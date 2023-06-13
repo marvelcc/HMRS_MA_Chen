@@ -198,22 +198,22 @@ EK = gp.quicksum(C_f[a] * X_f[a] for a in f) + gp.quicksum(C_g[a] * X_g[a] for a
      gp.quicksum(C_w[a] * X_w[a] for a in w)
 
 # Production/processing cost of all facilities: SUM B_f * Q_f
-PK = gp.quicksum(B_F * Q_fi[a, b] for a in f for b in i) + gp.quicksum(B_G[a] * Q_gi[a, b] for a in g for b in i) +\
-     gp.quicksum(B_H[a] * Q_hi[a, b] for a in h for b in i) + gp.quicksum(B_H_bar[a] * Q_hi_bar[a, b] for a in h for b in i) +\
-     gp.quicksum(B_J[a] * Q_ju[a, b] for a in j for b in u) + gp.quicksum(B_KU[a] * Q_kuw[a, b, c] for a in k for b in u for c in w) +\
-     gp.quicksum(B_KU[a] * Q_kuv[a, b, c] for a in k for b in u for c in v) + gp.quicksum(B_U * Q_uh[a, b] for a in u for b in h) +\
-     gp.quicksum(B_U * Q_ug[a, b] for a in u for b in g) + gp.quicksum(B_V[a] * Q_kvf[a, b, c] for a in k for b in v for c in f) +\
-     gp.quicksum(B_V[a] * Q_kvh[a, b, c] for a in k for b in v for c in h) + gp.quicksum(P_k[a] * Q_klf[a, b, c] for a in k for b in l for c in f) +\
+PK = gp.quicksum(B_F * Q_fi[a, b] for a in f for b in i) + gp.quicksum(B_G * Q_gi[a, b] for a in g for b in i) +\
+     gp.quicksum(B_H * Q_hi[a, b] for a in h for b in i) + gp.quicksum(B_H_bar * Q_hi_bar[a, b] for a in h for b in i) +\
+     gp.quicksum(B_J * Q_ju[a, b] for a in j for b in u) + gp.quicksum(B_KU * Q_kuw[a, b, c] for a in k for b in u for c in w) +\
+     gp.quicksum(B_KU * Q_kuv[a, b, c] for a in k for b in u for c in v) + gp.quicksum(B_U * Q_uh[a, b] for a in u for b in h) +\
+     gp.quicksum(B_U * Q_ug[a, b] for a in u for b in g) + gp.quicksum(B_V * Q_kvf[a, b, c] for a in k for b in v for c in f) +\
+     gp.quicksum(B_V * Q_kvh[a, b, c] for a in k for b in v for c in h) + gp.quicksum(P_k[a] * Q_klf[a, b, c] for a in k for b in l for c in f) +\
      gp.quicksum(P_k[a] * Q_klh[a, b, c] for a in k for b in l for c in h)
 
 # Transportation cost of all products and components for all routes
-TK = omega_k * (gp.quicksum(S_lf * Q_klf[a, b, c] for a in k for b in l for c in f) + gp.quicksum(S_lh * Q_klh[a, b, c] for a in k for b in l for c in h) +\
-                gp.quicksum(S_uw * Q_kuw[a, b, c] for a in k for b in u for c in w) + gp.quicksum(S_uv * Q_kuv[a, b, c] for a in k for b in u for c in v) +\
-                gp.quicksum(S_vf * Q_kvf[a, b, c] for a in k for b in v for c in f) + gp.quicksum(S_vh * Q_kvh[a, b, c] for a in k for b in v for c in h)) +\
-     omega_p * (gp.quicksum(S_fi * Q_fi[a, b] for a in f for b in i) + gp.quicksum(S_gi * Q_gi[a, b] for a in g for b in i) +\
-                gp.quicksum(S_hi * Q_hi[a, b] for a in h for b in i) + gp.quicksum(S_hi * Q_hi_bar[a, b] for a in h for b in i) +\
-                gp.quicksum(S_ju * Q_ju[a, b] for a in j for b in u) + gp.quicksum(S_uh * Q_uh[a, b] for a in u for b in h) +\
-                gp.quicksum(S_ug * Q_fi[a, b] for a in u for b in g))
+TK = omega_k * (gp.quicksum(S_lf[b, c] * Q_klf[a, b, c] for a in k for b in l for c in f) + gp.quicksum(S_lh[b, c] * Q_klh[a, b, c] for a in k for b in l for c in h) +\
+                gp.quicksum(S_uw[b, c] * Q_kuw[a, b, c] for a in k for b in u for c in w) + gp.quicksum(S_uv[b, c] * Q_kuv[a, b, c] for a in k for b in u for c in v) +\
+                gp.quicksum(S_vf[b, c] * Q_kvf[a, b, c] for a in k for b in v for c in f) + gp.quicksum(S_vh[b, c] * Q_kvh[a, b, c] for a in k for b in v for c in h)) +\
+     omega_p * (gp.quicksum(S_fi[a, b] * Q_fi[a, b] for a in f for b in i) + gp.quicksum(S_gi[a, b] * Q_gi[a, b] for a in g for b in i) +\
+                gp.quicksum(S_hi[a, b] * Q_hi[a, b] for a in h for b in i) + gp.quicksum(S_hi[a, b] * Q_hi_bar[a, b] for a in h for b in i) +\
+                gp.quicksum(S_ju[a, b] * Q_ju[a, b] for a in j for b in u) + gp.quicksum(S_uh[a, b] * Q_uh[a, b] for a in u for b in h) +\
+                gp.quicksum(S_ug[a, b] * Q_ug[a, b] for a in u for b in g))
 
 # Cost from CO2-offset
 KK = pi * (gp.quicksum(Q_fi[a, b] * E_F for a in f for b in i) + gp.quicksum(Q_gi[a, b] * E_G for a in g for b in i) +\
@@ -221,15 +221,15 @@ KK = pi * (gp.quicksum(Q_fi[a, b] * E_F for a in f for b in i) + gp.quicksum(Q_g
            gp.quicksum(Q_ug[a, b] * E_U for a in u for b in g) + gp.quicksum(Q_uh[a, b] * E_U for a in u for b in h) +\
            gp.quicksum(Q_kuw[a, b, c] * E_KU for a in k for b in u for c in w) + gp.quicksum(Q_kuv[a, b, c] * E_KU for a in k for b in u for c in v) +\
            gp.quicksum(Q_kvf[a, b, c] * E_V for a in k for b in v for c in f) + gp.quicksum(Q_kvh[a, b, c] * E_V for a in k for b in v for c in h) +\
-           (gp.quicksum(Q_fi[a, b] * S_fi for a in f for b in i) + gp.quicksum(Q_gi[a, b] * S_gi for a in g for b in i) +\
-           gp.quicksum((Q_hi[a, b] + Q_hi_bar[a, b]) * S_hi for a in h for b in i) + gp.quicksum(Q_ju[a, b] * S_ju for a in j for b in u)) * E_P +\
-           (gp.quicksum(Q_klf[a, b, c] * S_lf for a in k for b in l for c in f) + gp.quicksum(Q_klh[a, b, c] * S_lh for a in k for b in l for c in h) +\
-            gp.quicksum(Q_kuw[a, b, c] * S_uw for a in k for b in u for c in w) + gp.quicksum(Q_kuv[a, b, c] * S_uv for a in k for b in u for c in v) +\
-            gp.quicksum(Q_kvf[a, b, c] * S_vf for a in k for b in v for c in f) + gp.quicksum(Q_kvh[a, b, c] * S_vh for a in k for b in v for c in h)) * E_K)
+           (gp.quicksum(Q_fi[a, b] * S_fi[a, b] for a in f for b in i) + gp.quicksum(Q_gi[a, b] * S_gi[a, b] for a in g for b in i) +\
+           gp.quicksum((Q_hi[a, b] + Q_hi_bar[a, b]) * S_hi[a, b] for a in h for b in i) + gp.quicksum(Q_ju[a, b] * S_ju[a, b] for a in j for b in u)) * E_P +\
+           (gp.quicksum(Q_klf[a, b, c] * S_lf[b, c] for a in k for b in l for c in f) + gp.quicksum(Q_klh[a, b, c] * S_lh[b, c] for a in k for b in l for c in h) +\
+            gp.quicksum(Q_kuw[a, b, c] * S_uw[b, c] for a in k for b in u for c in w) + gp.quicksum(Q_kuv[a, b, c] * S_uv[b, c] for a in k for b in u for c in v) +\
+            gp.quicksum(Q_kvf[a, b, c] * S_vf[b, c] for a in k for b in v for c in f) + gp.quicksum(Q_kvh[a, b, c] * S_vh[b, c] for a in k for b in v for c in h)) * E_K)
 
 
 # Add constraints
 # (1)
-m.addConstrs()
 
 
+m.update()
