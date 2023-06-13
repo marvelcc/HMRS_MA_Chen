@@ -216,5 +216,6 @@ TK = omega_k * (gp.quicksum(S_lf * Q_klf[a, b, c] for a in k for b in l for c in
                 gp.quicksum(S_ug * Q_fi[a, b] for a in u for b in g))
 
 # Cost from CO2-offset
+KK = 
 
 
