@@ -216,6 +216,20 @@ TK = omega_k * (gp.quicksum(S_lf * Q_klf[a, b, c] for a in k for b in l for c in
                 gp.quicksum(S_ug * Q_fi[a, b] for a in u for b in g))
 
 # Cost from CO2-offset
-KK = 
+KK = pi * (gp.quicksum(Q_fi[a, b] * E_F for a in f for b in i) + gp.quicksum(Q_gi[a, b] * E_G for a in g for b in i) +\
+           gp.quicksum((Q_hi[a, b] + Q_hi_bar[a, b]) * E_H for a in h for b in i) + gp.quicksum(Q_ju[a, b] * E_J for a in j for b in u) +\
+           gp.quicksum(Q_ug[a, b] * E_U for a in u for b in g) + gp.quicksum(Q_uh[a, b] * E_U for a in u for b in h) +\
+           gp.quicksum(Q_kuw[a, b, c] * E_KU for a in k for b in u for c in w) + gp.quicksum(Q_kuv[a, b, c] * E_KU for a in k for b in u for c in v) +\
+           gp.quicksum(Q_kvf[a, b, c] * E_V for a in k for b in v for c in f) + gp.quicksum(Q_kvh[a, b, c] * E_V for a in k for b in v for c in h) +\
+           (gp.quicksum(Q_fi[a, b] * S_fi for a in f for b in i) + gp.quicksum(Q_gi[a, b] * S_gi for a in g for b in i) +\
+           gp.quicksum((Q_hi[a, b] + Q_hi_bar[a, b]) * S_hi for a in h for b in i) + gp.quicksum(Q_ju[a, b] * S_ju for a in j for b in u)) * E_P +\
+           (gp.quicksum(Q_klf[a, b, c] * S_lf for a in k for b in l for c in f) + gp.quicksum(Q_klh[a, b, c] * S_lh for a in k for b in l for c in h) +\
+            gp.quicksum(Q_kuw[a, b, c] * S_uw for a in k for b in u for c in w) + gp.quicksum(Q_kuv[a, b, c] * S_uv for a in k for b in u for c in v) +\
+            gp.quicksum(Q_kvf[a, b, c] * S_vf for a in k for b in v for c in f) + gp.quicksum(Q_kvh[a, b, c] * S_vh for a in k for b in v for c in h)) * E_K)
+
+
+# Add constraints
+# (1)
+m.addConstrs()
 
 
