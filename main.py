@@ -233,35 +233,50 @@ m.addConstrs(gp.quicksum(Q_kvf[a, b, c] for a in k for c in f) + gp.quicksum(Q_k
 # (9)
 m.addConstrs(gp.quicksum(Q_kuw[a, b, c] for a in k for b in u) <= CAP_Kw[c] * X_w[c] for c in w)
 
-# (10)
+# # (10)
 m.addConstrs(gp.quicksum(Q_fi[a, b] for a in f) + gp.quicksum(Q_hi[a, b] for a in h) == D_i[b] for b in i)
 
-# (11)
+# # (11)
 m.addConstrs(gp.quicksum(Q_gi[a, b] for a in g) + gp.quicksum(Q_hi_bar[a, b] for a in h) == D_i_bar[b] for b in i)
 
-# (12)
-m.addConstrs(gp.quicksum(Q_klf[a, b, c] for b in l) == gp.quicksum(Q_fi[c, b] for b in i) * R_k[a] for a in k for c in f)
+# # (12)
+# m.addConstrs(gp.quicksum(Q_klf[a, b, c] for b in l) == gp.quicksum(Q_fi[c, b] for b in i) * R_k[a] for a in k for c in f)
 
-# (13) PENDING REVIEW
-m.addConstrs(gp.quicksum(Q_ug[a, b] for a in u) == gp.quicksum(Q_gi[b, c] for c in i) for b in g)
+# # (13) PENDING REVIEW
+# m.addConstrs(gp.quicksum(Q_ug[a, b] for a in u) == gp.quicksum(Q_gi[b, c] for c in i) for b in g)
 
-# (14) PENDING REVIEW
-m.addConstrs(gp.quicksum(Q_klh[a, b, c] for b in l) + gp.quicksum(Q_kvh[a, b, c] for b in v) == gp.quicksum(Q_hi[c, b] for b in i) * R_k[a] for a in k for c in h)
+# # (14) PENDING REVIEW
+# m.addConstrs(gp.quicksum(Q_klh[a, b, c] for b in l) + gp.quicksum(Q_kvh[a, b, c] for b in v) == gp.quicksum(Q_hi[c, b] for b in i) * R_k[a] for a in k for c in h)
 
-# (15) PENDING REVIEW
-m.addConstrs(gp.quicksum(Q_uh[a, b] for a in u) == gp.quicksum(Q_hi_bar[b, c] for c in i) for b in h)
+# # (15) PENDING REVIEW
+# m.addConstrs(gp.quicksum(Q_uh[a, b] for a in u) == gp.quicksum(Q_hi_bar[b, c] for c in i) for b in h)
 
-# (16)
-m.addConstrs((gp.quicksum(Q_ju[a, b] for a in j) * alpha == gp.quicksum(Q_ug[b, c] for c in g) + gp.quicksum(Q_uh[b ,c] for c in h)) for b in u)
+# # (16)
+# m.addConstrs((gp.quicksum(Q_ju[a, b] for a in j) * alpha == gp.quicksum(Q_ug[b, c] for c in g) + gp.quicksum(Q_uh[b ,c] for c in h)) for b in u)
 
-# (17)
-m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * beta * R_k[a] == gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
+# # (17)
+# m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * beta * R_k[a] == gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
 
-# (18)
-m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * gamma * R_k[a] == gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
+# # (18)
+# m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * gamma * R_k[a] == gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
 
-# (19)
-m.addConstrs(gp.quicksum(Q_kuv[a, m, r] for m in u) == gp.quicksum(Q_kvf[a, r, c] for c in f) + gp.quicksum(Q_kvh[a, r, c] for c in h) for a in k for r in v)
+# # (19)
+# m.addConstrs(gp.quicksum(Q_kuv[a, m, r] for m in u) == gp.quicksum(Q_kvf[a, r, c] for c in f) + gp.quicksum(Q_kvh[a, r, c] for c in h) for a in k for r in v)
 
 
 m.optimize()
+
+# Print out results
+if m.Status == GRB.OPTIMAL:
+    total_cost = m.ObjVal
+    f_to_i = m.getAttr('X', Q_fi)
+    h_to_i = m.getAttr('X', Q_hi)
+    h_bar_to_i = m.getAttr('X', Q_hi_bar)
+    g_to_i = m.getAttr('X', Q_gi)
+    print(total_cost)
+    print(f_to_i)
+    print(h_to_i)
+    print(h_bar_to_i)
+    print(g_to_i)
+    print(D_i)
+    print(D_i_bar)
