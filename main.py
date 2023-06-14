@@ -216,16 +216,16 @@ m.addConstrs(gp.quicksum(Q_gi[a, b] for b in i) <= CAP_g[a] * X_g[a] for a in g)
 m.addConstrs(gp.quicksum(Q_hi[a, b] for b in i) <= CAP_h[a] * X_h[a] for a in h)
 
 # (4)
-m.addConstrs(gp.quicksum(Q_hi_bar[a] for a in i) <= CAP_h_bar[a] * X_h[a] for a in h)
+m.addConstrs(gp.quicksum(Q_hi_bar[a, b] for b in i) <= CAP_h_bar[a] * X_h[a] for a in h)
 
 # (5)
-m.addConstrs(gp.quicksum(Q_ju[a] for a in u) <= CAP_j[a] * X_j[a] for a in j)
+m.addConstrs(gp.quicksum(Q_ju[a, b] for b in u) <= CAP_j[a] * X_j[a] for a in j)
 
 # (6)
-m.addConstrs(gp.quicksum(Q_ug[a] for a in g) + gp.quicksum(Q_uh[a] for a in h) <= CAP_u[a] * X_u[a] for a in u)
+m.addConstrs(gp.quicksum(Q_ug[a, b] for b in g) + gp.quicksum(Q_uh[a, b] for b in h) <= CAP_u[a] * X_u[a] for a in u)
 
 # (7)
-m.addConstrs(gp.quicksum(Q_kuv[a, b] for a in k for b in v) + gp.quicksum(Q_kuw[a, b] for a in k for b in w) <= CAP_ku[a] * X_u[a] for a in u)
+m.addConstrs(gp.quicksum(Q_kuv[a, b, c] for a in k for b in v) + gp.quicksum(Q_kuw[a, b, c] for a in k for b in w) <= CAP_ku[a] * X_u[a] for a in u)
 
 # (8)
 m.addConstrs(gp.quicksum(Q_kvf[a, b] for a in k for b in f) + gp.quicksum(Q_kvh[a, b] for a in k for b in h) <= CAP_kv[a] * X_v[a] for a in v)
