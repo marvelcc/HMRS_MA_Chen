@@ -138,9 +138,9 @@ M_j = {'j1': 20000, 'j2': 20000, 'j3': 15000, 'j4': 25000}
 # CAP_h_bar = {a: random.randrange(5,10) * 1000 for a in h }
 # CAP_j = {a: random.randrange(8,15) * 1000 for a in j }
 # CAP_u = {a: random.randrange(10,15) * 1000 for a in u }
-# CAP_ku = {a: random.randrange(30,50) * 300 for a in k for b in u }
-# CAP_kv = {a: random.randrange(15,25) * 300 for a in k for b in v }
-# CAP_kw = {a: random.randrange(15,25) * 300 for a in k for b in w}
+# CAP_Ku = {a: random.randrange(30,50) * 300 for a in k for b in u }
+# CAP_Kv = {a: random.randrange(15,25) * 300 for a in k for b in v }
+# CAP_Kw = {a: random.randrange(15,25) * 300 for a in k for b in w}
 # static for testing ==================================================
 CAP_f = {'f1': 16000, 'f2': 18000, 'f3': 22000, 'f4': 15000, 'f5': 22000}
 CAP_g = {'g1': 10000, 'g2': 9000, 'g3': 8000, 'g4': 12000, 'g5': 8000}
@@ -148,9 +148,9 @@ CAP_h = {'h1': 14000, 'h2': 10000, 'h3': 11000, 'h4': 9000, 'h5': 12000}
 CAP_h_bar = {'h1': 5000, 'h2': 5000, 'h3': 7000, 'h4': 6000, 'h5': 6000}
 CAP_j = {'j1': 8000, 'j2': 12000, 'j3': 8000, 'j4': 11000}
 CAP_u = {'u1': 12000, 'u2': 14000, 'u3': 11000, 'u4': 12000, 'u5': 13000}
-CAP_ku = {'k1': 9000, 'k2': 14400, 'k3': 11100}
-CAP_kv = {'k1': 5700, 'k2': 7200, 'k3': 6600}
-CAP_kw = {'k1': 5400, 'k2': 5700, 'k3': 7200}
+CAP_Ku = {'u1': 9000, 'u2': 14400, 'u3': 11100, 'u4': 12100, 'u5': 11000}
+CAP_Kv = {'v1': 5700, 'v2': 7200, 'v3': 6600, 'v4': 6200, 'v5': 5900}
+CAP_Kw = {'w1': 5400, 'w2': 5700, 'w3': 7200, 'w4': 5900, 'w5': 6400}
 
 # Percentage of EoU (a), EoL (b) and disposal (c) products
 # a = round(random.uniform(0.5, 0.7), 2)
@@ -225,44 +225,43 @@ m.addConstrs(gp.quicksum(Q_ju[a, b] for b in u) <= CAP_j[a] * X_j[a] for a in j)
 m.addConstrs(gp.quicksum(Q_ug[a, b] for b in g) + gp.quicksum(Q_uh[a, b] for b in h) <= CAP_u[a] * X_u[a] for a in u)
 
 # (7)
-m.addConstrs(gp.quicksum(Q_kuv[a, b, c] for a in k for b in v) + gp.quicksum(Q_kuw[a, b, c] for a in k for b in w) <= CAP_ku[a] * X_u[a] for a in u)
+m.addConstrs(gp.quicksum(Q_kuv[a, b, c] for a in k for c in v) + gp.quicksum(Q_kuw[a, b, c] for a in k for c in w) <= CAP_Ku[b] * X_u[b] for b in u)
 
 # (8)
-m.addConstrs(gp.quicksum(Q_kvf[a, b] for a in k for b in f) + gp.quicksum(Q_kvh[a, b] for a in k for b in h) <= CAP_kv[a] * X_v[a] for a in v)
+m.addConstrs(gp.quicksum(Q_kvf[a, b, c] for a in k for c in f) + gp.quicksum(Q_kvh[a, b, c] for a in k for c in h) <= CAP_Kv[b] * X_v[b] for b in v)
 
 # (9)
-m.addConstrs(gp.quicksum(Q_kuw[a, b] for a in k for b in u) <= CAP_kw[a] * X_w[a] for a in w)
+m.addConstrs(gp.quicksum(Q_kuw[a, b, c] for a in k for b in u) <= CAP_Kw[c] * X_w[c] for c in w)
 
 # (10)
-m.addConstrs(gp.quicksum(Q_fi[a] for a in f) + gp.quicksum(Q_hi[a] for a in h) == D_i[a] for a in i)
+m.addConstrs(gp.quicksum(Q_fi[a, b] for a in f) + gp.quicksum(Q_hi[a, b] for a in h) == D_i[b] for b in i)
 
 # (11)
-m.addConstrs(gp.quicksum(Q_gi[a] for a in g) + gp.quicksum(Q_hi_bar[a] for a in h) == D_i_bar[a] for a in i)
+m.addConstrs(gp.quicksum(Q_gi[a, b] for a in g) + gp.quicksum(Q_hi_bar[a, b] for a in h) == D_i_bar[b] for b in i)
 
 # (12)
-m.addConstrs(gp.quicksum(Q_klf[a] for a in l) == gp.quicksum(Q_fi[a] for a in i) * R_k[a] for a in k)
+m.addConstrs(gp.quicksum(Q_klf[a, b, c] for b in l) == gp.quicksum(Q_fi[c, b] for b in i) * R_k[a] for a in k for c in f)
 
-# (13)
-m.addConstrs(gp.quicksum(Q_ug[a] for a in u) == gp.quicksum(Q_gi[a] for a in i))
+# (13) PENDING REVIEW
+m.addConstrs(gp.quicksum(Q_ug[a, b] for a in u) == gp.quicksum(Q_gi[b, c] for c in i) for b in g)
 
-# (14)
-m.addConstrs(gp.quicksum(Q_klh[a] for a in l) + gp.quicksum(Q_kvh[a] for a in v) == gp.quicksum(Q_hi[a] for a in i) * R_k[a] for a in k)
+# (14) PENDING REVIEW
+m.addConstrs(gp.quicksum(Q_klh[a, b, c] for b in l) + gp.quicksum(Q_kvh[a, b, c] for b in v) == gp.quicksum(Q_hi[c, b] for b in i) * R_k[a] for a in k for c in h)
 
-# (15)
-m.addConstrs(gp.quicksum(Q_uh[a] for a in u) == gp.quicksum(Q_hi_bar[a] for a in i))
+# (15) PENDING REVIEW
+m.addConstrs(gp.quicksum(Q_uh[a, b] for a in u) == gp.quicksum(Q_hi_bar[b, c] for c in i) for b in h)
 
 # (16)
-m.addConstr(gp.quicksum(Q_ju[a] for a in j) * alpha == gp.quicksum(Q_ug[a] for a in g) + gp.quicksum(Q_uh[a] for a in h))
+m.addConstrs((gp.quicksum(Q_ju[a, b] for a in j) * alpha == gp.quicksum(Q_ug[b, c] for c in g) + gp.quicksum(Q_uh[b ,c] for c in h)) for b in u)
 
 # (17)
-m.addConstr(gp.quicksum(Q_ju[a] for a in j) * beta * R_k == gp.quicksum(Q_kuv[a] for a in v))
+m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * beta * R_k[a] == gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
 
 # (18)
-m.addConstr(gp.quicksum(Q_ju[a] for a in j) * gamma * R_k == gp.quicksum(Q_ug[a] for a in g) + gp.quicksum(Q_kuv[a,] for a in v))
+m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * gamma * R_k[a] == gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
 
 # (19)
-m.addConstrs(gp.quicksum(Q_kuw[a] for a in u) == gp.quicksum(Q_kvf[a] for a in f) + gp.quicksum(Q_kvh[a] for a in h))
+m.addConstrs(gp.quicksum(Q_kuv[a, m, r] for m in u) == gp.quicksum(Q_kvf[a, r, c] for c in f) + gp.quicksum(Q_kvh[a, r, c] for c in h) for a in k for r in v)
 
 
-m.update()
-
+m.optimize()
