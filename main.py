@@ -251,14 +251,17 @@ m.addConstrs(gp.quicksum(Q_klh[a, b, c] for b in l) + gp.quicksum(Q_kvh[a, b, c]
 # # (15) PENDING REVIEW
 m.addConstrs(gp.quicksum(Q_uh[a, b] for a in u) == gp.quicksum(Q_hi_bar[b, c] for c in i) for b in h)
 
+# (15.5)
+m.addConstrs(gp.quicksum(Q_ju[a, b] for b in u) == M_j[a] for a in j)
+
 # # (16)
-m.addConstrs((gp.quicksum(Q_ju[a, b] for a in j) * alpha == gp.quicksum(Q_ug[b, c] for c in g) + gp.quicksum(Q_uh[b, c] for c in h)) for b in u)
+m.addConstrs((gp.quicksum(Q_ju[a, b] for a in j) * alpha >= gp.quicksum(Q_ug[b, c] for c in g) + gp.quicksum(Q_uh[b, d] for d in h)) for b in u)
 
 # # (17)
-m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * beta * R_k[a] == gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
+m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * beta * R_k[a] >= gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
 
 # # (18)
-m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * gamma * R_k[a] == gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
+m.addConstrs(gp.quicksum(Q_ju[o, b] for o in j) * gamma * R_k[a] >= gp.quicksum(Q_kuv[a, b, c] for c in v) for b in u for a in k)
 
 # # (19)
 m.addConstrs(gp.quicksum(Q_kuv[a, m, r] for m in u) == gp.quicksum(Q_kvf[a, r, c] for c in f) + gp.quicksum(Q_kvh[a, r, c] for c in h) for a in k for r in v)
@@ -268,15 +271,23 @@ m.optimize()
 
 # Print out results
 if m.Status == GRB.OPTIMAL:
-    total_cost = m.ObjVal
-    f_to_i = m.getAttr('X', Q_fi)
-    h_to_i = m.getAttr('X', Q_hi)
-    h_bar_to_i = m.getAttr('X', Q_hi_bar)
-    g_to_i = m.getAttr('X', Q_gi)
-    print(total_cost)
-    print(f_to_i)
-    print(h_to_i)
-    print(h_bar_to_i)
-    print(g_to_i)
-    print(D_i)
-    print(D_i_bar)
+#     total_cost = m.ObjVal
+#     f_to_i = m.getAttr('X', Q_fi)
+#     h_to_i = m.getAttr('X', Q_hi)
+#     h_bar_to_i = m.getAttr('X', Q_hi_bar)
+#     g_to_i = m.getAttr('X', Q_gi)
+#     print(total_cost)
+#     print(f_to_i)
+#     print(h_to_i)
+#     print(h_bar_to_i)
+#     print(g_to_i)
+#     print(D_i)
+#     print(D_i_bar)
+#     print(M_j)
+    jtou = m.getAttr('X', Q_ju)
+    utog = m.getAttr('X', Q_ug)
+    utoh = m.getAttr('X', Q_uh)
+    
+    print(jtou)
+    print(utog)
+    print(utoh)
