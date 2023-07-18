@@ -360,3 +360,5 @@ if m.Status == GRB.OPTIMAL:
     print(KK.getValue())
     print("Emission in Ton:")
     print(KK.getValue() / pi)
+    print("Optimality gap: ")
+    print(m.MIPGap)
