@@ -362,3 +362,5 @@ if m.Status == GRB.OPTIMAL:
     print(KK.getValue() / pi)
     print("Optimality gap: ")
     print(m.MIPGap)
+
+    test after branches
