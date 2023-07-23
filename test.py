@@ -114,7 +114,7 @@ E_K = 0.0005
 # Cost in euro
 pi = 1.5 # per kg 
 omega_p = 0.03 # per km
-omega_k = 0.006 # per km
+omega_k = 0.012 # per km
 
 # Amount of component component in a product
 R_k = {'k1': 2, 'k2': 3, 'k3': 4}
@@ -146,7 +146,7 @@ CAP_f = {'f1': 16000, 'f2': 18000, 'f3': 22000, 'f4': 15000, 'f5': 22000}
 CAP_g = {'g1': 10000, 'g2': 9000, 'g3': 8000, 'g4': 12000, 'g5': 8000}
 CAP_h = {'h1': 14000, 'h2': 10000, 'h3': 11000, 'h4': 9000, 'h5': 12000}
 CAP_h_bar = {'h1': 5000, 'h2': 5000, 'h3': 7000, 'h4': 6000, 'h5': 6000}
-CAP_j = {'j1': 15000, 'j2': 15000, 'j3': 15000, 'j4': 15000}
+CAP_j = {'j1': 1500000, 'j2': 1500000, 'j3': 1500000, 'j4': 1500000}
 CAP_u = {'u1': 120000, 'u2': 140000, 'u3': 110000, 'u4': 120000, 'u5': 130000}
 CAP_Ku = {'u1': 90000, 'u2': 144000, 'u3': 111000, 'u4': 121000, 'u5': 110000}
 CAP_Kv = {'v1': 5700, 'v2': 7200, 'v3': 6600, 'v4': 6200, 'v5': 5900}
@@ -250,7 +250,7 @@ m.addConstrs(gp.quicksum(Q_klh[a, b, c] for b in supplier) + gp.quicksum(Q_kvh[a
 m.addConstrs(gp.quicksum(Q_uh[u, h] for u in disassembly) == gp.quicksum(Q_hi_bar[h, i] for i in warehouse) for h in hybrid)
 
 # (15)
-m.addConstrs(gp.quicksum(Q_ju[j, u] for u in disassembly) <= M_j[j] for j in collect)
+m.addConstrs(gp.quicksum(Q_ju[j, u] for u in disassembly) == M_j[j] for j in collect)
 
 # # (16)
 m.addConstrs((gp.quicksum(Q_ju[j, u] for j in collect) * alpha >= gp.quicksum(Q_ug[u,g] for g in remanu) + gp.quicksum(Q_uh[u,h] for h in hybrid)) for u in disassembly)
@@ -362,5 +362,3 @@ if m.Status == GRB.OPTIMAL:
     print(KK.getValue() / pi)
     print("Optimality gap: ")
     print(m.MIPGap)
-
-    test after branches
