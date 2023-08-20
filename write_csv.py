@@ -85,11 +85,9 @@ T = 12
 # Values subject to change according to collected real world data
 
 # procurement_price = {'period': list(range(1, T+1))}
-
 # for k in component:
 #     prices = [random.randint(1, 6) for t in range(T)]
 #     procurement_price[k] = prices
-
 # df_procurement = pd.DataFrame(procurement_price)
 # df_procurement.to_csv('procurement_price.csv', index=False)
 
@@ -104,5 +102,38 @@ T = 12
 
 # -------------------------------------------------
 
-# 
+# Demand of products (new and remanufactured) at every distribution center for each period
+# Values subject to change according to collected real world data
+
+# total_demand = {'period': list(range(1, T+1))}
+# for i in warehouse:
+#     demand = [random.randint(10, 40) * 1000 for t in range(T)]
+#     total_demand[i] = demand
+# df_demand = pd.DataFrame(total_demand)
+# df_demand.to_csv('demand.csv', index=False)
+
+# -------------------------------------------------
+
+# Number of returned products at each collection center for each period
+# should be between 25% and 75% of sold items (according to research)
+# Values subject to change according to real world data
+
+# total_returns = {'period': list(range(1, T+1))}
+# for j in collect:
+#     returns = [random.randint(8, 20) * 1000 for t in range(T)]
+#     total_returns[j] = returns
+# df_returns = pd.DataFrame(total_returns)
+# df_returns.to_csv('returns.csv', index=False)
+
+# -------------------------------------------------
+
+# The production capacity of every location at each period
+# Values subject to change according to real world data
+
+
+
+
+
+
+
 
