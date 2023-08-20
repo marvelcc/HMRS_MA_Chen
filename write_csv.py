@@ -130,9 +130,34 @@ T = 12
 # The production capacity of every location at each period
 # Values subject to change according to real world data
 
+# cap = []
+# for t in range(T):
+#     capacities = {}
+#     for f in manu:
+#         capacities[f] = random.randint(15,25) * 1000
+#     for g in remanu:
+#         capacities[g] = random.randint(8,14) * 1000
+#     for h in hybrid:
+#         capacities[h] = random.randint(9,15) * 1000
+#     for h_bar in hybrid:
+#         capacities[h_bar] = random.randint(5,10) * 1000
+#     for j in collect:
+#         capacities[j] = random.randint(8,15) * 1000
+#     for u in disassembly:
+#         capacities[u] = random.randint(10,15) * 1000
+#     for Ku in disassembly:
+#         capacities[Ku] = random.randint(30,50) * 300
+#     for Kv in recycling:
+#         capacities[Kv] = random.randint(15,25) * 300
+#     for Kw in disposal:
+#         capacities[Kw] = random.randint(15,25) * 300
 
+#     cap.append({'period': t + 1, **capacities})
 
+# df_prod_cap = pd.DataFrame(cap).set_index('period')
+# df_prod_cap.to_csv('production_capacity.csv')
 
+# -------------------------------------------------
 
 
 
