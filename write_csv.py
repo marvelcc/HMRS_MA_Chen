@@ -159,6 +159,21 @@ T = 12
 
 # -------------------------------------------------
 
+# The ratio between EoU, EoL and to-be-disposed components
+# Ratio subject to change
 
+# ratio = []
+# for t in range(T):
+#     a = round(random.uniform(0.5, 0.7), 2)
+#     b = round(random.uniform(0.15, 0.4), 2)
+#     c = 1 - a - b
+#     if c < 0.1:
+#         c = 0.1
+#     ratio.append({'period': t + 1, 'a': a, 'b': b, 'c': c})
+
+# df_ratio = pd.DataFrame(ratio)
+# df_ratio.to_csv('ratio.csv', index=False)
+
+# -------------------------------------------------
 
 
