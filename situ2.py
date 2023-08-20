@@ -7,14 +7,14 @@ import random
 # Sets of the model
 component = ['k1', 'k2', 'k3']
 supplier = ['l1', 'l2']
-manu = ['f1', 'f2', 'f3', 'f4', 'f5']
-remanu = ['g1', 'g2', 'g3', 'g4', 'g5']
-hybrid = ['h1', 'h2', 'h3', 'h4', 'h5']
-warehouse = ['i1', 'i2', 'i3']
-collect = ['j1', 'j2', 'j3', 'j4']
-disassembly = ['u1', 'u2', 'u3', 'u4', 'u5']
-recycling = ['v1', 'v2', 'v3', 'v4', 'v5']
-disposal = ['w1', 'w2', 'w3', 'w4', 'w5']
+manu = ['f1', 'f2', 'f3']
+remanu = ['g1', 'g2', 'g3']
+hybrid = ['h1', 'h2', 'h3']
+warehouse = ['i1', 'i2']
+collect = ['j1', 'j2']
+disassembly = ['u1', 'u2', 'u3']
+recycling = ['v1', 'v2']
+disposal = ['w1', 'w2']
 T = 10
 
 # Activation cost of each facility
@@ -26,13 +26,13 @@ T = 10
 # C_v = {a: random.randrange(100,251)*1000 for a in recycling}
 # C_w = {a: random.randrange(100,251)*1000 for a in disposal}
 # static for testing ==================================================
-C_f = {'f1': 2530000, 'f2': 2250000, 'f3': 2130000, 'f4': 2200000, 'f5': 3160000}
-C_g = {'g1': 2140000, 'g2': 2120000, 'g3': 3380000, 'g4': 2360000, 'g5': 3390000}
-C_h = {'h1': 2000000, 'h2': 2260000, 'h3': 2100000, 'h4': 2590000, 'h5': 2320000}
-C_j = {'j1': 179000, 'j2': 120000, 'j3': 228000, 'j4': 225000}
-C_u = {'u1': 142000, 'u2': 170000, 'u3': 128000, 'u4': 143000, 'u5': 102000}
-C_v = {'v1': 108000, 'v2': 137000, 'v3': 187000, 'v4': 132000, 'v5': 101000}
-C_w = {'w1': 203000, 'w2': 137000, 'w3': 240000, 'w4': 225000, 'w5': 177000}
+C_f = {'f1': 53000, 'f2': 57000, 'f3': 51000}
+C_g = {'g1': 45000, 'g2': 52000, 'g3': 48000}
+C_h = {'h1': 460000, 'h2': 490000, 'h3': 406000}
+C_j = {'j1': 11000, 'j2': 7000}
+C_u = {'u1': 27000, 'u2': 32000, 'u3': 29000}
+C_v = {'v1': 22000, 'v2': 21000}
+C_w = {'w1': 10000, 'w2': 9000}
 
 # Production/processing cost for each type of facility
 B_F = 20
@@ -122,14 +122,14 @@ R_k = {'k1': 2, 'k2': 3, 'k3': 4}
 # Demand at each distribution center
 # demand_i = {a: random.randrange(10,31) * 1000 for a in warehouse}
 # static for testing ==================================================
-D_i = {'i1': 23000, 'i2': 32000, 'i3': 11000}
+D_i = {'i1': 1100, 'i2': 1300}
 
 
 
 # Returned product
 # M_j = {a: random.randrange(15,26) * 1000 for a in collect }
 # static for testing ==================================================
-M_j = {'j1': 20000, 'j2': 20000, 'j3': 15000, 'j4': 25000}
+M_j = {'j1': 300, 'j2': 650}
 
 # Capacity of each facility
 # CAP_f = {a: random.randrange(15,25) * 1000 for a in manu }
@@ -142,16 +142,16 @@ M_j = {'j1': 20000, 'j2': 20000, 'j3': 15000, 'j4': 25000}
 # CAP_Kv = {a: random.randrange(15,25) * 300 for a in component for b in recycling }
 # CAP_Kw = {a: random.randrange(15,25) * 300 for a in component for b in disposal}
 # static for testing ==================================================
-CAP_f = {'f1': 16000, 'f2': 18000, 'f3': 22000, 'f4': 15000, 'f5': 22000}
-CAP_g = {'g1': 10000, 'g2': 9000, 'g3': 8000, 'g4': 12000, 'g5': 8000}
-CAP_h = {'h1': 14000, 'h2': 10000, 'h3': 11000, 'h4': 9000, 'h5': 12000}
-CAP_h_bar = {'h1': 5000, 'h2': 5000, 'h3': 7000, 'h4': 6000, 'h5': 6000}
-CAP_j = {'j1': 1500000, 'j2': 1500000, 'j3': 1500000, 'j4': 1500000}
-CAP_u = {'u1': 120000, 'u2': 140000, 'u3': 110000, 'u4': 120000, 'u5': 130000}
-CAP_Ku = {'u1': 90000, 'u2': 144000, 'u3': 111000, 'u4': 121000, 'u5': 110000}
-CAP_Kv = {'v1': 5700, 'v2': 7200, 'v3': 6600, 'v4': 6200, 'v5': 5900}
-CAP_Kw = {'w1': 5400, 'w2': 5700, 'w3': 7200, 'w4': 5900, 'w5': 6400}
-CAP_CO2 = 4000000
+CAP_f = {'f1': 900, 'f2': 800, 'f3': 700}
+CAP_g = {'g1': 800, 'g2': 600, 'g3': 800}
+CAP_h = {'h1': 800, 'h2': 700, 'h3': 900}
+CAP_h_bar = {'h1': 100, 'h2': 100, 'h3': 200}
+CAP_j = {'j1': 500, 'j2': 700}
+CAP_u = {'u1': 18000, 'u2': 18000, 'u3': 10000}
+CAP_Ku = {'u1': 30000, 'u2': 45000, 'u3': 42000}
+CAP_Kv = {'v1': 33000, 'v2': 66000}
+CAP_Kw = {'w1': 72000, 'w2': 60000}
+CAP_CO2 = 5000
 
 # Percentage of EoU (a), EoL (b) and disposal (c) products
 # a = round(random.uniform(0.5, 0.7), 2)
@@ -290,6 +290,22 @@ if m.Status == GRB.OPTIMAL:
     utoh = m.getAttr('X', Q_uh)
     kutow = m.getAttr('X', Q_kuw)
     kutov = m.getAttr('X', Q_kuv)
+    ltof = m.getAttr('X', Q_klf)
+    ltoh = m.getAttr('X', Q_klh)
+
+    print("L to F: ")
+    for k in component:
+        for l in supplier:
+            for f in manu:
+                if ltof[k,l,f] > 0:
+                    print('%s: %s -> %s: %g' % (k, l, f, ltof[k,l,f]))
+        
+    print("L to H: ")
+    for k in component:
+        for l in supplier:
+            for h in hybrid:
+                if ltoh[k,l,h] > 0:
+                    print('%s: %s -> %s: %g' % (k, l, h, ltoh[k, l,h]))
 
     print("F to I: ")
     for f in manu:
@@ -326,8 +342,7 @@ if m.Status == GRB.OPTIMAL:
     print("Disassembly center to remanufacturing facility: ")
     for u in disassembly:
         for g in remanu:
-            if utog[u,g] > 0:
-                print('%s -> %s: %g' % (u, g, utog[u, g]))
+            print('%s -> %s: %g' % (u, g, utog[u, g]))
 
     print("Disassembly center to hybrid facility: ")
     for u in disassembly:
@@ -347,7 +362,7 @@ if m.Status == GRB.OPTIMAL:
         for u in disassembly:
             for w in disposal:
                 if kutow[k, u, w] > 0:
-                    print('%s -> %s: %g' % (u, w, kutow[k, u, w]))
+                    print('%s: %s -> %s: %g' % (k, u, w, kutow[k, u, w]))
     
     print(total_cost)
     print("EK:")
