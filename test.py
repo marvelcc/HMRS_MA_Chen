@@ -5,6 +5,7 @@ import random
 
 # Initialize the sets and parameters of the model
 # Sets of the model
+T = 12
 component = ['k1', 'k2', 'k3']
 supplier = ['l1', 'l2']
 manu = ['f1', 'f2', 'f3', 'f4', 'f5']
@@ -15,17 +16,10 @@ collect = ['j1', 'j2', 'j3', 'j4']
 disassembly = ['u1', 'u2', 'u3', 'u4', 'u5']
 recycling = ['v1', 'v2', 'v3', 'v4', 'v5']
 disposal = ['w1', 'w2', 'w3', 'w4', 'w5']
-T = 10
+
+
 
 # Activation cost of each facility
-# C_f = {a: random.randrange(200,351)*10000 for a in manu}
-# C_g = {a: random.randrange(200,351)*10000 for a in remanu}
-# C_h = {a: random.randrange(200,351)*10000 for a in hybrid}
-# C_j = {a: random.randrange(100,251)*1000 for a in collect}
-# C_u = {a: random.randrange(100,251)*1000 for a in disassembly}
-# C_v = {a: random.randrange(100,251)*1000 for a in recycling}
-# C_w = {a: random.randrange(100,251)*1000 for a in disposal}
-# static for testing ==================================================
 C_f = {'f1': 2530000, 'f2': 2250000, 'f3': 2130000, 'f4': 2200000, 'f5': 3160000}
 C_g = {'g1': 2140000, 'g2': 2120000, 'g3': 3380000, 'g4': 2360000, 'g5': 3390000}
 C_h = {'h1': 2000000, 'h2': 2260000, 'h3': 2100000, 'h4': 2590000, 'h5': 2320000}
@@ -33,6 +27,8 @@ C_j = {'j1': 179000, 'j2': 120000, 'j3': 228000, 'j4': 225000}
 C_u = {'u1': 142000, 'u2': 170000, 'u3': 128000, 'u4': 143000, 'u5': 102000}
 C_v = {'v1': 108000, 'v2': 137000, 'v3': 187000, 'v4': 132000, 'v5': 101000}
 C_w = {'w1': 203000, 'w2': 137000, 'w3': 240000, 'w4': 225000, 'w5': 177000}
+
+
 
 # Production/processing cost for each type of facility
 B_F = 20
@@ -43,7 +39,7 @@ B_J = 5
 B_KU = 1
 B_U = 2
 B_V = 2
-B_T = 3
+B_W = 3
 
 # The procurement price for each component
 # procurement_price = {a: random.randrange(1,7) for a in component}
@@ -142,15 +138,15 @@ M_j = {'j1': 20000, 'j2': 20000, 'j3': 15000, 'j4': 25000}
 # CAP_Kv = {a: random.randrange(15,25) * 300 for a in component for b in recycling }
 # CAP_Kw = {a: random.randrange(15,25) * 300 for a in component for b in disposal}
 # static for testing ==================================================
-CAP_f = {'f1': 16000, 'f2': 18000, 'f3': 22000, 'f4': 15000, 'f5': 22000}
-CAP_g = {'g1': 10000, 'g2': 9000, 'g3': 8000, 'g4': 12000, 'g5': 8000}
-CAP_h = {'h1': 14000, 'h2': 10000, 'h3': 11000, 'h4': 9000, 'h5': 12000}
-CAP_h_bar = {'h1': 5000, 'h2': 5000, 'h3': 7000, 'h4': 6000, 'h5': 6000}
-CAP_j = {'j1': 1500000, 'j2': 1500000, 'j3': 1500000, 'j4': 1500000}
-CAP_u = {'u1': 120000, 'u2': 140000, 'u3': 110000, 'u4': 120000, 'u5': 130000}
-CAP_Ku = {'u1': 90000, 'u2': 144000, 'u3': 111000, 'u4': 121000, 'u5': 110000}
-CAP_Kv = {'v1': 5700, 'v2': 7200, 'v3': 6600, 'v4': 6200, 'v5': 5900}
-CAP_Kw = {'w1': 5400, 'w2': 5700, 'w3': 7200, 'w4': 5900, 'w5': 6400}
+CAP_f = {'f1': 160000, 'f2': 180000, 'f3': 220000, 'f4': 150000, 'f5': 220000}
+CAP_g = {'g1': 100000, 'g2': 90000, 'g3': 80000, 'g4': 120000, 'g5': 80000}
+CAP_h = {'h1': 140000, 'h2': 100000, 'h3': 110000, 'h4': 90000, 'h5': 120000}
+CAP_h_bar = {'h1': 50000, 'h2': 50000, 'h3': 700000, 'h4': 60000, 'h5': 60000}
+CAP_j = {'j1': 15000000, 'j2': 15000000, 'j3': 15000000, 'j4': 15000000}
+CAP_u = {'u1': 1200000, 'u2': 1400000, 'u3': 1100000, 'u4': 1200000, 'u5': 1300000}
+CAP_Ku = {'u1': 900000, 'u2': 1440000, 'u3': 1110000, 'u4': 1210000, 'u5': 1100000}
+CAP_Kv = {'v1': 57000, 'v2': 72000, 'v3': 66000, 'v4': 62000, 'v5': 59000}
+CAP_Kw = {'w1': 54000, 'w2': 57000, 'w3': 72000, 'w4': 50900, 'w5': 60400}
 CAP_CO2 = 4000000
 
 # Percentage of EoU (a), EoL (b) and disposal (c) products
@@ -167,28 +163,28 @@ m = gp.Model('HMRS')
 
 # Add decision variables
 # Binary decision variables
-X_f = m.addVars(manu, vtype=GRB.BINARY)
-X_g = m.addVars(remanu, vtype=GRB.BINARY)
-X_h = m.addVars(hybrid, vtype=GRB.BINARY)
-X_j = m.addVars(collect, vtype=GRB.BINARY)
-X_u = m.addVars(disassembly, vtype=GRB.BINARY)
-X_v = m.addVars(recycling, vtype=GRB.BINARY)
-X_w = m.addVars(disposal, vtype=GRB.BINARY)
+X_f = m.addVars(manu, vtype=GRB.BINARY, name="Xf")
+X_g = m.addVars(remanu, vtype=GRB.BINARY, name="Xg")
+X_h = m.addVars(hybrid, vtype=GRB.BINARY, name="Xh")
+X_j = m.addVars(collect, vtype=GRB.BINARY, name="Xj")
+X_u = m.addVars(disassembly, vtype=GRB.BINARY, name="Xu")
+X_v = m.addVars(recycling, vtype=GRB.BINARY, name="Xv")
+X_w = m.addVars(disposal, vtype=GRB.BINARY, name="Xw")
 
 # Quantity of flow between facilities
-Q_klf = m.addVars(component, supplier, manu, vtype=GRB.INTEGER, lb=0)
-Q_klh = m.addVars(component, supplier, hybrid, vtype=GRB.INTEGER, lb=0)
-Q_fi = m.addVars(manu, warehouse, vtype=GRB.INTEGER, lb=0)
-Q_gi = m.addVars(remanu, warehouse, vtype=GRB.INTEGER, lb=0)
-Q_hi = m.addVars(hybrid, warehouse, vtype=GRB.INTEGER, lb=0)
-Q_hi_bar = m.addVars(hybrid, warehouse, vtype=GRB.INTEGER, lb=0)
-Q_ju = m.addVars(collect, disassembly, vtype=GRB.INTEGER, lb=0)
-Q_kuw = m.addVars(component, disassembly, disposal, vtype=GRB.INTEGER, lb=0)
-Q_kuv = m.addVars(component, disassembly, recycling, vtype=GRB.INTEGER, lb=0)
-Q_uh = m.addVars(disassembly, hybrid, vtype=GRB.INTEGER, lb=0)
-Q_ug = m.addVars(disassembly, remanu, vtype=GRB.INTEGER, lb=0)
-Q_kvf = m.addVars(component, recycling, manu, vtype=GRB.INTEGER, lb=0)
-Q_kvh = m.addVars(component, recycling, hybrid, vtype=GRB.INTEGER, lb=0)
+Q_klf = m.addVars(component, supplier, manu, vtype=GRB.INTEGER, lb=0, name="Qklf")
+Q_klh = m.addVars(component, supplier, hybrid, vtype=GRB.INTEGER, lb=0, name="Qklh")
+Q_fi = m.addVars(manu, warehouse, vtype=GRB.INTEGER, lb=0, name="Qfi")
+Q_gi = m.addVars(remanu, warehouse, vtype=GRB.INTEGER, lb=0, name="Qgi")
+Q_hi = m.addVars(hybrid, warehouse, vtype=GRB.INTEGER, lb=0, name="Qhi")
+Q_hi_bar = m.addVars(hybrid, warehouse, vtype=GRB.INTEGER, lb=0, name="Qhibar")
+Q_ju = m.addVars(collect, disassembly, vtype=GRB.INTEGER, lb=0, name="Qju")
+Q_kuw = m.addVars(component, disassembly, disposal, vtype=GRB.INTEGER, lb=0, name="Qkuw")
+Q_kuv = m.addVars(component, disassembly, recycling, vtype=GRB.INTEGER, lb=0, name="Qkuv")
+Q_uh = m.addVars(disassembly, hybrid, vtype=GRB.INTEGER, lb=0, name="Quh")
+Q_ug = m.addVars(disassembly, remanu, vtype=GRB.INTEGER, lb=0, name="Qug")
+Q_kvf = m.addVars(component, recycling, manu, vtype=GRB.INTEGER, lb=0, name="Qkvf")
+Q_kvh = m.addVars(component, recycling, hybrid, vtype=GRB.INTEGER, lb=0, name="Qkvh")
 
 # Set objective function
 # Activation costs of all facilities: SUM C_f * X_f
@@ -208,25 +204,25 @@ m.setObjective(EK + PK + TK + KK, GRB.MINIMIZE)
 
 # Add constraints
 # (1)
-m.addConstrs(gp.quicksum(Q_fi[a, b] for b in warehouse) <= CAP_f[a] * X_f[a] for a in manu)
+m.addConstrs((gp.quicksum(Q_fi[a, b] for b in warehouse) <= CAP_f[a] * X_f[a] for a in manu), name="c1")
 
 # (2)
-m.addConstrs(gp.quicksum(Q_gi[a, b] for b in warehouse) <= CAP_g[a] * X_g[a] for a in remanu)
+m.addConstrs((gp.quicksum(Q_gi[a, b] for b in warehouse) <= CAP_g[a] * X_g[a] for a in remanu), name="c2")
 
 # (3)
-m.addConstrs(gp.quicksum(Q_hi[a, b] for b in warehouse) <= CAP_h[a] * X_h[a] for a in hybrid)
+m.addConstrs((gp.quicksum(Q_hi[a, b] for b in warehouse) <= CAP_h[a] * X_h[a] for a in hybrid), name="c3")
 
 # (4)
-m.addConstrs(gp.quicksum(Q_hi_bar[a, b] for b in warehouse) <= CAP_h_bar[a] * X_h[a] for a in hybrid)
+m.addConstrs((gp.quicksum(Q_hi_bar[a, b] for b in warehouse) <= CAP_h_bar[a] * X_h[a] for a in hybrid), name="c4")
 
 # (5)
-m.addConstrs(gp.quicksum(Q_ju[a, b] for b in disassembly) <= CAP_j[a] * X_j[a] for a in collect)
+m.addConstrs((gp.quicksum(Q_ju[a, b] for b in disassembly) <= CAP_j[a] * X_j[a] for a in collect), name="c5")
 
 # (6)
-m.addConstrs(gp.quicksum(Q_ug[a, b] for b in remanu) + gp.quicksum(Q_uh[a, b] for b in hybrid) <= CAP_u[a] * X_u[a] for a in disassembly)
+m.addConstrs((gp.quicksum(Q_ug[a, b] for b in remanu) + gp.quicksum(Q_uh[a, b] for b in hybrid) <= CAP_u[a] * X_u[a] for a in disassembly), name="c6")
 
 # (7)
-m.addConstrs(gp.quicksum(Q_kuv[a, b, c] for a in component for c in recycling) + gp.quicksum(Q_kuw[a, b, c] for a in component for c in disposal) <= CAP_Ku[b] * X_u[b] for b in disassembly)
+m.addConstrs((gp.quicksum(Q_kuv[a, b, c] for a in component for c in recycling) + gp.quicksum(Q_kuw[a, b, c] for a in component for c in disposal) <= CAP_Ku[b] * X_u[b] for b in disassembly), name="c7")
 
 # (8)
 m.addConstrs(gp.quicksum(Q_kvf[a, b, c] for a in component for c in manu) + gp.quicksum(Q_kvh[a, b, c] for a in component for c in hybrid) <= CAP_Kv[b] * X_v[b] for b in recycling)
@@ -235,7 +231,7 @@ m.addConstrs(gp.quicksum(Q_kvf[a, b, c] for a in component for c in manu) + gp.q
 m.addConstrs(gp.quicksum(Q_kuw[a, b, c] for a in component for b in disassembly) <= CAP_Kw[c] * X_w[c] for c in disposal)
 
 # # (10)
-m.addConstrs(gp.quicksum(Q_fi[a, b] for a in manu) + gp.quicksum(Q_hi[a, b] for a in hybrid) + gp.quicksum(Q_gi[a, b] for a in remanu) + gp.quicksum(Q_hi_bar[a, b] for a in hybrid) == D_i[b] for b in warehouse)
+m.addConstrs((gp.quicksum(Q_fi[a, b] for a in manu) + gp.quicksum(Q_hi[a, b] for a in hybrid) + gp.quicksum(Q_gi[a, b] for a in remanu) + gp.quicksum(Q_hi_bar[a, b] for a in hybrid) == D_i[b] for b in warehouse), name="c10")
 
 # # (11)
 m.addConstrs(gp.quicksum(Q_klf[a, b, c] for b in supplier) + gp.quicksum(Q_kvf[a, b, c] for b in recycling)  == gp.quicksum(Q_fi[c, b] for b in warehouse) * R_k[a] for a in component for c in manu)
@@ -250,19 +246,19 @@ m.addConstrs(gp.quicksum(Q_klh[a, b, c] for b in supplier) + gp.quicksum(Q_kvh[a
 m.addConstrs(gp.quicksum(Q_uh[u, h] for u in disassembly) == gp.quicksum(Q_hi_bar[h, i] for i in warehouse) for h in hybrid)
 
 # (15)
-m.addConstrs(gp.quicksum(Q_ju[j, u] for u in disassembly) == M_j[j] for j in collect)
+c15 = m.addConstrs((gp.quicksum(Q_ju[j, u] for u in disassembly) == M_j[j] for j in collect), name="c15")
 
 # # (16)
-m.addConstrs((gp.quicksum(Q_ju[j, u] for j in collect) * alpha >= gp.quicksum(Q_ug[u,g] for g in remanu) + gp.quicksum(Q_uh[u,h] for h in hybrid)) for u in disassembly)
+c16 = m.addConstrs(((gp.quicksum(Q_ju[j, u] for j in collect) * alpha <= gp.quicksum(Q_ug[u,g] for g in remanu) + gp.quicksum(Q_uh[u,h] for h in hybrid)) for u in disassembly), name="c16")
 
 # # (17)
-m.addConstrs(gp.quicksum(Q_ju[j, u] for j in collect) * beta * R_k[k] >= gp.quicksum(Q_kuv[k,u,v] for v in recycling) for u in disassembly for k in component)
+c17 = m.addConstrs((gp.quicksum(Q_ju[j, u] for j in collect) * beta * R_k[k] <= gp.quicksum(Q_kuv[k,u,v] for v in recycling) for u in disassembly for k in component), name="c17")
 
 # # (18)
-m.addConstrs(gp.quicksum(Q_ju[j, u] for j in collect) * gamma * R_k[k] >= gp.quicksum(Q_kuv[k,u,v] for v in recycling) for u in disassembly for k in component)
+m.addConstrs(gp.quicksum(Q_ju[j, u] for j in collect) * gamma * R_k[k] <= gp.quicksum(Q_kuw[k,u,w] for w in disposal) for u in disassembly for k in component)
 
 # # (19)
-m.addConstrs(gp.quicksum(Q_kuv[a, m, r] for m in disassembly) == gp.quicksum(Q_kvf[a, r, c] for c in manu) + gp.quicksum(Q_kvh[a, r, c] for c in hybrid) for a in component for r in recycling)
+m.addConstrs(gp.quicksum(Q_kuv[a, m, r] for m in disassembly) <= gp.quicksum(Q_kvf[a, r, c] for c in manu) + gp.quicksum(Q_kvh[a, r, c] for c in hybrid) for a in component for r in recycling)
 
 # (20)
 m.addConstr(gp.quicksum(Q_fi[a, b] * E_F for a in manu for b in warehouse) + gp.quicksum(Q_gi[a, b] * E_G for a in remanu for b in warehouse) + gp.quicksum((Q_hi[a, b] + Q_hi_bar[a, b]) * E_H for a in hybrid for b in warehouse) + gp.quicksum(Q_ju[a, b] * E_J for a in collect for b in disassembly) + gp.quicksum(Q_ug[a, b] * E_U for a in disassembly for b in remanu) + gp.quicksum(Q_uh[a, b] * E_U for a in disassembly for b in hybrid) + gp.quicksum(Q_kuw[a, b, c] * E_KU for a in component for b in disassembly for c in disposal) + gp.quicksum(Q_kuv[a, b, c] * E_KU for a in component for b in disassembly for c in recycling) + gp.quicksum(Q_kvf[a, b, c] * E_V for a in component for b in recycling for c in manu) + gp.quicksum(Q_kvh[a, b, c] * E_V for a in component for b in recycling for c in hybrid) + (gp.quicksum(Q_fi[a, b] * S_fi[a, b] for a in manu for b in warehouse) + gp.quicksum(Q_gi[a, b] * S_gi[a, b] for a in remanu for b in warehouse) + gp.quicksum((Q_hi[a, b] + Q_hi_bar[a, b]) * S_hi[a, b] for a in hybrid for b in warehouse) + gp.quicksum(Q_ju[a, b] * S_ju[a, b] for a in collect for b in disassembly)) * E_P + (gp.quicksum(Q_klf[a, b, c] * S_lf[b, c] for a in component for b in supplier for c in manu) + gp.quicksum(Q_klh[a, b, c] * S_lh[b, c] for a in component for b in supplier for c in hybrid) + gp.quicksum(Q_kuw[a, b, c] * S_uw[b, c] for a in component for b in disassembly for c in disposal) + gp.quicksum(Q_kuv[a, b, c] * S_uv[b, c] for a in component for b in disassembly for c in recycling) + gp.quicksum(Q_kvf[a, b, c] * S_vf[b, c] for a in component for b in recycling for c in manu) + gp.quicksum(Q_kvh[a, b, c] * S_vh[b, c] for a in component for b in recycling for c in hybrid)) * E_K <= CAP_CO2)
@@ -290,6 +286,11 @@ if m.Status == GRB.OPTIMAL:
     utoh = m.getAttr('X', Q_uh)
     kutow = m.getAttr('X', Q_kuw)
     kutov = m.getAttr('X', Q_kuv)
+    xf = m.getAttr('X', X_f)
+
+    print(kutow)
+    print(kutov)
+
 
     print("F to I: ")
     for f in manu:
@@ -362,3 +363,13 @@ if m.Status == GRB.OPTIMAL:
     print(KK.getValue() / pi)
     print("Optimality gap: ")
     print(m.MIPGap)
+
+elif m.Status == GRB.INFEASIBLE:
+	m.computeIIS()
+	# m.write("model.ilp")
+	# m.write("hmrs.mps")
+	for c in m.getConstrs():
+		if c.IISConstr: print(f'\t{c.constrname}: {m.getRow(c)} {c.Sense} {c.RHS}')
+	print("=============================================================================================")
+	print("=============================================================================================")
+	print()

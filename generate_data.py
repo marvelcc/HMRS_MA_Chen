@@ -19,22 +19,22 @@ T = 12
 # Activation cost of each facility
 # Values subject to change according to collected real world data
 
-C_f = {a: random.randrange(200,351)*10000 for a in manu}
-C_g = {a: random.randrange(150,250)*10000 for a in remanu}
-C_h = {a: random.randrange(105,200)*10000 for a in hybrid}
-C_j = {a: random.randrange(100,251)*1000 for a in collect}
-C_u = {a: random.randrange(100,251)*1000 for a in disassembly}
-C_v = {a: random.randrange(100,251)*1000 for a in recycling}
-C_w = {a: random.randrange(100,251)*1000 for a in disposal}
+# C_f = {a: round(random.normalvariate(200, 20)) * 10000 for a in manu}
+# C_g = {a: round(random.normalvariate(150, 15)) * 10000 for a in remanu}
+# C_h = {a: round(random.normalvariate(100, 10)) * 10000 for a in hybrid}
+# C_j = {a: round(random.normalvariate(40, 4)) * 10000 for a in collect}
+# C_u = {a: round(random.normalvariate(100, 10)) * 10000 for a in disassembly}
+# C_v = {a: round(random.normalvariate(80, 8)) * 10000 for a in recycling}
+# C_w = {a: round(random.normalvariate(40, 4)) * 10000 for a in disposal}
 
-locations = {**C_f, **C_g, **C_h, **C_j, **C_u, **C_v, **C_w}
+# locations = {**C_f, **C_g, **C_h, **C_j, **C_u, **C_v, **C_w}
 
-with open('activation_cost.csv', 'w') as csv_file:
-    writer = csv.writer(csv_file)
-    for key, value in locations.items():
-        writer.writerow([key, value])
+# with open('activation_cost.csv', 'w') as csv_file:
+#     writer = csv.writer(csv_file)
+#     for key, value in locations.items():
+#         writer.writerow([key, value])
 
-csv_file.close()
+# csv_file.close()
 
 # -------------------------------------------------
 
@@ -53,15 +53,15 @@ csv_file.close()
 
 # for t in range(T):
     
-#     B_F = random.randrange(20,25)
-#     B_G = random.randrange(15,20)
-#     B_H = random.randrange(15,20)
-#     B_H_bar = random.randrange(10,15)
-#     B_J = random.randrange(5,8)
-#     B_KU = random.randrange(1,4)
-#     B_U = random.randrange(1,4)
-#     B_V = random.randrange(1,4)
-#     B_W = random.randrange(1,4)
+#     B_F = random.randrange(20,40)
+#     B_G = random.randrange(10,20)
+#     B_H = random.randrange(20,40)
+#     B_H_bar = random.randrange(10,20)
+#     B_J = random.randrange(4,8)
+#     B_KU = random.randrange(2,4)
+#     B_U = random.randrange(10,20)
+#     B_V = random.randrange(8,16)
+#     B_W = random.randrange(4,8)
 
     
 #     B_F_t.append(B_F)
@@ -83,11 +83,12 @@ csv_file.close()
 # Procurement cost of each component at each period
 # Values subject to change according to collected real world data
 
-# procurement_price = {}
+# price_ranges = {'k1': (6, 10), 'k2': (4, 8), 'k3': (1, 3)}
+# df_procurement = pd.DataFrame()
 # for k in component:
-#     prices = [random.randint(1, 6) for t in range(T)]
-#     procurement_price[k] = prices
-# df_procurement = pd.DataFrame(procurement_price)
+#     min_price, max_price = price_ranges[k]
+#     prices = [random.randint(min_price, max_price) for _ in range(T)]
+#     df_procurement[k] = prices
 # df_procurement.to_csv('procurement_price.csv')
 
 # -------------------------------------------------
@@ -95,7 +96,7 @@ csv_file.close()
 # Create distance matrix between each location, not all combination are used
 
 # facilities = supplier + manu + remanu + hybrid + warehouse + collect + disassembly + recycling + disposal
-# distance_table = {loc1: {loc2: 0 if loc1 == loc2 else random.randint(10, 75) for loc2 in facilities} for loc1 in facilities}
+# distance_table = {loc1: {loc2: 0 if loc1 == loc2 else random.randint(10, 35) * 10 for loc2 in facilities} for loc1 in facilities}
 # df_distance = pd.DataFrame.from_dict(distance_table, orient='index')
 # df_distance.to_csv('distance_matrix.csv')
 
@@ -106,10 +107,10 @@ csv_file.close()
 
 # total_demand = {}
 # for i in warehouse:
-#     demand = [random.randint(10, 40) * 1000 for t in range(T)]
+#     demand = [round(random.normalvariate(120, 12)) * 10 for t in range(T)]
 #     total_demand[i] = demand
 # df_demand = pd.DataFrame(total_demand)
-# df_demand.to_csv('demand.csv', index=False)
+# df_demand.to_csv('demand.csv')
 
 # -------------------------------------------------
 
@@ -119,10 +120,10 @@ csv_file.close()
 
 # total_returns = {}
 # for j in collect:
-#     returns = [random.randint(3, 6) * 1000 for t in range(T)]
+#     returns = [random.randint(20, 60) * 10 for t in range(T)]
 #     total_returns[j] = returns
 # df_returns = pd.DataFrame(total_returns)
-# df_returns.to_csv('returns.csv', index=False)
+# df_returns.to_csv('returns.csv')
 
 # -------------------------------------------------
 
@@ -135,29 +136,29 @@ csv_file.close()
 # for t in range(T):
 #     capacities = {}
 #     for f in manu:
-#         capacities[f] = random.randint(15,25) * 1000
+#         capacities[f] = round(random.normalvariate(120, 12)) * 10
 #     for g in remanu:
-#         capacities[g] = random.randint(8,14) * 1000
+#         capacities[g] = round(random.normalvariate(60, 6)) * 10
 #     for h in hybrid:
-#         capacities[h] = random.randint(9,15) * 1000
+#         capacities[h] = round(random.normalvariate(60, 6)) * 10
 #     for j in collect:
-#         capacities[j] = random.randint(8,15) * 1000
+#         capacities[j] = round(random.normalvariate(100, 10)) * 10
 #     for u in disassembly:
-#         capacities[u] = random.randint(10,15) * 1000
+#         capacities[u] = round(random.normalvariate(80, 8)) * 10
 #     cap.append({**capacities})
 
 #     capacities_bar = {}
 #     for h in hybrid:
-#         capacities_bar[h] = random.randint(5,10) * 1000
+#         capacities_bar[h] = round(random.normalvariate(30, 3)) * 10
 #     cap_bar.append({**capacities_bar})
 
 #     capacities_comp = {}
 #     for Ku in disassembly:
-#         capacities_comp[Ku] = random.randint(30,50) * 300
+#         capacities_comp[Ku] = round(random.normalvariate(60, 6)) * 100
 #     for Kv in recycling:
-#         capacities_comp[Kv] = random.randint(15,25) * 300
+#         capacities_comp[Kv] = round(random.normalvariate(45, 4.5)) * 100
 #     for Kw in disposal:
-#         capacities_comp[Kw] = random.randint(15,25) * 300
+#         capacities_comp[Kw] = round(random.normalvariate(70, 7)) * 100
 #     cap_component.append({**capacities_comp})
 
 # df_prod_cap = pd.DataFrame(cap)
