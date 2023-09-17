@@ -1,9 +1,9 @@
-Gesamtkosten:  29387481 
+Gesamtkosten:  29357235 
 Gesamte Einrichtungskosten:  23850000
-Gesamte Bearbeitungs- und Produktionskosten:  4645253
-Gesamte Transportkosten:  134788
-Gesamtkosten für Emissionen (Berechtigung + Strafe):  757440
-Gesamtemissionen in kg:  8911057
+Gesamte Bearbeitungs- und Produktionskosten:  4645243
+Gesamte Transportkosten:  134783
+Gesamtkosten für Emissionen (Berechtigung + Strafe):  727208
+Gesamtemissionen in kg:  8555392
 Gekaufte Emissionsberechtigung:  10000000000000.0 
-Rechtlich ausgestoßenes CO2:  8911057.0 
+Rechtlich ausgestoßenes CO2:  8555392.0 
 Emissionsüberschuss:  0.0 

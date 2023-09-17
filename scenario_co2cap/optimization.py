@@ -71,8 +71,8 @@ E_U = 40
 E_KU = 5
 E_V = 10
 E_W = 15
-E_P = 0.0265
-E_K = 0.0018
+E_P = 0.009
+E_K = 0.0006
 
 
 # Emission capacity in kg
