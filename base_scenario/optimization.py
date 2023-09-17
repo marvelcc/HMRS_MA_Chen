@@ -76,11 +76,12 @@ E_K = 0.0018
 
 
 # Emission capacity in kg
-CAP_CO2 = 5000000
+CAP_Em = 5000000
 
 
 # Cost in euro
-pi = 0.085 # Carbon offset per kg 
+pi = 0.085 # carbon legal per kg 
+pi_p = 0.134 # carbon penalty per kg
 omega_p = 0.0058 # per km per product
 omega_k = 0.00039 # per km per component
 
@@ -195,6 +196,12 @@ Q_uh = m.addVars(disassembly, hybrid, period, vtype=GRB.INTEGER, lb=0, name="Q_u
 Q_ug = m.addVars(disassembly, remanu, period, vtype=GRB.INTEGER, lb=0, name="Q_ug")
 Q_kvf = m.addVars(component, recycling, manu, period, vtype=GRB.INTEGER, lb=0, name="Q_kvf")
 Q_kvh = m.addVars(component, recycling, hybrid, period, vtype=GRB.INTEGER, lb=0, name="Q_kvh")
+legal = m.addVar(vtype=GRB.INTEGER, name="legal")
+excess = m.addVar(vtype=GRB.INTEGER, name="excess")
+CO2 = m.addVar(vtype=GRB.INTEGER)
+CAP_CO2 = m.addVar(vtype=GRB.INTEGER,lb=CAP_Em, ub=CAP_Em)
+var1 = m.addVar(lb=-GRB.INFINITY)
+
 
 # Set objective function
 # Activation costs of all facilities: SUM C_f * X_f
@@ -207,9 +214,8 @@ PK = gp.quicksum(B_F[t] * Q_fi[f, i, t] for f in manu for i in warehouse for t i
 TK = omega_k * (gp.quicksum(S_lf[l, f] * Q_klf[k, l, f, t] for k in component for l in supplier for f in manu for t in period) + gp.quicksum(S_lh[l, h] * Q_klh[k, l, h, t] for k in component for l in supplier for h in hybrid for t in period) + gp.quicksum(S_uw[u, w] * Q_kuw[k, u, w, t] for k in component for u in disassembly for w in disposal for t in period) + gp.quicksum(S_uv[u, v] * Q_kuv[k, u, v, t] for k in component for u in disassembly for v in recycling for t in period) + gp.quicksum(S_vf[v, f] * Q_kvf[k, v, f, t] for k in component for v in recycling for f in manu for t in period) + gp.quicksum(S_vh[v, h] * Q_kvh[k, v, h, t] for k in component for v in recycling for h in hybrid for t in period)) + omega_p * (gp.quicksum(S_fi[f, i] * Q_fi[f, i, t] for f in manu for i in warehouse for t in period) + gp.quicksum(S_gi[g, i] * Q_gi[g, i, t] for g in remanu for i in warehouse for t in period) + gp.quicksum(S_hi[h, i] * Q_hi[h, i, t] for h in hybrid for i in warehouse for t in period) + gp.quicksum(S_hi[h, i] * Q_hi_bar[h, i, t] for h in hybrid for i in warehouse for t in period) + gp.quicksum(S_ju[j, u] * Q_ju[j, u, t] for j in collect for u in disassembly for t in period) + gp.quicksum(S_uh[u, h] * Q_uh[u, h, t] for u in disassembly for h in hybrid for t in period) + gp.quicksum(S_ug[u, g] * Q_ug[u, g, t] for u in disassembly for g in remanu for t in period))
 
 # Cost from CO2-offset
-CO2 = gp.quicksum(Q_fi[a, b, t] * E_F for a in manu for b in warehouse for t in period) + gp.quicksum(Q_gi[a, b, t] * E_G for a in remanu for b in warehouse for t in period) + gp.quicksum((Q_hi[a, b, t] + Q_hi_bar[a, b, t]) * E_H for a in hybrid for b in warehouse for t in period) + gp.quicksum(Q_ju[a, b, t] * E_J for a in collect for b in disassembly for t in period) + gp.quicksum(Q_ug[a, b, t] * E_U for a in disassembly for b in remanu for t in period) + gp.quicksum(Q_uh[a, b, t] * E_U for a in disassembly for b in hybrid for t in period) + gp.quicksum(Q_kuw[a, b, c, t] * E_KU for a in component for b in disassembly for c in disposal for t in period) + gp.quicksum(Q_kuv[a, b, c, t] * E_KU for a in component for b in disassembly for c in recycling for t in period) + gp.quicksum(Q_kvf[a, b, c, t] * E_V for a in component for b in recycling for c in manu for t in period) + gp.quicksum(Q_kvh[a, b, c, t] * E_V for a in component for b in recycling for c in hybrid for t in period) + (gp.quicksum(Q_fi[a, b, t] * S_fi[a, b] for a in manu for b in warehouse for t in period) + gp.quicksum(Q_gi[a, b, t] * S_gi[a, b] for a in remanu for b in warehouse for t in period) + gp.quicksum((Q_hi[a, b, t] + Q_hi_bar[a, b, t]) * S_hi[a, b] for a in hybrid for b in warehouse for t in period) + gp.quicksum(Q_ju[a, b, t] * S_ju[a, b] for a in collect for b in disassembly for t in period)) * E_P + (gp.quicksum(Q_klf[a, b, c, t] * S_lf[b, c] for a in component for b in supplier for c in manu for t in period) + gp.quicksum(Q_klh[a, b, c, t] * S_lh[b, c] for a in component for b in supplier for c in hybrid for t in period) + gp.quicksum(Q_kuw[a, b, c, t] * S_uw[b, c] for a in component for b in disassembly for c in disposal for t in period) + gp.quicksum(Q_kuv[a, b, c, t] * S_uv[b, c] for a in component for b in disassembly for c in recycling for t in period) + gp.quicksum(Q_kvf[a, b, c, t] * S_vf[b, c] for a in component for b in recycling for c in manu for t in period) + gp.quicksum(Q_kvh[a, b, c, t] * S_vh[b, c] for a in component for b in recycling for c in hybrid for t in period)) * E_K
+KK = pi * legal + pi_p * excess
 
-KK = pi * (CO2 - CAP_CO2)
 
 # Define the objective function
 m.setObjective(EK + PK + TK + KK, GRB.MINIMIZE)
@@ -272,6 +278,12 @@ m.addConstrs((gp.quicksum(Q_ju[j, u, t] for j in collect) * R_k[k] * gamma[t] ==
 # (19)
 m.addConstrs((gp.quicksum(Q_kuv[k, u, v, t] for u in disassembly) == (gp.quicksum(Q_kvf[k, v, f, t] for f in manu) + gp.quicksum(Q_kvh[k, v, h, t] for h in hybrid)) for k in component for v in recycling for t in period), name='c19')
 
+# TEST
+m.addConstr(CO2 == gp.quicksum(Q_fi[a, b, t] * E_F for a in manu for b in warehouse for t in period) + gp.quicksum(Q_gi[a, b, t] * E_G for a in remanu for b in warehouse for t in period) + gp.quicksum((Q_hi[a, b, t] + Q_hi_bar[a, b, t]) * E_H for a in hybrid for b in warehouse for t in period) + gp.quicksum(Q_ju[a, b, t] * E_J for a in collect for b in disassembly for t in period) + gp.quicksum(Q_ug[a, b, t] * E_U for a in disassembly for b in remanu for t in period) + gp.quicksum(Q_uh[a, b, t] * E_U for a in disassembly for b in hybrid for t in period) + gp.quicksum(Q_kuw[a, b, c, t] * E_KU for a in component for b in disassembly for c in disposal for t in period) + gp.quicksum(Q_kuv[a, b, c, t] * E_KU for a in component for b in disassembly for c in recycling for t in period) + gp.quicksum(Q_kvf[a, b, c, t] * E_V for a in component for b in recycling for c in manu for t in period) + gp.quicksum(Q_kvh[a, b, c, t] * E_V for a in component for b in recycling for c in hybrid for t in period) + (gp.quicksum(Q_fi[a, b, t] * S_fi[a, b] for a in manu for b in warehouse for t in period) + gp.quicksum(Q_gi[a, b, t] * S_gi[a, b] for a in remanu for b in warehouse for t in period) + gp.quicksum((Q_hi[a, b, t] + Q_hi_bar[a, b, t]) * S_hi[a, b] for a in hybrid for b in warehouse for t in period) + gp.quicksum(Q_ju[a, b, t] * S_ju[a, b] for a in collect for b in disassembly for t in period)) * E_P + (gp.quicksum(Q_klf[a, b, c, t] * S_lf[b, c] for a in component for b in supplier for c in manu for t in period) + gp.quicksum(Q_klh[a, b, c, t] * S_lh[b, c] for a in component for b in supplier for c in hybrid for t in period) + gp.quicksum(Q_kuw[a, b, c, t] * S_uw[b, c] for a in component for b in disassembly for c in disposal for t in period) + gp.quicksum(Q_kuv[a, b, c, t] * S_uv[b, c] for a in component for b in disassembly for c in recycling for t in period) + gp.quicksum(Q_kvf[a, b, c, t] * S_vf[b, c] for a in component for b in recycling for c in manu for t in period) + gp.quicksum(Q_kvh[a, b, c, t] * S_vh[b, c] for a in component for b in recycling for c in hybrid for t in period)) * E_K)
+
+m.addConstr(var1 == CO2 - CAP_CO2)
+m.addGenConstrMin(legal, [CO2, CAP_CO2])
+m.addGenConstrMax(excess, [var1], 0.0)
 
 # Activation constraint: Once a facility is opened in the first period, it stays open. No new facilities are allowed to open in later periods
 for t in period:
@@ -315,7 +327,7 @@ if m.Status == GRB.OPTIMAL:
 	m.Params.LogFile = ""
 
 	with open(objective_filename, "w") as file:
-		file.write("%s %s \n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n" % ("Gesamtkosten: ", str(round(total_cost)), "Gesamte Einrichtungskosten: ", str(round(EK.getValue())), "Gesamte Bearbeitungs- und Produktionskosten: ", str(round(PK.getValue())), "Gesamte Transportkosten: ", str(round(TK.getValue())), "Gesamte Kosten für den Emissionsüberschuss: ", str(round(KK.getValue())), "Gesamtemissionen in kg: ", str(round(CO2.getValue()))))
+		file.write("%s %s \n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s \n%s %s \n%s %s \n" % ("Gesamtkosten: ", str(round(total_cost)), "Gesamte Einrichtungskosten: ", str(round(EK.getValue())), "Gesamte Bearbeitungs- und Produktionskosten: ", str(round(PK.getValue())), "Gesamte Transportkosten: ", str(round(TK.getValue())), "Gesamtkosten für Emissionen (Berechtigung + Strafe): ", str(round(KK.getValue())), "Gesamtemissionen in kg: ", str(round(CO2.X)), "Gekaufte Emissionsberechtigung: ", str(CAP_CO2.X), "Rechtlich ausgestoßenes CO2: ", str(legal.X), "Emissionsüberschuss: ", str(excess.X)))
 	file.close()
 
 	# Activation decisions
@@ -510,6 +522,10 @@ if m.Status == GRB.OPTIMAL:
 	k2_vh.to_csv("base_scenario/results/Q_kvh_k2.csv")
 	k3_vh.to_csv("base_scenario/results/Q_kvh_k3.csv")
 
+	print("=======================================================================================")
+	print("=============================== Optimal solution found! ===============================")
+	print("=======================================================================================")
+
 
 elif m.Status == GRB.INFEASIBLE:
 	m.computeIIS()
@@ -517,4 +533,8 @@ elif m.Status == GRB.INFEASIBLE:
 	m.write("hmrs.mps")
 	for c in m.getConstrs():
 		if c.IISConstr: print(f'\t{c.constrname}: {m.getRow(c)} {c.Sense} {c.RHS}')
-	print()
+
+	print("=======================================================================================")
+	print("================================ Model is infeasible! =================================")
+	print("=======================================================================================")
+
