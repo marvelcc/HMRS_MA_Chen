@@ -1,8 +1,10 @@
 import gurobipy as gp
 from gurobipy import GRB
 import pandas as pd
-import random
-import numpy as np
+
+# Scenario: no CO2 regulation
+parameters = "parameters/base/"
+scenario_result = "scenario_co2cap/results/"
 
 # Initialize the sets and parameters of the model
 # Sets of the model
@@ -20,16 +22,16 @@ recycling = ['v1', 'v2', 'v3', 'v4', 'v5']
 disposal = ['w1', 'w2', 'w3', 'w4', 'w5']
 
 # Reading basis scenario data
-activation = pd.read_csv('base_scenario/activation_cost.csv', header=None)
-demand = pd.read_csv('base_scenario/demand.csv', index_col=0)
-distance = pd.read_csv('base_scenario/distance_matrix.csv', index_col=0)
-processing = pd.read_csv('base_scenario/processing_cost.csv', index_col=0)
-procurement = pd.read_csv('base_scenario/procurement_price.csv', index_col=0)
-returns = pd.read_csv('base_scenario/returns.csv', index_col=0)
-capacity = pd.read_csv('base_scenario/production_capacity.csv', index_col=0)
-capacity_bar = pd.read_csv('base_scenario/production_capacity_bar.csv', index_col=0)
-capacity_k = pd.read_csv('base_scenario/production_capacity_k.csv', index_col=0)
-ratio = pd.read_csv('base_scenario/ratio.csv', index_col=0)
+activation = pd.read_csv(parameters + 'activation_cost.csv', header=None)
+demand = pd.read_csv(parameters + 'demand.csv', index_col=0)
+distance = pd.read_csv(parameters + 'distance_matrix.csv', index_col=0)
+processing = pd.read_csv(parameters + 'processing_cost.csv', index_col=0)
+procurement = pd.read_csv(parameters + 'procurement_price.csv', index_col=0)
+returns = pd.read_csv(parameters +  'returns.csv', index_col=0)
+capacity = pd.read_csv(parameters + 'production_capacity.csv', index_col=0)
+capacity_bar = pd.read_csv(parameters + 'production_capacity_bar.csv', index_col=0)
+capacity_k = pd.read_csv(parameters + 'production_capacity_k.csv', index_col=0)
+ratio = pd.read_csv(parameters + 'ratio.csv', index_col=0)
 
 # Read activation costs from activation_cost.csv
 for i in activation.columns:
@@ -48,6 +50,7 @@ for i in activation.columns:
 	for w in disposal:
 		C_w = {row[0]: row[1] for index, row in activation.iterrows() if row[0] in disposal}
 
+
 # Read distance between facilities from distance matrix
 S_lf = {(l, f): distance.loc[l, f] for l in supplier for f in manu}
 S_lh = {(l, h): distance.loc[l, h] for l in supplier for h in hybrid}
@@ -63,24 +66,25 @@ S_vf = {(v, f): distance.loc[v, f] for v in recycling for f in manu}
 S_vh = {(v, h): distance.loc[v, h] for v in recycling for h in hybrid}
 
 # Emission in kg per product or component
-E_F = 80
-E_G = 16
-E_H = 40
-E_J = 80
-E_U = 40
+E_F = 10
+E_G = 2
+E_H = 5
+E_J = 10
+E_U = 5
 E_KU = 5
-E_V = 10
-E_W = 15
-E_P = 0.0265
-E_K = 0.0018
+E_V = 0.5
+E_W = 2
+E_P = 0.009
+E_K = 0.0006
 
 
 # Emission capacity in kg
-CAP_Em = 10000000000000
+CAP_Em = 20000000
+
 
 # Cost in euro
-pi = 0.085 # carbon legal per kg 
-pi_p = 0.134 # carbon penalty per kg
+pi = 0.085 * 0 # carbon legal per kg 
+pi_p = 0.134 * 0 # carbon penalty per kg
 omega_p = 0.0058 # per km per product
 omega_k = 0.00039 # per km per component
 
@@ -122,6 +126,11 @@ for t, row in returns.iterrows():
 	for j in returns.columns:
 		value = returns.loc[t, j]
 		M_j[(t, j)] = value
+
+# The ratio between EoU, EoL and to-be-disposed components
+alpha = ratio['a'].tolist()
+beta = ratio['b'].tolist()
+gamma = ratio['c'].tolist()
 
 # Read the production capacity of each facility in period t
 CAP_f = {}
@@ -165,10 +174,7 @@ for t, row in capacity_k.iterrows():
 		value = capacity_k.loc[t, w]
 		CAP_Kw[(t, w)] = value
 
-# Read the ratio between EoU (a), EoL (b) and disposal (c) products in period t
-alpha = ratio['a'].tolist()
-beta = ratio['b'].tolist()
-gamma = ratio['c'].tolist()
+
 
 m = gp.Model('HMRS')
 # Add decision variables
@@ -277,8 +283,8 @@ m.addConstrs((gp.quicksum(Q_ju[j, u, t] for j in collect) * R_k[k] * gamma[t] ==
 # (19)
 m.addConstrs((gp.quicksum(Q_kuv[k, u, v, t] for u in disassembly) == (gp.quicksum(Q_kvf[k, v, f, t] for f in manu) + gp.quicksum(Q_kvh[k, v, h, t] for h in hybrid)) for k in component for v in recycling for t in period), name='c19')
 
-# TEST
-m.addConstr(CO2 == gp.quicksum(Q_fi[a, b, t] * E_F for a in manu for b in warehouse for t in period) + gp.quicksum(Q_gi[a, b, t] * E_G for a in remanu for b in warehouse for t in period) + gp.quicksum((Q_hi[a, b, t] + Q_hi_bar[a, b, t]) * E_H for a in hybrid for b in warehouse for t in period) + gp.quicksum(Q_ju[a, b, t] * E_J for a in collect for b in disassembly for t in period) + gp.quicksum(Q_ug[a, b, t] * E_U for a in disassembly for b in remanu for t in period) + gp.quicksum(Q_uh[a, b, t] * E_U for a in disassembly for b in hybrid for t in period) + gp.quicksum(Q_kuw[a, b, c, t] * E_KU for a in component for b in disassembly for c in disposal for t in period) + gp.quicksum(Q_kuv[a, b, c, t] * E_KU for a in component for b in disassembly for c in recycling for t in period) + gp.quicksum(Q_kvf[a, b, c, t] * E_V for a in component for b in recycling for c in manu for t in period) + gp.quicksum(Q_kvh[a, b, c, t] * E_V for a in component for b in recycling for c in hybrid for t in period) + (gp.quicksum(Q_fi[a, b, t] * S_fi[a, b] for a in manu for b in warehouse for t in period) + gp.quicksum(Q_gi[a, b, t] * S_gi[a, b] for a in remanu for b in warehouse for t in period) + gp.quicksum((Q_hi[a, b, t] + Q_hi_bar[a, b, t]) * S_hi[a, b] for a in hybrid for b in warehouse for t in period) + gp.quicksum(Q_ju[a, b, t] * S_ju[a, b] for a in collect for b in disassembly for t in period)) * E_P + (gp.quicksum(Q_klf[a, b, c, t] * S_lf[b, c] for a in component for b in supplier for c in manu for t in period) + gp.quicksum(Q_klh[a, b, c, t] * S_lh[b, c] for a in component for b in supplier for c in hybrid for t in period) + gp.quicksum(Q_kuw[a, b, c, t] * S_uw[b, c] for a in component for b in disassembly for c in disposal for t in period) + gp.quicksum(Q_kuv[a, b, c, t] * S_uv[b, c] for a in component for b in disassembly for c in recycling for t in period) + gp.quicksum(Q_kvf[a, b, c, t] * S_vf[b, c] for a in component for b in recycling for c in manu for t in period) + gp.quicksum(Q_kvh[a, b, c, t] * S_vh[b, c] for a in component for b in recycling for c in hybrid for t in period)) * E_K)
+# CO2 constraint
+m.addConstr((CO2 == gp.quicksum(Q_fi[a, b, t] * E_F for a in manu for b in warehouse for t in period) + gp.quicksum(Q_gi[a, b, t] * E_G for a in remanu for b in warehouse for t in period) + gp.quicksum((Q_hi[a, b, t] + Q_hi_bar[a, b, t]) * E_H for a in hybrid for b in warehouse for t in period) + gp.quicksum(Q_ju[a, b, t] * E_J for a in collect for b in disassembly for t in period) + gp.quicksum(Q_ug[a, b, t] * E_U for a in disassembly for b in remanu for t in period) + gp.quicksum(Q_uh[a, b, t] * E_U for a in disassembly for b in hybrid for t in period) + gp.quicksum(Q_kuw[a, b, c, t] * E_KU for a in component for b in disassembly for c in disposal for t in period) + gp.quicksum(Q_kuv[a, b, c, t] * E_KU for a in component for b in disassembly for c in recycling for t in period) + gp.quicksum(Q_kvf[a, b, c, t] * E_V for a in component for b in recycling for c in manu for t in period) + gp.quicksum(Q_kvh[a, b, c, t] * E_V for a in component for b in recycling for c in hybrid for t in period) + (gp.quicksum(Q_fi[a, b, t] * S_fi[a, b] for a in manu for b in warehouse for t in period) + gp.quicksum(Q_gi[a, b, t] * S_gi[a, b] for a in remanu for b in warehouse for t in period) + gp.quicksum((Q_hi[a, b, t] + Q_hi_bar[a, b, t]) * S_hi[a, b] for a in hybrid for b in warehouse for t in period) + gp.quicksum(Q_ju[a, b, t] * S_ju[a, b] for a in collect for b in disassembly for t in period)) * E_P + (gp.quicksum(Q_klf[a, b, c, t] * S_lf[b, c] for a in component for b in supplier for c in manu for t in period) + gp.quicksum(Q_klh[a, b, c, t] * S_lh[b, c] for a in component for b in supplier for c in hybrid for t in period) + gp.quicksum(Q_kuw[a, b, c, t] * S_uw[b, c] for a in component for b in disassembly for c in disposal for t in period) + gp.quicksum(Q_kuv[a, b, c, t] * S_uv[b, c] for a in component for b in disassembly for c in recycling for t in period) + gp.quicksum(Q_kvf[a, b, c, t] * S_vf[b, c] for a in component for b in recycling for c in manu for t in period) + gp.quicksum(Q_kvh[a, b, c, t] * S_vh[b, c] for a in component for b in recycling for c in hybrid for t in period)) * E_K), name="CO2")
 
 m.addConstr(var1 == CO2 - CAP_CO2)
 m.addGenConstrMin(legal, [CO2, CAP_CO2])
@@ -309,8 +315,8 @@ for t in period:
 		m.addConstrs(((X_w[w, 0] == 1) >> (X_w[w, i+1] == 1) for i in range(0, 11)))
 
 
-log_filename = "scenario_co2cap/results/mip_log.txt"
-objective_filename = "scenario_co2cap/results/objective_function.txt"
+log_filename = scenario_result + "mip_log.txt"
+objective_filename = scenario_result + "objective_function.txt"
 
 m.Params.OutputFlag = 1
 m.Params.LogFile = log_filename
@@ -326,7 +332,7 @@ if m.Status == GRB.OPTIMAL:
 	m.Params.LogFile = ""
 
 	with open(objective_filename, "w") as file:
-		file.write("%s %s \n%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s \n%s %s \n%s %s \n" % ("Gesamtkosten: ", str(round(total_cost)), "Gesamte Einrichtungskosten: ", str(round(EK.getValue())), "Gesamte Bearbeitungs- und Produktionskosten: ", str(round(PK.getValue())), "Gesamte Transportkosten: ", str(round(TK.getValue())), "Gesamtkosten für Emissionen (Berechtigung + Strafe): ", str(round(KK.getValue())), "Gesamtemissionen in kg: ", str(round(CO2.X)), "Gekaufte Emissionsberechtigung: ", str(CAP_CO2.X), "Rechtlich ausgestoßenes CO2: ", str(legal.X), "Emissionsüberschuss: ", str(excess.X)))
+		file.write("%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s \n" % ("Gesamtkosten: ", str(round(total_cost, 2)), "Gesamte Einrichtungskosten: ", str(round(EK.getValue(), 2)), "Gesamte Bearbeitungs- und Produktionskosten: ", str(round(PK.getValue(), 2)), "Gesamte Transportkosten: ", str(round(TK.getValue(), 2)), "Gesamtkosten für Emissionen: ", str(round(KK.getValue(), 2)), "Gesamtemissionen in kg: ", str(round(CO2.X, 2))))
 	file.close()
 
 	# Activation decisions
@@ -365,8 +371,8 @@ if m.Status == GRB.OPTIMAL:
 	actv_xw.index = pd.MultiIndex.from_tuples(actv_xw.index)
 	actv_xw = actv_xw.unstack()
 
-	activation_matrix = pd.concat([actv_xf, actv_xg, actv_xh, actv_xj, actv_xu, actv_xv, actv_xw]).transpose()
-	activation_matrix.to_csv("scenario_co2cap/results/activation_matrix.csv")
+	activation_matrix = pd.concat([actv_xf, actv_xg, actv_xh, actv_xj, actv_xu, actv_xv, actv_xw]).transpose().head(1)
+	activation_matrix.to_csv(scenario_result + "activation_matrix.csv")
 
 
 	# Transport quantity Q_klf: supplier --> manu
@@ -380,9 +386,9 @@ if m.Status == GRB.OPTIMAL:
 	k1_lf = qklf_df['k1']
 	k2_lf = qklf_df['k2']
 	k3_lf = qklf_df['k3']
-	k1_lf.to_csv("scenario_co2cap/results/Q_klf_k1.csv")
-	k2_lf.to_csv("scenario_co2cap/results/Q_klf_k2.csv")
-	k3_lf.to_csv("scenario_co2cap/results/Q_klf_k3.csv")
+	k1_lf.to_csv(scenario_result + "Q_klf_k1.csv")
+	k2_lf.to_csv(scenario_result + "Q_klf_k2.csv")
+	k3_lf.to_csv(scenario_result + "Q_klf_k3.csv")
 
 
 	# Transport quantity Q_klh: supplier --> hybrid
@@ -396,9 +402,9 @@ if m.Status == GRB.OPTIMAL:
 	k1_lh = qklh_df['k1']
 	k2_lh = qklh_df['k2']
 	k3_lh = qklh_df['k3']
-	k1_lh.to_csv("scenario_co2cap/results/Q_klh_k1.csv")
-	k2_lh.to_csv("scenario_co2cap/results/Q_klh_k2.csv")
-	k3_lh.to_csv("scenario_co2cap/results/Q_klh_k3.csv")
+	k1_lh.to_csv(scenario_result + "Q_klh_k1.csv")
+	k2_lh.to_csv(scenario_result + "Q_klh_k2.csv")
+	k3_lh.to_csv(scenario_result + "Q_klh_k3.csv")
 
 
 	# Transport quantity Q_fi: manu --> warehouse
@@ -406,7 +412,7 @@ if m.Status == GRB.OPTIMAL:
 	qfi = pd.DataFrame.from_dict(fi, orient="index")
 	qfi.index = pd.MultiIndex.from_tuples(qfi.index)
 	qfi = qfi.unstack()
-	qfi.to_csv("scenario_co2cap/results/Q_fi.csv")
+	qfi.to_csv(scenario_result + "Q_fi.csv")
 
 
 	# Transport quantity Q_gi: remanu --> warehouse
@@ -414,7 +420,7 @@ if m.Status == GRB.OPTIMAL:
 	qgi = pd.DataFrame.from_dict(gi, orient="index")
 	qgi.index = pd.MultiIndex.from_tuples(qgi.index)
 	qgi = qgi.unstack()
-	qgi.to_csv("scenario_co2cap/results/Q_gi.csv")
+	qgi.to_csv(scenario_result + "Q_gi.csv")
 
 
 	# Transport quantity Q_hi: hybrid --> warehouse
@@ -422,7 +428,7 @@ if m.Status == GRB.OPTIMAL:
 	qhi = pd.DataFrame.from_dict(hi, orient="index")
 	qhi.index = pd.MultiIndex.from_tuples(qhi.index)
 	qhi = qhi.unstack()
-	qhi.to_csv("scenario_co2cap/results/Q_hi.csv")
+	qhi.to_csv(scenario_result + "Q_hi.csv")
 
 
 	# Transport quantity Q_hi_bar: hybrid --> warehouse
@@ -430,7 +436,7 @@ if m.Status == GRB.OPTIMAL:
 	qhi_bar = pd.DataFrame.from_dict(hi_bar, orient="index")
 	qhi_bar.index = pd.MultiIndex.from_tuples(qhi_bar.index)
 	qhi_bar = qhi_bar.unstack()
-	qhi_bar.to_csv("scenario_co2cap/results/Q_hi_bar.csv")
+	qhi_bar.to_csv(scenario_result + "Q_hi_bar.csv")
 
 
 	# Transport quantity Q_ju: collection --> disassembly
@@ -438,7 +444,7 @@ if m.Status == GRB.OPTIMAL:
 	qju = pd.DataFrame.from_dict(ju, orient="index")
 	qju.index = pd.MultiIndex.from_tuples(qju.index)
 	qju = qju.unstack()
-	qju.to_csv("scenario_co2cap/results/Q_ju.csv")
+	qju.to_csv(scenario_result + "Q_ju.csv")
 
 
  	# Transport component quantity Q_kuv: disassembly --> recycling
@@ -452,9 +458,9 @@ if m.Status == GRB.OPTIMAL:
 	k1_uv = qkuv_df['k1']
 	k2_uv = qkuv_df['k2']
 	k3_uv = qkuv_df['k3']
-	k1_uv.to_csv("scenario_co2cap/results/Q_kuv_k1.csv")
-	k2_uv.to_csv("scenario_co2cap/results/Q_kuv_k2.csv")
-	k3_uv.to_csv("scenario_co2cap/results/Q_kuv_k3.csv")
+	k1_uv.to_csv(scenario_result + "Q_kuv_k1.csv")
+	k2_uv.to_csv(scenario_result + "Q_kuv_k2.csv")
+	k3_uv.to_csv(scenario_result + "Q_kuv_k3.csv")
 
 
  	# Transport component quantity Q_kuw: disassembly --> disposal
@@ -468,9 +474,9 @@ if m.Status == GRB.OPTIMAL:
 	k1_uw = qkuw_df['k1']
 	k2_uw = qkuw_df['k2']
 	k3_uw = qkuw_df['k3']
-	k1_uw.to_csv("scenario_co2cap/results/Q_kuw_k1.csv")
-	k2_uw.to_csv("scenario_co2cap/results/Q_kuw_k2.csv")
-	k3_uw.to_csv("scenario_co2cap/results/Q_kuw_k3.csv")
+	k1_uw.to_csv(scenario_result + "Q_kuw_k1.csv")
+	k2_uw.to_csv(scenario_result + "Q_kuw_k2.csv")
+	k3_uw.to_csv(scenario_result + "Q_kuw_k3.csv")
 
 
 	# Transport quantity Q_ug: disassembly --> remanu
@@ -478,7 +484,7 @@ if m.Status == GRB.OPTIMAL:
 	qug = pd.DataFrame.from_dict(ug, orient="index")
 	qug.index = pd.MultiIndex.from_tuples(qug.index)
 	qug = qug.unstack()
-	qug.to_csv("scenario_co2cap/results/Q_ug.csv")
+	qug.to_csv(scenario_result + "Q_ug.csv")
 
 
 	# Transport quantity Q_uh: disassembly --> hybrid
@@ -487,7 +493,7 @@ if m.Status == GRB.OPTIMAL:
 	quh = pd.DataFrame.from_dict(uh, orient="index")
 	quh.index = pd.MultiIndex.from_tuples(quh.index)
 	quh = quh.unstack()
-	quh.to_csv("scenario_co2cap/results/Q_uh.csv")
+	quh.to_csv(scenario_result + "Q_uh.csv")
 
 
 	# Transport component quantity Q_kvf: recycling --> manu
@@ -501,9 +507,9 @@ if m.Status == GRB.OPTIMAL:
 	k1_vf = qkvf_df['k1']
 	k2_vf = qkvf_df['k2']
 	k3_vf = qkvf_df['k3']
-	k1_vf.to_csv("scenario_co2cap/results/Q_kvf_k1.csv")
-	k2_vf.to_csv("scenario_co2cap/results/Q_kvf_k2.csv")
-	k3_vf.to_csv("scenario_co2cap/results/Q_kvf_k3.csv")
+	k1_vf.to_csv(scenario_result + "Q_kvf_k1.csv")
+	k2_vf.to_csv(scenario_result + "Q_kvf_k2.csv")
+	k3_vf.to_csv(scenario_result + "Q_kvf_k3.csv")
 
 
 	# Transport component quantity Q_kvh: recycling --> hybrid
@@ -517,21 +523,22 @@ if m.Status == GRB.OPTIMAL:
 	k1_vh = qkvh_df['k1']
 	k2_vh = qkvh_df['k2']
 	k3_vh = qkvh_df['k3']
-	k1_vh.to_csv("scenario_co2cap/results/Q_kvh_k1.csv")
-	k2_vh.to_csv("scenario_co2cap/results/Q_kvh_k2.csv")
-	k3_vh.to_csv("scenario_co2cap/results/Q_kvh_k3.csv")
+	k1_vh.to_csv(scenario_result + "Q_kvh_k1.csv")
+	k2_vh.to_csv(scenario_result + "Q_kvh_k2.csv")
+	k3_vh.to_csv(scenario_result + "Q_kvh_k3.csv")
 
 	print("=======================================================================================")
 	print("=============================== Optimal solution found! ===============================")
 	print("=======================================================================================")
 
+
 elif m.Status == GRB.INFEASIBLE:
 	m.computeIIS()
-	m.write("model.ilp")
-	m.write("hmrs.mps")
+	m.write(scenario_result + "model.ilp")
 	for c in m.getConstrs():
 		if c.IISConstr: print(f'\t{c.constrname}: {m.getRow(c)} {c.Sense} {c.RHS}')
 
 	print("=======================================================================================")
 	print("================================ Model is infeasible! =================================")
 	print("=======================================================================================")
+
