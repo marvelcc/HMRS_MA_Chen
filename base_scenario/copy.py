@@ -32,6 +32,9 @@ capacity = pd.read_csv(parameters + 'production_capacity.csv', index_col=0)
 capacity_bar = pd.read_csv(parameters + 'production_capacity_bar.csv', index_col=0)
 capacity_k = pd.read_csv(parameters + 'production_capacity_k.csv', index_col=0)
 ratio = pd.read_csv(parameters + 'ratio.csv', index_col=0)
+ratio_a_dom = pd.read_csv(parameters + 'ratio_a_dominant.csv', index_col=0)
+ratio_b_dom = pd.read_csv(parameters + 'ratio_b_dominant.csv', index_col=0)
+ratio_c_dom = pd.read_csv(parameters + 'ratio_c_dominant.csv', index_col=0)
 
 # Read activation costs from activation_cost.csv
 for i in activation.columns:
@@ -128,9 +131,58 @@ for t, row in returns.iterrows():
 		M_j[(t, j)] = value
 
 # The ratio between EoU, EoL and to-be-disposed components
-alpha = ratio['a'].tolist()
-beta = ratio['b'].tolist()
-gamma = ratio['c'].tolist()
+# alpha = ratio['a'].tolist()
+# beta = ratio['b'].tolist()
+# gamma = ratio['c'].tolist()
+
+# TEST
+ratio_dict = {}
+for t, row in ratio.iterrows():
+	for a in ratio.filter(like='a').columns:
+		value = ratio.loc[t, a]
+		ratio_dict[(t, a)] = value
+	for b in ratio.filter(like='b').columns:
+		value = ratio.loc[t, b]
+		ratio_dict[(t, b)] = value
+	for c in ratio.filter(like='c').columns:
+		value = ratio.loc[t, c]
+		ratio_dict[(t, c)] = value
+
+ratio_dict_a_dom = {}
+for t, row in ratio_a_dom.iterrows():
+	for a in ratio_a_dom.filter(like='a').columns:
+		value = ratio_a_dom.loc[t, a]
+		ratio_dict_a_dom[(t, a)] = value
+	for b in ratio_a_dom.filter(like='b').columns:
+		value = ratio_a_dom.loc[t, b]
+		ratio_dict_a_dom[(t, b)] = value
+	for c in ratio_a_dom.filter(like='c').columns:
+		value = ratio_a_dom.loc[t, c]
+		ratio_dict_a_dom[(t, c)] = value
+
+ratio_dict_b_dom = {}
+for t, row in ratio_b_dom.iterrows():
+	for a in ratio_b_dom.filter(like='a').columns:
+		value = ratio_b_dom.loc[t, a]
+		ratio_dict_b_dom[(t, a)] = value
+	for b in ratio_b_dom.filter(like='b').columns:
+		value = ratio_b_dom.loc[t, b]
+		ratio_dict_b_dom[(t, b)] = value
+	for c in ratio_b_dom.filter(like='c').columns:
+		value = ratio_b_dom.loc[t, c]
+		ratio_dict_b_dom[(t, c)] = value
+
+ratio_dict_c_dom = {}
+for t, row in ratio_c_dom.iterrows():
+	for a in ratio_c_dom.filter(like='a').columns:
+		value = ratio_c_dom.loc[t, a]
+		ratio_dict_c_dom[(t, a)] = value
+	for b in ratio_c_dom.filter(like='b').columns:
+		value = ratio_c_dom.loc[t, b]
+		ratio_dict_c_dom[(t, b)] = value
+	for c in ratio_c_dom.filter(like='c').columns:
+		value = ratio_c_dom.loc[t, c]
+		ratio_dict_c_dom[(t, c)] = value
 
 # Read the production capacity of each facility in period t
 CAP_f = {}
@@ -203,9 +255,12 @@ Q_kvf = m.addVars(component, recycling, manu, period, vtype=GRB.INTEGER, lb=0, n
 Q_kvh = m.addVars(component, recycling, hybrid, period, vtype=GRB.INTEGER, lb=0, name="Q_kvh")
 legal = m.addVar(vtype=GRB.INTEGER, name="legal")
 excess = m.addVar(vtype=GRB.INTEGER, name="excess")
-CO2 = m.addVar(vtype=GRB.INTEGER)
-CAP_CO2 = m.addVar(vtype=GRB.INTEGER,lb=CAP_Em, ub=CAP_Em)
-var1 = m.addVar(lb=-GRB.INFINITY)
+CO2 = m.addVar(vtype=GRB.INTEGER, name="CO2_em")
+CAP_CO2 = m.addVar(vtype=GRB.INTEGER,lb=CAP_Em, ub=CAP_Em, name="CO2_cap")
+var1 = m.addVar(lb=-GRB.INFINITY, name="co2_var")
+a_var = m.addVars(disassembly, period, vtype=GRB.CONTINUOUS, ub=0.00001, name="a_var")
+b_var = m.addVar(vtype=GRB.CONTINUOUS, name="b_var")
+c_var = m.addVar(vtype=GRB.CONTINUOUS, name="c_var")
 
 
 # pi = 0.085 # carbon legal per kg 
@@ -275,16 +330,20 @@ m.addConstrs((gp.quicksum(Q_klh[a, b, c, t] for b in supplier) + gp.quicksum(Q_k
 m.addConstrs((gp.quicksum(Q_uh[u, h, t] for u in disassembly) == gp.quicksum(Q_hi_bar[h, i, t] for i in warehouse) for h in hybrid for t in period), name='c14')
 
 # (15)
-m.addConstrs(((gp.quicksum(Q_ju[j, u, t] for u in disassembly) == M_j[t, j]) for j in collect for t in period), name='c15')
+constrM_j = m.addConstrs(((gp.quicksum(Q_ju[j, u, t] for u in disassembly) == M_j[t, j]) for j in collect for t in period), name='c15')
 
 # (16)
-m.addConstrs((gp.quicksum(Q_ju[j, u, t] for j in collect) * alpha[t] == gp.quicksum(Q_ug[u, g, t] for g in remanu) + gp.quicksum(Q_uh[u,h,t] for h in hybrid) for u in disassembly for t in period), name='c16')
+constrA_var = m.addConstrs((gp.quicksum(Q_ju[j, u, t] for j in collect) * a_var[u,t] == 1 for u in disassembly for t in period), name="a_var_constr")
+
+constrAlpha = m.addConstrs(((gp.quicksum(Q_ug[u, g, t] for g in remanu) + gp.quicksum(Q_uh[u,h,t] for h in hybrid)) * a_var[u,t] == ratio_dict[(t, a)] for u in disassembly for t in period), name='c16')
+m.update()
+
 
 # (17)
-m.addConstrs((gp.quicksum(Q_ju[j, u, t] for j in collect) * R_k[k] * beta[t]  == gp.quicksum(Q_kuv[k,u,v,t] for v in recycling) for u in disassembly for k in component for t in period), name='c17')
+constrBeta = m.addConstrs((gp.quicksum(Q_kuv[k,u,v,t] for v in recycling) == gp.quicksum(Q_ju[j, u, t] for j in collect) * R_k[k] * ratio_dict[(t, b)]  for u in disassembly for k in component for t in period), name='c17')
 
 # (18)
-m.addConstrs((gp.quicksum(Q_ju[j, u, t] for j in collect) * R_k[k] * gamma[t] == gp.quicksum(Q_kuw[k,u,w,t] for w in disposal) for u in disassembly for k in component for t in period), name='c18')
+constrGamma = m.addConstrs((gp.quicksum(Q_kuw[k,u,w,t] for w in disposal) == gp.quicksum(Q_ju[j, u, t] for j in collect) * R_k[k] * ratio_dict[(t, c)] for u in disassembly for k in component for t in period), name='c18')
 
 # (19)
 m.addConstrs((gp.quicksum(Q_kuv[k, u, v, t] for u in disassembly) == (gp.quicksum(Q_kvf[k, v, f, t] for f in manu) + gp.quicksum(Q_kvh[k, v, h, t] for h in hybrid)) for k in component for v in recycling for t in period), name='c19')
@@ -321,108 +380,196 @@ for t in period:
 		m.addConstrs(((X_w[w, 0] == 1) >> (X_w[w, i+1] == 1) for i in range(0, 11)))
 
 
-m.NumScenarios = a
 
+m.NumScenarios = 1
+
+# m.Params.ScenarioNumber = 0
+# m.ScenNName = 'TEST'
+
+
+# m.Params.ScenarioNumber = 0
+# m.ScenNName = 'Base model'
+
+# m.Params.ScenarioNumber = 1
+# m.ScenNName = 'No CO2 regulation'
+# pi.ScenNLB = 0.0
+# pi.ScenNUB = 0.0
+# pi_p.ScenNLB = 0.0
+# pi_p.ScenNUB = 0.0
+
+
+# # CAP_f + 50%
+# m.Params.ScenarioNumber = 2
+# m.ScenNName = 'CAP_f_+50'
+# for f in manu:
+# 	for t in period:
+# 		constrCAP_f[(f,t)].ScenNRhs = CAP_f[(t,f)] * 1.5
+
+# # CAP_f + 25%
+# m.Params.ScenarioNumber = 3
+# m.ScenNName = 'CAP_f_+25'
+# for f in manu:
+# 	for t in period:
+# 		constrCAP_f[(f,t)].ScenNRhs = CAP_f[(t,f)] * 1.25
+
+# # CAP_f - 25%
+# m.Params.ScenarioNumber = 4
+# m.ScenNName = 'CAP_f_-25'
+# for f in manu:
+# 	for t in period:
+# 		constrCAP_f[(f,t)].ScenNRhs = CAP_f[(t,f)] * 0.75
+
+# # CAP_f - 50%
+# m.Params.ScenarioNumber = 5
+# m.ScenNName = 'CAP_f_-50'
+# for f in manu:
+# 	for t in period:
+# 		constrCAP_f[(f,t)].ScenNRhs = CAP_f[(t,f)] * 0.5
+
+# # CAP_g + 50%
+# m.Params.ScenarioNumber = 6
+# m.ScenNName = 'CAP_g_+50'
+# for g in remanu:
+# 	for t in period:
+# 		constrCAP_g[(g,t)].ScenNRhs = CAP_g[(t,g)] * 1.5
+
+# # CAP_g + 25%
+# m.Params.ScenarioNumber = 7
+# m.ScenNName = 'CAP_g_+25'
+# for g in remanu:
+# 	for t in period:
+# 		constrCAP_g[(g,t)].ScenNRhs = CAP_g[(t,g)] * 1.25
+
+# # CAP_g - 25%
+# m.Params.ScenarioNumber = 8
+# m.ScenNName = 'CAP_g_-25'
+# for g in remanu:
+# 	for t in period:
+# 		constrCAP_g[(g,t)].ScenNRhs = CAP_g[(t,g)] * 0.75
+
+# # CAP_g - 50%
+# m.Params.ScenarioNumber = 9
+# m.ScenNName = 'CAP_g_-50'
+# for g in remanu:
+# 	for t in period:
+# 		constrCAP_g[(g,t)].ScenNRhs = CAP_g[(t,g)] * 0.5
+
+# # CAP_h + 50%
+# m.Params.ScenarioNumber = 10
+# m.ScenNName = 'CAP_h_+50'
+# for h in hybrid:
+# 	for t in period:
+# 		constrCAP_h[(f,t)].ScenNRhs = CAP_h[(t,h)] * 1.5
+# 		constrCAP_h_bar[(f,t)].ScenNRhs = CAP_h_bar[(t,h)] * 1.5
+
+# # CAP_h + 25%
+# m.Params.ScenarioNumber = 11
+# m.ScenNName = 'CAP_h_+25'
+# for h in hybrid:
+# 	for t in period:
+# 		constrCAP_h[(f,t)].ScenNRhs = CAP_h[(t,h)] * 1.25
+# 		constrCAP_h_bar[(f,t)].ScenNRhs = CAP_h_bar[(t,h)] * 1.25
+
+# # CAP_h - 25%
+# m.Params.ScenarioNumber = 12
+# m.ScenNName = 'CAP_h_-25'
+# for h in hybrid:
+# 	for t in period:
+# 		constrCAP_h[(f,t)].ScenNRhs = CAP_h[(t,h)] * 0.75
+# 		constrCAP_h_bar[(f,t)].ScenNRhs = CAP_h_bar[(t,h)] * 0.75
+
+# # CAP_h - 50%
+# m.Params.ScenarioNumber = 13
+# m.ScenNName = 'CAP_h_-50'
+# for h in hybrid:
+# 	for t in period:
+# 		constrCAP_h[(f,t)].ScenNRhs = CAP_h[(t,h)] * 0.5
+# 		constrCAP_h_bar[(f,t)].ScenNRhs = CAP_h_bar[(t,h)] * 0.5
+
+# # M_j +50%
+# m.Params.ScenarioNumber = 14
+# m.ScenNName = 'M_j_+50'
+# for t in period:
+# 	for j in collect:
+# 		constrM_j[(t,j)].ScenNRHS = M_j[(t, j)] * 1.5
+
+# # M_j +25%
+# m.Params.ScenarioNumber = 15
+# m.ScenNName = 'M_j_+25'
+# for t in period:
+# 	for j in collect:
+# 		constrM_j[(t,j)].ScenNRHS = M_j[(t, j)] * 1.25
+
+# # M_j -25%
+# m.Params.ScenarioNumber = 16
+# m.ScenNName = 'M_j_-25'
+# for t in period:
+# 	for j in collect:
+# 		constrM_j[(t,j)].ScenNRHS = M_j[(t, j)] * 0.75
+
+# # M_j -50%
+# m.Params.ScenarioNumber = 17
+# m.ScenNName = 'M_j_-50'
+# for t in period:
+# 	for j in collect:
+# 		constrM_j[(t,j)].ScenNRHS = M_j[(t, j)] * 0.5
+
+
+# M_j +50% and alpha dominant
 m.Params.ScenarioNumber = 0
-m.ScenNName = 'Base model'
-
-m.Params.ScenarioNumber = 1
-m.ScenNName = 'No CO2 regulation'
-pi.ScenNLB = 0.0
-pi.ScenNUB = 0.0
-pi_p.ScenNLB = 0.0
-pi_p.ScenNUB = 0.0
+m.ScenNName = 'M_j_+50'
+for t in period:
+	for j in collect:
+			for u in disassembly:
+				constrM_j[(j,t)].ScenNRHS = M_j[(t, j)] * 1.5
+				constrAlpha[(u,t)].ScenNRHS = ratio_dict_a_dom[(t, a)]
 
 
-# CAP_f + 50%
-m.Params.ScenarioNumber = 2
-m.ScenNName = 'Increased CAP_f_+50'
-for f in manu:
-	for t in period:
-		constrCAP_f[(f,t)].ScenNRhs = CAP_f[(t,f)] * 1.5
+# M_j +25% and alpha dominant
 
-# CAP_f + 25%
-m.Params.ScenarioNumber = 3
-m.ScenNName = 'Increased CAP_f_+25'
-for f in manu:
-	for t in period:
-		constrCAP_f[(f,t)].ScenNRhs = CAP_f[(t,f)] * 1.25
 
-# CAP_f - 25%
-m.Params.ScenarioNumber = 4
-m.ScenNName = 'Increased CAP_f_-25'
-for f in manu:
-	for t in period:
-		constrCAP_f[(f,t)].ScenNRhs = CAP_f[(t,f)] * 0.75
+# M_j -25% and alpha dominant
 
-# CAP_f - 50%
-m.Params.ScenarioNumber = 5
-m.ScenNName = 'Increased CAP_f_-50'
-for f in manu:
-	for t in period:
-		constrCAP_f[(f,t)].ScenNRhs = CAP_f[(t,f)] * 0.5
 
-# CAP_g + 50%
-m.Params.ScenarioNumber = 6
-m.ScenNName = 'Increased CAP_g_+50'
-for g in remanu:
-	for t in period:
-		constrCAP_g[(g,t)].ScenNRhs = CAP_g[(t,g)] * 1.5
+# M_j 0% and beta dominant
 
-# CAP_g + 25%
-m.Params.ScenarioNumber = 7
-m.ScenNName = 'Increased CAP_g_+25'
-for g in remanu:
-	for t in period:
-		constrCAP_g[(g,t)].ScenNRhs = CAP_g[(t,g)] * 1.25
 
-# CAP_g - 25%
-m.Params.ScenarioNumber = 8
-m.ScenNName = 'Increased CAP_g_-25'
-for g in remanu:
-	for t in period:
-		constrCAP_g[(g,t)].ScenNRhs = CAP_g[(t,g)] * 0.75
+# M_j -50% and alpha dominant
 
-# CAP_g - 50%
-m.Params.ScenarioNumber = 9
-m.ScenNName = 'Increased CAP_g_-50'
-for g in remanu:
-	for t in period:
-		constrCAP_g[(g,t)].ScenNRhs = CAP_g[(t,g)] * 0.5
 
-# CAP_h + 50%
-m.Params.ScenarioNumber = 10
-m.ScenNName = 'Increased CAP_h_+50'
-for h in hybrid:
-	for t in period:
-		constrCAP_h[(f,t)].ScenNRhs = CAP_h[(t,h)] * 1.5
-		constrCAP_h_bar[(f,t)].ScenNRhs = CAP_h_bar[(t,h)] * 1.5
+# M_j +50% and beta dominant
 
-# CAP_h + 25%
-m.Params.ScenarioNumber = 11
-m.ScenNName = 'Increased CAP_h_+25'
-for h in hybrid:
-	for t in period:
-		constrCAP_h[(f,t)].ScenNRhs = CAP_h[(t,h)] * 1.25
-		constrCAP_h_bar[(f,t)].ScenNRhs = CAP_h_bar[(t,h)] * 1.25
 
-# CAP_h - 25%
-m.Params.ScenarioNumber = 12
-m.ScenNName = 'Increased CAP_h_-25'
-for h in hybrid:
-	for t in period:
-		constrCAP_h[(f,t)].ScenNRhs = CAP_h[(t,h)] * 0.75
-		constrCAP_h_bar[(f,t)].ScenNRhs = CAP_h_bar[(t,h)] * 0.75
+# M_j +25% and beta dominant
 
-# CAP_h - 50%
-m.Params.ScenarioNumber = 13
-m.ScenNName = 'Increased CAP_h_-50'
-for h in hybrid:
-	for t in period:
-		constrCAP_h[(f,t)].ScenNRhs = CAP_h[(t,h)] * 0.5
-		constrCAP_h_bar[(f,t)].ScenNRhs = CAP_h_bar[(t,h)] * 0.5
 
-# M_j  
+# M_j 0% and beta dominant
+
+
+# M_j -25% and beta dominant
+
+
+# M_j -50% and beta dominant
+
+
+# M_j +50% and gamma dominant
+
+
+# M_j +25% and gamma dominant
+
+
+# M_j 0% and gamma dominant
+
+
+# M_j -25% and gamma dominant
+
+
+# M_j -50% and gamma dominant
+
+
+
+
+
 
 
 m.write("multisce.lp")

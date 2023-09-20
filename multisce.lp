@@ -7303,1366 +7303,1366 @@ Subject To
    + Q_ju[j4,u4,10] + Q_ju[j4,u5,10] = 7000
  c15[j4,11]: Q_ju[j4,u1,11] + Q_ju[j4,u2,11] + Q_ju[j4,u3,11]
    + Q_ju[j4,u4,11] + Q_ju[j4,u5,11] = 11000
- c16[u1,0]: 0.6 Q_ju[j1,u1,0] + 0.6 Q_ju[j2,u1,0] + 0.6 Q_ju[j3,u1,0]
-   + 0.6 Q_ju[j4,u1,0] - Q_uh[u1,h1,0] - Q_uh[u1,h2,0] - Q_uh[u1,h3,0]
-   - Q_uh[u1,h4,0] - Q_uh[u1,h5,0] - Q_ug[u1,g1,0] - Q_ug[u1,g2,0]
-   - Q_ug[u1,g3,0] - Q_ug[u1,g4,0] - Q_ug[u1,g5,0] = 0
- c16[u1,1]: 0.4 Q_ju[j1,u1,1] + 0.4 Q_ju[j2,u1,1] + 0.4 Q_ju[j3,u1,1]
-   + 0.4 Q_ju[j4,u1,1] - Q_uh[u1,h1,1] - Q_uh[u1,h2,1] - Q_uh[u1,h3,1]
-   - Q_uh[u1,h4,1] - Q_uh[u1,h5,1] - Q_ug[u1,g1,1] - Q_ug[u1,g2,1]
-   - Q_ug[u1,g3,1] - Q_ug[u1,g4,1] - Q_ug[u1,g5,1] = 0
- c16[u1,2]: 0.6 Q_ju[j1,u1,2] + 0.6 Q_ju[j2,u1,2] + 0.6 Q_ju[j3,u1,2]
-   + 0.6 Q_ju[j4,u1,2] - Q_uh[u1,h1,2] - Q_uh[u1,h2,2] - Q_uh[u1,h3,2]
-   - Q_uh[u1,h4,2] - Q_uh[u1,h5,2] - Q_ug[u1,g1,2] - Q_ug[u1,g2,2]
-   - Q_ug[u1,g3,2] - Q_ug[u1,g4,2] - Q_ug[u1,g5,2] = 0
- c16[u1,3]: 0.4 Q_ju[j1,u1,3] + 0.4 Q_ju[j2,u1,3] + 0.4 Q_ju[j3,u1,3]
-   + 0.4 Q_ju[j4,u1,3] - Q_uh[u1,h1,3] - Q_uh[u1,h2,3] - Q_uh[u1,h3,3]
-   - Q_uh[u1,h4,3] - Q_uh[u1,h5,3] - Q_ug[u1,g1,3] - Q_ug[u1,g2,3]
-   - Q_ug[u1,g3,3] - Q_ug[u1,g4,3] - Q_ug[u1,g5,3] = 0
- c16[u1,4]: 0.6 Q_ju[j1,u1,4] + 0.6 Q_ju[j2,u1,4] + 0.6 Q_ju[j3,u1,4]
-   + 0.6 Q_ju[j4,u1,4] - Q_uh[u1,h1,4] - Q_uh[u1,h2,4] - Q_uh[u1,h3,4]
-   - Q_uh[u1,h4,4] - Q_uh[u1,h5,4] - Q_ug[u1,g1,4] - Q_ug[u1,g2,4]
-   - Q_ug[u1,g3,4] - Q_ug[u1,g4,4] - Q_ug[u1,g5,4] = 0
- c16[u1,5]: 0.5 Q_ju[j1,u1,5] + 0.5 Q_ju[j2,u1,5] + 0.5 Q_ju[j3,u1,5]
-   + 0.5 Q_ju[j4,u1,5] - Q_uh[u1,h1,5] - Q_uh[u1,h2,5] - Q_uh[u1,h3,5]
-   - Q_uh[u1,h4,5] - Q_uh[u1,h5,5] - Q_ug[u1,g1,5] - Q_ug[u1,g2,5]
-   - Q_ug[u1,g3,5] - Q_ug[u1,g4,5] - Q_ug[u1,g5,5] = 0
- c16[u1,6]: 0.5 Q_ju[j1,u1,6] + 0.5 Q_ju[j2,u1,6] + 0.5 Q_ju[j3,u1,6]
-   + 0.5 Q_ju[j4,u1,6] - Q_uh[u1,h1,6] - Q_uh[u1,h2,6] - Q_uh[u1,h3,6]
-   - Q_uh[u1,h4,6] - Q_uh[u1,h5,6] - Q_ug[u1,g1,6] - Q_ug[u1,g2,6]
-   - Q_ug[u1,g3,6] - Q_ug[u1,g4,6] - Q_ug[u1,g5,6] = 0
- c16[u1,7]: 0.5 Q_ju[j1,u1,7] + 0.5 Q_ju[j2,u1,7] + 0.5 Q_ju[j3,u1,7]
-   + 0.5 Q_ju[j4,u1,7] - Q_uh[u1,h1,7] - Q_uh[u1,h2,7] - Q_uh[u1,h3,7]
-   - Q_uh[u1,h4,7] - Q_uh[u1,h5,7] - Q_ug[u1,g1,7] - Q_ug[u1,g2,7]
-   - Q_ug[u1,g3,7] - Q_ug[u1,g4,7] - Q_ug[u1,g5,7] = 0
- c16[u1,8]: 0.6 Q_ju[j1,u1,8] + 0.6 Q_ju[j2,u1,8] + 0.6 Q_ju[j3,u1,8]
-   + 0.6 Q_ju[j4,u1,8] - Q_uh[u1,h1,8] - Q_uh[u1,h2,8] - Q_uh[u1,h3,8]
-   - Q_uh[u1,h4,8] - Q_uh[u1,h5,8] - Q_ug[u1,g1,8] - Q_ug[u1,g2,8]
-   - Q_ug[u1,g3,8] - Q_ug[u1,g4,8] - Q_ug[u1,g5,8] = 0
- c16[u1,9]: 0.5 Q_ju[j1,u1,9] + 0.5 Q_ju[j2,u1,9] + 0.5 Q_ju[j3,u1,9]
-   + 0.5 Q_ju[j4,u1,9] - Q_uh[u1,h1,9] - Q_uh[u1,h2,9] - Q_uh[u1,h3,9]
-   - Q_uh[u1,h4,9] - Q_uh[u1,h5,9] - Q_ug[u1,g1,9] - Q_ug[u1,g2,9]
-   - Q_ug[u1,g3,9] - Q_ug[u1,g4,9] - Q_ug[u1,g5,9] = 0
- c16[u1,10]: 0.4 Q_ju[j1,u1,10] + 0.4 Q_ju[j2,u1,10] + 0.4 Q_ju[j3,u1,10]
-   + 0.4 Q_ju[j4,u1,10] - Q_uh[u1,h1,10] - Q_uh[u1,h2,10] - Q_uh[u1,h3,10]
-   - Q_uh[u1,h4,10] - Q_uh[u1,h5,10] - Q_ug[u1,g1,10] - Q_ug[u1,g2,10]
-   - Q_ug[u1,g3,10] - Q_ug[u1,g4,10] - Q_ug[u1,g5,10] = 0
- c16[u1,11]: 0.6 Q_ju[j1,u1,11] + 0.6 Q_ju[j2,u1,11] + 0.6 Q_ju[j3,u1,11]
-   + 0.6 Q_ju[j4,u1,11] - Q_uh[u1,h1,11] - Q_uh[u1,h2,11] - Q_uh[u1,h3,11]
-   - Q_uh[u1,h4,11] - Q_uh[u1,h5,11] - Q_ug[u1,g1,11] - Q_ug[u1,g2,11]
-   - Q_ug[u1,g3,11] - Q_ug[u1,g4,11] - Q_ug[u1,g5,11] = 0
- c16[u2,0]: 0.6 Q_ju[j1,u2,0] + 0.6 Q_ju[j2,u2,0] + 0.6 Q_ju[j3,u2,0]
-   + 0.6 Q_ju[j4,u2,0] - Q_uh[u2,h1,0] - Q_uh[u2,h2,0] - Q_uh[u2,h3,0]
-   - Q_uh[u2,h4,0] - Q_uh[u2,h5,0] - Q_ug[u2,g1,0] - Q_ug[u2,g2,0]
-   - Q_ug[u2,g3,0] - Q_ug[u2,g4,0] - Q_ug[u2,g5,0] = 0
- c16[u2,1]: 0.4 Q_ju[j1,u2,1] + 0.4 Q_ju[j2,u2,1] + 0.4 Q_ju[j3,u2,1]
-   + 0.4 Q_ju[j4,u2,1] - Q_uh[u2,h1,1] - Q_uh[u2,h2,1] - Q_uh[u2,h3,1]
-   - Q_uh[u2,h4,1] - Q_uh[u2,h5,1] - Q_ug[u2,g1,1] - Q_ug[u2,g2,1]
-   - Q_ug[u2,g3,1] - Q_ug[u2,g4,1] - Q_ug[u2,g5,1] = 0
- c16[u2,2]: 0.6 Q_ju[j1,u2,2] + 0.6 Q_ju[j2,u2,2] + 0.6 Q_ju[j3,u2,2]
-   + 0.6 Q_ju[j4,u2,2] - Q_uh[u2,h1,2] - Q_uh[u2,h2,2] - Q_uh[u2,h3,2]
-   - Q_uh[u2,h4,2] - Q_uh[u2,h5,2] - Q_ug[u2,g1,2] - Q_ug[u2,g2,2]
-   - Q_ug[u2,g3,2] - Q_ug[u2,g4,2] - Q_ug[u2,g5,2] = 0
- c16[u2,3]: 0.4 Q_ju[j1,u2,3] + 0.4 Q_ju[j2,u2,3] + 0.4 Q_ju[j3,u2,3]
-   + 0.4 Q_ju[j4,u2,3] - Q_uh[u2,h1,3] - Q_uh[u2,h2,3] - Q_uh[u2,h3,3]
-   - Q_uh[u2,h4,3] - Q_uh[u2,h5,3] - Q_ug[u2,g1,3] - Q_ug[u2,g2,3]
-   - Q_ug[u2,g3,3] - Q_ug[u2,g4,3] - Q_ug[u2,g5,3] = 0
- c16[u2,4]: 0.6 Q_ju[j1,u2,4] + 0.6 Q_ju[j2,u2,4] + 0.6 Q_ju[j3,u2,4]
-   + 0.6 Q_ju[j4,u2,4] - Q_uh[u2,h1,4] - Q_uh[u2,h2,4] - Q_uh[u2,h3,4]
-   - Q_uh[u2,h4,4] - Q_uh[u2,h5,4] - Q_ug[u2,g1,4] - Q_ug[u2,g2,4]
-   - Q_ug[u2,g3,4] - Q_ug[u2,g4,4] - Q_ug[u2,g5,4] = 0
- c16[u2,5]: 0.5 Q_ju[j1,u2,5] + 0.5 Q_ju[j2,u2,5] + 0.5 Q_ju[j3,u2,5]
-   + 0.5 Q_ju[j4,u2,5] - Q_uh[u2,h1,5] - Q_uh[u2,h2,5] - Q_uh[u2,h3,5]
-   - Q_uh[u2,h4,5] - Q_uh[u2,h5,5] - Q_ug[u2,g1,5] - Q_ug[u2,g2,5]
-   - Q_ug[u2,g3,5] - Q_ug[u2,g4,5] - Q_ug[u2,g5,5] = 0
- c16[u2,6]: 0.5 Q_ju[j1,u2,6] + 0.5 Q_ju[j2,u2,6] + 0.5 Q_ju[j3,u2,6]
-   + 0.5 Q_ju[j4,u2,6] - Q_uh[u2,h1,6] - Q_uh[u2,h2,6] - Q_uh[u2,h3,6]
-   - Q_uh[u2,h4,6] - Q_uh[u2,h5,6] - Q_ug[u2,g1,6] - Q_ug[u2,g2,6]
-   - Q_ug[u2,g3,6] - Q_ug[u2,g4,6] - Q_ug[u2,g5,6] = 0
- c16[u2,7]: 0.5 Q_ju[j1,u2,7] + 0.5 Q_ju[j2,u2,7] + 0.5 Q_ju[j3,u2,7]
-   + 0.5 Q_ju[j4,u2,7] - Q_uh[u2,h1,7] - Q_uh[u2,h2,7] - Q_uh[u2,h3,7]
-   - Q_uh[u2,h4,7] - Q_uh[u2,h5,7] - Q_ug[u2,g1,7] - Q_ug[u2,g2,7]
-   - Q_ug[u2,g3,7] - Q_ug[u2,g4,7] - Q_ug[u2,g5,7] = 0
- c16[u2,8]: 0.6 Q_ju[j1,u2,8] + 0.6 Q_ju[j2,u2,8] + 0.6 Q_ju[j3,u2,8]
-   + 0.6 Q_ju[j4,u2,8] - Q_uh[u2,h1,8] - Q_uh[u2,h2,8] - Q_uh[u2,h3,8]
-   - Q_uh[u2,h4,8] - Q_uh[u2,h5,8] - Q_ug[u2,g1,8] - Q_ug[u2,g2,8]
-   - Q_ug[u2,g3,8] - Q_ug[u2,g4,8] - Q_ug[u2,g5,8] = 0
- c16[u2,9]: 0.5 Q_ju[j1,u2,9] + 0.5 Q_ju[j2,u2,9] + 0.5 Q_ju[j3,u2,9]
-   + 0.5 Q_ju[j4,u2,9] - Q_uh[u2,h1,9] - Q_uh[u2,h2,9] - Q_uh[u2,h3,9]
-   - Q_uh[u2,h4,9] - Q_uh[u2,h5,9] - Q_ug[u2,g1,9] - Q_ug[u2,g2,9]
-   - Q_ug[u2,g3,9] - Q_ug[u2,g4,9] - Q_ug[u2,g5,9] = 0
- c16[u2,10]: 0.4 Q_ju[j1,u2,10] + 0.4 Q_ju[j2,u2,10] + 0.4 Q_ju[j3,u2,10]
-   + 0.4 Q_ju[j4,u2,10] - Q_uh[u2,h1,10] - Q_uh[u2,h2,10] - Q_uh[u2,h3,10]
-   - Q_uh[u2,h4,10] - Q_uh[u2,h5,10] - Q_ug[u2,g1,10] - Q_ug[u2,g2,10]
-   - Q_ug[u2,g3,10] - Q_ug[u2,g4,10] - Q_ug[u2,g5,10] = 0
- c16[u2,11]: 0.6 Q_ju[j1,u2,11] + 0.6 Q_ju[j2,u2,11] + 0.6 Q_ju[j3,u2,11]
-   + 0.6 Q_ju[j4,u2,11] - Q_uh[u2,h1,11] - Q_uh[u2,h2,11] - Q_uh[u2,h3,11]
-   - Q_uh[u2,h4,11] - Q_uh[u2,h5,11] - Q_ug[u2,g1,11] - Q_ug[u2,g2,11]
-   - Q_ug[u2,g3,11] - Q_ug[u2,g4,11] - Q_ug[u2,g5,11] = 0
- c16[u3,0]: 0.6 Q_ju[j1,u3,0] + 0.6 Q_ju[j2,u3,0] + 0.6 Q_ju[j3,u3,0]
-   + 0.6 Q_ju[j4,u3,0] - Q_uh[u3,h1,0] - Q_uh[u3,h2,0] - Q_uh[u3,h3,0]
-   - Q_uh[u3,h4,0] - Q_uh[u3,h5,0] - Q_ug[u3,g1,0] - Q_ug[u3,g2,0]
-   - Q_ug[u3,g3,0] - Q_ug[u3,g4,0] - Q_ug[u3,g5,0] = 0
- c16[u3,1]: 0.4 Q_ju[j1,u3,1] + 0.4 Q_ju[j2,u3,1] + 0.4 Q_ju[j3,u3,1]
-   + 0.4 Q_ju[j4,u3,1] - Q_uh[u3,h1,1] - Q_uh[u3,h2,1] - Q_uh[u3,h3,1]
-   - Q_uh[u3,h4,1] - Q_uh[u3,h5,1] - Q_ug[u3,g1,1] - Q_ug[u3,g2,1]
-   - Q_ug[u3,g3,1] - Q_ug[u3,g4,1] - Q_ug[u3,g5,1] = 0
- c16[u3,2]: 0.6 Q_ju[j1,u3,2] + 0.6 Q_ju[j2,u3,2] + 0.6 Q_ju[j3,u3,2]
-   + 0.6 Q_ju[j4,u3,2] - Q_uh[u3,h1,2] - Q_uh[u3,h2,2] - Q_uh[u3,h3,2]
-   - Q_uh[u3,h4,2] - Q_uh[u3,h5,2] - Q_ug[u3,g1,2] - Q_ug[u3,g2,2]
-   - Q_ug[u3,g3,2] - Q_ug[u3,g4,2] - Q_ug[u3,g5,2] = 0
- c16[u3,3]: 0.4 Q_ju[j1,u3,3] + 0.4 Q_ju[j2,u3,3] + 0.4 Q_ju[j3,u3,3]
-   + 0.4 Q_ju[j4,u3,3] - Q_uh[u3,h1,3] - Q_uh[u3,h2,3] - Q_uh[u3,h3,3]
-   - Q_uh[u3,h4,3] - Q_uh[u3,h5,3] - Q_ug[u3,g1,3] - Q_ug[u3,g2,3]
-   - Q_ug[u3,g3,3] - Q_ug[u3,g4,3] - Q_ug[u3,g5,3] = 0
- c16[u3,4]: 0.6 Q_ju[j1,u3,4] + 0.6 Q_ju[j2,u3,4] + 0.6 Q_ju[j3,u3,4]
-   + 0.6 Q_ju[j4,u3,4] - Q_uh[u3,h1,4] - Q_uh[u3,h2,4] - Q_uh[u3,h3,4]
-   - Q_uh[u3,h4,4] - Q_uh[u3,h5,4] - Q_ug[u3,g1,4] - Q_ug[u3,g2,4]
-   - Q_ug[u3,g3,4] - Q_ug[u3,g4,4] - Q_ug[u3,g5,4] = 0
- c16[u3,5]: 0.5 Q_ju[j1,u3,5] + 0.5 Q_ju[j2,u3,5] + 0.5 Q_ju[j3,u3,5]
-   + 0.5 Q_ju[j4,u3,5] - Q_uh[u3,h1,5] - Q_uh[u3,h2,5] - Q_uh[u3,h3,5]
-   - Q_uh[u3,h4,5] - Q_uh[u3,h5,5] - Q_ug[u3,g1,5] - Q_ug[u3,g2,5]
-   - Q_ug[u3,g3,5] - Q_ug[u3,g4,5] - Q_ug[u3,g5,5] = 0
- c16[u3,6]: 0.5 Q_ju[j1,u3,6] + 0.5 Q_ju[j2,u3,6] + 0.5 Q_ju[j3,u3,6]
-   + 0.5 Q_ju[j4,u3,6] - Q_uh[u3,h1,6] - Q_uh[u3,h2,6] - Q_uh[u3,h3,6]
-   - Q_uh[u3,h4,6] - Q_uh[u3,h5,6] - Q_ug[u3,g1,6] - Q_ug[u3,g2,6]
-   - Q_ug[u3,g3,6] - Q_ug[u3,g4,6] - Q_ug[u3,g5,6] = 0
- c16[u3,7]: 0.5 Q_ju[j1,u3,7] + 0.5 Q_ju[j2,u3,7] + 0.5 Q_ju[j3,u3,7]
-   + 0.5 Q_ju[j4,u3,7] - Q_uh[u3,h1,7] - Q_uh[u3,h2,7] - Q_uh[u3,h3,7]
-   - Q_uh[u3,h4,7] - Q_uh[u3,h5,7] - Q_ug[u3,g1,7] - Q_ug[u3,g2,7]
-   - Q_ug[u3,g3,7] - Q_ug[u3,g4,7] - Q_ug[u3,g5,7] = 0
- c16[u3,8]: 0.6 Q_ju[j1,u3,8] + 0.6 Q_ju[j2,u3,8] + 0.6 Q_ju[j3,u3,8]
-   + 0.6 Q_ju[j4,u3,8] - Q_uh[u3,h1,8] - Q_uh[u3,h2,8] - Q_uh[u3,h3,8]
-   - Q_uh[u3,h4,8] - Q_uh[u3,h5,8] - Q_ug[u3,g1,8] - Q_ug[u3,g2,8]
-   - Q_ug[u3,g3,8] - Q_ug[u3,g4,8] - Q_ug[u3,g5,8] = 0
- c16[u3,9]: 0.5 Q_ju[j1,u3,9] + 0.5 Q_ju[j2,u3,9] + 0.5 Q_ju[j3,u3,9]
-   + 0.5 Q_ju[j4,u3,9] - Q_uh[u3,h1,9] - Q_uh[u3,h2,9] - Q_uh[u3,h3,9]
-   - Q_uh[u3,h4,9] - Q_uh[u3,h5,9] - Q_ug[u3,g1,9] - Q_ug[u3,g2,9]
-   - Q_ug[u3,g3,9] - Q_ug[u3,g4,9] - Q_ug[u3,g5,9] = 0
- c16[u3,10]: 0.4 Q_ju[j1,u3,10] + 0.4 Q_ju[j2,u3,10] + 0.4 Q_ju[j3,u3,10]
-   + 0.4 Q_ju[j4,u3,10] - Q_uh[u3,h1,10] - Q_uh[u3,h2,10] - Q_uh[u3,h3,10]
-   - Q_uh[u3,h4,10] - Q_uh[u3,h5,10] - Q_ug[u3,g1,10] - Q_ug[u3,g2,10]
-   - Q_ug[u3,g3,10] - Q_ug[u3,g4,10] - Q_ug[u3,g5,10] = 0
- c16[u3,11]: 0.6 Q_ju[j1,u3,11] + 0.6 Q_ju[j2,u3,11] + 0.6 Q_ju[j3,u3,11]
-   + 0.6 Q_ju[j4,u3,11] - Q_uh[u3,h1,11] - Q_uh[u3,h2,11] - Q_uh[u3,h3,11]
-   - Q_uh[u3,h4,11] - Q_uh[u3,h5,11] - Q_ug[u3,g1,11] - Q_ug[u3,g2,11]
-   - Q_ug[u3,g3,11] - Q_ug[u3,g4,11] - Q_ug[u3,g5,11] = 0
- c16[u4,0]: 0.6 Q_ju[j1,u4,0] + 0.6 Q_ju[j2,u4,0] + 0.6 Q_ju[j3,u4,0]
-   + 0.6 Q_ju[j4,u4,0] - Q_uh[u4,h1,0] - Q_uh[u4,h2,0] - Q_uh[u4,h3,0]
-   - Q_uh[u4,h4,0] - Q_uh[u4,h5,0] - Q_ug[u4,g1,0] - Q_ug[u4,g2,0]
-   - Q_ug[u4,g3,0] - Q_ug[u4,g4,0] - Q_ug[u4,g5,0] = 0
- c16[u4,1]: 0.4 Q_ju[j1,u4,1] + 0.4 Q_ju[j2,u4,1] + 0.4 Q_ju[j3,u4,1]
-   + 0.4 Q_ju[j4,u4,1] - Q_uh[u4,h1,1] - Q_uh[u4,h2,1] - Q_uh[u4,h3,1]
-   - Q_uh[u4,h4,1] - Q_uh[u4,h5,1] - Q_ug[u4,g1,1] - Q_ug[u4,g2,1]
-   - Q_ug[u4,g3,1] - Q_ug[u4,g4,1] - Q_ug[u4,g5,1] = 0
- c16[u4,2]: 0.6 Q_ju[j1,u4,2] + 0.6 Q_ju[j2,u4,2] + 0.6 Q_ju[j3,u4,2]
-   + 0.6 Q_ju[j4,u4,2] - Q_uh[u4,h1,2] - Q_uh[u4,h2,2] - Q_uh[u4,h3,2]
-   - Q_uh[u4,h4,2] - Q_uh[u4,h5,2] - Q_ug[u4,g1,2] - Q_ug[u4,g2,2]
-   - Q_ug[u4,g3,2] - Q_ug[u4,g4,2] - Q_ug[u4,g5,2] = 0
- c16[u4,3]: 0.4 Q_ju[j1,u4,3] + 0.4 Q_ju[j2,u4,3] + 0.4 Q_ju[j3,u4,3]
-   + 0.4 Q_ju[j4,u4,3] - Q_uh[u4,h1,3] - Q_uh[u4,h2,3] - Q_uh[u4,h3,3]
-   - Q_uh[u4,h4,3] - Q_uh[u4,h5,3] - Q_ug[u4,g1,3] - Q_ug[u4,g2,3]
-   - Q_ug[u4,g3,3] - Q_ug[u4,g4,3] - Q_ug[u4,g5,3] = 0
- c16[u4,4]: 0.6 Q_ju[j1,u4,4] + 0.6 Q_ju[j2,u4,4] + 0.6 Q_ju[j3,u4,4]
-   + 0.6 Q_ju[j4,u4,4] - Q_uh[u4,h1,4] - Q_uh[u4,h2,4] - Q_uh[u4,h3,4]
-   - Q_uh[u4,h4,4] - Q_uh[u4,h5,4] - Q_ug[u4,g1,4] - Q_ug[u4,g2,4]
-   - Q_ug[u4,g3,4] - Q_ug[u4,g4,4] - Q_ug[u4,g5,4] = 0
- c16[u4,5]: 0.5 Q_ju[j1,u4,5] + 0.5 Q_ju[j2,u4,5] + 0.5 Q_ju[j3,u4,5]
-   + 0.5 Q_ju[j4,u4,5] - Q_uh[u4,h1,5] - Q_uh[u4,h2,5] - Q_uh[u4,h3,5]
-   - Q_uh[u4,h4,5] - Q_uh[u4,h5,5] - Q_ug[u4,g1,5] - Q_ug[u4,g2,5]
-   - Q_ug[u4,g3,5] - Q_ug[u4,g4,5] - Q_ug[u4,g5,5] = 0
- c16[u4,6]: 0.5 Q_ju[j1,u4,6] + 0.5 Q_ju[j2,u4,6] + 0.5 Q_ju[j3,u4,6]
-   + 0.5 Q_ju[j4,u4,6] - Q_uh[u4,h1,6] - Q_uh[u4,h2,6] - Q_uh[u4,h3,6]
-   - Q_uh[u4,h4,6] - Q_uh[u4,h5,6] - Q_ug[u4,g1,6] - Q_ug[u4,g2,6]
-   - Q_ug[u4,g3,6] - Q_ug[u4,g4,6] - Q_ug[u4,g5,6] = 0
- c16[u4,7]: 0.5 Q_ju[j1,u4,7] + 0.5 Q_ju[j2,u4,7] + 0.5 Q_ju[j3,u4,7]
-   + 0.5 Q_ju[j4,u4,7] - Q_uh[u4,h1,7] - Q_uh[u4,h2,7] - Q_uh[u4,h3,7]
-   - Q_uh[u4,h4,7] - Q_uh[u4,h5,7] - Q_ug[u4,g1,7] - Q_ug[u4,g2,7]
-   - Q_ug[u4,g3,7] - Q_ug[u4,g4,7] - Q_ug[u4,g5,7] = 0
- c16[u4,8]: 0.6 Q_ju[j1,u4,8] + 0.6 Q_ju[j2,u4,8] + 0.6 Q_ju[j3,u4,8]
-   + 0.6 Q_ju[j4,u4,8] - Q_uh[u4,h1,8] - Q_uh[u4,h2,8] - Q_uh[u4,h3,8]
-   - Q_uh[u4,h4,8] - Q_uh[u4,h5,8] - Q_ug[u4,g1,8] - Q_ug[u4,g2,8]
-   - Q_ug[u4,g3,8] - Q_ug[u4,g4,8] - Q_ug[u4,g5,8] = 0
- c16[u4,9]: 0.5 Q_ju[j1,u4,9] + 0.5 Q_ju[j2,u4,9] + 0.5 Q_ju[j3,u4,9]
-   + 0.5 Q_ju[j4,u4,9] - Q_uh[u4,h1,9] - Q_uh[u4,h2,9] - Q_uh[u4,h3,9]
-   - Q_uh[u4,h4,9] - Q_uh[u4,h5,9] - Q_ug[u4,g1,9] - Q_ug[u4,g2,9]
-   - Q_ug[u4,g3,9] - Q_ug[u4,g4,9] - Q_ug[u4,g5,9] = 0
- c16[u4,10]: 0.4 Q_ju[j1,u4,10] + 0.4 Q_ju[j2,u4,10] + 0.4 Q_ju[j3,u4,10]
-   + 0.4 Q_ju[j4,u4,10] - Q_uh[u4,h1,10] - Q_uh[u4,h2,10] - Q_uh[u4,h3,10]
-   - Q_uh[u4,h4,10] - Q_uh[u4,h5,10] - Q_ug[u4,g1,10] - Q_ug[u4,g2,10]
-   - Q_ug[u4,g3,10] - Q_ug[u4,g4,10] - Q_ug[u4,g5,10] = 0
- c16[u4,11]: 0.6 Q_ju[j1,u4,11] + 0.6 Q_ju[j2,u4,11] + 0.6 Q_ju[j3,u4,11]
-   + 0.6 Q_ju[j4,u4,11] - Q_uh[u4,h1,11] - Q_uh[u4,h2,11] - Q_uh[u4,h3,11]
-   - Q_uh[u4,h4,11] - Q_uh[u4,h5,11] - Q_ug[u4,g1,11] - Q_ug[u4,g2,11]
-   - Q_ug[u4,g3,11] - Q_ug[u4,g4,11] - Q_ug[u4,g5,11] = 0
- c16[u5,0]: 0.6 Q_ju[j1,u5,0] + 0.6 Q_ju[j2,u5,0] + 0.6 Q_ju[j3,u5,0]
-   + 0.6 Q_ju[j4,u5,0] - Q_uh[u5,h1,0] - Q_uh[u5,h2,0] - Q_uh[u5,h3,0]
-   - Q_uh[u5,h4,0] - Q_uh[u5,h5,0] - Q_ug[u5,g1,0] - Q_ug[u5,g2,0]
-   - Q_ug[u5,g3,0] - Q_ug[u5,g4,0] - Q_ug[u5,g5,0] = 0
- c16[u5,1]: 0.4 Q_ju[j1,u5,1] + 0.4 Q_ju[j2,u5,1] + 0.4 Q_ju[j3,u5,1]
-   + 0.4 Q_ju[j4,u5,1] - Q_uh[u5,h1,1] - Q_uh[u5,h2,1] - Q_uh[u5,h3,1]
-   - Q_uh[u5,h4,1] - Q_uh[u5,h5,1] - Q_ug[u5,g1,1] - Q_ug[u5,g2,1]
-   - Q_ug[u5,g3,1] - Q_ug[u5,g4,1] - Q_ug[u5,g5,1] = 0
- c16[u5,2]: 0.6 Q_ju[j1,u5,2] + 0.6 Q_ju[j2,u5,2] + 0.6 Q_ju[j3,u5,2]
-   + 0.6 Q_ju[j4,u5,2] - Q_uh[u5,h1,2] - Q_uh[u5,h2,2] - Q_uh[u5,h3,2]
-   - Q_uh[u5,h4,2] - Q_uh[u5,h5,2] - Q_ug[u5,g1,2] - Q_ug[u5,g2,2]
-   - Q_ug[u5,g3,2] - Q_ug[u5,g4,2] - Q_ug[u5,g5,2] = 0
- c16[u5,3]: 0.4 Q_ju[j1,u5,3] + 0.4 Q_ju[j2,u5,3] + 0.4 Q_ju[j3,u5,3]
-   + 0.4 Q_ju[j4,u5,3] - Q_uh[u5,h1,3] - Q_uh[u5,h2,3] - Q_uh[u5,h3,3]
-   - Q_uh[u5,h4,3] - Q_uh[u5,h5,3] - Q_ug[u5,g1,3] - Q_ug[u5,g2,3]
-   - Q_ug[u5,g3,3] - Q_ug[u5,g4,3] - Q_ug[u5,g5,3] = 0
- c16[u5,4]: 0.6 Q_ju[j1,u5,4] + 0.6 Q_ju[j2,u5,4] + 0.6 Q_ju[j3,u5,4]
-   + 0.6 Q_ju[j4,u5,4] - Q_uh[u5,h1,4] - Q_uh[u5,h2,4] - Q_uh[u5,h3,4]
-   - Q_uh[u5,h4,4] - Q_uh[u5,h5,4] - Q_ug[u5,g1,4] - Q_ug[u5,g2,4]
-   - Q_ug[u5,g3,4] - Q_ug[u5,g4,4] - Q_ug[u5,g5,4] = 0
- c16[u5,5]: 0.5 Q_ju[j1,u5,5] + 0.5 Q_ju[j2,u5,5] + 0.5 Q_ju[j3,u5,5]
-   + 0.5 Q_ju[j4,u5,5] - Q_uh[u5,h1,5] - Q_uh[u5,h2,5] - Q_uh[u5,h3,5]
-   - Q_uh[u5,h4,5] - Q_uh[u5,h5,5] - Q_ug[u5,g1,5] - Q_ug[u5,g2,5]
-   - Q_ug[u5,g3,5] - Q_ug[u5,g4,5] - Q_ug[u5,g5,5] = 0
- c16[u5,6]: 0.5 Q_ju[j1,u5,6] + 0.5 Q_ju[j2,u5,6] + 0.5 Q_ju[j3,u5,6]
-   + 0.5 Q_ju[j4,u5,6] - Q_uh[u5,h1,6] - Q_uh[u5,h2,6] - Q_uh[u5,h3,6]
-   - Q_uh[u5,h4,6] - Q_uh[u5,h5,6] - Q_ug[u5,g1,6] - Q_ug[u5,g2,6]
-   - Q_ug[u5,g3,6] - Q_ug[u5,g4,6] - Q_ug[u5,g5,6] = 0
- c16[u5,7]: 0.5 Q_ju[j1,u5,7] + 0.5 Q_ju[j2,u5,7] + 0.5 Q_ju[j3,u5,7]
-   + 0.5 Q_ju[j4,u5,7] - Q_uh[u5,h1,7] - Q_uh[u5,h2,7] - Q_uh[u5,h3,7]
-   - Q_uh[u5,h4,7] - Q_uh[u5,h5,7] - Q_ug[u5,g1,7] - Q_ug[u5,g2,7]
-   - Q_ug[u5,g3,7] - Q_ug[u5,g4,7] - Q_ug[u5,g5,7] = 0
- c16[u5,8]: 0.6 Q_ju[j1,u5,8] + 0.6 Q_ju[j2,u5,8] + 0.6 Q_ju[j3,u5,8]
-   + 0.6 Q_ju[j4,u5,8] - Q_uh[u5,h1,8] - Q_uh[u5,h2,8] - Q_uh[u5,h3,8]
-   - Q_uh[u5,h4,8] - Q_uh[u5,h5,8] - Q_ug[u5,g1,8] - Q_ug[u5,g2,8]
-   - Q_ug[u5,g3,8] - Q_ug[u5,g4,8] - Q_ug[u5,g5,8] = 0
- c16[u5,9]: 0.5 Q_ju[j1,u5,9] + 0.5 Q_ju[j2,u5,9] + 0.5 Q_ju[j3,u5,9]
-   + 0.5 Q_ju[j4,u5,9] - Q_uh[u5,h1,9] - Q_uh[u5,h2,9] - Q_uh[u5,h3,9]
-   - Q_uh[u5,h4,9] - Q_uh[u5,h5,9] - Q_ug[u5,g1,9] - Q_ug[u5,g2,9]
-   - Q_ug[u5,g3,9] - Q_ug[u5,g4,9] - Q_ug[u5,g5,9] = 0
- c16[u5,10]: 0.4 Q_ju[j1,u5,10] + 0.4 Q_ju[j2,u5,10] + 0.4 Q_ju[j3,u5,10]
-   + 0.4 Q_ju[j4,u5,10] - Q_uh[u5,h1,10] - Q_uh[u5,h2,10] - Q_uh[u5,h3,10]
-   - Q_uh[u5,h4,10] - Q_uh[u5,h5,10] - Q_ug[u5,g1,10] - Q_ug[u5,g2,10]
-   - Q_ug[u5,g3,10] - Q_ug[u5,g4,10] - Q_ug[u5,g5,10] = 0
- c16[u5,11]: 0.6 Q_ju[j1,u5,11] + 0.6 Q_ju[j2,u5,11] + 0.6 Q_ju[j3,u5,11]
-   + 0.6 Q_ju[j4,u5,11] - Q_uh[u5,h1,11] - Q_uh[u5,h2,11] - Q_uh[u5,h3,11]
-   - Q_uh[u5,h4,11] - Q_uh[u5,h5,11] - Q_ug[u5,g1,11] - Q_ug[u5,g2,11]
-   - Q_ug[u5,g3,11] - Q_ug[u5,g4,11] - Q_ug[u5,g5,11] = 0
- c17[u1,k1,0]: 0.3 Q_ju[j1,u1,0] + 0.3 Q_ju[j2,u1,0] + 0.3 Q_ju[j3,u1,0]
-   + 0.3 Q_ju[j4,u1,0] - Q_kuv[k1,u1,v1,0] - Q_kuv[k1,u1,v2,0]
-   - Q_kuv[k1,u1,v3,0] - Q_kuv[k1,u1,v4,0] - Q_kuv[k1,u1,v5,0] = 0
- c17[u1,k1,1]: 0.3 Q_ju[j1,u1,1] + 0.3 Q_ju[j2,u1,1] + 0.3 Q_ju[j3,u1,1]
-   + 0.3 Q_ju[j4,u1,1] - Q_kuv[k1,u1,v1,1] - Q_kuv[k1,u1,v2,1]
-   - Q_kuv[k1,u1,v3,1] - Q_kuv[k1,u1,v4,1] - Q_kuv[k1,u1,v5,1] = 0
- c17[u1,k1,2]: 0.3 Q_ju[j1,u1,2] + 0.3 Q_ju[j2,u1,2] + 0.3 Q_ju[j3,u1,2]
-   + 0.3 Q_ju[j4,u1,2] - Q_kuv[k1,u1,v1,2] - Q_kuv[k1,u1,v2,2]
-   - Q_kuv[k1,u1,v3,2] - Q_kuv[k1,u1,v4,2] - Q_kuv[k1,u1,v5,2] = 0
- c17[u1,k1,3]: 0.4 Q_ju[j1,u1,3] + 0.4 Q_ju[j2,u1,3] + 0.4 Q_ju[j3,u1,3]
-   + 0.4 Q_ju[j4,u1,3] - Q_kuv[k1,u1,v1,3] - Q_kuv[k1,u1,v2,3]
-   - Q_kuv[k1,u1,v3,3] - Q_kuv[k1,u1,v4,3] - Q_kuv[k1,u1,v5,3] = 0
- c17[u1,k1,4]: 0.2 Q_ju[j1,u1,4] + 0.2 Q_ju[j2,u1,4] + 0.2 Q_ju[j3,u1,4]
-   + 0.2 Q_ju[j4,u1,4] - Q_kuv[k1,u1,v1,4] - Q_kuv[k1,u1,v2,4]
-   - Q_kuv[k1,u1,v3,4] - Q_kuv[k1,u1,v4,4] - Q_kuv[k1,u1,v5,4] = 0
- c17[u1,k1,5]: 0.2 Q_ju[j1,u1,5] + 0.2 Q_ju[j2,u1,5] + 0.2 Q_ju[j3,u1,5]
-   + 0.2 Q_ju[j4,u1,5] - Q_kuv[k1,u1,v1,5] - Q_kuv[k1,u1,v2,5]
-   - Q_kuv[k1,u1,v3,5] - Q_kuv[k1,u1,v4,5] - Q_kuv[k1,u1,v5,5] = 0
- c17[u1,k1,6]: 0.3 Q_ju[j1,u1,6] + 0.3 Q_ju[j2,u1,6] + 0.3 Q_ju[j3,u1,6]
-   + 0.3 Q_ju[j4,u1,6] - Q_kuv[k1,u1,v1,6] - Q_kuv[k1,u1,v2,6]
-   - Q_kuv[k1,u1,v3,6] - Q_kuv[k1,u1,v4,6] - Q_kuv[k1,u1,v5,6] = 0
- c17[u1,k1,7]: 0.4 Q_ju[j1,u1,7] + 0.4 Q_ju[j2,u1,7] + 0.4 Q_ju[j3,u1,7]
-   + 0.4 Q_ju[j4,u1,7] - Q_kuv[k1,u1,v1,7] - Q_kuv[k1,u1,v2,7]
-   - Q_kuv[k1,u1,v3,7] - Q_kuv[k1,u1,v4,7] - Q_kuv[k1,u1,v5,7] = 0
- c17[u1,k1,8]: 0.2 Q_ju[j1,u1,8] + 0.2 Q_ju[j2,u1,8] + 0.2 Q_ju[j3,u1,8]
-   + 0.2 Q_ju[j4,u1,8] - Q_kuv[k1,u1,v1,8] - Q_kuv[k1,u1,v2,8]
-   - Q_kuv[k1,u1,v3,8] - Q_kuv[k1,u1,v4,8] - Q_kuv[k1,u1,v5,8] = 0
- c17[u1,k1,9]: 0.4 Q_ju[j1,u1,9] + 0.4 Q_ju[j2,u1,9] + 0.4 Q_ju[j3,u1,9]
-   + 0.4 Q_ju[j4,u1,9] - Q_kuv[k1,u1,v1,9] - Q_kuv[k1,u1,v2,9]
-   - Q_kuv[k1,u1,v3,9] - Q_kuv[k1,u1,v4,9] - Q_kuv[k1,u1,v5,9] = 0
- c17[u1,k1,10]: 0.4 Q_ju[j1,u1,10] + 0.4 Q_ju[j2,u1,10]
-   + 0.4 Q_ju[j3,u1,10] + 0.4 Q_ju[j4,u1,10] - Q_kuv[k1,u1,v1,10]
-   - Q_kuv[k1,u1,v2,10] - Q_kuv[k1,u1,v3,10] - Q_kuv[k1,u1,v4,10]
-   - Q_kuv[k1,u1,v5,10] = 0
- c17[u1,k1,11]: 0.3 Q_ju[j1,u1,11] + 0.3 Q_ju[j2,u1,11]
-   + 0.3 Q_ju[j3,u1,11] + 0.3 Q_ju[j4,u1,11] - Q_kuv[k1,u1,v1,11]
-   - Q_kuv[k1,u1,v2,11] - Q_kuv[k1,u1,v3,11] - Q_kuv[k1,u1,v4,11]
-   - Q_kuv[k1,u1,v5,11] = 0
- c17[u1,k2,0]: 1.2 Q_ju[j1,u1,0] + 1.2 Q_ju[j2,u1,0] + 1.2 Q_ju[j3,u1,0]
-   + 1.2 Q_ju[j4,u1,0] - Q_kuv[k2,u1,v1,0] - Q_kuv[k2,u1,v2,0]
-   - Q_kuv[k2,u1,v3,0] - Q_kuv[k2,u1,v4,0] - Q_kuv[k2,u1,v5,0] = 0
- c17[u1,k2,1]: 1.2 Q_ju[j1,u1,1] + 1.2 Q_ju[j2,u1,1] + 1.2 Q_ju[j3,u1,1]
-   + 1.2 Q_ju[j4,u1,1] - Q_kuv[k2,u1,v1,1] - Q_kuv[k2,u1,v2,1]
-   - Q_kuv[k2,u1,v3,1] - Q_kuv[k2,u1,v4,1] - Q_kuv[k2,u1,v5,1] = 0
- c17[u1,k2,2]: 1.2 Q_ju[j1,u1,2] + 1.2 Q_ju[j2,u1,2] + 1.2 Q_ju[j3,u1,2]
-   + 1.2 Q_ju[j4,u1,2] - Q_kuv[k2,u1,v1,2] - Q_kuv[k2,u1,v2,2]
-   - Q_kuv[k2,u1,v3,2] - Q_kuv[k2,u1,v4,2] - Q_kuv[k2,u1,v5,2] = 0
- c17[u1,k2,3]: 1.6 Q_ju[j1,u1,3] + 1.6 Q_ju[j2,u1,3] + 1.6 Q_ju[j3,u1,3]
-   + 1.6 Q_ju[j4,u1,3] - Q_kuv[k2,u1,v1,3] - Q_kuv[k2,u1,v2,3]
-   - Q_kuv[k2,u1,v3,3] - Q_kuv[k2,u1,v4,3] - Q_kuv[k2,u1,v5,3] = 0
- c17[u1,k2,4]: 0.8 Q_ju[j1,u1,4] + 0.8 Q_ju[j2,u1,4] + 0.8 Q_ju[j3,u1,4]
-   + 0.8 Q_ju[j4,u1,4] - Q_kuv[k2,u1,v1,4] - Q_kuv[k2,u1,v2,4]
-   - Q_kuv[k2,u1,v3,4] - Q_kuv[k2,u1,v4,4] - Q_kuv[k2,u1,v5,4] = 0
- c17[u1,k2,5]: 0.8 Q_ju[j1,u1,5] + 0.8 Q_ju[j2,u1,5] + 0.8 Q_ju[j3,u1,5]
-   + 0.8 Q_ju[j4,u1,5] - Q_kuv[k2,u1,v1,5] - Q_kuv[k2,u1,v2,5]
-   - Q_kuv[k2,u1,v3,5] - Q_kuv[k2,u1,v4,5] - Q_kuv[k2,u1,v5,5] = 0
- c17[u1,k2,6]: 1.2 Q_ju[j1,u1,6] + 1.2 Q_ju[j2,u1,6] + 1.2 Q_ju[j3,u1,6]
-   + 1.2 Q_ju[j4,u1,6] - Q_kuv[k2,u1,v1,6] - Q_kuv[k2,u1,v2,6]
-   - Q_kuv[k2,u1,v3,6] - Q_kuv[k2,u1,v4,6] - Q_kuv[k2,u1,v5,6] = 0
- c17[u1,k2,7]: 1.6 Q_ju[j1,u1,7] + 1.6 Q_ju[j2,u1,7] + 1.6 Q_ju[j3,u1,7]
-   + 1.6 Q_ju[j4,u1,7] - Q_kuv[k2,u1,v1,7] - Q_kuv[k2,u1,v2,7]
-   - Q_kuv[k2,u1,v3,7] - Q_kuv[k2,u1,v4,7] - Q_kuv[k2,u1,v5,7] = 0
- c17[u1,k2,8]: 0.8 Q_ju[j1,u1,8] + 0.8 Q_ju[j2,u1,8] + 0.8 Q_ju[j3,u1,8]
-   + 0.8 Q_ju[j4,u1,8] - Q_kuv[k2,u1,v1,8] - Q_kuv[k2,u1,v2,8]
-   - Q_kuv[k2,u1,v3,8] - Q_kuv[k2,u1,v4,8] - Q_kuv[k2,u1,v5,8] = 0
- c17[u1,k2,9]: 1.6 Q_ju[j1,u1,9] + 1.6 Q_ju[j2,u1,9] + 1.6 Q_ju[j3,u1,9]
-   + 1.6 Q_ju[j4,u1,9] - Q_kuv[k2,u1,v1,9] - Q_kuv[k2,u1,v2,9]
-   - Q_kuv[k2,u1,v3,9] - Q_kuv[k2,u1,v4,9] - Q_kuv[k2,u1,v5,9] = 0
- c17[u1,k2,10]: 1.6 Q_ju[j1,u1,10] + 1.6 Q_ju[j2,u1,10]
-   + 1.6 Q_ju[j3,u1,10] + 1.6 Q_ju[j4,u1,10] - Q_kuv[k2,u1,v1,10]
-   - Q_kuv[k2,u1,v2,10] - Q_kuv[k2,u1,v3,10] - Q_kuv[k2,u1,v4,10]
-   - Q_kuv[k2,u1,v5,10] = 0
- c17[u1,k2,11]: 1.2 Q_ju[j1,u1,11] + 1.2 Q_ju[j2,u1,11]
-   + 1.2 Q_ju[j3,u1,11] + 1.2 Q_ju[j4,u1,11] - Q_kuv[k2,u1,v1,11]
-   - Q_kuv[k2,u1,v2,11] - Q_kuv[k2,u1,v3,11] - Q_kuv[k2,u1,v4,11]
-   - Q_kuv[k2,u1,v5,11] = 0
- c17[u1,k3,0]: 3 Q_ju[j1,u1,0] + 3 Q_ju[j2,u1,0] + 3 Q_ju[j3,u1,0]
-   + 3 Q_ju[j4,u1,0] - Q_kuv[k3,u1,v1,0] - Q_kuv[k3,u1,v2,0]
-   - Q_kuv[k3,u1,v3,0] - Q_kuv[k3,u1,v4,0] - Q_kuv[k3,u1,v5,0] = 0
- c17[u1,k3,1]: 3 Q_ju[j1,u1,1] + 3 Q_ju[j2,u1,1] + 3 Q_ju[j3,u1,1]
-   + 3 Q_ju[j4,u1,1] - Q_kuv[k3,u1,v1,1] - Q_kuv[k3,u1,v2,1]
-   - Q_kuv[k3,u1,v3,1] - Q_kuv[k3,u1,v4,1] - Q_kuv[k3,u1,v5,1] = 0
- c17[u1,k3,2]: 3 Q_ju[j1,u1,2] + 3 Q_ju[j2,u1,2] + 3 Q_ju[j3,u1,2]
-   + 3 Q_ju[j4,u1,2] - Q_kuv[k3,u1,v1,2] - Q_kuv[k3,u1,v2,2]
-   - Q_kuv[k3,u1,v3,2] - Q_kuv[k3,u1,v4,2] - Q_kuv[k3,u1,v5,2] = 0
- c17[u1,k3,3]: 4 Q_ju[j1,u1,3] + 4 Q_ju[j2,u1,3] + 4 Q_ju[j3,u1,3]
-   + 4 Q_ju[j4,u1,3] - Q_kuv[k3,u1,v1,3] - Q_kuv[k3,u1,v2,3]
-   - Q_kuv[k3,u1,v3,3] - Q_kuv[k3,u1,v4,3] - Q_kuv[k3,u1,v5,3] = 0
- c17[u1,k3,4]: 2 Q_ju[j1,u1,4] + 2 Q_ju[j2,u1,4] + 2 Q_ju[j3,u1,4]
-   + 2 Q_ju[j4,u1,4] - Q_kuv[k3,u1,v1,4] - Q_kuv[k3,u1,v2,4]
-   - Q_kuv[k3,u1,v3,4] - Q_kuv[k3,u1,v4,4] - Q_kuv[k3,u1,v5,4] = 0
- c17[u1,k3,5]: 2 Q_ju[j1,u1,5] + 2 Q_ju[j2,u1,5] + 2 Q_ju[j3,u1,5]
-   + 2 Q_ju[j4,u1,5] - Q_kuv[k3,u1,v1,5] - Q_kuv[k3,u1,v2,5]
-   - Q_kuv[k3,u1,v3,5] - Q_kuv[k3,u1,v4,5] - Q_kuv[k3,u1,v5,5] = 0
- c17[u1,k3,6]: 3 Q_ju[j1,u1,6] + 3 Q_ju[j2,u1,6] + 3 Q_ju[j3,u1,6]
-   + 3 Q_ju[j4,u1,6] - Q_kuv[k3,u1,v1,6] - Q_kuv[k3,u1,v2,6]
-   - Q_kuv[k3,u1,v3,6] - Q_kuv[k3,u1,v4,6] - Q_kuv[k3,u1,v5,6] = 0
- c17[u1,k3,7]: 4 Q_ju[j1,u1,7] + 4 Q_ju[j2,u1,7] + 4 Q_ju[j3,u1,7]
-   + 4 Q_ju[j4,u1,7] - Q_kuv[k3,u1,v1,7] - Q_kuv[k3,u1,v2,7]
-   - Q_kuv[k3,u1,v3,7] - Q_kuv[k3,u1,v4,7] - Q_kuv[k3,u1,v5,7] = 0
- c17[u1,k3,8]: 2 Q_ju[j1,u1,8] + 2 Q_ju[j2,u1,8] + 2 Q_ju[j3,u1,8]
-   + 2 Q_ju[j4,u1,8] - Q_kuv[k3,u1,v1,8] - Q_kuv[k3,u1,v2,8]
-   - Q_kuv[k3,u1,v3,8] - Q_kuv[k3,u1,v4,8] - Q_kuv[k3,u1,v5,8] = 0
- c17[u1,k3,9]: 4 Q_ju[j1,u1,9] + 4 Q_ju[j2,u1,9] + 4 Q_ju[j3,u1,9]
-   + 4 Q_ju[j4,u1,9] - Q_kuv[k3,u1,v1,9] - Q_kuv[k3,u1,v2,9]
-   - Q_kuv[k3,u1,v3,9] - Q_kuv[k3,u1,v4,9] - Q_kuv[k3,u1,v5,9] = 0
- c17[u1,k3,10]: 4 Q_ju[j1,u1,10] + 4 Q_ju[j2,u1,10] + 4 Q_ju[j3,u1,10]
-   + 4 Q_ju[j4,u1,10] - Q_kuv[k3,u1,v1,10] - Q_kuv[k3,u1,v2,10]
-   - Q_kuv[k3,u1,v3,10] - Q_kuv[k3,u1,v4,10] - Q_kuv[k3,u1,v5,10] = 0
- c17[u1,k3,11]: 3 Q_ju[j1,u1,11] + 3 Q_ju[j2,u1,11] + 3 Q_ju[j3,u1,11]
-   + 3 Q_ju[j4,u1,11] - Q_kuv[k3,u1,v1,11] - Q_kuv[k3,u1,v2,11]
-   - Q_kuv[k3,u1,v3,11] - Q_kuv[k3,u1,v4,11] - Q_kuv[k3,u1,v5,11] = 0
- c17[u2,k1,0]: 0.3 Q_ju[j1,u2,0] + 0.3 Q_ju[j2,u2,0] + 0.3 Q_ju[j3,u2,0]
-   + 0.3 Q_ju[j4,u2,0] - Q_kuv[k1,u2,v1,0] - Q_kuv[k1,u2,v2,0]
-   - Q_kuv[k1,u2,v3,0] - Q_kuv[k1,u2,v4,0] - Q_kuv[k1,u2,v5,0] = 0
- c17[u2,k1,1]: 0.3 Q_ju[j1,u2,1] + 0.3 Q_ju[j2,u2,1] + 0.3 Q_ju[j3,u2,1]
-   + 0.3 Q_ju[j4,u2,1] - Q_kuv[k1,u2,v1,1] - Q_kuv[k1,u2,v2,1]
-   - Q_kuv[k1,u2,v3,1] - Q_kuv[k1,u2,v4,1] - Q_kuv[k1,u2,v5,1] = 0
- c17[u2,k1,2]: 0.3 Q_ju[j1,u2,2] + 0.3 Q_ju[j2,u2,2] + 0.3 Q_ju[j3,u2,2]
-   + 0.3 Q_ju[j4,u2,2] - Q_kuv[k1,u2,v1,2] - Q_kuv[k1,u2,v2,2]
-   - Q_kuv[k1,u2,v3,2] - Q_kuv[k1,u2,v4,2] - Q_kuv[k1,u2,v5,2] = 0
- c17[u2,k1,3]: 0.4 Q_ju[j1,u2,3] + 0.4 Q_ju[j2,u2,3] + 0.4 Q_ju[j3,u2,3]
-   + 0.4 Q_ju[j4,u2,3] - Q_kuv[k1,u2,v1,3] - Q_kuv[k1,u2,v2,3]
-   - Q_kuv[k1,u2,v3,3] - Q_kuv[k1,u2,v4,3] - Q_kuv[k1,u2,v5,3] = 0
- c17[u2,k1,4]: 0.2 Q_ju[j1,u2,4] + 0.2 Q_ju[j2,u2,4] + 0.2 Q_ju[j3,u2,4]
-   + 0.2 Q_ju[j4,u2,4] - Q_kuv[k1,u2,v1,4] - Q_kuv[k1,u2,v2,4]
-   - Q_kuv[k1,u2,v3,4] - Q_kuv[k1,u2,v4,4] - Q_kuv[k1,u2,v5,4] = 0
- c17[u2,k1,5]: 0.2 Q_ju[j1,u2,5] + 0.2 Q_ju[j2,u2,5] + 0.2 Q_ju[j3,u2,5]
-   + 0.2 Q_ju[j4,u2,5] - Q_kuv[k1,u2,v1,5] - Q_kuv[k1,u2,v2,5]
-   - Q_kuv[k1,u2,v3,5] - Q_kuv[k1,u2,v4,5] - Q_kuv[k1,u2,v5,5] = 0
- c17[u2,k1,6]: 0.3 Q_ju[j1,u2,6] + 0.3 Q_ju[j2,u2,6] + 0.3 Q_ju[j3,u2,6]
-   + 0.3 Q_ju[j4,u2,6] - Q_kuv[k1,u2,v1,6] - Q_kuv[k1,u2,v2,6]
-   - Q_kuv[k1,u2,v3,6] - Q_kuv[k1,u2,v4,6] - Q_kuv[k1,u2,v5,6] = 0
- c17[u2,k1,7]: 0.4 Q_ju[j1,u2,7] + 0.4 Q_ju[j2,u2,7] + 0.4 Q_ju[j3,u2,7]
-   + 0.4 Q_ju[j4,u2,7] - Q_kuv[k1,u2,v1,7] - Q_kuv[k1,u2,v2,7]
-   - Q_kuv[k1,u2,v3,7] - Q_kuv[k1,u2,v4,7] - Q_kuv[k1,u2,v5,7] = 0
- c17[u2,k1,8]: 0.2 Q_ju[j1,u2,8] + 0.2 Q_ju[j2,u2,8] + 0.2 Q_ju[j3,u2,8]
-   + 0.2 Q_ju[j4,u2,8] - Q_kuv[k1,u2,v1,8] - Q_kuv[k1,u2,v2,8]
-   - Q_kuv[k1,u2,v3,8] - Q_kuv[k1,u2,v4,8] - Q_kuv[k1,u2,v5,8] = 0
- c17[u2,k1,9]: 0.4 Q_ju[j1,u2,9] + 0.4 Q_ju[j2,u2,9] + 0.4 Q_ju[j3,u2,9]
-   + 0.4 Q_ju[j4,u2,9] - Q_kuv[k1,u2,v1,9] - Q_kuv[k1,u2,v2,9]
-   - Q_kuv[k1,u2,v3,9] - Q_kuv[k1,u2,v4,9] - Q_kuv[k1,u2,v5,9] = 0
- c17[u2,k1,10]: 0.4 Q_ju[j1,u2,10] + 0.4 Q_ju[j2,u2,10]
-   + 0.4 Q_ju[j3,u2,10] + 0.4 Q_ju[j4,u2,10] - Q_kuv[k1,u2,v1,10]
-   - Q_kuv[k1,u2,v2,10] - Q_kuv[k1,u2,v3,10] - Q_kuv[k1,u2,v4,10]
-   - Q_kuv[k1,u2,v5,10] = 0
- c17[u2,k1,11]: 0.3 Q_ju[j1,u2,11] + 0.3 Q_ju[j2,u2,11]
-   + 0.3 Q_ju[j3,u2,11] + 0.3 Q_ju[j4,u2,11] - Q_kuv[k1,u2,v1,11]
-   - Q_kuv[k1,u2,v2,11] - Q_kuv[k1,u2,v3,11] - Q_kuv[k1,u2,v4,11]
-   - Q_kuv[k1,u2,v5,11] = 0
- c17[u2,k2,0]: 1.2 Q_ju[j1,u2,0] + 1.2 Q_ju[j2,u2,0] + 1.2 Q_ju[j3,u2,0]
-   + 1.2 Q_ju[j4,u2,0] - Q_kuv[k2,u2,v1,0] - Q_kuv[k2,u2,v2,0]
-   - Q_kuv[k2,u2,v3,0] - Q_kuv[k2,u2,v4,0] - Q_kuv[k2,u2,v5,0] = 0
- c17[u2,k2,1]: 1.2 Q_ju[j1,u2,1] + 1.2 Q_ju[j2,u2,1] + 1.2 Q_ju[j3,u2,1]
-   + 1.2 Q_ju[j4,u2,1] - Q_kuv[k2,u2,v1,1] - Q_kuv[k2,u2,v2,1]
-   - Q_kuv[k2,u2,v3,1] - Q_kuv[k2,u2,v4,1] - Q_kuv[k2,u2,v5,1] = 0
- c17[u2,k2,2]: 1.2 Q_ju[j1,u2,2] + 1.2 Q_ju[j2,u2,2] + 1.2 Q_ju[j3,u2,2]
-   + 1.2 Q_ju[j4,u2,2] - Q_kuv[k2,u2,v1,2] - Q_kuv[k2,u2,v2,2]
-   - Q_kuv[k2,u2,v3,2] - Q_kuv[k2,u2,v4,2] - Q_kuv[k2,u2,v5,2] = 0
- c17[u2,k2,3]: 1.6 Q_ju[j1,u2,3] + 1.6 Q_ju[j2,u2,3] + 1.6 Q_ju[j3,u2,3]
-   + 1.6 Q_ju[j4,u2,3] - Q_kuv[k2,u2,v1,3] - Q_kuv[k2,u2,v2,3]
-   - Q_kuv[k2,u2,v3,3] - Q_kuv[k2,u2,v4,3] - Q_kuv[k2,u2,v5,3] = 0
- c17[u2,k2,4]: 0.8 Q_ju[j1,u2,4] + 0.8 Q_ju[j2,u2,4] + 0.8 Q_ju[j3,u2,4]
-   + 0.8 Q_ju[j4,u2,4] - Q_kuv[k2,u2,v1,4] - Q_kuv[k2,u2,v2,4]
-   - Q_kuv[k2,u2,v3,4] - Q_kuv[k2,u2,v4,4] - Q_kuv[k2,u2,v5,4] = 0
- c17[u2,k2,5]: 0.8 Q_ju[j1,u2,5] + 0.8 Q_ju[j2,u2,5] + 0.8 Q_ju[j3,u2,5]
-   + 0.8 Q_ju[j4,u2,5] - Q_kuv[k2,u2,v1,5] - Q_kuv[k2,u2,v2,5]
-   - Q_kuv[k2,u2,v3,5] - Q_kuv[k2,u2,v4,5] - Q_kuv[k2,u2,v5,5] = 0
- c17[u2,k2,6]: 1.2 Q_ju[j1,u2,6] + 1.2 Q_ju[j2,u2,6] + 1.2 Q_ju[j3,u2,6]
-   + 1.2 Q_ju[j4,u2,6] - Q_kuv[k2,u2,v1,6] - Q_kuv[k2,u2,v2,6]
-   - Q_kuv[k2,u2,v3,6] - Q_kuv[k2,u2,v4,6] - Q_kuv[k2,u2,v5,6] = 0
- c17[u2,k2,7]: 1.6 Q_ju[j1,u2,7] + 1.6 Q_ju[j2,u2,7] + 1.6 Q_ju[j3,u2,7]
-   + 1.6 Q_ju[j4,u2,7] - Q_kuv[k2,u2,v1,7] - Q_kuv[k2,u2,v2,7]
-   - Q_kuv[k2,u2,v3,7] - Q_kuv[k2,u2,v4,7] - Q_kuv[k2,u2,v5,7] = 0
- c17[u2,k2,8]: 0.8 Q_ju[j1,u2,8] + 0.8 Q_ju[j2,u2,8] + 0.8 Q_ju[j3,u2,8]
-   + 0.8 Q_ju[j4,u2,8] - Q_kuv[k2,u2,v1,8] - Q_kuv[k2,u2,v2,8]
-   - Q_kuv[k2,u2,v3,8] - Q_kuv[k2,u2,v4,8] - Q_kuv[k2,u2,v5,8] = 0
- c17[u2,k2,9]: 1.6 Q_ju[j1,u2,9] + 1.6 Q_ju[j2,u2,9] + 1.6 Q_ju[j3,u2,9]
-   + 1.6 Q_ju[j4,u2,9] - Q_kuv[k2,u2,v1,9] - Q_kuv[k2,u2,v2,9]
-   - Q_kuv[k2,u2,v3,9] - Q_kuv[k2,u2,v4,9] - Q_kuv[k2,u2,v5,9] = 0
- c17[u2,k2,10]: 1.6 Q_ju[j1,u2,10] + 1.6 Q_ju[j2,u2,10]
-   + 1.6 Q_ju[j3,u2,10] + 1.6 Q_ju[j4,u2,10] - Q_kuv[k2,u2,v1,10]
-   - Q_kuv[k2,u2,v2,10] - Q_kuv[k2,u2,v3,10] - Q_kuv[k2,u2,v4,10]
-   - Q_kuv[k2,u2,v5,10] = 0
- c17[u2,k2,11]: 1.2 Q_ju[j1,u2,11] + 1.2 Q_ju[j2,u2,11]
-   + 1.2 Q_ju[j3,u2,11] + 1.2 Q_ju[j4,u2,11] - Q_kuv[k2,u2,v1,11]
-   - Q_kuv[k2,u2,v2,11] - Q_kuv[k2,u2,v3,11] - Q_kuv[k2,u2,v4,11]
-   - Q_kuv[k2,u2,v5,11] = 0
- c17[u2,k3,0]: 3 Q_ju[j1,u2,0] + 3 Q_ju[j2,u2,0] + 3 Q_ju[j3,u2,0]
-   + 3 Q_ju[j4,u2,0] - Q_kuv[k3,u2,v1,0] - Q_kuv[k3,u2,v2,0]
-   - Q_kuv[k3,u2,v3,0] - Q_kuv[k3,u2,v4,0] - Q_kuv[k3,u2,v5,0] = 0
- c17[u2,k3,1]: 3 Q_ju[j1,u2,1] + 3 Q_ju[j2,u2,1] + 3 Q_ju[j3,u2,1]
-   + 3 Q_ju[j4,u2,1] - Q_kuv[k3,u2,v1,1] - Q_kuv[k3,u2,v2,1]
-   - Q_kuv[k3,u2,v3,1] - Q_kuv[k3,u2,v4,1] - Q_kuv[k3,u2,v5,1] = 0
- c17[u2,k3,2]: 3 Q_ju[j1,u2,2] + 3 Q_ju[j2,u2,2] + 3 Q_ju[j3,u2,2]
-   + 3 Q_ju[j4,u2,2] - Q_kuv[k3,u2,v1,2] - Q_kuv[k3,u2,v2,2]
-   - Q_kuv[k3,u2,v3,2] - Q_kuv[k3,u2,v4,2] - Q_kuv[k3,u2,v5,2] = 0
- c17[u2,k3,3]: 4 Q_ju[j1,u2,3] + 4 Q_ju[j2,u2,3] + 4 Q_ju[j3,u2,3]
-   + 4 Q_ju[j4,u2,3] - Q_kuv[k3,u2,v1,3] - Q_kuv[k3,u2,v2,3]
-   - Q_kuv[k3,u2,v3,3] - Q_kuv[k3,u2,v4,3] - Q_kuv[k3,u2,v5,3] = 0
- c17[u2,k3,4]: 2 Q_ju[j1,u2,4] + 2 Q_ju[j2,u2,4] + 2 Q_ju[j3,u2,4]
-   + 2 Q_ju[j4,u2,4] - Q_kuv[k3,u2,v1,4] - Q_kuv[k3,u2,v2,4]
-   - Q_kuv[k3,u2,v3,4] - Q_kuv[k3,u2,v4,4] - Q_kuv[k3,u2,v5,4] = 0
- c17[u2,k3,5]: 2 Q_ju[j1,u2,5] + 2 Q_ju[j2,u2,5] + 2 Q_ju[j3,u2,5]
-   + 2 Q_ju[j4,u2,5] - Q_kuv[k3,u2,v1,5] - Q_kuv[k3,u2,v2,5]
-   - Q_kuv[k3,u2,v3,5] - Q_kuv[k3,u2,v4,5] - Q_kuv[k3,u2,v5,5] = 0
- c17[u2,k3,6]: 3 Q_ju[j1,u2,6] + 3 Q_ju[j2,u2,6] + 3 Q_ju[j3,u2,6]
-   + 3 Q_ju[j4,u2,6] - Q_kuv[k3,u2,v1,6] - Q_kuv[k3,u2,v2,6]
-   - Q_kuv[k3,u2,v3,6] - Q_kuv[k3,u2,v4,6] - Q_kuv[k3,u2,v5,6] = 0
- c17[u2,k3,7]: 4 Q_ju[j1,u2,7] + 4 Q_ju[j2,u2,7] + 4 Q_ju[j3,u2,7]
-   + 4 Q_ju[j4,u2,7] - Q_kuv[k3,u2,v1,7] - Q_kuv[k3,u2,v2,7]
-   - Q_kuv[k3,u2,v3,7] - Q_kuv[k3,u2,v4,7] - Q_kuv[k3,u2,v5,7] = 0
- c17[u2,k3,8]: 2 Q_ju[j1,u2,8] + 2 Q_ju[j2,u2,8] + 2 Q_ju[j3,u2,8]
-   + 2 Q_ju[j4,u2,8] - Q_kuv[k3,u2,v1,8] - Q_kuv[k3,u2,v2,8]
-   - Q_kuv[k3,u2,v3,8] - Q_kuv[k3,u2,v4,8] - Q_kuv[k3,u2,v5,8] = 0
- c17[u2,k3,9]: 4 Q_ju[j1,u2,9] + 4 Q_ju[j2,u2,9] + 4 Q_ju[j3,u2,9]
-   + 4 Q_ju[j4,u2,9] - Q_kuv[k3,u2,v1,9] - Q_kuv[k3,u2,v2,9]
-   - Q_kuv[k3,u2,v3,9] - Q_kuv[k3,u2,v4,9] - Q_kuv[k3,u2,v5,9] = 0
- c17[u2,k3,10]: 4 Q_ju[j1,u2,10] + 4 Q_ju[j2,u2,10] + 4 Q_ju[j3,u2,10]
-   + 4 Q_ju[j4,u2,10] - Q_kuv[k3,u2,v1,10] - Q_kuv[k3,u2,v2,10]
-   - Q_kuv[k3,u2,v3,10] - Q_kuv[k3,u2,v4,10] - Q_kuv[k3,u2,v5,10] = 0
- c17[u2,k3,11]: 3 Q_ju[j1,u2,11] + 3 Q_ju[j2,u2,11] + 3 Q_ju[j3,u2,11]
-   + 3 Q_ju[j4,u2,11] - Q_kuv[k3,u2,v1,11] - Q_kuv[k3,u2,v2,11]
-   - Q_kuv[k3,u2,v3,11] - Q_kuv[k3,u2,v4,11] - Q_kuv[k3,u2,v5,11] = 0
- c17[u3,k1,0]: 0.3 Q_ju[j1,u3,0] + 0.3 Q_ju[j2,u3,0] + 0.3 Q_ju[j3,u3,0]
-   + 0.3 Q_ju[j4,u3,0] - Q_kuv[k1,u3,v1,0] - Q_kuv[k1,u3,v2,0]
-   - Q_kuv[k1,u3,v3,0] - Q_kuv[k1,u3,v4,0] - Q_kuv[k1,u3,v5,0] = 0
- c17[u3,k1,1]: 0.3 Q_ju[j1,u3,1] + 0.3 Q_ju[j2,u3,1] + 0.3 Q_ju[j3,u3,1]
-   + 0.3 Q_ju[j4,u3,1] - Q_kuv[k1,u3,v1,1] - Q_kuv[k1,u3,v2,1]
-   - Q_kuv[k1,u3,v3,1] - Q_kuv[k1,u3,v4,1] - Q_kuv[k1,u3,v5,1] = 0
- c17[u3,k1,2]: 0.3 Q_ju[j1,u3,2] + 0.3 Q_ju[j2,u3,2] + 0.3 Q_ju[j3,u3,2]
-   + 0.3 Q_ju[j4,u3,2] - Q_kuv[k1,u3,v1,2] - Q_kuv[k1,u3,v2,2]
-   - Q_kuv[k1,u3,v3,2] - Q_kuv[k1,u3,v4,2] - Q_kuv[k1,u3,v5,2] = 0
- c17[u3,k1,3]: 0.4 Q_ju[j1,u3,3] + 0.4 Q_ju[j2,u3,3] + 0.4 Q_ju[j3,u3,3]
-   + 0.4 Q_ju[j4,u3,3] - Q_kuv[k1,u3,v1,3] - Q_kuv[k1,u3,v2,3]
-   - Q_kuv[k1,u3,v3,3] - Q_kuv[k1,u3,v4,3] - Q_kuv[k1,u3,v5,3] = 0
- c17[u3,k1,4]: 0.2 Q_ju[j1,u3,4] + 0.2 Q_ju[j2,u3,4] + 0.2 Q_ju[j3,u3,4]
-   + 0.2 Q_ju[j4,u3,4] - Q_kuv[k1,u3,v1,4] - Q_kuv[k1,u3,v2,4]
-   - Q_kuv[k1,u3,v3,4] - Q_kuv[k1,u3,v4,4] - Q_kuv[k1,u3,v5,4] = 0
- c17[u3,k1,5]: 0.2 Q_ju[j1,u3,5] + 0.2 Q_ju[j2,u3,5] + 0.2 Q_ju[j3,u3,5]
-   + 0.2 Q_ju[j4,u3,5] - Q_kuv[k1,u3,v1,5] - Q_kuv[k1,u3,v2,5]
-   - Q_kuv[k1,u3,v3,5] - Q_kuv[k1,u3,v4,5] - Q_kuv[k1,u3,v5,5] = 0
- c17[u3,k1,6]: 0.3 Q_ju[j1,u3,6] + 0.3 Q_ju[j2,u3,6] + 0.3 Q_ju[j3,u3,6]
-   + 0.3 Q_ju[j4,u3,6] - Q_kuv[k1,u3,v1,6] - Q_kuv[k1,u3,v2,6]
-   - Q_kuv[k1,u3,v3,6] - Q_kuv[k1,u3,v4,6] - Q_kuv[k1,u3,v5,6] = 0
- c17[u3,k1,7]: 0.4 Q_ju[j1,u3,7] + 0.4 Q_ju[j2,u3,7] + 0.4 Q_ju[j3,u3,7]
-   + 0.4 Q_ju[j4,u3,7] - Q_kuv[k1,u3,v1,7] - Q_kuv[k1,u3,v2,7]
-   - Q_kuv[k1,u3,v3,7] - Q_kuv[k1,u3,v4,7] - Q_kuv[k1,u3,v5,7] = 0
- c17[u3,k1,8]: 0.2 Q_ju[j1,u3,8] + 0.2 Q_ju[j2,u3,8] + 0.2 Q_ju[j3,u3,8]
-   + 0.2 Q_ju[j4,u3,8] - Q_kuv[k1,u3,v1,8] - Q_kuv[k1,u3,v2,8]
-   - Q_kuv[k1,u3,v3,8] - Q_kuv[k1,u3,v4,8] - Q_kuv[k1,u3,v5,8] = 0
- c17[u3,k1,9]: 0.4 Q_ju[j1,u3,9] + 0.4 Q_ju[j2,u3,9] + 0.4 Q_ju[j3,u3,9]
-   + 0.4 Q_ju[j4,u3,9] - Q_kuv[k1,u3,v1,9] - Q_kuv[k1,u3,v2,9]
-   - Q_kuv[k1,u3,v3,9] - Q_kuv[k1,u3,v4,9] - Q_kuv[k1,u3,v5,9] = 0
- c17[u3,k1,10]: 0.4 Q_ju[j1,u3,10] + 0.4 Q_ju[j2,u3,10]
-   + 0.4 Q_ju[j3,u3,10] + 0.4 Q_ju[j4,u3,10] - Q_kuv[k1,u3,v1,10]
-   - Q_kuv[k1,u3,v2,10] - Q_kuv[k1,u3,v3,10] - Q_kuv[k1,u3,v4,10]
-   - Q_kuv[k1,u3,v5,10] = 0
- c17[u3,k1,11]: 0.3 Q_ju[j1,u3,11] + 0.3 Q_ju[j2,u3,11]
-   + 0.3 Q_ju[j3,u3,11] + 0.3 Q_ju[j4,u3,11] - Q_kuv[k1,u3,v1,11]
-   - Q_kuv[k1,u3,v2,11] - Q_kuv[k1,u3,v3,11] - Q_kuv[k1,u3,v4,11]
-   - Q_kuv[k1,u3,v5,11] = 0
- c17[u3,k2,0]: 1.2 Q_ju[j1,u3,0] + 1.2 Q_ju[j2,u3,0] + 1.2 Q_ju[j3,u3,0]
-   + 1.2 Q_ju[j4,u3,0] - Q_kuv[k2,u3,v1,0] - Q_kuv[k2,u3,v2,0]
-   - Q_kuv[k2,u3,v3,0] - Q_kuv[k2,u3,v4,0] - Q_kuv[k2,u3,v5,0] = 0
- c17[u3,k2,1]: 1.2 Q_ju[j1,u3,1] + 1.2 Q_ju[j2,u3,1] + 1.2 Q_ju[j3,u3,1]
-   + 1.2 Q_ju[j4,u3,1] - Q_kuv[k2,u3,v1,1] - Q_kuv[k2,u3,v2,1]
-   - Q_kuv[k2,u3,v3,1] - Q_kuv[k2,u3,v4,1] - Q_kuv[k2,u3,v5,1] = 0
- c17[u3,k2,2]: 1.2 Q_ju[j1,u3,2] + 1.2 Q_ju[j2,u3,2] + 1.2 Q_ju[j3,u3,2]
-   + 1.2 Q_ju[j4,u3,2] - Q_kuv[k2,u3,v1,2] - Q_kuv[k2,u3,v2,2]
-   - Q_kuv[k2,u3,v3,2] - Q_kuv[k2,u3,v4,2] - Q_kuv[k2,u3,v5,2] = 0
- c17[u3,k2,3]: 1.6 Q_ju[j1,u3,3] + 1.6 Q_ju[j2,u3,3] + 1.6 Q_ju[j3,u3,3]
-   + 1.6 Q_ju[j4,u3,3] - Q_kuv[k2,u3,v1,3] - Q_kuv[k2,u3,v2,3]
-   - Q_kuv[k2,u3,v3,3] - Q_kuv[k2,u3,v4,3] - Q_kuv[k2,u3,v5,3] = 0
- c17[u3,k2,4]: 0.8 Q_ju[j1,u3,4] + 0.8 Q_ju[j2,u3,4] + 0.8 Q_ju[j3,u3,4]
-   + 0.8 Q_ju[j4,u3,4] - Q_kuv[k2,u3,v1,4] - Q_kuv[k2,u3,v2,4]
-   - Q_kuv[k2,u3,v3,4] - Q_kuv[k2,u3,v4,4] - Q_kuv[k2,u3,v5,4] = 0
- c17[u3,k2,5]: 0.8 Q_ju[j1,u3,5] + 0.8 Q_ju[j2,u3,5] + 0.8 Q_ju[j3,u3,5]
-   + 0.8 Q_ju[j4,u3,5] - Q_kuv[k2,u3,v1,5] - Q_kuv[k2,u3,v2,5]
-   - Q_kuv[k2,u3,v3,5] - Q_kuv[k2,u3,v4,5] - Q_kuv[k2,u3,v5,5] = 0
- c17[u3,k2,6]: 1.2 Q_ju[j1,u3,6] + 1.2 Q_ju[j2,u3,6] + 1.2 Q_ju[j3,u3,6]
-   + 1.2 Q_ju[j4,u3,6] - Q_kuv[k2,u3,v1,6] - Q_kuv[k2,u3,v2,6]
-   - Q_kuv[k2,u3,v3,6] - Q_kuv[k2,u3,v4,6] - Q_kuv[k2,u3,v5,6] = 0
- c17[u3,k2,7]: 1.6 Q_ju[j1,u3,7] + 1.6 Q_ju[j2,u3,7] + 1.6 Q_ju[j3,u3,7]
-   + 1.6 Q_ju[j4,u3,7] - Q_kuv[k2,u3,v1,7] - Q_kuv[k2,u3,v2,7]
-   - Q_kuv[k2,u3,v3,7] - Q_kuv[k2,u3,v4,7] - Q_kuv[k2,u3,v5,7] = 0
- c17[u3,k2,8]: 0.8 Q_ju[j1,u3,8] + 0.8 Q_ju[j2,u3,8] + 0.8 Q_ju[j3,u3,8]
-   + 0.8 Q_ju[j4,u3,8] - Q_kuv[k2,u3,v1,8] - Q_kuv[k2,u3,v2,8]
-   - Q_kuv[k2,u3,v3,8] - Q_kuv[k2,u3,v4,8] - Q_kuv[k2,u3,v5,8] = 0
- c17[u3,k2,9]: 1.6 Q_ju[j1,u3,9] + 1.6 Q_ju[j2,u3,9] + 1.6 Q_ju[j3,u3,9]
-   + 1.6 Q_ju[j4,u3,9] - Q_kuv[k2,u3,v1,9] - Q_kuv[k2,u3,v2,9]
-   - Q_kuv[k2,u3,v3,9] - Q_kuv[k2,u3,v4,9] - Q_kuv[k2,u3,v5,9] = 0
- c17[u3,k2,10]: 1.6 Q_ju[j1,u3,10] + 1.6 Q_ju[j2,u3,10]
-   + 1.6 Q_ju[j3,u3,10] + 1.6 Q_ju[j4,u3,10] - Q_kuv[k2,u3,v1,10]
-   - Q_kuv[k2,u3,v2,10] - Q_kuv[k2,u3,v3,10] - Q_kuv[k2,u3,v4,10]
-   - Q_kuv[k2,u3,v5,10] = 0
- c17[u3,k2,11]: 1.2 Q_ju[j1,u3,11] + 1.2 Q_ju[j2,u3,11]
-   + 1.2 Q_ju[j3,u3,11] + 1.2 Q_ju[j4,u3,11] - Q_kuv[k2,u3,v1,11]
-   - Q_kuv[k2,u3,v2,11] - Q_kuv[k2,u3,v3,11] - Q_kuv[k2,u3,v4,11]
-   - Q_kuv[k2,u3,v5,11] = 0
- c17[u3,k3,0]: 3 Q_ju[j1,u3,0] + 3 Q_ju[j2,u3,0] + 3 Q_ju[j3,u3,0]
-   + 3 Q_ju[j4,u3,0] - Q_kuv[k3,u3,v1,0] - Q_kuv[k3,u3,v2,0]
-   - Q_kuv[k3,u3,v3,0] - Q_kuv[k3,u3,v4,0] - Q_kuv[k3,u3,v5,0] = 0
- c17[u3,k3,1]: 3 Q_ju[j1,u3,1] + 3 Q_ju[j2,u3,1] + 3 Q_ju[j3,u3,1]
-   + 3 Q_ju[j4,u3,1] - Q_kuv[k3,u3,v1,1] - Q_kuv[k3,u3,v2,1]
-   - Q_kuv[k3,u3,v3,1] - Q_kuv[k3,u3,v4,1] - Q_kuv[k3,u3,v5,1] = 0
- c17[u3,k3,2]: 3 Q_ju[j1,u3,2] + 3 Q_ju[j2,u3,2] + 3 Q_ju[j3,u3,2]
-   + 3 Q_ju[j4,u3,2] - Q_kuv[k3,u3,v1,2] - Q_kuv[k3,u3,v2,2]
-   - Q_kuv[k3,u3,v3,2] - Q_kuv[k3,u3,v4,2] - Q_kuv[k3,u3,v5,2] = 0
- c17[u3,k3,3]: 4 Q_ju[j1,u3,3] + 4 Q_ju[j2,u3,3] + 4 Q_ju[j3,u3,3]
-   + 4 Q_ju[j4,u3,3] - Q_kuv[k3,u3,v1,3] - Q_kuv[k3,u3,v2,3]
-   - Q_kuv[k3,u3,v3,3] - Q_kuv[k3,u3,v4,3] - Q_kuv[k3,u3,v5,3] = 0
- c17[u3,k3,4]: 2 Q_ju[j1,u3,4] + 2 Q_ju[j2,u3,4] + 2 Q_ju[j3,u3,4]
-   + 2 Q_ju[j4,u3,4] - Q_kuv[k3,u3,v1,4] - Q_kuv[k3,u3,v2,4]
-   - Q_kuv[k3,u3,v3,4] - Q_kuv[k3,u3,v4,4] - Q_kuv[k3,u3,v5,4] = 0
- c17[u3,k3,5]: 2 Q_ju[j1,u3,5] + 2 Q_ju[j2,u3,5] + 2 Q_ju[j3,u3,5]
-   + 2 Q_ju[j4,u3,5] - Q_kuv[k3,u3,v1,5] - Q_kuv[k3,u3,v2,5]
-   - Q_kuv[k3,u3,v3,5] - Q_kuv[k3,u3,v4,5] - Q_kuv[k3,u3,v5,5] = 0
- c17[u3,k3,6]: 3 Q_ju[j1,u3,6] + 3 Q_ju[j2,u3,6] + 3 Q_ju[j3,u3,6]
-   + 3 Q_ju[j4,u3,6] - Q_kuv[k3,u3,v1,6] - Q_kuv[k3,u3,v2,6]
-   - Q_kuv[k3,u3,v3,6] - Q_kuv[k3,u3,v4,6] - Q_kuv[k3,u3,v5,6] = 0
- c17[u3,k3,7]: 4 Q_ju[j1,u3,7] + 4 Q_ju[j2,u3,7] + 4 Q_ju[j3,u3,7]
-   + 4 Q_ju[j4,u3,7] - Q_kuv[k3,u3,v1,7] - Q_kuv[k3,u3,v2,7]
-   - Q_kuv[k3,u3,v3,7] - Q_kuv[k3,u3,v4,7] - Q_kuv[k3,u3,v5,7] = 0
- c17[u3,k3,8]: 2 Q_ju[j1,u3,8] + 2 Q_ju[j2,u3,8] + 2 Q_ju[j3,u3,8]
-   + 2 Q_ju[j4,u3,8] - Q_kuv[k3,u3,v1,8] - Q_kuv[k3,u3,v2,8]
-   - Q_kuv[k3,u3,v3,8] - Q_kuv[k3,u3,v4,8] - Q_kuv[k3,u3,v5,8] = 0
- c17[u3,k3,9]: 4 Q_ju[j1,u3,9] + 4 Q_ju[j2,u3,9] + 4 Q_ju[j3,u3,9]
-   + 4 Q_ju[j4,u3,9] - Q_kuv[k3,u3,v1,9] - Q_kuv[k3,u3,v2,9]
-   - Q_kuv[k3,u3,v3,9] - Q_kuv[k3,u3,v4,9] - Q_kuv[k3,u3,v5,9] = 0
- c17[u3,k3,10]: 4 Q_ju[j1,u3,10] + 4 Q_ju[j2,u3,10] + 4 Q_ju[j3,u3,10]
-   + 4 Q_ju[j4,u3,10] - Q_kuv[k3,u3,v1,10] - Q_kuv[k3,u3,v2,10]
-   - Q_kuv[k3,u3,v3,10] - Q_kuv[k3,u3,v4,10] - Q_kuv[k3,u3,v5,10] = 0
- c17[u3,k3,11]: 3 Q_ju[j1,u3,11] + 3 Q_ju[j2,u3,11] + 3 Q_ju[j3,u3,11]
-   + 3 Q_ju[j4,u3,11] - Q_kuv[k3,u3,v1,11] - Q_kuv[k3,u3,v2,11]
-   - Q_kuv[k3,u3,v3,11] - Q_kuv[k3,u3,v4,11] - Q_kuv[k3,u3,v5,11] = 0
- c17[u4,k1,0]: 0.3 Q_ju[j1,u4,0] + 0.3 Q_ju[j2,u4,0] + 0.3 Q_ju[j3,u4,0]
-   + 0.3 Q_ju[j4,u4,0] - Q_kuv[k1,u4,v1,0] - Q_kuv[k1,u4,v2,0]
-   - Q_kuv[k1,u4,v3,0] - Q_kuv[k1,u4,v4,0] - Q_kuv[k1,u4,v5,0] = 0
- c17[u4,k1,1]: 0.3 Q_ju[j1,u4,1] + 0.3 Q_ju[j2,u4,1] + 0.3 Q_ju[j3,u4,1]
-   + 0.3 Q_ju[j4,u4,1] - Q_kuv[k1,u4,v1,1] - Q_kuv[k1,u4,v2,1]
-   - Q_kuv[k1,u4,v3,1] - Q_kuv[k1,u4,v4,1] - Q_kuv[k1,u4,v5,1] = 0
- c17[u4,k1,2]: 0.3 Q_ju[j1,u4,2] + 0.3 Q_ju[j2,u4,2] + 0.3 Q_ju[j3,u4,2]
-   + 0.3 Q_ju[j4,u4,2] - Q_kuv[k1,u4,v1,2] - Q_kuv[k1,u4,v2,2]
-   - Q_kuv[k1,u4,v3,2] - Q_kuv[k1,u4,v4,2] - Q_kuv[k1,u4,v5,2] = 0
- c17[u4,k1,3]: 0.4 Q_ju[j1,u4,3] + 0.4 Q_ju[j2,u4,3] + 0.4 Q_ju[j3,u4,3]
-   + 0.4 Q_ju[j4,u4,3] - Q_kuv[k1,u4,v1,3] - Q_kuv[k1,u4,v2,3]
-   - Q_kuv[k1,u4,v3,3] - Q_kuv[k1,u4,v4,3] - Q_kuv[k1,u4,v5,3] = 0
- c17[u4,k1,4]: 0.2 Q_ju[j1,u4,4] + 0.2 Q_ju[j2,u4,4] + 0.2 Q_ju[j3,u4,4]
-   + 0.2 Q_ju[j4,u4,4] - Q_kuv[k1,u4,v1,4] - Q_kuv[k1,u4,v2,4]
-   - Q_kuv[k1,u4,v3,4] - Q_kuv[k1,u4,v4,4] - Q_kuv[k1,u4,v5,4] = 0
- c17[u4,k1,5]: 0.2 Q_ju[j1,u4,5] + 0.2 Q_ju[j2,u4,5] + 0.2 Q_ju[j3,u4,5]
-   + 0.2 Q_ju[j4,u4,5] - Q_kuv[k1,u4,v1,5] - Q_kuv[k1,u4,v2,5]
-   - Q_kuv[k1,u4,v3,5] - Q_kuv[k1,u4,v4,5] - Q_kuv[k1,u4,v5,5] = 0
- c17[u4,k1,6]: 0.3 Q_ju[j1,u4,6] + 0.3 Q_ju[j2,u4,6] + 0.3 Q_ju[j3,u4,6]
-   + 0.3 Q_ju[j4,u4,6] - Q_kuv[k1,u4,v1,6] - Q_kuv[k1,u4,v2,6]
-   - Q_kuv[k1,u4,v3,6] - Q_kuv[k1,u4,v4,6] - Q_kuv[k1,u4,v5,6] = 0
- c17[u4,k1,7]: 0.4 Q_ju[j1,u4,7] + 0.4 Q_ju[j2,u4,7] + 0.4 Q_ju[j3,u4,7]
-   + 0.4 Q_ju[j4,u4,7] - Q_kuv[k1,u4,v1,7] - Q_kuv[k1,u4,v2,7]
-   - Q_kuv[k1,u4,v3,7] - Q_kuv[k1,u4,v4,7] - Q_kuv[k1,u4,v5,7] = 0
- c17[u4,k1,8]: 0.2 Q_ju[j1,u4,8] + 0.2 Q_ju[j2,u4,8] + 0.2 Q_ju[j3,u4,8]
-   + 0.2 Q_ju[j4,u4,8] - Q_kuv[k1,u4,v1,8] - Q_kuv[k1,u4,v2,8]
-   - Q_kuv[k1,u4,v3,8] - Q_kuv[k1,u4,v4,8] - Q_kuv[k1,u4,v5,8] = 0
- c17[u4,k1,9]: 0.4 Q_ju[j1,u4,9] + 0.4 Q_ju[j2,u4,9] + 0.4 Q_ju[j3,u4,9]
-   + 0.4 Q_ju[j4,u4,9] - Q_kuv[k1,u4,v1,9] - Q_kuv[k1,u4,v2,9]
-   - Q_kuv[k1,u4,v3,9] - Q_kuv[k1,u4,v4,9] - Q_kuv[k1,u4,v5,9] = 0
- c17[u4,k1,10]: 0.4 Q_ju[j1,u4,10] + 0.4 Q_ju[j2,u4,10]
-   + 0.4 Q_ju[j3,u4,10] + 0.4 Q_ju[j4,u4,10] - Q_kuv[k1,u4,v1,10]
-   - Q_kuv[k1,u4,v2,10] - Q_kuv[k1,u4,v3,10] - Q_kuv[k1,u4,v4,10]
-   - Q_kuv[k1,u4,v5,10] = 0
- c17[u4,k1,11]: 0.3 Q_ju[j1,u4,11] + 0.3 Q_ju[j2,u4,11]
-   + 0.3 Q_ju[j3,u4,11] + 0.3 Q_ju[j4,u4,11] - Q_kuv[k1,u4,v1,11]
-   - Q_kuv[k1,u4,v2,11] - Q_kuv[k1,u4,v3,11] - Q_kuv[k1,u4,v4,11]
-   - Q_kuv[k1,u4,v5,11] = 0
- c17[u4,k2,0]: 1.2 Q_ju[j1,u4,0] + 1.2 Q_ju[j2,u4,0] + 1.2 Q_ju[j3,u4,0]
-   + 1.2 Q_ju[j4,u4,0] - Q_kuv[k2,u4,v1,0] - Q_kuv[k2,u4,v2,0]
-   - Q_kuv[k2,u4,v3,0] - Q_kuv[k2,u4,v4,0] - Q_kuv[k2,u4,v5,0] = 0
- c17[u4,k2,1]: 1.2 Q_ju[j1,u4,1] + 1.2 Q_ju[j2,u4,1] + 1.2 Q_ju[j3,u4,1]
-   + 1.2 Q_ju[j4,u4,1] - Q_kuv[k2,u4,v1,1] - Q_kuv[k2,u4,v2,1]
-   - Q_kuv[k2,u4,v3,1] - Q_kuv[k2,u4,v4,1] - Q_kuv[k2,u4,v5,1] = 0
- c17[u4,k2,2]: 1.2 Q_ju[j1,u4,2] + 1.2 Q_ju[j2,u4,2] + 1.2 Q_ju[j3,u4,2]
-   + 1.2 Q_ju[j4,u4,2] - Q_kuv[k2,u4,v1,2] - Q_kuv[k2,u4,v2,2]
-   - Q_kuv[k2,u4,v3,2] - Q_kuv[k2,u4,v4,2] - Q_kuv[k2,u4,v5,2] = 0
- c17[u4,k2,3]: 1.6 Q_ju[j1,u4,3] + 1.6 Q_ju[j2,u4,3] + 1.6 Q_ju[j3,u4,3]
-   + 1.6 Q_ju[j4,u4,3] - Q_kuv[k2,u4,v1,3] - Q_kuv[k2,u4,v2,3]
-   - Q_kuv[k2,u4,v3,3] - Q_kuv[k2,u4,v4,3] - Q_kuv[k2,u4,v5,3] = 0
- c17[u4,k2,4]: 0.8 Q_ju[j1,u4,4] + 0.8 Q_ju[j2,u4,4] + 0.8 Q_ju[j3,u4,4]
-   + 0.8 Q_ju[j4,u4,4] - Q_kuv[k2,u4,v1,4] - Q_kuv[k2,u4,v2,4]
-   - Q_kuv[k2,u4,v3,4] - Q_kuv[k2,u4,v4,4] - Q_kuv[k2,u4,v5,4] = 0
- c17[u4,k2,5]: 0.8 Q_ju[j1,u4,5] + 0.8 Q_ju[j2,u4,5] + 0.8 Q_ju[j3,u4,5]
-   + 0.8 Q_ju[j4,u4,5] - Q_kuv[k2,u4,v1,5] - Q_kuv[k2,u4,v2,5]
-   - Q_kuv[k2,u4,v3,5] - Q_kuv[k2,u4,v4,5] - Q_kuv[k2,u4,v5,5] = 0
- c17[u4,k2,6]: 1.2 Q_ju[j1,u4,6] + 1.2 Q_ju[j2,u4,6] + 1.2 Q_ju[j3,u4,6]
-   + 1.2 Q_ju[j4,u4,6] - Q_kuv[k2,u4,v1,6] - Q_kuv[k2,u4,v2,6]
-   - Q_kuv[k2,u4,v3,6] - Q_kuv[k2,u4,v4,6] - Q_kuv[k2,u4,v5,6] = 0
- c17[u4,k2,7]: 1.6 Q_ju[j1,u4,7] + 1.6 Q_ju[j2,u4,7] + 1.6 Q_ju[j3,u4,7]
-   + 1.6 Q_ju[j4,u4,7] - Q_kuv[k2,u4,v1,7] - Q_kuv[k2,u4,v2,7]
-   - Q_kuv[k2,u4,v3,7] - Q_kuv[k2,u4,v4,7] - Q_kuv[k2,u4,v5,7] = 0
- c17[u4,k2,8]: 0.8 Q_ju[j1,u4,8] + 0.8 Q_ju[j2,u4,8] + 0.8 Q_ju[j3,u4,8]
-   + 0.8 Q_ju[j4,u4,8] - Q_kuv[k2,u4,v1,8] - Q_kuv[k2,u4,v2,8]
-   - Q_kuv[k2,u4,v3,8] - Q_kuv[k2,u4,v4,8] - Q_kuv[k2,u4,v5,8] = 0
- c17[u4,k2,9]: 1.6 Q_ju[j1,u4,9] + 1.6 Q_ju[j2,u4,9] + 1.6 Q_ju[j3,u4,9]
-   + 1.6 Q_ju[j4,u4,9] - Q_kuv[k2,u4,v1,9] - Q_kuv[k2,u4,v2,9]
-   - Q_kuv[k2,u4,v3,9] - Q_kuv[k2,u4,v4,9] - Q_kuv[k2,u4,v5,9] = 0
- c17[u4,k2,10]: 1.6 Q_ju[j1,u4,10] + 1.6 Q_ju[j2,u4,10]
-   + 1.6 Q_ju[j3,u4,10] + 1.6 Q_ju[j4,u4,10] - Q_kuv[k2,u4,v1,10]
-   - Q_kuv[k2,u4,v2,10] - Q_kuv[k2,u4,v3,10] - Q_kuv[k2,u4,v4,10]
-   - Q_kuv[k2,u4,v5,10] = 0
- c17[u4,k2,11]: 1.2 Q_ju[j1,u4,11] + 1.2 Q_ju[j2,u4,11]
-   + 1.2 Q_ju[j3,u4,11] + 1.2 Q_ju[j4,u4,11] - Q_kuv[k2,u4,v1,11]
-   - Q_kuv[k2,u4,v2,11] - Q_kuv[k2,u4,v3,11] - Q_kuv[k2,u4,v4,11]
-   - Q_kuv[k2,u4,v5,11] = 0
- c17[u4,k3,0]: 3 Q_ju[j1,u4,0] + 3 Q_ju[j2,u4,0] + 3 Q_ju[j3,u4,0]
-   + 3 Q_ju[j4,u4,0] - Q_kuv[k3,u4,v1,0] - Q_kuv[k3,u4,v2,0]
-   - Q_kuv[k3,u4,v3,0] - Q_kuv[k3,u4,v4,0] - Q_kuv[k3,u4,v5,0] = 0
- c17[u4,k3,1]: 3 Q_ju[j1,u4,1] + 3 Q_ju[j2,u4,1] + 3 Q_ju[j3,u4,1]
-   + 3 Q_ju[j4,u4,1] - Q_kuv[k3,u4,v1,1] - Q_kuv[k3,u4,v2,1]
-   - Q_kuv[k3,u4,v3,1] - Q_kuv[k3,u4,v4,1] - Q_kuv[k3,u4,v5,1] = 0
- c17[u4,k3,2]: 3 Q_ju[j1,u4,2] + 3 Q_ju[j2,u4,2] + 3 Q_ju[j3,u4,2]
-   + 3 Q_ju[j4,u4,2] - Q_kuv[k3,u4,v1,2] - Q_kuv[k3,u4,v2,2]
-   - Q_kuv[k3,u4,v3,2] - Q_kuv[k3,u4,v4,2] - Q_kuv[k3,u4,v5,2] = 0
- c17[u4,k3,3]: 4 Q_ju[j1,u4,3] + 4 Q_ju[j2,u4,3] + 4 Q_ju[j3,u4,3]
-   + 4 Q_ju[j4,u4,3] - Q_kuv[k3,u4,v1,3] - Q_kuv[k3,u4,v2,3]
-   - Q_kuv[k3,u4,v3,3] - Q_kuv[k3,u4,v4,3] - Q_kuv[k3,u4,v5,3] = 0
- c17[u4,k3,4]: 2 Q_ju[j1,u4,4] + 2 Q_ju[j2,u4,4] + 2 Q_ju[j3,u4,4]
-   + 2 Q_ju[j4,u4,4] - Q_kuv[k3,u4,v1,4] - Q_kuv[k3,u4,v2,4]
-   - Q_kuv[k3,u4,v3,4] - Q_kuv[k3,u4,v4,4] - Q_kuv[k3,u4,v5,4] = 0
- c17[u4,k3,5]: 2 Q_ju[j1,u4,5] + 2 Q_ju[j2,u4,5] + 2 Q_ju[j3,u4,5]
-   + 2 Q_ju[j4,u4,5] - Q_kuv[k3,u4,v1,5] - Q_kuv[k3,u4,v2,5]
-   - Q_kuv[k3,u4,v3,5] - Q_kuv[k3,u4,v4,5] - Q_kuv[k3,u4,v5,5] = 0
- c17[u4,k3,6]: 3 Q_ju[j1,u4,6] + 3 Q_ju[j2,u4,6] + 3 Q_ju[j3,u4,6]
-   + 3 Q_ju[j4,u4,6] - Q_kuv[k3,u4,v1,6] - Q_kuv[k3,u4,v2,6]
-   - Q_kuv[k3,u4,v3,6] - Q_kuv[k3,u4,v4,6] - Q_kuv[k3,u4,v5,6] = 0
- c17[u4,k3,7]: 4 Q_ju[j1,u4,7] + 4 Q_ju[j2,u4,7] + 4 Q_ju[j3,u4,7]
-   + 4 Q_ju[j4,u4,7] - Q_kuv[k3,u4,v1,7] - Q_kuv[k3,u4,v2,7]
-   - Q_kuv[k3,u4,v3,7] - Q_kuv[k3,u4,v4,7] - Q_kuv[k3,u4,v5,7] = 0
- c17[u4,k3,8]: 2 Q_ju[j1,u4,8] + 2 Q_ju[j2,u4,8] + 2 Q_ju[j3,u4,8]
-   + 2 Q_ju[j4,u4,8] - Q_kuv[k3,u4,v1,8] - Q_kuv[k3,u4,v2,8]
-   - Q_kuv[k3,u4,v3,8] - Q_kuv[k3,u4,v4,8] - Q_kuv[k3,u4,v5,8] = 0
- c17[u4,k3,9]: 4 Q_ju[j1,u4,9] + 4 Q_ju[j2,u4,9] + 4 Q_ju[j3,u4,9]
-   + 4 Q_ju[j4,u4,9] - Q_kuv[k3,u4,v1,9] - Q_kuv[k3,u4,v2,9]
-   - Q_kuv[k3,u4,v3,9] - Q_kuv[k3,u4,v4,9] - Q_kuv[k3,u4,v5,9] = 0
- c17[u4,k3,10]: 4 Q_ju[j1,u4,10] + 4 Q_ju[j2,u4,10] + 4 Q_ju[j3,u4,10]
-   + 4 Q_ju[j4,u4,10] - Q_kuv[k3,u4,v1,10] - Q_kuv[k3,u4,v2,10]
-   - Q_kuv[k3,u4,v3,10] - Q_kuv[k3,u4,v4,10] - Q_kuv[k3,u4,v5,10] = 0
- c17[u4,k3,11]: 3 Q_ju[j1,u4,11] + 3 Q_ju[j2,u4,11] + 3 Q_ju[j3,u4,11]
-   + 3 Q_ju[j4,u4,11] - Q_kuv[k3,u4,v1,11] - Q_kuv[k3,u4,v2,11]
-   - Q_kuv[k3,u4,v3,11] - Q_kuv[k3,u4,v4,11] - Q_kuv[k3,u4,v5,11] = 0
- c17[u5,k1,0]: 0.3 Q_ju[j1,u5,0] + 0.3 Q_ju[j2,u5,0] + 0.3 Q_ju[j3,u5,0]
-   + 0.3 Q_ju[j4,u5,0] - Q_kuv[k1,u5,v1,0] - Q_kuv[k1,u5,v2,0]
-   - Q_kuv[k1,u5,v3,0] - Q_kuv[k1,u5,v4,0] - Q_kuv[k1,u5,v5,0] = 0
- c17[u5,k1,1]: 0.3 Q_ju[j1,u5,1] + 0.3 Q_ju[j2,u5,1] + 0.3 Q_ju[j3,u5,1]
-   + 0.3 Q_ju[j4,u5,1] - Q_kuv[k1,u5,v1,1] - Q_kuv[k1,u5,v2,1]
-   - Q_kuv[k1,u5,v3,1] - Q_kuv[k1,u5,v4,1] - Q_kuv[k1,u5,v5,1] = 0
- c17[u5,k1,2]: 0.3 Q_ju[j1,u5,2] + 0.3 Q_ju[j2,u5,2] + 0.3 Q_ju[j3,u5,2]
-   + 0.3 Q_ju[j4,u5,2] - Q_kuv[k1,u5,v1,2] - Q_kuv[k1,u5,v2,2]
-   - Q_kuv[k1,u5,v3,2] - Q_kuv[k1,u5,v4,2] - Q_kuv[k1,u5,v5,2] = 0
- c17[u5,k1,3]: 0.4 Q_ju[j1,u5,3] + 0.4 Q_ju[j2,u5,3] + 0.4 Q_ju[j3,u5,3]
-   + 0.4 Q_ju[j4,u5,3] - Q_kuv[k1,u5,v1,3] - Q_kuv[k1,u5,v2,3]
-   - Q_kuv[k1,u5,v3,3] - Q_kuv[k1,u5,v4,3] - Q_kuv[k1,u5,v5,3] = 0
- c17[u5,k1,4]: 0.2 Q_ju[j1,u5,4] + 0.2 Q_ju[j2,u5,4] + 0.2 Q_ju[j3,u5,4]
-   + 0.2 Q_ju[j4,u5,4] - Q_kuv[k1,u5,v1,4] - Q_kuv[k1,u5,v2,4]
-   - Q_kuv[k1,u5,v3,4] - Q_kuv[k1,u5,v4,4] - Q_kuv[k1,u5,v5,4] = 0
- c17[u5,k1,5]: 0.2 Q_ju[j1,u5,5] + 0.2 Q_ju[j2,u5,5] + 0.2 Q_ju[j3,u5,5]
-   + 0.2 Q_ju[j4,u5,5] - Q_kuv[k1,u5,v1,5] - Q_kuv[k1,u5,v2,5]
-   - Q_kuv[k1,u5,v3,5] - Q_kuv[k1,u5,v4,5] - Q_kuv[k1,u5,v5,5] = 0
- c17[u5,k1,6]: 0.3 Q_ju[j1,u5,6] + 0.3 Q_ju[j2,u5,6] + 0.3 Q_ju[j3,u5,6]
-   + 0.3 Q_ju[j4,u5,6] - Q_kuv[k1,u5,v1,6] - Q_kuv[k1,u5,v2,6]
-   - Q_kuv[k1,u5,v3,6] - Q_kuv[k1,u5,v4,6] - Q_kuv[k1,u5,v5,6] = 0
- c17[u5,k1,7]: 0.4 Q_ju[j1,u5,7] + 0.4 Q_ju[j2,u5,7] + 0.4 Q_ju[j3,u5,7]
-   + 0.4 Q_ju[j4,u5,7] - Q_kuv[k1,u5,v1,7] - Q_kuv[k1,u5,v2,7]
-   - Q_kuv[k1,u5,v3,7] - Q_kuv[k1,u5,v4,7] - Q_kuv[k1,u5,v5,7] = 0
- c17[u5,k1,8]: 0.2 Q_ju[j1,u5,8] + 0.2 Q_ju[j2,u5,8] + 0.2 Q_ju[j3,u5,8]
-   + 0.2 Q_ju[j4,u5,8] - Q_kuv[k1,u5,v1,8] - Q_kuv[k1,u5,v2,8]
-   - Q_kuv[k1,u5,v3,8] - Q_kuv[k1,u5,v4,8] - Q_kuv[k1,u5,v5,8] = 0
- c17[u5,k1,9]: 0.4 Q_ju[j1,u5,9] + 0.4 Q_ju[j2,u5,9] + 0.4 Q_ju[j3,u5,9]
-   + 0.4 Q_ju[j4,u5,9] - Q_kuv[k1,u5,v1,9] - Q_kuv[k1,u5,v2,9]
-   - Q_kuv[k1,u5,v3,9] - Q_kuv[k1,u5,v4,9] - Q_kuv[k1,u5,v5,9] = 0
- c17[u5,k1,10]: 0.4 Q_ju[j1,u5,10] + 0.4 Q_ju[j2,u5,10]
-   + 0.4 Q_ju[j3,u5,10] + 0.4 Q_ju[j4,u5,10] - Q_kuv[k1,u5,v1,10]
-   - Q_kuv[k1,u5,v2,10] - Q_kuv[k1,u5,v3,10] - Q_kuv[k1,u5,v4,10]
-   - Q_kuv[k1,u5,v5,10] = 0
- c17[u5,k1,11]: 0.3 Q_ju[j1,u5,11] + 0.3 Q_ju[j2,u5,11]
-   + 0.3 Q_ju[j3,u5,11] + 0.3 Q_ju[j4,u5,11] - Q_kuv[k1,u5,v1,11]
-   - Q_kuv[k1,u5,v2,11] - Q_kuv[k1,u5,v3,11] - Q_kuv[k1,u5,v4,11]
-   - Q_kuv[k1,u5,v5,11] = 0
- c17[u5,k2,0]: 1.2 Q_ju[j1,u5,0] + 1.2 Q_ju[j2,u5,0] + 1.2 Q_ju[j3,u5,0]
-   + 1.2 Q_ju[j4,u5,0] - Q_kuv[k2,u5,v1,0] - Q_kuv[k2,u5,v2,0]
-   - Q_kuv[k2,u5,v3,0] - Q_kuv[k2,u5,v4,0] - Q_kuv[k2,u5,v5,0] = 0
- c17[u5,k2,1]: 1.2 Q_ju[j1,u5,1] + 1.2 Q_ju[j2,u5,1] + 1.2 Q_ju[j3,u5,1]
-   + 1.2 Q_ju[j4,u5,1] - Q_kuv[k2,u5,v1,1] - Q_kuv[k2,u5,v2,1]
-   - Q_kuv[k2,u5,v3,1] - Q_kuv[k2,u5,v4,1] - Q_kuv[k2,u5,v5,1] = 0
- c17[u5,k2,2]: 1.2 Q_ju[j1,u5,2] + 1.2 Q_ju[j2,u5,2] + 1.2 Q_ju[j3,u5,2]
-   + 1.2 Q_ju[j4,u5,2] - Q_kuv[k2,u5,v1,2] - Q_kuv[k2,u5,v2,2]
-   - Q_kuv[k2,u5,v3,2] - Q_kuv[k2,u5,v4,2] - Q_kuv[k2,u5,v5,2] = 0
- c17[u5,k2,3]: 1.6 Q_ju[j1,u5,3] + 1.6 Q_ju[j2,u5,3] + 1.6 Q_ju[j3,u5,3]
-   + 1.6 Q_ju[j4,u5,3] - Q_kuv[k2,u5,v1,3] - Q_kuv[k2,u5,v2,3]
-   - Q_kuv[k2,u5,v3,3] - Q_kuv[k2,u5,v4,3] - Q_kuv[k2,u5,v5,3] = 0
- c17[u5,k2,4]: 0.8 Q_ju[j1,u5,4] + 0.8 Q_ju[j2,u5,4] + 0.8 Q_ju[j3,u5,4]
-   + 0.8 Q_ju[j4,u5,4] - Q_kuv[k2,u5,v1,4] - Q_kuv[k2,u5,v2,4]
-   - Q_kuv[k2,u5,v3,4] - Q_kuv[k2,u5,v4,4] - Q_kuv[k2,u5,v5,4] = 0
- c17[u5,k2,5]: 0.8 Q_ju[j1,u5,5] + 0.8 Q_ju[j2,u5,5] + 0.8 Q_ju[j3,u5,5]
-   + 0.8 Q_ju[j4,u5,5] - Q_kuv[k2,u5,v1,5] - Q_kuv[k2,u5,v2,5]
-   - Q_kuv[k2,u5,v3,5] - Q_kuv[k2,u5,v4,5] - Q_kuv[k2,u5,v5,5] = 0
- c17[u5,k2,6]: 1.2 Q_ju[j1,u5,6] + 1.2 Q_ju[j2,u5,6] + 1.2 Q_ju[j3,u5,6]
-   + 1.2 Q_ju[j4,u5,6] - Q_kuv[k2,u5,v1,6] - Q_kuv[k2,u5,v2,6]
-   - Q_kuv[k2,u5,v3,6] - Q_kuv[k2,u5,v4,6] - Q_kuv[k2,u5,v5,6] = 0
- c17[u5,k2,7]: 1.6 Q_ju[j1,u5,7] + 1.6 Q_ju[j2,u5,7] + 1.6 Q_ju[j3,u5,7]
-   + 1.6 Q_ju[j4,u5,7] - Q_kuv[k2,u5,v1,7] - Q_kuv[k2,u5,v2,7]
-   - Q_kuv[k2,u5,v3,7] - Q_kuv[k2,u5,v4,7] - Q_kuv[k2,u5,v5,7] = 0
- c17[u5,k2,8]: 0.8 Q_ju[j1,u5,8] + 0.8 Q_ju[j2,u5,8] + 0.8 Q_ju[j3,u5,8]
-   + 0.8 Q_ju[j4,u5,8] - Q_kuv[k2,u5,v1,8] - Q_kuv[k2,u5,v2,8]
-   - Q_kuv[k2,u5,v3,8] - Q_kuv[k2,u5,v4,8] - Q_kuv[k2,u5,v5,8] = 0
- c17[u5,k2,9]: 1.6 Q_ju[j1,u5,9] + 1.6 Q_ju[j2,u5,9] + 1.6 Q_ju[j3,u5,9]
-   + 1.6 Q_ju[j4,u5,9] - Q_kuv[k2,u5,v1,9] - Q_kuv[k2,u5,v2,9]
-   - Q_kuv[k2,u5,v3,9] - Q_kuv[k2,u5,v4,9] - Q_kuv[k2,u5,v5,9] = 0
- c17[u5,k2,10]: 1.6 Q_ju[j1,u5,10] + 1.6 Q_ju[j2,u5,10]
-   + 1.6 Q_ju[j3,u5,10] + 1.6 Q_ju[j4,u5,10] - Q_kuv[k2,u5,v1,10]
-   - Q_kuv[k2,u5,v2,10] - Q_kuv[k2,u5,v3,10] - Q_kuv[k2,u5,v4,10]
-   - Q_kuv[k2,u5,v5,10] = 0
- c17[u5,k2,11]: 1.2 Q_ju[j1,u5,11] + 1.2 Q_ju[j2,u5,11]
-   + 1.2 Q_ju[j3,u5,11] + 1.2 Q_ju[j4,u5,11] - Q_kuv[k2,u5,v1,11]
-   - Q_kuv[k2,u5,v2,11] - Q_kuv[k2,u5,v3,11] - Q_kuv[k2,u5,v4,11]
-   - Q_kuv[k2,u5,v5,11] = 0
- c17[u5,k3,0]: 3 Q_ju[j1,u5,0] + 3 Q_ju[j2,u5,0] + 3 Q_ju[j3,u5,0]
-   + 3 Q_ju[j4,u5,0] - Q_kuv[k3,u5,v1,0] - Q_kuv[k3,u5,v2,0]
-   - Q_kuv[k3,u5,v3,0] - Q_kuv[k3,u5,v4,0] - Q_kuv[k3,u5,v5,0] = 0
- c17[u5,k3,1]: 3 Q_ju[j1,u5,1] + 3 Q_ju[j2,u5,1] + 3 Q_ju[j3,u5,1]
-   + 3 Q_ju[j4,u5,1] - Q_kuv[k3,u5,v1,1] - Q_kuv[k3,u5,v2,1]
-   - Q_kuv[k3,u5,v3,1] - Q_kuv[k3,u5,v4,1] - Q_kuv[k3,u5,v5,1] = 0
- c17[u5,k3,2]: 3 Q_ju[j1,u5,2] + 3 Q_ju[j2,u5,2] + 3 Q_ju[j3,u5,2]
-   + 3 Q_ju[j4,u5,2] - Q_kuv[k3,u5,v1,2] - Q_kuv[k3,u5,v2,2]
-   - Q_kuv[k3,u5,v3,2] - Q_kuv[k3,u5,v4,2] - Q_kuv[k3,u5,v5,2] = 0
- c17[u5,k3,3]: 4 Q_ju[j1,u5,3] + 4 Q_ju[j2,u5,3] + 4 Q_ju[j3,u5,3]
-   + 4 Q_ju[j4,u5,3] - Q_kuv[k3,u5,v1,3] - Q_kuv[k3,u5,v2,3]
-   - Q_kuv[k3,u5,v3,3] - Q_kuv[k3,u5,v4,3] - Q_kuv[k3,u5,v5,3] = 0
- c17[u5,k3,4]: 2 Q_ju[j1,u5,4] + 2 Q_ju[j2,u5,4] + 2 Q_ju[j3,u5,4]
-   + 2 Q_ju[j4,u5,4] - Q_kuv[k3,u5,v1,4] - Q_kuv[k3,u5,v2,4]
-   - Q_kuv[k3,u5,v3,4] - Q_kuv[k3,u5,v4,4] - Q_kuv[k3,u5,v5,4] = 0
- c17[u5,k3,5]: 2 Q_ju[j1,u5,5] + 2 Q_ju[j2,u5,5] + 2 Q_ju[j3,u5,5]
-   + 2 Q_ju[j4,u5,5] - Q_kuv[k3,u5,v1,5] - Q_kuv[k3,u5,v2,5]
-   - Q_kuv[k3,u5,v3,5] - Q_kuv[k3,u5,v4,5] - Q_kuv[k3,u5,v5,5] = 0
- c17[u5,k3,6]: 3 Q_ju[j1,u5,6] + 3 Q_ju[j2,u5,6] + 3 Q_ju[j3,u5,6]
-   + 3 Q_ju[j4,u5,6] - Q_kuv[k3,u5,v1,6] - Q_kuv[k3,u5,v2,6]
-   - Q_kuv[k3,u5,v3,6] - Q_kuv[k3,u5,v4,6] - Q_kuv[k3,u5,v5,6] = 0
- c17[u5,k3,7]: 4 Q_ju[j1,u5,7] + 4 Q_ju[j2,u5,7] + 4 Q_ju[j3,u5,7]
-   + 4 Q_ju[j4,u5,7] - Q_kuv[k3,u5,v1,7] - Q_kuv[k3,u5,v2,7]
-   - Q_kuv[k3,u5,v3,7] - Q_kuv[k3,u5,v4,7] - Q_kuv[k3,u5,v5,7] = 0
- c17[u5,k3,8]: 2 Q_ju[j1,u5,8] + 2 Q_ju[j2,u5,8] + 2 Q_ju[j3,u5,8]
-   + 2 Q_ju[j4,u5,8] - Q_kuv[k3,u5,v1,8] - Q_kuv[k3,u5,v2,8]
-   - Q_kuv[k3,u5,v3,8] - Q_kuv[k3,u5,v4,8] - Q_kuv[k3,u5,v5,8] = 0
- c17[u5,k3,9]: 4 Q_ju[j1,u5,9] + 4 Q_ju[j2,u5,9] + 4 Q_ju[j3,u5,9]
-   + 4 Q_ju[j4,u5,9] - Q_kuv[k3,u5,v1,9] - Q_kuv[k3,u5,v2,9]
-   - Q_kuv[k3,u5,v3,9] - Q_kuv[k3,u5,v4,9] - Q_kuv[k3,u5,v5,9] = 0
- c17[u5,k3,10]: 4 Q_ju[j1,u5,10] + 4 Q_ju[j2,u5,10] + 4 Q_ju[j3,u5,10]
-   + 4 Q_ju[j4,u5,10] - Q_kuv[k3,u5,v1,10] - Q_kuv[k3,u5,v2,10]
-   - Q_kuv[k3,u5,v3,10] - Q_kuv[k3,u5,v4,10] - Q_kuv[k3,u5,v5,10] = 0
- c17[u5,k3,11]: 3 Q_ju[j1,u5,11] + 3 Q_ju[j2,u5,11] + 3 Q_ju[j3,u5,11]
-   + 3 Q_ju[j4,u5,11] - Q_kuv[k3,u5,v1,11] - Q_kuv[k3,u5,v2,11]
-   - Q_kuv[k3,u5,v3,11] - Q_kuv[k3,u5,v4,11] - Q_kuv[k3,u5,v5,11] = 0
- c18[u1,k1,0]: 0.1 Q_ju[j1,u1,0] + 0.1 Q_ju[j2,u1,0] + 0.1 Q_ju[j3,u1,0]
-   + 0.1 Q_ju[j4,u1,0] - Q_kuw[k1,u1,w1,0] - Q_kuw[k1,u1,w2,0]
-   - Q_kuw[k1,u1,w3,0] - Q_kuw[k1,u1,w4,0] - Q_kuw[k1,u1,w5,0] = 0
- c18[u1,k1,1]: 0.3 Q_ju[j1,u1,1] + 0.3 Q_ju[j2,u1,1] + 0.3 Q_ju[j3,u1,1]
-   + 0.3 Q_ju[j4,u1,1] - Q_kuw[k1,u1,w1,1] - Q_kuw[k1,u1,w2,1]
-   - Q_kuw[k1,u1,w3,1] - Q_kuw[k1,u1,w4,1] - Q_kuw[k1,u1,w5,1] = 0
- c18[u1,k1,2]: 0.1 Q_ju[j1,u1,2] + 0.1 Q_ju[j2,u1,2] + 0.1 Q_ju[j3,u1,2]
-   + 0.1 Q_ju[j4,u1,2] - Q_kuw[k1,u1,w1,2] - Q_kuw[k1,u1,w2,2]
-   - Q_kuw[k1,u1,w3,2] - Q_kuw[k1,u1,w4,2] - Q_kuw[k1,u1,w5,2] = 0
- c18[u1,k1,3]: 0.2 Q_ju[j1,u1,3] + 0.2 Q_ju[j2,u1,3] + 0.2 Q_ju[j3,u1,3]
-   + 0.2 Q_ju[j4,u1,3] - Q_kuw[k1,u1,w1,3] - Q_kuw[k1,u1,w2,3]
-   - Q_kuw[k1,u1,w3,3] - Q_kuw[k1,u1,w4,3] - Q_kuw[k1,u1,w5,3] = 0
- c18[u1,k1,4]: 0.2 Q_ju[j1,u1,4] + 0.2 Q_ju[j2,u1,4] + 0.2 Q_ju[j3,u1,4]
-   + 0.2 Q_ju[j4,u1,4] - Q_kuw[k1,u1,w1,4] - Q_kuw[k1,u1,w2,4]
-   - Q_kuw[k1,u1,w3,4] - Q_kuw[k1,u1,w4,4] - Q_kuw[k1,u1,w5,4] = 0
- c18[u1,k1,5]: 0.3 Q_ju[j1,u1,5] + 0.3 Q_ju[j2,u1,5] + 0.3 Q_ju[j3,u1,5]
-   + 0.3 Q_ju[j4,u1,5] - Q_kuw[k1,u1,w1,5] - Q_kuw[k1,u1,w2,5]
-   - Q_kuw[k1,u1,w3,5] - Q_kuw[k1,u1,w4,5] - Q_kuw[k1,u1,w5,5] = 0
- c18[u1,k1,6]: 0.2 Q_ju[j1,u1,6] + 0.2 Q_ju[j2,u1,6] + 0.2 Q_ju[j3,u1,6]
-   + 0.2 Q_ju[j4,u1,6] - Q_kuw[k1,u1,w1,6] - Q_kuw[k1,u1,w2,6]
-   - Q_kuw[k1,u1,w3,6] - Q_kuw[k1,u1,w4,6] - Q_kuw[k1,u1,w5,6] = 0
- c18[u1,k1,7]: 0.1 Q_ju[j1,u1,7] + 0.1 Q_ju[j2,u1,7] + 0.1 Q_ju[j3,u1,7]
-   + 0.1 Q_ju[j4,u1,7] - Q_kuw[k1,u1,w1,7] - Q_kuw[k1,u1,w2,7]
-   - Q_kuw[k1,u1,w3,7] - Q_kuw[k1,u1,w4,7] - Q_kuw[k1,u1,w5,7] = 0
- c18[u1,k1,8]: 0.2 Q_ju[j1,u1,8] + 0.2 Q_ju[j2,u1,8] + 0.2 Q_ju[j3,u1,8]
-   + 0.2 Q_ju[j4,u1,8] - Q_kuw[k1,u1,w1,8] - Q_kuw[k1,u1,w2,8]
-   - Q_kuw[k1,u1,w3,8] - Q_kuw[k1,u1,w4,8] - Q_kuw[k1,u1,w5,8] = 0
- c18[u1,k1,9]: 0.1 Q_ju[j1,u1,9] + 0.1 Q_ju[j2,u1,9] + 0.1 Q_ju[j3,u1,9]
-   + 0.1 Q_ju[j4,u1,9] - Q_kuw[k1,u1,w1,9] - Q_kuw[k1,u1,w2,9]
-   - Q_kuw[k1,u1,w3,9] - Q_kuw[k1,u1,w4,9] - Q_kuw[k1,u1,w5,9] = 0
- c18[u1,k1,10]: 0.2 Q_ju[j1,u1,10] + 0.2 Q_ju[j2,u1,10]
-   + 0.2 Q_ju[j3,u1,10] + 0.2 Q_ju[j4,u1,10] - Q_kuw[k1,u1,w1,10]
-   - Q_kuw[k1,u1,w2,10] - Q_kuw[k1,u1,w3,10] - Q_kuw[k1,u1,w4,10]
-   - Q_kuw[k1,u1,w5,10] = 0
- c18[u1,k1,11]: 0.1 Q_ju[j1,u1,11] + 0.1 Q_ju[j2,u1,11]
-   + 0.1 Q_ju[j3,u1,11] + 0.1 Q_ju[j4,u1,11] - Q_kuw[k1,u1,w1,11]
-   - Q_kuw[k1,u1,w2,11] - Q_kuw[k1,u1,w3,11] - Q_kuw[k1,u1,w4,11]
-   - Q_kuw[k1,u1,w5,11] = 0
- c18[u1,k2,0]: 0.4 Q_ju[j1,u1,0] + 0.4 Q_ju[j2,u1,0] + 0.4 Q_ju[j3,u1,0]
-   + 0.4 Q_ju[j4,u1,0] - Q_kuw[k2,u1,w1,0] - Q_kuw[k2,u1,w2,0]
-   - Q_kuw[k2,u1,w3,0] - Q_kuw[k2,u1,w4,0] - Q_kuw[k2,u1,w5,0] = 0
- c18[u1,k2,1]: 1.2 Q_ju[j1,u1,1] + 1.2 Q_ju[j2,u1,1] + 1.2 Q_ju[j3,u1,1]
-   + 1.2 Q_ju[j4,u1,1] - Q_kuw[k2,u1,w1,1] - Q_kuw[k2,u1,w2,1]
-   - Q_kuw[k2,u1,w3,1] - Q_kuw[k2,u1,w4,1] - Q_kuw[k2,u1,w5,1] = 0
- c18[u1,k2,2]: 0.4 Q_ju[j1,u1,2] + 0.4 Q_ju[j2,u1,2] + 0.4 Q_ju[j3,u1,2]
-   + 0.4 Q_ju[j4,u1,2] - Q_kuw[k2,u1,w1,2] - Q_kuw[k2,u1,w2,2]
-   - Q_kuw[k2,u1,w3,2] - Q_kuw[k2,u1,w4,2] - Q_kuw[k2,u1,w5,2] = 0
- c18[u1,k2,3]: 0.8 Q_ju[j1,u1,3] + 0.8 Q_ju[j2,u1,3] + 0.8 Q_ju[j3,u1,3]
-   + 0.8 Q_ju[j4,u1,3] - Q_kuw[k2,u1,w1,3] - Q_kuw[k2,u1,w2,3]
-   - Q_kuw[k2,u1,w3,3] - Q_kuw[k2,u1,w4,3] - Q_kuw[k2,u1,w5,3] = 0
- c18[u1,k2,4]: 0.8 Q_ju[j1,u1,4] + 0.8 Q_ju[j2,u1,4] + 0.8 Q_ju[j3,u1,4]
-   + 0.8 Q_ju[j4,u1,4] - Q_kuw[k2,u1,w1,4] - Q_kuw[k2,u1,w2,4]
-   - Q_kuw[k2,u1,w3,4] - Q_kuw[k2,u1,w4,4] - Q_kuw[k2,u1,w5,4] = 0
- c18[u1,k2,5]: 1.2 Q_ju[j1,u1,5] + 1.2 Q_ju[j2,u1,5] + 1.2 Q_ju[j3,u1,5]
-   + 1.2 Q_ju[j4,u1,5] - Q_kuw[k2,u1,w1,5] - Q_kuw[k2,u1,w2,5]
-   - Q_kuw[k2,u1,w3,5] - Q_kuw[k2,u1,w4,5] - Q_kuw[k2,u1,w5,5] = 0
- c18[u1,k2,6]: 0.8 Q_ju[j1,u1,6] + 0.8 Q_ju[j2,u1,6] + 0.8 Q_ju[j3,u1,6]
-   + 0.8 Q_ju[j4,u1,6] - Q_kuw[k2,u1,w1,6] - Q_kuw[k2,u1,w2,6]
-   - Q_kuw[k2,u1,w3,6] - Q_kuw[k2,u1,w4,6] - Q_kuw[k2,u1,w5,6] = 0
- c18[u1,k2,7]: 0.4 Q_ju[j1,u1,7] + 0.4 Q_ju[j2,u1,7] + 0.4 Q_ju[j3,u1,7]
-   + 0.4 Q_ju[j4,u1,7] - Q_kuw[k2,u1,w1,7] - Q_kuw[k2,u1,w2,7]
-   - Q_kuw[k2,u1,w3,7] - Q_kuw[k2,u1,w4,7] - Q_kuw[k2,u1,w5,7] = 0
- c18[u1,k2,8]: 0.8 Q_ju[j1,u1,8] + 0.8 Q_ju[j2,u1,8] + 0.8 Q_ju[j3,u1,8]
-   + 0.8 Q_ju[j4,u1,8] - Q_kuw[k2,u1,w1,8] - Q_kuw[k2,u1,w2,8]
-   - Q_kuw[k2,u1,w3,8] - Q_kuw[k2,u1,w4,8] - Q_kuw[k2,u1,w5,8] = 0
- c18[u1,k2,9]: 0.4 Q_ju[j1,u1,9] + 0.4 Q_ju[j2,u1,9] + 0.4 Q_ju[j3,u1,9]
-   + 0.4 Q_ju[j4,u1,9] - Q_kuw[k2,u1,w1,9] - Q_kuw[k2,u1,w2,9]
-   - Q_kuw[k2,u1,w3,9] - Q_kuw[k2,u1,w4,9] - Q_kuw[k2,u1,w5,9] = 0
- c18[u1,k2,10]: 0.8 Q_ju[j1,u1,10] + 0.8 Q_ju[j2,u1,10]
-   + 0.8 Q_ju[j3,u1,10] + 0.8 Q_ju[j4,u1,10] - Q_kuw[k2,u1,w1,10]
-   - Q_kuw[k2,u1,w2,10] - Q_kuw[k2,u1,w3,10] - Q_kuw[k2,u1,w4,10]
-   - Q_kuw[k2,u1,w5,10] = 0
- c18[u1,k2,11]: 0.4 Q_ju[j1,u1,11] + 0.4 Q_ju[j2,u1,11]
-   + 0.4 Q_ju[j3,u1,11] + 0.4 Q_ju[j4,u1,11] - Q_kuw[k2,u1,w1,11]
-   - Q_kuw[k2,u1,w2,11] - Q_kuw[k2,u1,w3,11] - Q_kuw[k2,u1,w4,11]
-   - Q_kuw[k2,u1,w5,11] = 0
- c18[u1,k3,0]: Q_ju[j1,u1,0] + Q_ju[j2,u1,0] + Q_ju[j3,u1,0]
-   + Q_ju[j4,u1,0] - Q_kuw[k3,u1,w1,0] - Q_kuw[k3,u1,w2,0]
-   - Q_kuw[k3,u1,w3,0] - Q_kuw[k3,u1,w4,0] - Q_kuw[k3,u1,w5,0] = 0
- c18[u1,k3,1]: 3 Q_ju[j1,u1,1] + 3 Q_ju[j2,u1,1] + 3 Q_ju[j3,u1,1]
-   + 3 Q_ju[j4,u1,1] - Q_kuw[k3,u1,w1,1] - Q_kuw[k3,u1,w2,1]
-   - Q_kuw[k3,u1,w3,1] - Q_kuw[k3,u1,w4,1] - Q_kuw[k3,u1,w5,1] = 0
- c18[u1,k3,2]: Q_ju[j1,u1,2] + Q_ju[j2,u1,2] + Q_ju[j3,u1,2]
-   + Q_ju[j4,u1,2] - Q_kuw[k3,u1,w1,2] - Q_kuw[k3,u1,w2,2]
-   - Q_kuw[k3,u1,w3,2] - Q_kuw[k3,u1,w4,2] - Q_kuw[k3,u1,w5,2] = 0
- c18[u1,k3,3]: 2 Q_ju[j1,u1,3] + 2 Q_ju[j2,u1,3] + 2 Q_ju[j3,u1,3]
-   + 2 Q_ju[j4,u1,3] - Q_kuw[k3,u1,w1,3] - Q_kuw[k3,u1,w2,3]
-   - Q_kuw[k3,u1,w3,3] - Q_kuw[k3,u1,w4,3] - Q_kuw[k3,u1,w5,3] = 0
- c18[u1,k3,4]: 2 Q_ju[j1,u1,4] + 2 Q_ju[j2,u1,4] + 2 Q_ju[j3,u1,4]
-   + 2 Q_ju[j4,u1,4] - Q_kuw[k3,u1,w1,4] - Q_kuw[k3,u1,w2,4]
-   - Q_kuw[k3,u1,w3,4] - Q_kuw[k3,u1,w4,4] - Q_kuw[k3,u1,w5,4] = 0
- c18[u1,k3,5]: 3 Q_ju[j1,u1,5] + 3 Q_ju[j2,u1,5] + 3 Q_ju[j3,u1,5]
-   + 3 Q_ju[j4,u1,5] - Q_kuw[k3,u1,w1,5] - Q_kuw[k3,u1,w2,5]
-   - Q_kuw[k3,u1,w3,5] - Q_kuw[k3,u1,w4,5] - Q_kuw[k3,u1,w5,5] = 0
- c18[u1,k3,6]: 2 Q_ju[j1,u1,6] + 2 Q_ju[j2,u1,6] + 2 Q_ju[j3,u1,6]
-   + 2 Q_ju[j4,u1,6] - Q_kuw[k3,u1,w1,6] - Q_kuw[k3,u1,w2,6]
-   - Q_kuw[k3,u1,w3,6] - Q_kuw[k3,u1,w4,6] - Q_kuw[k3,u1,w5,6] = 0
- c18[u1,k3,7]: Q_ju[j1,u1,7] + Q_ju[j2,u1,7] + Q_ju[j3,u1,7]
-   + Q_ju[j4,u1,7] - Q_kuw[k3,u1,w1,7] - Q_kuw[k3,u1,w2,7]
-   - Q_kuw[k3,u1,w3,7] - Q_kuw[k3,u1,w4,7] - Q_kuw[k3,u1,w5,7] = 0
- c18[u1,k3,8]: 2 Q_ju[j1,u1,8] + 2 Q_ju[j2,u1,8] + 2 Q_ju[j3,u1,8]
-   + 2 Q_ju[j4,u1,8] - Q_kuw[k3,u1,w1,8] - Q_kuw[k3,u1,w2,8]
-   - Q_kuw[k3,u1,w3,8] - Q_kuw[k3,u1,w4,8] - Q_kuw[k3,u1,w5,8] = 0
- c18[u1,k3,9]: Q_ju[j1,u1,9] + Q_ju[j2,u1,9] + Q_ju[j3,u1,9]
-   + Q_ju[j4,u1,9] - Q_kuw[k3,u1,w1,9] - Q_kuw[k3,u1,w2,9]
-   - Q_kuw[k3,u1,w3,9] - Q_kuw[k3,u1,w4,9] - Q_kuw[k3,u1,w5,9] = 0
- c18[u1,k3,10]: 2 Q_ju[j1,u1,10] + 2 Q_ju[j2,u1,10] + 2 Q_ju[j3,u1,10]
-   + 2 Q_ju[j4,u1,10] - Q_kuw[k3,u1,w1,10] - Q_kuw[k3,u1,w2,10]
-   - Q_kuw[k3,u1,w3,10] - Q_kuw[k3,u1,w4,10] - Q_kuw[k3,u1,w5,10] = 0
- c18[u1,k3,11]: Q_ju[j1,u1,11] + Q_ju[j2,u1,11] + Q_ju[j3,u1,11]
-   + Q_ju[j4,u1,11] - Q_kuw[k3,u1,w1,11] - Q_kuw[k3,u1,w2,11]
-   - Q_kuw[k3,u1,w3,11] - Q_kuw[k3,u1,w4,11] - Q_kuw[k3,u1,w5,11] = 0
- c18[u2,k1,0]: 0.1 Q_ju[j1,u2,0] + 0.1 Q_ju[j2,u2,0] + 0.1 Q_ju[j3,u2,0]
-   + 0.1 Q_ju[j4,u2,0] - Q_kuw[k1,u2,w1,0] - Q_kuw[k1,u2,w2,0]
-   - Q_kuw[k1,u2,w3,0] - Q_kuw[k1,u2,w4,0] - Q_kuw[k1,u2,w5,0] = 0
- c18[u2,k1,1]: 0.3 Q_ju[j1,u2,1] + 0.3 Q_ju[j2,u2,1] + 0.3 Q_ju[j3,u2,1]
-   + 0.3 Q_ju[j4,u2,1] - Q_kuw[k1,u2,w1,1] - Q_kuw[k1,u2,w2,1]
-   - Q_kuw[k1,u2,w3,1] - Q_kuw[k1,u2,w4,1] - Q_kuw[k1,u2,w5,1] = 0
- c18[u2,k1,2]: 0.1 Q_ju[j1,u2,2] + 0.1 Q_ju[j2,u2,2] + 0.1 Q_ju[j3,u2,2]
-   + 0.1 Q_ju[j4,u2,2] - Q_kuw[k1,u2,w1,2] - Q_kuw[k1,u2,w2,2]
-   - Q_kuw[k1,u2,w3,2] - Q_kuw[k1,u2,w4,2] - Q_kuw[k1,u2,w5,2] = 0
- c18[u2,k1,3]: 0.2 Q_ju[j1,u2,3] + 0.2 Q_ju[j2,u2,3] + 0.2 Q_ju[j3,u2,3]
-   + 0.2 Q_ju[j4,u2,3] - Q_kuw[k1,u2,w1,3] - Q_kuw[k1,u2,w2,3]
-   - Q_kuw[k1,u2,w3,3] - Q_kuw[k1,u2,w4,3] - Q_kuw[k1,u2,w5,3] = 0
- c18[u2,k1,4]: 0.2 Q_ju[j1,u2,4] + 0.2 Q_ju[j2,u2,4] + 0.2 Q_ju[j3,u2,4]
-   + 0.2 Q_ju[j4,u2,4] - Q_kuw[k1,u2,w1,4] - Q_kuw[k1,u2,w2,4]
-   - Q_kuw[k1,u2,w3,4] - Q_kuw[k1,u2,w4,4] - Q_kuw[k1,u2,w5,4] = 0
- c18[u2,k1,5]: 0.3 Q_ju[j1,u2,5] + 0.3 Q_ju[j2,u2,5] + 0.3 Q_ju[j3,u2,5]
-   + 0.3 Q_ju[j4,u2,5] - Q_kuw[k1,u2,w1,5] - Q_kuw[k1,u2,w2,5]
-   - Q_kuw[k1,u2,w3,5] - Q_kuw[k1,u2,w4,5] - Q_kuw[k1,u2,w5,5] = 0
- c18[u2,k1,6]: 0.2 Q_ju[j1,u2,6] + 0.2 Q_ju[j2,u2,6] + 0.2 Q_ju[j3,u2,6]
-   + 0.2 Q_ju[j4,u2,6] - Q_kuw[k1,u2,w1,6] - Q_kuw[k1,u2,w2,6]
-   - Q_kuw[k1,u2,w3,6] - Q_kuw[k1,u2,w4,6] - Q_kuw[k1,u2,w5,6] = 0
- c18[u2,k1,7]: 0.1 Q_ju[j1,u2,7] + 0.1 Q_ju[j2,u2,7] + 0.1 Q_ju[j3,u2,7]
-   + 0.1 Q_ju[j4,u2,7] - Q_kuw[k1,u2,w1,7] - Q_kuw[k1,u2,w2,7]
-   - Q_kuw[k1,u2,w3,7] - Q_kuw[k1,u2,w4,7] - Q_kuw[k1,u2,w5,7] = 0
- c18[u2,k1,8]: 0.2 Q_ju[j1,u2,8] + 0.2 Q_ju[j2,u2,8] + 0.2 Q_ju[j3,u2,8]
-   + 0.2 Q_ju[j4,u2,8] - Q_kuw[k1,u2,w1,8] - Q_kuw[k1,u2,w2,8]
-   - Q_kuw[k1,u2,w3,8] - Q_kuw[k1,u2,w4,8] - Q_kuw[k1,u2,w5,8] = 0
- c18[u2,k1,9]: 0.1 Q_ju[j1,u2,9] + 0.1 Q_ju[j2,u2,9] + 0.1 Q_ju[j3,u2,9]
-   + 0.1 Q_ju[j4,u2,9] - Q_kuw[k1,u2,w1,9] - Q_kuw[k1,u2,w2,9]
-   - Q_kuw[k1,u2,w3,9] - Q_kuw[k1,u2,w4,9] - Q_kuw[k1,u2,w5,9] = 0
- c18[u2,k1,10]: 0.2 Q_ju[j1,u2,10] + 0.2 Q_ju[j2,u2,10]
-   + 0.2 Q_ju[j3,u2,10] + 0.2 Q_ju[j4,u2,10] - Q_kuw[k1,u2,w1,10]
-   - Q_kuw[k1,u2,w2,10] - Q_kuw[k1,u2,w3,10] - Q_kuw[k1,u2,w4,10]
-   - Q_kuw[k1,u2,w5,10] = 0
- c18[u2,k1,11]: 0.1 Q_ju[j1,u2,11] + 0.1 Q_ju[j2,u2,11]
-   + 0.1 Q_ju[j3,u2,11] + 0.1 Q_ju[j4,u2,11] - Q_kuw[k1,u2,w1,11]
-   - Q_kuw[k1,u2,w2,11] - Q_kuw[k1,u2,w3,11] - Q_kuw[k1,u2,w4,11]
-   - Q_kuw[k1,u2,w5,11] = 0
- c18[u2,k2,0]: 0.4 Q_ju[j1,u2,0] + 0.4 Q_ju[j2,u2,0] + 0.4 Q_ju[j3,u2,0]
-   + 0.4 Q_ju[j4,u2,0] - Q_kuw[k2,u2,w1,0] - Q_kuw[k2,u2,w2,0]
-   - Q_kuw[k2,u2,w3,0] - Q_kuw[k2,u2,w4,0] - Q_kuw[k2,u2,w5,0] = 0
- c18[u2,k2,1]: 1.2 Q_ju[j1,u2,1] + 1.2 Q_ju[j2,u2,1] + 1.2 Q_ju[j3,u2,1]
-   + 1.2 Q_ju[j4,u2,1] - Q_kuw[k2,u2,w1,1] - Q_kuw[k2,u2,w2,1]
-   - Q_kuw[k2,u2,w3,1] - Q_kuw[k2,u2,w4,1] - Q_kuw[k2,u2,w5,1] = 0
- c18[u2,k2,2]: 0.4 Q_ju[j1,u2,2] + 0.4 Q_ju[j2,u2,2] + 0.4 Q_ju[j3,u2,2]
-   + 0.4 Q_ju[j4,u2,2] - Q_kuw[k2,u2,w1,2] - Q_kuw[k2,u2,w2,2]
-   - Q_kuw[k2,u2,w3,2] - Q_kuw[k2,u2,w4,2] - Q_kuw[k2,u2,w5,2] = 0
- c18[u2,k2,3]: 0.8 Q_ju[j1,u2,3] + 0.8 Q_ju[j2,u2,3] + 0.8 Q_ju[j3,u2,3]
-   + 0.8 Q_ju[j4,u2,3] - Q_kuw[k2,u2,w1,3] - Q_kuw[k2,u2,w2,3]
-   - Q_kuw[k2,u2,w3,3] - Q_kuw[k2,u2,w4,3] - Q_kuw[k2,u2,w5,3] = 0
- c18[u2,k2,4]: 0.8 Q_ju[j1,u2,4] + 0.8 Q_ju[j2,u2,4] + 0.8 Q_ju[j3,u2,4]
-   + 0.8 Q_ju[j4,u2,4] - Q_kuw[k2,u2,w1,4] - Q_kuw[k2,u2,w2,4]
-   - Q_kuw[k2,u2,w3,4] - Q_kuw[k2,u2,w4,4] - Q_kuw[k2,u2,w5,4] = 0
- c18[u2,k2,5]: 1.2 Q_ju[j1,u2,5] + 1.2 Q_ju[j2,u2,5] + 1.2 Q_ju[j3,u2,5]
-   + 1.2 Q_ju[j4,u2,5] - Q_kuw[k2,u2,w1,5] - Q_kuw[k2,u2,w2,5]
-   - Q_kuw[k2,u2,w3,5] - Q_kuw[k2,u2,w4,5] - Q_kuw[k2,u2,w5,5] = 0
- c18[u2,k2,6]: 0.8 Q_ju[j1,u2,6] + 0.8 Q_ju[j2,u2,6] + 0.8 Q_ju[j3,u2,6]
-   + 0.8 Q_ju[j4,u2,6] - Q_kuw[k2,u2,w1,6] - Q_kuw[k2,u2,w2,6]
-   - Q_kuw[k2,u2,w3,6] - Q_kuw[k2,u2,w4,6] - Q_kuw[k2,u2,w5,6] = 0
- c18[u2,k2,7]: 0.4 Q_ju[j1,u2,7] + 0.4 Q_ju[j2,u2,7] + 0.4 Q_ju[j3,u2,7]
-   + 0.4 Q_ju[j4,u2,7] - Q_kuw[k2,u2,w1,7] - Q_kuw[k2,u2,w2,7]
-   - Q_kuw[k2,u2,w3,7] - Q_kuw[k2,u2,w4,7] - Q_kuw[k2,u2,w5,7] = 0
- c18[u2,k2,8]: 0.8 Q_ju[j1,u2,8] + 0.8 Q_ju[j2,u2,8] + 0.8 Q_ju[j3,u2,8]
-   + 0.8 Q_ju[j4,u2,8] - Q_kuw[k2,u2,w1,8] - Q_kuw[k2,u2,w2,8]
-   - Q_kuw[k2,u2,w3,8] - Q_kuw[k2,u2,w4,8] - Q_kuw[k2,u2,w5,8] = 0
- c18[u2,k2,9]: 0.4 Q_ju[j1,u2,9] + 0.4 Q_ju[j2,u2,9] + 0.4 Q_ju[j3,u2,9]
-   + 0.4 Q_ju[j4,u2,9] - Q_kuw[k2,u2,w1,9] - Q_kuw[k2,u2,w2,9]
-   - Q_kuw[k2,u2,w3,9] - Q_kuw[k2,u2,w4,9] - Q_kuw[k2,u2,w5,9] = 0
- c18[u2,k2,10]: 0.8 Q_ju[j1,u2,10] + 0.8 Q_ju[j2,u2,10]
-   + 0.8 Q_ju[j3,u2,10] + 0.8 Q_ju[j4,u2,10] - Q_kuw[k2,u2,w1,10]
-   - Q_kuw[k2,u2,w2,10] - Q_kuw[k2,u2,w3,10] - Q_kuw[k2,u2,w4,10]
-   - Q_kuw[k2,u2,w5,10] = 0
- c18[u2,k2,11]: 0.4 Q_ju[j1,u2,11] + 0.4 Q_ju[j2,u2,11]
-   + 0.4 Q_ju[j3,u2,11] + 0.4 Q_ju[j4,u2,11] - Q_kuw[k2,u2,w1,11]
-   - Q_kuw[k2,u2,w2,11] - Q_kuw[k2,u2,w3,11] - Q_kuw[k2,u2,w4,11]
-   - Q_kuw[k2,u2,w5,11] = 0
- c18[u2,k3,0]: Q_ju[j1,u2,0] + Q_ju[j2,u2,0] + Q_ju[j3,u2,0]
-   + Q_ju[j4,u2,0] - Q_kuw[k3,u2,w1,0] - Q_kuw[k3,u2,w2,0]
-   - Q_kuw[k3,u2,w3,0] - Q_kuw[k3,u2,w4,0] - Q_kuw[k3,u2,w5,0] = 0
- c18[u2,k3,1]: 3 Q_ju[j1,u2,1] + 3 Q_ju[j2,u2,1] + 3 Q_ju[j3,u2,1]
-   + 3 Q_ju[j4,u2,1] - Q_kuw[k3,u2,w1,1] - Q_kuw[k3,u2,w2,1]
-   - Q_kuw[k3,u2,w3,1] - Q_kuw[k3,u2,w4,1] - Q_kuw[k3,u2,w5,1] = 0
- c18[u2,k3,2]: Q_ju[j1,u2,2] + Q_ju[j2,u2,2] + Q_ju[j3,u2,2]
-   + Q_ju[j4,u2,2] - Q_kuw[k3,u2,w1,2] - Q_kuw[k3,u2,w2,2]
-   - Q_kuw[k3,u2,w3,2] - Q_kuw[k3,u2,w4,2] - Q_kuw[k3,u2,w5,2] = 0
- c18[u2,k3,3]: 2 Q_ju[j1,u2,3] + 2 Q_ju[j2,u2,3] + 2 Q_ju[j3,u2,3]
-   + 2 Q_ju[j4,u2,3] - Q_kuw[k3,u2,w1,3] - Q_kuw[k3,u2,w2,3]
-   - Q_kuw[k3,u2,w3,3] - Q_kuw[k3,u2,w4,3] - Q_kuw[k3,u2,w5,3] = 0
- c18[u2,k3,4]: 2 Q_ju[j1,u2,4] + 2 Q_ju[j2,u2,4] + 2 Q_ju[j3,u2,4]
-   + 2 Q_ju[j4,u2,4] - Q_kuw[k3,u2,w1,4] - Q_kuw[k3,u2,w2,4]
-   - Q_kuw[k3,u2,w3,4] - Q_kuw[k3,u2,w4,4] - Q_kuw[k3,u2,w5,4] = 0
- c18[u2,k3,5]: 3 Q_ju[j1,u2,5] + 3 Q_ju[j2,u2,5] + 3 Q_ju[j3,u2,5]
-   + 3 Q_ju[j4,u2,5] - Q_kuw[k3,u2,w1,5] - Q_kuw[k3,u2,w2,5]
-   - Q_kuw[k3,u2,w3,5] - Q_kuw[k3,u2,w4,5] - Q_kuw[k3,u2,w5,5] = 0
- c18[u2,k3,6]: 2 Q_ju[j1,u2,6] + 2 Q_ju[j2,u2,6] + 2 Q_ju[j3,u2,6]
-   + 2 Q_ju[j4,u2,6] - Q_kuw[k3,u2,w1,6] - Q_kuw[k3,u2,w2,6]
-   - Q_kuw[k3,u2,w3,6] - Q_kuw[k3,u2,w4,6] - Q_kuw[k3,u2,w5,6] = 0
- c18[u2,k3,7]: Q_ju[j1,u2,7] + Q_ju[j2,u2,7] + Q_ju[j3,u2,7]
-   + Q_ju[j4,u2,7] - Q_kuw[k3,u2,w1,7] - Q_kuw[k3,u2,w2,7]
-   - Q_kuw[k3,u2,w3,7] - Q_kuw[k3,u2,w4,7] - Q_kuw[k3,u2,w5,7] = 0
- c18[u2,k3,8]: 2 Q_ju[j1,u2,8] + 2 Q_ju[j2,u2,8] + 2 Q_ju[j3,u2,8]
-   + 2 Q_ju[j4,u2,8] - Q_kuw[k3,u2,w1,8] - Q_kuw[k3,u2,w2,8]
-   - Q_kuw[k3,u2,w3,8] - Q_kuw[k3,u2,w4,8] - Q_kuw[k3,u2,w5,8] = 0
- c18[u2,k3,9]: Q_ju[j1,u2,9] + Q_ju[j2,u2,9] + Q_ju[j3,u2,9]
-   + Q_ju[j4,u2,9] - Q_kuw[k3,u2,w1,9] - Q_kuw[k3,u2,w2,9]
-   - Q_kuw[k3,u2,w3,9] - Q_kuw[k3,u2,w4,9] - Q_kuw[k3,u2,w5,9] = 0
- c18[u2,k3,10]: 2 Q_ju[j1,u2,10] + 2 Q_ju[j2,u2,10] + 2 Q_ju[j3,u2,10]
-   + 2 Q_ju[j4,u2,10] - Q_kuw[k3,u2,w1,10] - Q_kuw[k3,u2,w2,10]
-   - Q_kuw[k3,u2,w3,10] - Q_kuw[k3,u2,w4,10] - Q_kuw[k3,u2,w5,10] = 0
- c18[u2,k3,11]: Q_ju[j1,u2,11] + Q_ju[j2,u2,11] + Q_ju[j3,u2,11]
-   + Q_ju[j4,u2,11] - Q_kuw[k3,u2,w1,11] - Q_kuw[k3,u2,w2,11]
-   - Q_kuw[k3,u2,w3,11] - Q_kuw[k3,u2,w4,11] - Q_kuw[k3,u2,w5,11] = 0
- c18[u3,k1,0]: 0.1 Q_ju[j1,u3,0] + 0.1 Q_ju[j2,u3,0] + 0.1 Q_ju[j3,u3,0]
-   + 0.1 Q_ju[j4,u3,0] - Q_kuw[k1,u3,w1,0] - Q_kuw[k1,u3,w2,0]
-   - Q_kuw[k1,u3,w3,0] - Q_kuw[k1,u3,w4,0] - Q_kuw[k1,u3,w5,0] = 0
- c18[u3,k1,1]: 0.3 Q_ju[j1,u3,1] + 0.3 Q_ju[j2,u3,1] + 0.3 Q_ju[j3,u3,1]
-   + 0.3 Q_ju[j4,u3,1] - Q_kuw[k1,u3,w1,1] - Q_kuw[k1,u3,w2,1]
-   - Q_kuw[k1,u3,w3,1] - Q_kuw[k1,u3,w4,1] - Q_kuw[k1,u3,w5,1] = 0
- c18[u3,k1,2]: 0.1 Q_ju[j1,u3,2] + 0.1 Q_ju[j2,u3,2] + 0.1 Q_ju[j3,u3,2]
-   + 0.1 Q_ju[j4,u3,2] - Q_kuw[k1,u3,w1,2] - Q_kuw[k1,u3,w2,2]
-   - Q_kuw[k1,u3,w3,2] - Q_kuw[k1,u3,w4,2] - Q_kuw[k1,u3,w5,2] = 0
- c18[u3,k1,3]: 0.2 Q_ju[j1,u3,3] + 0.2 Q_ju[j2,u3,3] + 0.2 Q_ju[j3,u3,3]
-   + 0.2 Q_ju[j4,u3,3] - Q_kuw[k1,u3,w1,3] - Q_kuw[k1,u3,w2,3]
-   - Q_kuw[k1,u3,w3,3] - Q_kuw[k1,u3,w4,3] - Q_kuw[k1,u3,w5,3] = 0
- c18[u3,k1,4]: 0.2 Q_ju[j1,u3,4] + 0.2 Q_ju[j2,u3,4] + 0.2 Q_ju[j3,u3,4]
-   + 0.2 Q_ju[j4,u3,4] - Q_kuw[k1,u3,w1,4] - Q_kuw[k1,u3,w2,4]
-   - Q_kuw[k1,u3,w3,4] - Q_kuw[k1,u3,w4,4] - Q_kuw[k1,u3,w5,4] = 0
- c18[u3,k1,5]: 0.3 Q_ju[j1,u3,5] + 0.3 Q_ju[j2,u3,5] + 0.3 Q_ju[j3,u3,5]
-   + 0.3 Q_ju[j4,u3,5] - Q_kuw[k1,u3,w1,5] - Q_kuw[k1,u3,w2,5]
-   - Q_kuw[k1,u3,w3,5] - Q_kuw[k1,u3,w4,5] - Q_kuw[k1,u3,w5,5] = 0
- c18[u3,k1,6]: 0.2 Q_ju[j1,u3,6] + 0.2 Q_ju[j2,u3,6] + 0.2 Q_ju[j3,u3,6]
-   + 0.2 Q_ju[j4,u3,6] - Q_kuw[k1,u3,w1,6] - Q_kuw[k1,u3,w2,6]
-   - Q_kuw[k1,u3,w3,6] - Q_kuw[k1,u3,w4,6] - Q_kuw[k1,u3,w5,6] = 0
- c18[u3,k1,7]: 0.1 Q_ju[j1,u3,7] + 0.1 Q_ju[j2,u3,7] + 0.1 Q_ju[j3,u3,7]
-   + 0.1 Q_ju[j4,u3,7] - Q_kuw[k1,u3,w1,7] - Q_kuw[k1,u3,w2,7]
-   - Q_kuw[k1,u3,w3,7] - Q_kuw[k1,u3,w4,7] - Q_kuw[k1,u3,w5,7] = 0
- c18[u3,k1,8]: 0.2 Q_ju[j1,u3,8] + 0.2 Q_ju[j2,u3,8] + 0.2 Q_ju[j3,u3,8]
-   + 0.2 Q_ju[j4,u3,8] - Q_kuw[k1,u3,w1,8] - Q_kuw[k1,u3,w2,8]
-   - Q_kuw[k1,u3,w3,8] - Q_kuw[k1,u3,w4,8] - Q_kuw[k1,u3,w5,8] = 0
- c18[u3,k1,9]: 0.1 Q_ju[j1,u3,9] + 0.1 Q_ju[j2,u3,9] + 0.1 Q_ju[j3,u3,9]
-   + 0.1 Q_ju[j4,u3,9] - Q_kuw[k1,u3,w1,9] - Q_kuw[k1,u3,w2,9]
-   - Q_kuw[k1,u3,w3,9] - Q_kuw[k1,u3,w4,9] - Q_kuw[k1,u3,w5,9] = 0
- c18[u3,k1,10]: 0.2 Q_ju[j1,u3,10] + 0.2 Q_ju[j2,u3,10]
-   + 0.2 Q_ju[j3,u3,10] + 0.2 Q_ju[j4,u3,10] - Q_kuw[k1,u3,w1,10]
-   - Q_kuw[k1,u3,w2,10] - Q_kuw[k1,u3,w3,10] - Q_kuw[k1,u3,w4,10]
-   - Q_kuw[k1,u3,w5,10] = 0
- c18[u3,k1,11]: 0.1 Q_ju[j1,u3,11] + 0.1 Q_ju[j2,u3,11]
-   + 0.1 Q_ju[j3,u3,11] + 0.1 Q_ju[j4,u3,11] - Q_kuw[k1,u3,w1,11]
-   - Q_kuw[k1,u3,w2,11] - Q_kuw[k1,u3,w3,11] - Q_kuw[k1,u3,w4,11]
-   - Q_kuw[k1,u3,w5,11] = 0
- c18[u3,k2,0]: 0.4 Q_ju[j1,u3,0] + 0.4 Q_ju[j2,u3,0] + 0.4 Q_ju[j3,u3,0]
-   + 0.4 Q_ju[j4,u3,0] - Q_kuw[k2,u3,w1,0] - Q_kuw[k2,u3,w2,0]
-   - Q_kuw[k2,u3,w3,0] - Q_kuw[k2,u3,w4,0] - Q_kuw[k2,u3,w5,0] = 0
- c18[u3,k2,1]: 1.2 Q_ju[j1,u3,1] + 1.2 Q_ju[j2,u3,1] + 1.2 Q_ju[j3,u3,1]
-   + 1.2 Q_ju[j4,u3,1] - Q_kuw[k2,u3,w1,1] - Q_kuw[k2,u3,w2,1]
-   - Q_kuw[k2,u3,w3,1] - Q_kuw[k2,u3,w4,1] - Q_kuw[k2,u3,w5,1] = 0
- c18[u3,k2,2]: 0.4 Q_ju[j1,u3,2] + 0.4 Q_ju[j2,u3,2] + 0.4 Q_ju[j3,u3,2]
-   + 0.4 Q_ju[j4,u3,2] - Q_kuw[k2,u3,w1,2] - Q_kuw[k2,u3,w2,2]
-   - Q_kuw[k2,u3,w3,2] - Q_kuw[k2,u3,w4,2] - Q_kuw[k2,u3,w5,2] = 0
- c18[u3,k2,3]: 0.8 Q_ju[j1,u3,3] + 0.8 Q_ju[j2,u3,3] + 0.8 Q_ju[j3,u3,3]
-   + 0.8 Q_ju[j4,u3,3] - Q_kuw[k2,u3,w1,3] - Q_kuw[k2,u3,w2,3]
-   - Q_kuw[k2,u3,w3,3] - Q_kuw[k2,u3,w4,3] - Q_kuw[k2,u3,w5,3] = 0
- c18[u3,k2,4]: 0.8 Q_ju[j1,u3,4] + 0.8 Q_ju[j2,u3,4] + 0.8 Q_ju[j3,u3,4]
-   + 0.8 Q_ju[j4,u3,4] - Q_kuw[k2,u3,w1,4] - Q_kuw[k2,u3,w2,4]
-   - Q_kuw[k2,u3,w3,4] - Q_kuw[k2,u3,w4,4] - Q_kuw[k2,u3,w5,4] = 0
- c18[u3,k2,5]: 1.2 Q_ju[j1,u3,5] + 1.2 Q_ju[j2,u3,5] + 1.2 Q_ju[j3,u3,5]
-   + 1.2 Q_ju[j4,u3,5] - Q_kuw[k2,u3,w1,5] - Q_kuw[k2,u3,w2,5]
-   - Q_kuw[k2,u3,w3,5] - Q_kuw[k2,u3,w4,5] - Q_kuw[k2,u3,w5,5] = 0
- c18[u3,k2,6]: 0.8 Q_ju[j1,u3,6] + 0.8 Q_ju[j2,u3,6] + 0.8 Q_ju[j3,u3,6]
-   + 0.8 Q_ju[j4,u3,6] - Q_kuw[k2,u3,w1,6] - Q_kuw[k2,u3,w2,6]
-   - Q_kuw[k2,u3,w3,6] - Q_kuw[k2,u3,w4,6] - Q_kuw[k2,u3,w5,6] = 0
- c18[u3,k2,7]: 0.4 Q_ju[j1,u3,7] + 0.4 Q_ju[j2,u3,7] + 0.4 Q_ju[j3,u3,7]
-   + 0.4 Q_ju[j4,u3,7] - Q_kuw[k2,u3,w1,7] - Q_kuw[k2,u3,w2,7]
-   - Q_kuw[k2,u3,w3,7] - Q_kuw[k2,u3,w4,7] - Q_kuw[k2,u3,w5,7] = 0
- c18[u3,k2,8]: 0.8 Q_ju[j1,u3,8] + 0.8 Q_ju[j2,u3,8] + 0.8 Q_ju[j3,u3,8]
-   + 0.8 Q_ju[j4,u3,8] - Q_kuw[k2,u3,w1,8] - Q_kuw[k2,u3,w2,8]
-   - Q_kuw[k2,u3,w3,8] - Q_kuw[k2,u3,w4,8] - Q_kuw[k2,u3,w5,8] = 0
- c18[u3,k2,9]: 0.4 Q_ju[j1,u3,9] + 0.4 Q_ju[j2,u3,9] + 0.4 Q_ju[j3,u3,9]
-   + 0.4 Q_ju[j4,u3,9] - Q_kuw[k2,u3,w1,9] - Q_kuw[k2,u3,w2,9]
-   - Q_kuw[k2,u3,w3,9] - Q_kuw[k2,u3,w4,9] - Q_kuw[k2,u3,w5,9] = 0
- c18[u3,k2,10]: 0.8 Q_ju[j1,u3,10] + 0.8 Q_ju[j2,u3,10]
-   + 0.8 Q_ju[j3,u3,10] + 0.8 Q_ju[j4,u3,10] - Q_kuw[k2,u3,w1,10]
-   - Q_kuw[k2,u3,w2,10] - Q_kuw[k2,u3,w3,10] - Q_kuw[k2,u3,w4,10]
-   - Q_kuw[k2,u3,w5,10] = 0
- c18[u3,k2,11]: 0.4 Q_ju[j1,u3,11] + 0.4 Q_ju[j2,u3,11]
-   + 0.4 Q_ju[j3,u3,11] + 0.4 Q_ju[j4,u3,11] - Q_kuw[k2,u3,w1,11]
-   - Q_kuw[k2,u3,w2,11] - Q_kuw[k2,u3,w3,11] - Q_kuw[k2,u3,w4,11]
-   - Q_kuw[k2,u3,w5,11] = 0
- c18[u3,k3,0]: Q_ju[j1,u3,0] + Q_ju[j2,u3,0] + Q_ju[j3,u3,0]
-   + Q_ju[j4,u3,0] - Q_kuw[k3,u3,w1,0] - Q_kuw[k3,u3,w2,0]
-   - Q_kuw[k3,u3,w3,0] - Q_kuw[k3,u3,w4,0] - Q_kuw[k3,u3,w5,0] = 0
- c18[u3,k3,1]: 3 Q_ju[j1,u3,1] + 3 Q_ju[j2,u3,1] + 3 Q_ju[j3,u3,1]
-   + 3 Q_ju[j4,u3,1] - Q_kuw[k3,u3,w1,1] - Q_kuw[k3,u3,w2,1]
-   - Q_kuw[k3,u3,w3,1] - Q_kuw[k3,u3,w4,1] - Q_kuw[k3,u3,w5,1] = 0
- c18[u3,k3,2]: Q_ju[j1,u3,2] + Q_ju[j2,u3,2] + Q_ju[j3,u3,2]
-   + Q_ju[j4,u3,2] - Q_kuw[k3,u3,w1,2] - Q_kuw[k3,u3,w2,2]
-   - Q_kuw[k3,u3,w3,2] - Q_kuw[k3,u3,w4,2] - Q_kuw[k3,u3,w5,2] = 0
- c18[u3,k3,3]: 2 Q_ju[j1,u3,3] + 2 Q_ju[j2,u3,3] + 2 Q_ju[j3,u3,3]
-   + 2 Q_ju[j4,u3,3] - Q_kuw[k3,u3,w1,3] - Q_kuw[k3,u3,w2,3]
-   - Q_kuw[k3,u3,w3,3] - Q_kuw[k3,u3,w4,3] - Q_kuw[k3,u3,w5,3] = 0
- c18[u3,k3,4]: 2 Q_ju[j1,u3,4] + 2 Q_ju[j2,u3,4] + 2 Q_ju[j3,u3,4]
-   + 2 Q_ju[j4,u3,4] - Q_kuw[k3,u3,w1,4] - Q_kuw[k3,u3,w2,4]
-   - Q_kuw[k3,u3,w3,4] - Q_kuw[k3,u3,w4,4] - Q_kuw[k3,u3,w5,4] = 0
- c18[u3,k3,5]: 3 Q_ju[j1,u3,5] + 3 Q_ju[j2,u3,5] + 3 Q_ju[j3,u3,5]
-   + 3 Q_ju[j4,u3,5] - Q_kuw[k3,u3,w1,5] - Q_kuw[k3,u3,w2,5]
-   - Q_kuw[k3,u3,w3,5] - Q_kuw[k3,u3,w4,5] - Q_kuw[k3,u3,w5,5] = 0
- c18[u3,k3,6]: 2 Q_ju[j1,u3,6] + 2 Q_ju[j2,u3,6] + 2 Q_ju[j3,u3,6]
-   + 2 Q_ju[j4,u3,6] - Q_kuw[k3,u3,w1,6] - Q_kuw[k3,u3,w2,6]
-   - Q_kuw[k3,u3,w3,6] - Q_kuw[k3,u3,w4,6] - Q_kuw[k3,u3,w5,6] = 0
- c18[u3,k3,7]: Q_ju[j1,u3,7] + Q_ju[j2,u3,7] + Q_ju[j3,u3,7]
-   + Q_ju[j4,u3,7] - Q_kuw[k3,u3,w1,7] - Q_kuw[k3,u3,w2,7]
-   - Q_kuw[k3,u3,w3,7] - Q_kuw[k3,u3,w4,7] - Q_kuw[k3,u3,w5,7] = 0
- c18[u3,k3,8]: 2 Q_ju[j1,u3,8] + 2 Q_ju[j2,u3,8] + 2 Q_ju[j3,u3,8]
-   + 2 Q_ju[j4,u3,8] - Q_kuw[k3,u3,w1,8] - Q_kuw[k3,u3,w2,8]
-   - Q_kuw[k3,u3,w3,8] - Q_kuw[k3,u3,w4,8] - Q_kuw[k3,u3,w5,8] = 0
- c18[u3,k3,9]: Q_ju[j1,u3,9] + Q_ju[j2,u3,9] + Q_ju[j3,u3,9]
-   + Q_ju[j4,u3,9] - Q_kuw[k3,u3,w1,9] - Q_kuw[k3,u3,w2,9]
-   - Q_kuw[k3,u3,w3,9] - Q_kuw[k3,u3,w4,9] - Q_kuw[k3,u3,w5,9] = 0
- c18[u3,k3,10]: 2 Q_ju[j1,u3,10] + 2 Q_ju[j2,u3,10] + 2 Q_ju[j3,u3,10]
-   + 2 Q_ju[j4,u3,10] - Q_kuw[k3,u3,w1,10] - Q_kuw[k3,u3,w2,10]
-   - Q_kuw[k3,u3,w3,10] - Q_kuw[k3,u3,w4,10] - Q_kuw[k3,u3,w5,10] = 0
- c18[u3,k3,11]: Q_ju[j1,u3,11] + Q_ju[j2,u3,11] + Q_ju[j3,u3,11]
-   + Q_ju[j4,u3,11] - Q_kuw[k3,u3,w1,11] - Q_kuw[k3,u3,w2,11]
-   - Q_kuw[k3,u3,w3,11] - Q_kuw[k3,u3,w4,11] - Q_kuw[k3,u3,w5,11] = 0
- c18[u4,k1,0]: 0.1 Q_ju[j1,u4,0] + 0.1 Q_ju[j2,u4,0] + 0.1 Q_ju[j3,u4,0]
-   + 0.1 Q_ju[j4,u4,0] - Q_kuw[k1,u4,w1,0] - Q_kuw[k1,u4,w2,0]
-   - Q_kuw[k1,u4,w3,0] - Q_kuw[k1,u4,w4,0] - Q_kuw[k1,u4,w5,0] = 0
- c18[u4,k1,1]: 0.3 Q_ju[j1,u4,1] + 0.3 Q_ju[j2,u4,1] + 0.3 Q_ju[j3,u4,1]
-   + 0.3 Q_ju[j4,u4,1] - Q_kuw[k1,u4,w1,1] - Q_kuw[k1,u4,w2,1]
-   - Q_kuw[k1,u4,w3,1] - Q_kuw[k1,u4,w4,1] - Q_kuw[k1,u4,w5,1] = 0
- c18[u4,k1,2]: 0.1 Q_ju[j1,u4,2] + 0.1 Q_ju[j2,u4,2] + 0.1 Q_ju[j3,u4,2]
-   + 0.1 Q_ju[j4,u4,2] - Q_kuw[k1,u4,w1,2] - Q_kuw[k1,u4,w2,2]
-   - Q_kuw[k1,u4,w3,2] - Q_kuw[k1,u4,w4,2] - Q_kuw[k1,u4,w5,2] = 0
- c18[u4,k1,3]: 0.2 Q_ju[j1,u4,3] + 0.2 Q_ju[j2,u4,3] + 0.2 Q_ju[j3,u4,3]
-   + 0.2 Q_ju[j4,u4,3] - Q_kuw[k1,u4,w1,3] - Q_kuw[k1,u4,w2,3]
-   - Q_kuw[k1,u4,w3,3] - Q_kuw[k1,u4,w4,3] - Q_kuw[k1,u4,w5,3] = 0
- c18[u4,k1,4]: 0.2 Q_ju[j1,u4,4] + 0.2 Q_ju[j2,u4,4] + 0.2 Q_ju[j3,u4,4]
-   + 0.2 Q_ju[j4,u4,4] - Q_kuw[k1,u4,w1,4] - Q_kuw[k1,u4,w2,4]
-   - Q_kuw[k1,u4,w3,4] - Q_kuw[k1,u4,w4,4] - Q_kuw[k1,u4,w5,4] = 0
- c18[u4,k1,5]: 0.3 Q_ju[j1,u4,5] + 0.3 Q_ju[j2,u4,5] + 0.3 Q_ju[j3,u4,5]
-   + 0.3 Q_ju[j4,u4,5] - Q_kuw[k1,u4,w1,5] - Q_kuw[k1,u4,w2,5]
-   - Q_kuw[k1,u4,w3,5] - Q_kuw[k1,u4,w4,5] - Q_kuw[k1,u4,w5,5] = 0
- c18[u4,k1,6]: 0.2 Q_ju[j1,u4,6] + 0.2 Q_ju[j2,u4,6] + 0.2 Q_ju[j3,u4,6]
-   + 0.2 Q_ju[j4,u4,6] - Q_kuw[k1,u4,w1,6] - Q_kuw[k1,u4,w2,6]
-   - Q_kuw[k1,u4,w3,6] - Q_kuw[k1,u4,w4,6] - Q_kuw[k1,u4,w5,6] = 0
- c18[u4,k1,7]: 0.1 Q_ju[j1,u4,7] + 0.1 Q_ju[j2,u4,7] + 0.1 Q_ju[j3,u4,7]
-   + 0.1 Q_ju[j4,u4,7] - Q_kuw[k1,u4,w1,7] - Q_kuw[k1,u4,w2,7]
-   - Q_kuw[k1,u4,w3,7] - Q_kuw[k1,u4,w4,7] - Q_kuw[k1,u4,w5,7] = 0
- c18[u4,k1,8]: 0.2 Q_ju[j1,u4,8] + 0.2 Q_ju[j2,u4,8] + 0.2 Q_ju[j3,u4,8]
-   + 0.2 Q_ju[j4,u4,8] - Q_kuw[k1,u4,w1,8] - Q_kuw[k1,u4,w2,8]
-   - Q_kuw[k1,u4,w3,8] - Q_kuw[k1,u4,w4,8] - Q_kuw[k1,u4,w5,8] = 0
- c18[u4,k1,9]: 0.1 Q_ju[j1,u4,9] + 0.1 Q_ju[j2,u4,9] + 0.1 Q_ju[j3,u4,9]
-   + 0.1 Q_ju[j4,u4,9] - Q_kuw[k1,u4,w1,9] - Q_kuw[k1,u4,w2,9]
-   - Q_kuw[k1,u4,w3,9] - Q_kuw[k1,u4,w4,9] - Q_kuw[k1,u4,w5,9] = 0
- c18[u4,k1,10]: 0.2 Q_ju[j1,u4,10] + 0.2 Q_ju[j2,u4,10]
-   + 0.2 Q_ju[j3,u4,10] + 0.2 Q_ju[j4,u4,10] - Q_kuw[k1,u4,w1,10]
-   - Q_kuw[k1,u4,w2,10] - Q_kuw[k1,u4,w3,10] - Q_kuw[k1,u4,w4,10]
-   - Q_kuw[k1,u4,w5,10] = 0
- c18[u4,k1,11]: 0.1 Q_ju[j1,u4,11] + 0.1 Q_ju[j2,u4,11]
-   + 0.1 Q_ju[j3,u4,11] + 0.1 Q_ju[j4,u4,11] - Q_kuw[k1,u4,w1,11]
-   - Q_kuw[k1,u4,w2,11] - Q_kuw[k1,u4,w3,11] - Q_kuw[k1,u4,w4,11]
-   - Q_kuw[k1,u4,w5,11] = 0
- c18[u4,k2,0]: 0.4 Q_ju[j1,u4,0] + 0.4 Q_ju[j2,u4,0] + 0.4 Q_ju[j3,u4,0]
-   + 0.4 Q_ju[j4,u4,0] - Q_kuw[k2,u4,w1,0] - Q_kuw[k2,u4,w2,0]
-   - Q_kuw[k2,u4,w3,0] - Q_kuw[k2,u4,w4,0] - Q_kuw[k2,u4,w5,0] = 0
- c18[u4,k2,1]: 1.2 Q_ju[j1,u4,1] + 1.2 Q_ju[j2,u4,1] + 1.2 Q_ju[j3,u4,1]
-   + 1.2 Q_ju[j4,u4,1] - Q_kuw[k2,u4,w1,1] - Q_kuw[k2,u4,w2,1]
-   - Q_kuw[k2,u4,w3,1] - Q_kuw[k2,u4,w4,1] - Q_kuw[k2,u4,w5,1] = 0
- c18[u4,k2,2]: 0.4 Q_ju[j1,u4,2] + 0.4 Q_ju[j2,u4,2] + 0.4 Q_ju[j3,u4,2]
-   + 0.4 Q_ju[j4,u4,2] - Q_kuw[k2,u4,w1,2] - Q_kuw[k2,u4,w2,2]
-   - Q_kuw[k2,u4,w3,2] - Q_kuw[k2,u4,w4,2] - Q_kuw[k2,u4,w5,2] = 0
- c18[u4,k2,3]: 0.8 Q_ju[j1,u4,3] + 0.8 Q_ju[j2,u4,3] + 0.8 Q_ju[j3,u4,3]
-   + 0.8 Q_ju[j4,u4,3] - Q_kuw[k2,u4,w1,3] - Q_kuw[k2,u4,w2,3]
-   - Q_kuw[k2,u4,w3,3] - Q_kuw[k2,u4,w4,3] - Q_kuw[k2,u4,w5,3] = 0
- c18[u4,k2,4]: 0.8 Q_ju[j1,u4,4] + 0.8 Q_ju[j2,u4,4] + 0.8 Q_ju[j3,u4,4]
-   + 0.8 Q_ju[j4,u4,4] - Q_kuw[k2,u4,w1,4] - Q_kuw[k2,u4,w2,4]
-   - Q_kuw[k2,u4,w3,4] - Q_kuw[k2,u4,w4,4] - Q_kuw[k2,u4,w5,4] = 0
- c18[u4,k2,5]: 1.2 Q_ju[j1,u4,5] + 1.2 Q_ju[j2,u4,5] + 1.2 Q_ju[j3,u4,5]
-   + 1.2 Q_ju[j4,u4,5] - Q_kuw[k2,u4,w1,5] - Q_kuw[k2,u4,w2,5]
-   - Q_kuw[k2,u4,w3,5] - Q_kuw[k2,u4,w4,5] - Q_kuw[k2,u4,w5,5] = 0
- c18[u4,k2,6]: 0.8 Q_ju[j1,u4,6] + 0.8 Q_ju[j2,u4,6] + 0.8 Q_ju[j3,u4,6]
-   + 0.8 Q_ju[j4,u4,6] - Q_kuw[k2,u4,w1,6] - Q_kuw[k2,u4,w2,6]
-   - Q_kuw[k2,u4,w3,6] - Q_kuw[k2,u4,w4,6] - Q_kuw[k2,u4,w5,6] = 0
- c18[u4,k2,7]: 0.4 Q_ju[j1,u4,7] + 0.4 Q_ju[j2,u4,7] + 0.4 Q_ju[j3,u4,7]
-   + 0.4 Q_ju[j4,u4,7] - Q_kuw[k2,u4,w1,7] - Q_kuw[k2,u4,w2,7]
-   - Q_kuw[k2,u4,w3,7] - Q_kuw[k2,u4,w4,7] - Q_kuw[k2,u4,w5,7] = 0
- c18[u4,k2,8]: 0.8 Q_ju[j1,u4,8] + 0.8 Q_ju[j2,u4,8] + 0.8 Q_ju[j3,u4,8]
-   + 0.8 Q_ju[j4,u4,8] - Q_kuw[k2,u4,w1,8] - Q_kuw[k2,u4,w2,8]
-   - Q_kuw[k2,u4,w3,8] - Q_kuw[k2,u4,w4,8] - Q_kuw[k2,u4,w5,8] = 0
- c18[u4,k2,9]: 0.4 Q_ju[j1,u4,9] + 0.4 Q_ju[j2,u4,9] + 0.4 Q_ju[j3,u4,9]
-   + 0.4 Q_ju[j4,u4,9] - Q_kuw[k2,u4,w1,9] - Q_kuw[k2,u4,w2,9]
-   - Q_kuw[k2,u4,w3,9] - Q_kuw[k2,u4,w4,9] - Q_kuw[k2,u4,w5,9] = 0
- c18[u4,k2,10]: 0.8 Q_ju[j1,u4,10] + 0.8 Q_ju[j2,u4,10]
-   + 0.8 Q_ju[j3,u4,10] + 0.8 Q_ju[j4,u4,10] - Q_kuw[k2,u4,w1,10]
-   - Q_kuw[k2,u4,w2,10] - Q_kuw[k2,u4,w3,10] - Q_kuw[k2,u4,w4,10]
-   - Q_kuw[k2,u4,w5,10] = 0
- c18[u4,k2,11]: 0.4 Q_ju[j1,u4,11] + 0.4 Q_ju[j2,u4,11]
-   + 0.4 Q_ju[j3,u4,11] + 0.4 Q_ju[j4,u4,11] - Q_kuw[k2,u4,w1,11]
-   - Q_kuw[k2,u4,w2,11] - Q_kuw[k2,u4,w3,11] - Q_kuw[k2,u4,w4,11]
-   - Q_kuw[k2,u4,w5,11] = 0
- c18[u4,k3,0]: Q_ju[j1,u4,0] + Q_ju[j2,u4,0] + Q_ju[j3,u4,0]
-   + Q_ju[j4,u4,0] - Q_kuw[k3,u4,w1,0] - Q_kuw[k3,u4,w2,0]
-   - Q_kuw[k3,u4,w3,0] - Q_kuw[k3,u4,w4,0] - Q_kuw[k3,u4,w5,0] = 0
- c18[u4,k3,1]: 3 Q_ju[j1,u4,1] + 3 Q_ju[j2,u4,1] + 3 Q_ju[j3,u4,1]
-   + 3 Q_ju[j4,u4,1] - Q_kuw[k3,u4,w1,1] - Q_kuw[k3,u4,w2,1]
-   - Q_kuw[k3,u4,w3,1] - Q_kuw[k3,u4,w4,1] - Q_kuw[k3,u4,w5,1] = 0
- c18[u4,k3,2]: Q_ju[j1,u4,2] + Q_ju[j2,u4,2] + Q_ju[j3,u4,2]
-   + Q_ju[j4,u4,2] - Q_kuw[k3,u4,w1,2] - Q_kuw[k3,u4,w2,2]
-   - Q_kuw[k3,u4,w3,2] - Q_kuw[k3,u4,w4,2] - Q_kuw[k3,u4,w5,2] = 0
- c18[u4,k3,3]: 2 Q_ju[j1,u4,3] + 2 Q_ju[j2,u4,3] + 2 Q_ju[j3,u4,3]
-   + 2 Q_ju[j4,u4,3] - Q_kuw[k3,u4,w1,3] - Q_kuw[k3,u4,w2,3]
-   - Q_kuw[k3,u4,w3,3] - Q_kuw[k3,u4,w4,3] - Q_kuw[k3,u4,w5,3] = 0
- c18[u4,k3,4]: 2 Q_ju[j1,u4,4] + 2 Q_ju[j2,u4,4] + 2 Q_ju[j3,u4,4]
-   + 2 Q_ju[j4,u4,4] - Q_kuw[k3,u4,w1,4] - Q_kuw[k3,u4,w2,4]
-   - Q_kuw[k3,u4,w3,4] - Q_kuw[k3,u4,w4,4] - Q_kuw[k3,u4,w5,4] = 0
- c18[u4,k3,5]: 3 Q_ju[j1,u4,5] + 3 Q_ju[j2,u4,5] + 3 Q_ju[j3,u4,5]
-   + 3 Q_ju[j4,u4,5] - Q_kuw[k3,u4,w1,5] - Q_kuw[k3,u4,w2,5]
-   - Q_kuw[k3,u4,w3,5] - Q_kuw[k3,u4,w4,5] - Q_kuw[k3,u4,w5,5] = 0
- c18[u4,k3,6]: 2 Q_ju[j1,u4,6] + 2 Q_ju[j2,u4,6] + 2 Q_ju[j3,u4,6]
-   + 2 Q_ju[j4,u4,6] - Q_kuw[k3,u4,w1,6] - Q_kuw[k3,u4,w2,6]
-   - Q_kuw[k3,u4,w3,6] - Q_kuw[k3,u4,w4,6] - Q_kuw[k3,u4,w5,6] = 0
- c18[u4,k3,7]: Q_ju[j1,u4,7] + Q_ju[j2,u4,7] + Q_ju[j3,u4,7]
-   + Q_ju[j4,u4,7] - Q_kuw[k3,u4,w1,7] - Q_kuw[k3,u4,w2,7]
-   - Q_kuw[k3,u4,w3,7] - Q_kuw[k3,u4,w4,7] - Q_kuw[k3,u4,w5,7] = 0
- c18[u4,k3,8]: 2 Q_ju[j1,u4,8] + 2 Q_ju[j2,u4,8] + 2 Q_ju[j3,u4,8]
-   + 2 Q_ju[j4,u4,8] - Q_kuw[k3,u4,w1,8] - Q_kuw[k3,u4,w2,8]
-   - Q_kuw[k3,u4,w3,8] - Q_kuw[k3,u4,w4,8] - Q_kuw[k3,u4,w5,8] = 0
- c18[u4,k3,9]: Q_ju[j1,u4,9] + Q_ju[j2,u4,9] + Q_ju[j3,u4,9]
-   + Q_ju[j4,u4,9] - Q_kuw[k3,u4,w1,9] - Q_kuw[k3,u4,w2,9]
-   - Q_kuw[k3,u4,w3,9] - Q_kuw[k3,u4,w4,9] - Q_kuw[k3,u4,w5,9] = 0
- c18[u4,k3,10]: 2 Q_ju[j1,u4,10] + 2 Q_ju[j2,u4,10] + 2 Q_ju[j3,u4,10]
-   + 2 Q_ju[j4,u4,10] - Q_kuw[k3,u4,w1,10] - Q_kuw[k3,u4,w2,10]
-   - Q_kuw[k3,u4,w3,10] - Q_kuw[k3,u4,w4,10] - Q_kuw[k3,u4,w5,10] = 0
- c18[u4,k3,11]: Q_ju[j1,u4,11] + Q_ju[j2,u4,11] + Q_ju[j3,u4,11]
-   + Q_ju[j4,u4,11] - Q_kuw[k3,u4,w1,11] - Q_kuw[k3,u4,w2,11]
-   - Q_kuw[k3,u4,w3,11] - Q_kuw[k3,u4,w4,11] - Q_kuw[k3,u4,w5,11] = 0
- c18[u5,k1,0]: 0.1 Q_ju[j1,u5,0] + 0.1 Q_ju[j2,u5,0] + 0.1 Q_ju[j3,u5,0]
-   + 0.1 Q_ju[j4,u5,0] - Q_kuw[k1,u5,w1,0] - Q_kuw[k1,u5,w2,0]
-   - Q_kuw[k1,u5,w3,0] - Q_kuw[k1,u5,w4,0] - Q_kuw[k1,u5,w5,0] = 0
- c18[u5,k1,1]: 0.3 Q_ju[j1,u5,1] + 0.3 Q_ju[j2,u5,1] + 0.3 Q_ju[j3,u5,1]
-   + 0.3 Q_ju[j4,u5,1] - Q_kuw[k1,u5,w1,1] - Q_kuw[k1,u5,w2,1]
-   - Q_kuw[k1,u5,w3,1] - Q_kuw[k1,u5,w4,1] - Q_kuw[k1,u5,w5,1] = 0
- c18[u5,k1,2]: 0.1 Q_ju[j1,u5,2] + 0.1 Q_ju[j2,u5,2] + 0.1 Q_ju[j3,u5,2]
-   + 0.1 Q_ju[j4,u5,2] - Q_kuw[k1,u5,w1,2] - Q_kuw[k1,u5,w2,2]
-   - Q_kuw[k1,u5,w3,2] - Q_kuw[k1,u5,w4,2] - Q_kuw[k1,u5,w5,2] = 0
- c18[u5,k1,3]: 0.2 Q_ju[j1,u5,3] + 0.2 Q_ju[j2,u5,3] + 0.2 Q_ju[j3,u5,3]
-   + 0.2 Q_ju[j4,u5,3] - Q_kuw[k1,u5,w1,3] - Q_kuw[k1,u5,w2,3]
-   - Q_kuw[k1,u5,w3,3] - Q_kuw[k1,u5,w4,3] - Q_kuw[k1,u5,w5,3] = 0
- c18[u5,k1,4]: 0.2 Q_ju[j1,u5,4] + 0.2 Q_ju[j2,u5,4] + 0.2 Q_ju[j3,u5,4]
-   + 0.2 Q_ju[j4,u5,4] - Q_kuw[k1,u5,w1,4] - Q_kuw[k1,u5,w2,4]
-   - Q_kuw[k1,u5,w3,4] - Q_kuw[k1,u5,w4,4] - Q_kuw[k1,u5,w5,4] = 0
- c18[u5,k1,5]: 0.3 Q_ju[j1,u5,5] + 0.3 Q_ju[j2,u5,5] + 0.3 Q_ju[j3,u5,5]
-   + 0.3 Q_ju[j4,u5,5] - Q_kuw[k1,u5,w1,5] - Q_kuw[k1,u5,w2,5]
-   - Q_kuw[k1,u5,w3,5] - Q_kuw[k1,u5,w4,5] - Q_kuw[k1,u5,w5,5] = 0
- c18[u5,k1,6]: 0.2 Q_ju[j1,u5,6] + 0.2 Q_ju[j2,u5,6] + 0.2 Q_ju[j3,u5,6]
-   + 0.2 Q_ju[j4,u5,6] - Q_kuw[k1,u5,w1,6] - Q_kuw[k1,u5,w2,6]
-   - Q_kuw[k1,u5,w3,6] - Q_kuw[k1,u5,w4,6] - Q_kuw[k1,u5,w5,6] = 0
- c18[u5,k1,7]: 0.1 Q_ju[j1,u5,7] + 0.1 Q_ju[j2,u5,7] + 0.1 Q_ju[j3,u5,7]
-   + 0.1 Q_ju[j4,u5,7] - Q_kuw[k1,u5,w1,7] - Q_kuw[k1,u5,w2,7]
-   - Q_kuw[k1,u5,w3,7] - Q_kuw[k1,u5,w4,7] - Q_kuw[k1,u5,w5,7] = 0
- c18[u5,k1,8]: 0.2 Q_ju[j1,u5,8] + 0.2 Q_ju[j2,u5,8] + 0.2 Q_ju[j3,u5,8]
-   + 0.2 Q_ju[j4,u5,8] - Q_kuw[k1,u5,w1,8] - Q_kuw[k1,u5,w2,8]
-   - Q_kuw[k1,u5,w3,8] - Q_kuw[k1,u5,w4,8] - Q_kuw[k1,u5,w5,8] = 0
- c18[u5,k1,9]: 0.1 Q_ju[j1,u5,9] + 0.1 Q_ju[j2,u5,9] + 0.1 Q_ju[j3,u5,9]
-   + 0.1 Q_ju[j4,u5,9] - Q_kuw[k1,u5,w1,9] - Q_kuw[k1,u5,w2,9]
-   - Q_kuw[k1,u5,w3,9] - Q_kuw[k1,u5,w4,9] - Q_kuw[k1,u5,w5,9] = 0
- c18[u5,k1,10]: 0.2 Q_ju[j1,u5,10] + 0.2 Q_ju[j2,u5,10]
-   + 0.2 Q_ju[j3,u5,10] + 0.2 Q_ju[j4,u5,10] - Q_kuw[k1,u5,w1,10]
-   - Q_kuw[k1,u5,w2,10] - Q_kuw[k1,u5,w3,10] - Q_kuw[k1,u5,w4,10]
-   - Q_kuw[k1,u5,w5,10] = 0
- c18[u5,k1,11]: 0.1 Q_ju[j1,u5,11] + 0.1 Q_ju[j2,u5,11]
-   + 0.1 Q_ju[j3,u5,11] + 0.1 Q_ju[j4,u5,11] - Q_kuw[k1,u5,w1,11]
-   - Q_kuw[k1,u5,w2,11] - Q_kuw[k1,u5,w3,11] - Q_kuw[k1,u5,w4,11]
-   - Q_kuw[k1,u5,w5,11] = 0
- c18[u5,k2,0]: 0.4 Q_ju[j1,u5,0] + 0.4 Q_ju[j2,u5,0] + 0.4 Q_ju[j3,u5,0]
-   + 0.4 Q_ju[j4,u5,0] - Q_kuw[k2,u5,w1,0] - Q_kuw[k2,u5,w2,0]
-   - Q_kuw[k2,u5,w3,0] - Q_kuw[k2,u5,w4,0] - Q_kuw[k2,u5,w5,0] = 0
- c18[u5,k2,1]: 1.2 Q_ju[j1,u5,1] + 1.2 Q_ju[j2,u5,1] + 1.2 Q_ju[j3,u5,1]
-   + 1.2 Q_ju[j4,u5,1] - Q_kuw[k2,u5,w1,1] - Q_kuw[k2,u5,w2,1]
-   - Q_kuw[k2,u5,w3,1] - Q_kuw[k2,u5,w4,1] - Q_kuw[k2,u5,w5,1] = 0
- c18[u5,k2,2]: 0.4 Q_ju[j1,u5,2] + 0.4 Q_ju[j2,u5,2] + 0.4 Q_ju[j3,u5,2]
-   + 0.4 Q_ju[j4,u5,2] - Q_kuw[k2,u5,w1,2] - Q_kuw[k2,u5,w2,2]
-   - Q_kuw[k2,u5,w3,2] - Q_kuw[k2,u5,w4,2] - Q_kuw[k2,u5,w5,2] = 0
- c18[u5,k2,3]: 0.8 Q_ju[j1,u5,3] + 0.8 Q_ju[j2,u5,3] + 0.8 Q_ju[j3,u5,3]
-   + 0.8 Q_ju[j4,u5,3] - Q_kuw[k2,u5,w1,3] - Q_kuw[k2,u5,w2,3]
-   - Q_kuw[k2,u5,w3,3] - Q_kuw[k2,u5,w4,3] - Q_kuw[k2,u5,w5,3] = 0
- c18[u5,k2,4]: 0.8 Q_ju[j1,u5,4] + 0.8 Q_ju[j2,u5,4] + 0.8 Q_ju[j3,u5,4]
-   + 0.8 Q_ju[j4,u5,4] - Q_kuw[k2,u5,w1,4] - Q_kuw[k2,u5,w2,4]
-   - Q_kuw[k2,u5,w3,4] - Q_kuw[k2,u5,w4,4] - Q_kuw[k2,u5,w5,4] = 0
- c18[u5,k2,5]: 1.2 Q_ju[j1,u5,5] + 1.2 Q_ju[j2,u5,5] + 1.2 Q_ju[j3,u5,5]
-   + 1.2 Q_ju[j4,u5,5] - Q_kuw[k2,u5,w1,5] - Q_kuw[k2,u5,w2,5]
-   - Q_kuw[k2,u5,w3,5] - Q_kuw[k2,u5,w4,5] - Q_kuw[k2,u5,w5,5] = 0
- c18[u5,k2,6]: 0.8 Q_ju[j1,u5,6] + 0.8 Q_ju[j2,u5,6] + 0.8 Q_ju[j3,u5,6]
-   + 0.8 Q_ju[j4,u5,6] - Q_kuw[k2,u5,w1,6] - Q_kuw[k2,u5,w2,6]
-   - Q_kuw[k2,u5,w3,6] - Q_kuw[k2,u5,w4,6] - Q_kuw[k2,u5,w5,6] = 0
- c18[u5,k2,7]: 0.4 Q_ju[j1,u5,7] + 0.4 Q_ju[j2,u5,7] + 0.4 Q_ju[j3,u5,7]
-   + 0.4 Q_ju[j4,u5,7] - Q_kuw[k2,u5,w1,7] - Q_kuw[k2,u5,w2,7]
-   - Q_kuw[k2,u5,w3,7] - Q_kuw[k2,u5,w4,7] - Q_kuw[k2,u5,w5,7] = 0
- c18[u5,k2,8]: 0.8 Q_ju[j1,u5,8] + 0.8 Q_ju[j2,u5,8] + 0.8 Q_ju[j3,u5,8]
-   + 0.8 Q_ju[j4,u5,8] - Q_kuw[k2,u5,w1,8] - Q_kuw[k2,u5,w2,8]
-   - Q_kuw[k2,u5,w3,8] - Q_kuw[k2,u5,w4,8] - Q_kuw[k2,u5,w5,8] = 0
- c18[u5,k2,9]: 0.4 Q_ju[j1,u5,9] + 0.4 Q_ju[j2,u5,9] + 0.4 Q_ju[j3,u5,9]
-   + 0.4 Q_ju[j4,u5,9] - Q_kuw[k2,u5,w1,9] - Q_kuw[k2,u5,w2,9]
-   - Q_kuw[k2,u5,w3,9] - Q_kuw[k2,u5,w4,9] - Q_kuw[k2,u5,w5,9] = 0
- c18[u5,k2,10]: 0.8 Q_ju[j1,u5,10] + 0.8 Q_ju[j2,u5,10]
-   + 0.8 Q_ju[j3,u5,10] + 0.8 Q_ju[j4,u5,10] - Q_kuw[k2,u5,w1,10]
-   - Q_kuw[k2,u5,w2,10] - Q_kuw[k2,u5,w3,10] - Q_kuw[k2,u5,w4,10]
-   - Q_kuw[k2,u5,w5,10] = 0
- c18[u5,k2,11]: 0.4 Q_ju[j1,u5,11] + 0.4 Q_ju[j2,u5,11]
-   + 0.4 Q_ju[j3,u5,11] + 0.4 Q_ju[j4,u5,11] - Q_kuw[k2,u5,w1,11]
-   - Q_kuw[k2,u5,w2,11] - Q_kuw[k2,u5,w3,11] - Q_kuw[k2,u5,w4,11]
-   - Q_kuw[k2,u5,w5,11] = 0
- c18[u5,k3,0]: Q_ju[j1,u5,0] + Q_ju[j2,u5,0] + Q_ju[j3,u5,0]
-   + Q_ju[j4,u5,0] - Q_kuw[k3,u5,w1,0] - Q_kuw[k3,u5,w2,0]
-   - Q_kuw[k3,u5,w3,0] - Q_kuw[k3,u5,w4,0] - Q_kuw[k3,u5,w5,0] = 0
- c18[u5,k3,1]: 3 Q_ju[j1,u5,1] + 3 Q_ju[j2,u5,1] + 3 Q_ju[j3,u5,1]
-   + 3 Q_ju[j4,u5,1] - Q_kuw[k3,u5,w1,1] - Q_kuw[k3,u5,w2,1]
-   - Q_kuw[k3,u5,w3,1] - Q_kuw[k3,u5,w4,1] - Q_kuw[k3,u5,w5,1] = 0
- c18[u5,k3,2]: Q_ju[j1,u5,2] + Q_ju[j2,u5,2] + Q_ju[j3,u5,2]
-   + Q_ju[j4,u5,2] - Q_kuw[k3,u5,w1,2] - Q_kuw[k3,u5,w2,2]
-   - Q_kuw[k3,u5,w3,2] - Q_kuw[k3,u5,w4,2] - Q_kuw[k3,u5,w5,2] = 0
- c18[u5,k3,3]: 2 Q_ju[j1,u5,3] + 2 Q_ju[j2,u5,3] + 2 Q_ju[j3,u5,3]
-   + 2 Q_ju[j4,u5,3] - Q_kuw[k3,u5,w1,3] - Q_kuw[k3,u5,w2,3]
-   - Q_kuw[k3,u5,w3,3] - Q_kuw[k3,u5,w4,3] - Q_kuw[k3,u5,w5,3] = 0
- c18[u5,k3,4]: 2 Q_ju[j1,u5,4] + 2 Q_ju[j2,u5,4] + 2 Q_ju[j3,u5,4]
-   + 2 Q_ju[j4,u5,4] - Q_kuw[k3,u5,w1,4] - Q_kuw[k3,u5,w2,4]
-   - Q_kuw[k3,u5,w3,4] - Q_kuw[k3,u5,w4,4] - Q_kuw[k3,u5,w5,4] = 0
- c18[u5,k3,5]: 3 Q_ju[j1,u5,5] + 3 Q_ju[j2,u5,5] + 3 Q_ju[j3,u5,5]
-   + 3 Q_ju[j4,u5,5] - Q_kuw[k3,u5,w1,5] - Q_kuw[k3,u5,w2,5]
-   - Q_kuw[k3,u5,w3,5] - Q_kuw[k3,u5,w4,5] - Q_kuw[k3,u5,w5,5] = 0
- c18[u5,k3,6]: 2 Q_ju[j1,u5,6] + 2 Q_ju[j2,u5,6] + 2 Q_ju[j3,u5,6]
-   + 2 Q_ju[j4,u5,6] - Q_kuw[k3,u5,w1,6] - Q_kuw[k3,u5,w2,6]
-   - Q_kuw[k3,u5,w3,6] - Q_kuw[k3,u5,w4,6] - Q_kuw[k3,u5,w5,6] = 0
- c18[u5,k3,7]: Q_ju[j1,u5,7] + Q_ju[j2,u5,7] + Q_ju[j3,u5,7]
-   + Q_ju[j4,u5,7] - Q_kuw[k3,u5,w1,7] - Q_kuw[k3,u5,w2,7]
-   - Q_kuw[k3,u5,w3,7] - Q_kuw[k3,u5,w4,7] - Q_kuw[k3,u5,w5,7] = 0
- c18[u5,k3,8]: 2 Q_ju[j1,u5,8] + 2 Q_ju[j2,u5,8] + 2 Q_ju[j3,u5,8]
-   + 2 Q_ju[j4,u5,8] - Q_kuw[k3,u5,w1,8] - Q_kuw[k3,u5,w2,8]
-   - Q_kuw[k3,u5,w3,8] - Q_kuw[k3,u5,w4,8] - Q_kuw[k3,u5,w5,8] = 0
- c18[u5,k3,9]: Q_ju[j1,u5,9] + Q_ju[j2,u5,9] + Q_ju[j3,u5,9]
-   + Q_ju[j4,u5,9] - Q_kuw[k3,u5,w1,9] - Q_kuw[k3,u5,w2,9]
-   - Q_kuw[k3,u5,w3,9] - Q_kuw[k3,u5,w4,9] - Q_kuw[k3,u5,w5,9] = 0
- c18[u5,k3,10]: 2 Q_ju[j1,u5,10] + 2 Q_ju[j2,u5,10] + 2 Q_ju[j3,u5,10]
-   + 2 Q_ju[j4,u5,10] - Q_kuw[k3,u5,w1,10] - Q_kuw[k3,u5,w2,10]
-   - Q_kuw[k3,u5,w3,10] - Q_kuw[k3,u5,w4,10] - Q_kuw[k3,u5,w5,10] = 0
- c18[u5,k3,11]: Q_ju[j1,u5,11] + Q_ju[j2,u5,11] + Q_ju[j3,u5,11]
-   + Q_ju[j4,u5,11] - Q_kuw[k3,u5,w1,11] - Q_kuw[k3,u5,w2,11]
-   - Q_kuw[k3,u5,w3,11] - Q_kuw[k3,u5,w4,11] - Q_kuw[k3,u5,w5,11] = 0
+ c16[u1,0]: - 0.6 Q_ju[j1,u1,0] - 0.6 Q_ju[j2,u1,0] - 0.6 Q_ju[j3,u1,0]
+   - 0.6 Q_ju[j4,u1,0] + Q_uh[u1,h1,0] + Q_uh[u1,h2,0] + Q_uh[u1,h3,0]
+   + Q_uh[u1,h4,0] + Q_uh[u1,h5,0] + Q_ug[u1,g1,0] + Q_ug[u1,g2,0]
+   + Q_ug[u1,g3,0] + Q_ug[u1,g4,0] + Q_ug[u1,g5,0] = 0
+ c16[u1,1]: - 0.4 Q_ju[j1,u1,1] - 0.4 Q_ju[j2,u1,1] - 0.4 Q_ju[j3,u1,1]
+   - 0.4 Q_ju[j4,u1,1] + Q_uh[u1,h1,1] + Q_uh[u1,h2,1] + Q_uh[u1,h3,1]
+   + Q_uh[u1,h4,1] + Q_uh[u1,h5,1] + Q_ug[u1,g1,1] + Q_ug[u1,g2,1]
+   + Q_ug[u1,g3,1] + Q_ug[u1,g4,1] + Q_ug[u1,g5,1] = 0
+ c16[u1,2]: - 0.6 Q_ju[j1,u1,2] - 0.6 Q_ju[j2,u1,2] - 0.6 Q_ju[j3,u1,2]
+   - 0.6 Q_ju[j4,u1,2] + Q_uh[u1,h1,2] + Q_uh[u1,h2,2] + Q_uh[u1,h3,2]
+   + Q_uh[u1,h4,2] + Q_uh[u1,h5,2] + Q_ug[u1,g1,2] + Q_ug[u1,g2,2]
+   + Q_ug[u1,g3,2] + Q_ug[u1,g4,2] + Q_ug[u1,g5,2] = 0
+ c16[u1,3]: - 0.4 Q_ju[j1,u1,3] - 0.4 Q_ju[j2,u1,3] - 0.4 Q_ju[j3,u1,3]
+   - 0.4 Q_ju[j4,u1,3] + Q_uh[u1,h1,3] + Q_uh[u1,h2,3] + Q_uh[u1,h3,3]
+   + Q_uh[u1,h4,3] + Q_uh[u1,h5,3] + Q_ug[u1,g1,3] + Q_ug[u1,g2,3]
+   + Q_ug[u1,g3,3] + Q_ug[u1,g4,3] + Q_ug[u1,g5,3] = 0
+ c16[u1,4]: - 0.6 Q_ju[j1,u1,4] - 0.6 Q_ju[j2,u1,4] - 0.6 Q_ju[j3,u1,4]
+   - 0.6 Q_ju[j4,u1,4] + Q_uh[u1,h1,4] + Q_uh[u1,h2,4] + Q_uh[u1,h3,4]
+   + Q_uh[u1,h4,4] + Q_uh[u1,h5,4] + Q_ug[u1,g1,4] + Q_ug[u1,g2,4]
+   + Q_ug[u1,g3,4] + Q_ug[u1,g4,4] + Q_ug[u1,g5,4] = 0
+ c16[u1,5]: - 0.5 Q_ju[j1,u1,5] - 0.5 Q_ju[j2,u1,5] - 0.5 Q_ju[j3,u1,5]
+   - 0.5 Q_ju[j4,u1,5] + Q_uh[u1,h1,5] + Q_uh[u1,h2,5] + Q_uh[u1,h3,5]
+   + Q_uh[u1,h4,5] + Q_uh[u1,h5,5] + Q_ug[u1,g1,5] + Q_ug[u1,g2,5]
+   + Q_ug[u1,g3,5] + Q_ug[u1,g4,5] + Q_ug[u1,g5,5] = 0
+ c16[u1,6]: - 0.5 Q_ju[j1,u1,6] - 0.5 Q_ju[j2,u1,6] - 0.5 Q_ju[j3,u1,6]
+   - 0.5 Q_ju[j4,u1,6] + Q_uh[u1,h1,6] + Q_uh[u1,h2,6] + Q_uh[u1,h3,6]
+   + Q_uh[u1,h4,6] + Q_uh[u1,h5,6] + Q_ug[u1,g1,6] + Q_ug[u1,g2,6]
+   + Q_ug[u1,g3,6] + Q_ug[u1,g4,6] + Q_ug[u1,g5,6] = 0
+ c16[u1,7]: - 0.5 Q_ju[j1,u1,7] - 0.5 Q_ju[j2,u1,7] - 0.5 Q_ju[j3,u1,7]
+   - 0.5 Q_ju[j4,u1,7] + Q_uh[u1,h1,7] + Q_uh[u1,h2,7] + Q_uh[u1,h3,7]
+   + Q_uh[u1,h4,7] + Q_uh[u1,h5,7] + Q_ug[u1,g1,7] + Q_ug[u1,g2,7]
+   + Q_ug[u1,g3,7] + Q_ug[u1,g4,7] + Q_ug[u1,g5,7] = 0
+ c16[u1,8]: - 0.6 Q_ju[j1,u1,8] - 0.6 Q_ju[j2,u1,8] - 0.6 Q_ju[j3,u1,8]
+   - 0.6 Q_ju[j4,u1,8] + Q_uh[u1,h1,8] + Q_uh[u1,h2,8] + Q_uh[u1,h3,8]
+   + Q_uh[u1,h4,8] + Q_uh[u1,h5,8] + Q_ug[u1,g1,8] + Q_ug[u1,g2,8]
+   + Q_ug[u1,g3,8] + Q_ug[u1,g4,8] + Q_ug[u1,g5,8] = 0
+ c16[u1,9]: - 0.5 Q_ju[j1,u1,9] - 0.5 Q_ju[j2,u1,9] - 0.5 Q_ju[j3,u1,9]
+   - 0.5 Q_ju[j4,u1,9] + Q_uh[u1,h1,9] + Q_uh[u1,h2,9] + Q_uh[u1,h3,9]
+   + Q_uh[u1,h4,9] + Q_uh[u1,h5,9] + Q_ug[u1,g1,9] + Q_ug[u1,g2,9]
+   + Q_ug[u1,g3,9] + Q_ug[u1,g4,9] + Q_ug[u1,g5,9] = 0
+ c16[u1,10]: - 0.4 Q_ju[j1,u1,10] - 0.4 Q_ju[j2,u1,10] - 0.4 Q_ju[j3,u1,10]
+   - 0.4 Q_ju[j4,u1,10] + Q_uh[u1,h1,10] + Q_uh[u1,h2,10] + Q_uh[u1,h3,10]
+   + Q_uh[u1,h4,10] + Q_uh[u1,h5,10] + Q_ug[u1,g1,10] + Q_ug[u1,g2,10]
+   + Q_ug[u1,g3,10] + Q_ug[u1,g4,10] + Q_ug[u1,g5,10] = 0
+ c16[u1,11]: - 0.6 Q_ju[j1,u1,11] - 0.6 Q_ju[j2,u1,11] - 0.6 Q_ju[j3,u1,11]
+   - 0.6 Q_ju[j4,u1,11] + Q_uh[u1,h1,11] + Q_uh[u1,h2,11] + Q_uh[u1,h3,11]
+   + Q_uh[u1,h4,11] + Q_uh[u1,h5,11] + Q_ug[u1,g1,11] + Q_ug[u1,g2,11]
+   + Q_ug[u1,g3,11] + Q_ug[u1,g4,11] + Q_ug[u1,g5,11] = 0
+ c16[u2,0]: - 0.6 Q_ju[j1,u2,0] - 0.6 Q_ju[j2,u2,0] - 0.6 Q_ju[j3,u2,0]
+   - 0.6 Q_ju[j4,u2,0] + Q_uh[u2,h1,0] + Q_uh[u2,h2,0] + Q_uh[u2,h3,0]
+   + Q_uh[u2,h4,0] + Q_uh[u2,h5,0] + Q_ug[u2,g1,0] + Q_ug[u2,g2,0]
+   + Q_ug[u2,g3,0] + Q_ug[u2,g4,0] + Q_ug[u2,g5,0] = 0
+ c16[u2,1]: - 0.4 Q_ju[j1,u2,1] - 0.4 Q_ju[j2,u2,1] - 0.4 Q_ju[j3,u2,1]
+   - 0.4 Q_ju[j4,u2,1] + Q_uh[u2,h1,1] + Q_uh[u2,h2,1] + Q_uh[u2,h3,1]
+   + Q_uh[u2,h4,1] + Q_uh[u2,h5,1] + Q_ug[u2,g1,1] + Q_ug[u2,g2,1]
+   + Q_ug[u2,g3,1] + Q_ug[u2,g4,1] + Q_ug[u2,g5,1] = 0
+ c16[u2,2]: - 0.6 Q_ju[j1,u2,2] - 0.6 Q_ju[j2,u2,2] - 0.6 Q_ju[j3,u2,2]
+   - 0.6 Q_ju[j4,u2,2] + Q_uh[u2,h1,2] + Q_uh[u2,h2,2] + Q_uh[u2,h3,2]
+   + Q_uh[u2,h4,2] + Q_uh[u2,h5,2] + Q_ug[u2,g1,2] + Q_ug[u2,g2,2]
+   + Q_ug[u2,g3,2] + Q_ug[u2,g4,2] + Q_ug[u2,g5,2] = 0
+ c16[u2,3]: - 0.4 Q_ju[j1,u2,3] - 0.4 Q_ju[j2,u2,3] - 0.4 Q_ju[j3,u2,3]
+   - 0.4 Q_ju[j4,u2,3] + Q_uh[u2,h1,3] + Q_uh[u2,h2,3] + Q_uh[u2,h3,3]
+   + Q_uh[u2,h4,3] + Q_uh[u2,h5,3] + Q_ug[u2,g1,3] + Q_ug[u2,g2,3]
+   + Q_ug[u2,g3,3] + Q_ug[u2,g4,3] + Q_ug[u2,g5,3] = 0
+ c16[u2,4]: - 0.6 Q_ju[j1,u2,4] - 0.6 Q_ju[j2,u2,4] - 0.6 Q_ju[j3,u2,4]
+   - 0.6 Q_ju[j4,u2,4] + Q_uh[u2,h1,4] + Q_uh[u2,h2,4] + Q_uh[u2,h3,4]
+   + Q_uh[u2,h4,4] + Q_uh[u2,h5,4] + Q_ug[u2,g1,4] + Q_ug[u2,g2,4]
+   + Q_ug[u2,g3,4] + Q_ug[u2,g4,4] + Q_ug[u2,g5,4] = 0
+ c16[u2,5]: - 0.5 Q_ju[j1,u2,5] - 0.5 Q_ju[j2,u2,5] - 0.5 Q_ju[j3,u2,5]
+   - 0.5 Q_ju[j4,u2,5] + Q_uh[u2,h1,5] + Q_uh[u2,h2,5] + Q_uh[u2,h3,5]
+   + Q_uh[u2,h4,5] + Q_uh[u2,h5,5] + Q_ug[u2,g1,5] + Q_ug[u2,g2,5]
+   + Q_ug[u2,g3,5] + Q_ug[u2,g4,5] + Q_ug[u2,g5,5] = 0
+ c16[u2,6]: - 0.5 Q_ju[j1,u2,6] - 0.5 Q_ju[j2,u2,6] - 0.5 Q_ju[j3,u2,6]
+   - 0.5 Q_ju[j4,u2,6] + Q_uh[u2,h1,6] + Q_uh[u2,h2,6] + Q_uh[u2,h3,6]
+   + Q_uh[u2,h4,6] + Q_uh[u2,h5,6] + Q_ug[u2,g1,6] + Q_ug[u2,g2,6]
+   + Q_ug[u2,g3,6] + Q_ug[u2,g4,6] + Q_ug[u2,g5,6] = 0
+ c16[u2,7]: - 0.5 Q_ju[j1,u2,7] - 0.5 Q_ju[j2,u2,7] - 0.5 Q_ju[j3,u2,7]
+   - 0.5 Q_ju[j4,u2,7] + Q_uh[u2,h1,7] + Q_uh[u2,h2,7] + Q_uh[u2,h3,7]
+   + Q_uh[u2,h4,7] + Q_uh[u2,h5,7] + Q_ug[u2,g1,7] + Q_ug[u2,g2,7]
+   + Q_ug[u2,g3,7] + Q_ug[u2,g4,7] + Q_ug[u2,g5,7] = 0
+ c16[u2,8]: - 0.6 Q_ju[j1,u2,8] - 0.6 Q_ju[j2,u2,8] - 0.6 Q_ju[j3,u2,8]
+   - 0.6 Q_ju[j4,u2,8] + Q_uh[u2,h1,8] + Q_uh[u2,h2,8] + Q_uh[u2,h3,8]
+   + Q_uh[u2,h4,8] + Q_uh[u2,h5,8] + Q_ug[u2,g1,8] + Q_ug[u2,g2,8]
+   + Q_ug[u2,g3,8] + Q_ug[u2,g4,8] + Q_ug[u2,g5,8] = 0
+ c16[u2,9]: - 0.5 Q_ju[j1,u2,9] - 0.5 Q_ju[j2,u2,9] - 0.5 Q_ju[j3,u2,9]
+   - 0.5 Q_ju[j4,u2,9] + Q_uh[u2,h1,9] + Q_uh[u2,h2,9] + Q_uh[u2,h3,9]
+   + Q_uh[u2,h4,9] + Q_uh[u2,h5,9] + Q_ug[u2,g1,9] + Q_ug[u2,g2,9]
+   + Q_ug[u2,g3,9] + Q_ug[u2,g4,9] + Q_ug[u2,g5,9] = 0
+ c16[u2,10]: - 0.4 Q_ju[j1,u2,10] - 0.4 Q_ju[j2,u2,10] - 0.4 Q_ju[j3,u2,10]
+   - 0.4 Q_ju[j4,u2,10] + Q_uh[u2,h1,10] + Q_uh[u2,h2,10] + Q_uh[u2,h3,10]
+   + Q_uh[u2,h4,10] + Q_uh[u2,h5,10] + Q_ug[u2,g1,10] + Q_ug[u2,g2,10]
+   + Q_ug[u2,g3,10] + Q_ug[u2,g4,10] + Q_ug[u2,g5,10] = 0
+ c16[u2,11]: - 0.6 Q_ju[j1,u2,11] - 0.6 Q_ju[j2,u2,11] - 0.6 Q_ju[j3,u2,11]
+   - 0.6 Q_ju[j4,u2,11] + Q_uh[u2,h1,11] + Q_uh[u2,h2,11] + Q_uh[u2,h3,11]
+   + Q_uh[u2,h4,11] + Q_uh[u2,h5,11] + Q_ug[u2,g1,11] + Q_ug[u2,g2,11]
+   + Q_ug[u2,g3,11] + Q_ug[u2,g4,11] + Q_ug[u2,g5,11] = 0
+ c16[u3,0]: - 0.6 Q_ju[j1,u3,0] - 0.6 Q_ju[j2,u3,0] - 0.6 Q_ju[j3,u3,0]
+   - 0.6 Q_ju[j4,u3,0] + Q_uh[u3,h1,0] + Q_uh[u3,h2,0] + Q_uh[u3,h3,0]
+   + Q_uh[u3,h4,0] + Q_uh[u3,h5,0] + Q_ug[u3,g1,0] + Q_ug[u3,g2,0]
+   + Q_ug[u3,g3,0] + Q_ug[u3,g4,0] + Q_ug[u3,g5,0] = 0
+ c16[u3,1]: - 0.4 Q_ju[j1,u3,1] - 0.4 Q_ju[j2,u3,1] - 0.4 Q_ju[j3,u3,1]
+   - 0.4 Q_ju[j4,u3,1] + Q_uh[u3,h1,1] + Q_uh[u3,h2,1] + Q_uh[u3,h3,1]
+   + Q_uh[u3,h4,1] + Q_uh[u3,h5,1] + Q_ug[u3,g1,1] + Q_ug[u3,g2,1]
+   + Q_ug[u3,g3,1] + Q_ug[u3,g4,1] + Q_ug[u3,g5,1] = 0
+ c16[u3,2]: - 0.6 Q_ju[j1,u3,2] - 0.6 Q_ju[j2,u3,2] - 0.6 Q_ju[j3,u3,2]
+   - 0.6 Q_ju[j4,u3,2] + Q_uh[u3,h1,2] + Q_uh[u3,h2,2] + Q_uh[u3,h3,2]
+   + Q_uh[u3,h4,2] + Q_uh[u3,h5,2] + Q_ug[u3,g1,2] + Q_ug[u3,g2,2]
+   + Q_ug[u3,g3,2] + Q_ug[u3,g4,2] + Q_ug[u3,g5,2] = 0
+ c16[u3,3]: - 0.4 Q_ju[j1,u3,3] - 0.4 Q_ju[j2,u3,3] - 0.4 Q_ju[j3,u3,3]
+   - 0.4 Q_ju[j4,u3,3] + Q_uh[u3,h1,3] + Q_uh[u3,h2,3] + Q_uh[u3,h3,3]
+   + Q_uh[u3,h4,3] + Q_uh[u3,h5,3] + Q_ug[u3,g1,3] + Q_ug[u3,g2,3]
+   + Q_ug[u3,g3,3] + Q_ug[u3,g4,3] + Q_ug[u3,g5,3] = 0
+ c16[u3,4]: - 0.6 Q_ju[j1,u3,4] - 0.6 Q_ju[j2,u3,4] - 0.6 Q_ju[j3,u3,4]
+   - 0.6 Q_ju[j4,u3,4] + Q_uh[u3,h1,4] + Q_uh[u3,h2,4] + Q_uh[u3,h3,4]
+   + Q_uh[u3,h4,4] + Q_uh[u3,h5,4] + Q_ug[u3,g1,4] + Q_ug[u3,g2,4]
+   + Q_ug[u3,g3,4] + Q_ug[u3,g4,4] + Q_ug[u3,g5,4] = 0
+ c16[u3,5]: - 0.5 Q_ju[j1,u3,5] - 0.5 Q_ju[j2,u3,5] - 0.5 Q_ju[j3,u3,5]
+   - 0.5 Q_ju[j4,u3,5] + Q_uh[u3,h1,5] + Q_uh[u3,h2,5] + Q_uh[u3,h3,5]
+   + Q_uh[u3,h4,5] + Q_uh[u3,h5,5] + Q_ug[u3,g1,5] + Q_ug[u3,g2,5]
+   + Q_ug[u3,g3,5] + Q_ug[u3,g4,5] + Q_ug[u3,g5,5] = 0
+ c16[u3,6]: - 0.5 Q_ju[j1,u3,6] - 0.5 Q_ju[j2,u3,6] - 0.5 Q_ju[j3,u3,6]
+   - 0.5 Q_ju[j4,u3,6] + Q_uh[u3,h1,6] + Q_uh[u3,h2,6] + Q_uh[u3,h3,6]
+   + Q_uh[u3,h4,6] + Q_uh[u3,h5,6] + Q_ug[u3,g1,6] + Q_ug[u3,g2,6]
+   + Q_ug[u3,g3,6] + Q_ug[u3,g4,6] + Q_ug[u3,g5,6] = 0
+ c16[u3,7]: - 0.5 Q_ju[j1,u3,7] - 0.5 Q_ju[j2,u3,7] - 0.5 Q_ju[j3,u3,7]
+   - 0.5 Q_ju[j4,u3,7] + Q_uh[u3,h1,7] + Q_uh[u3,h2,7] + Q_uh[u3,h3,7]
+   + Q_uh[u3,h4,7] + Q_uh[u3,h5,7] + Q_ug[u3,g1,7] + Q_ug[u3,g2,7]
+   + Q_ug[u3,g3,7] + Q_ug[u3,g4,7] + Q_ug[u3,g5,7] = 0
+ c16[u3,8]: - 0.6 Q_ju[j1,u3,8] - 0.6 Q_ju[j2,u3,8] - 0.6 Q_ju[j3,u3,8]
+   - 0.6 Q_ju[j4,u3,8] + Q_uh[u3,h1,8] + Q_uh[u3,h2,8] + Q_uh[u3,h3,8]
+   + Q_uh[u3,h4,8] + Q_uh[u3,h5,8] + Q_ug[u3,g1,8] + Q_ug[u3,g2,8]
+   + Q_ug[u3,g3,8] + Q_ug[u3,g4,8] + Q_ug[u3,g5,8] = 0
+ c16[u3,9]: - 0.5 Q_ju[j1,u3,9] - 0.5 Q_ju[j2,u3,9] - 0.5 Q_ju[j3,u3,9]
+   - 0.5 Q_ju[j4,u3,9] + Q_uh[u3,h1,9] + Q_uh[u3,h2,9] + Q_uh[u3,h3,9]
+   + Q_uh[u3,h4,9] + Q_uh[u3,h5,9] + Q_ug[u3,g1,9] + Q_ug[u3,g2,9]
+   + Q_ug[u3,g3,9] + Q_ug[u3,g4,9] + Q_ug[u3,g5,9] = 0
+ c16[u3,10]: - 0.4 Q_ju[j1,u3,10] - 0.4 Q_ju[j2,u3,10] - 0.4 Q_ju[j3,u3,10]
+   - 0.4 Q_ju[j4,u3,10] + Q_uh[u3,h1,10] + Q_uh[u3,h2,10] + Q_uh[u3,h3,10]
+   + Q_uh[u3,h4,10] + Q_uh[u3,h5,10] + Q_ug[u3,g1,10] + Q_ug[u3,g2,10]
+   + Q_ug[u3,g3,10] + Q_ug[u3,g4,10] + Q_ug[u3,g5,10] = 0
+ c16[u3,11]: - 0.6 Q_ju[j1,u3,11] - 0.6 Q_ju[j2,u3,11] - 0.6 Q_ju[j3,u3,11]
+   - 0.6 Q_ju[j4,u3,11] + Q_uh[u3,h1,11] + Q_uh[u3,h2,11] + Q_uh[u3,h3,11]
+   + Q_uh[u3,h4,11] + Q_uh[u3,h5,11] + Q_ug[u3,g1,11] + Q_ug[u3,g2,11]
+   + Q_ug[u3,g3,11] + Q_ug[u3,g4,11] + Q_ug[u3,g5,11] = 0
+ c16[u4,0]: - 0.6 Q_ju[j1,u4,0] - 0.6 Q_ju[j2,u4,0] - 0.6 Q_ju[j3,u4,0]
+   - 0.6 Q_ju[j4,u4,0] + Q_uh[u4,h1,0] + Q_uh[u4,h2,0] + Q_uh[u4,h3,0]
+   + Q_uh[u4,h4,0] + Q_uh[u4,h5,0] + Q_ug[u4,g1,0] + Q_ug[u4,g2,0]
+   + Q_ug[u4,g3,0] + Q_ug[u4,g4,0] + Q_ug[u4,g5,0] = 0
+ c16[u4,1]: - 0.4 Q_ju[j1,u4,1] - 0.4 Q_ju[j2,u4,1] - 0.4 Q_ju[j3,u4,1]
+   - 0.4 Q_ju[j4,u4,1] + Q_uh[u4,h1,1] + Q_uh[u4,h2,1] + Q_uh[u4,h3,1]
+   + Q_uh[u4,h4,1] + Q_uh[u4,h5,1] + Q_ug[u4,g1,1] + Q_ug[u4,g2,1]
+   + Q_ug[u4,g3,1] + Q_ug[u4,g4,1] + Q_ug[u4,g5,1] = 0
+ c16[u4,2]: - 0.6 Q_ju[j1,u4,2] - 0.6 Q_ju[j2,u4,2] - 0.6 Q_ju[j3,u4,2]
+   - 0.6 Q_ju[j4,u4,2] + Q_uh[u4,h1,2] + Q_uh[u4,h2,2] + Q_uh[u4,h3,2]
+   + Q_uh[u4,h4,2] + Q_uh[u4,h5,2] + Q_ug[u4,g1,2] + Q_ug[u4,g2,2]
+   + Q_ug[u4,g3,2] + Q_ug[u4,g4,2] + Q_ug[u4,g5,2] = 0
+ c16[u4,3]: - 0.4 Q_ju[j1,u4,3] - 0.4 Q_ju[j2,u4,3] - 0.4 Q_ju[j3,u4,3]
+   - 0.4 Q_ju[j4,u4,3] + Q_uh[u4,h1,3] + Q_uh[u4,h2,3] + Q_uh[u4,h3,3]
+   + Q_uh[u4,h4,3] + Q_uh[u4,h5,3] + Q_ug[u4,g1,3] + Q_ug[u4,g2,3]
+   + Q_ug[u4,g3,3] + Q_ug[u4,g4,3] + Q_ug[u4,g5,3] = 0
+ c16[u4,4]: - 0.6 Q_ju[j1,u4,4] - 0.6 Q_ju[j2,u4,4] - 0.6 Q_ju[j3,u4,4]
+   - 0.6 Q_ju[j4,u4,4] + Q_uh[u4,h1,4] + Q_uh[u4,h2,4] + Q_uh[u4,h3,4]
+   + Q_uh[u4,h4,4] + Q_uh[u4,h5,4] + Q_ug[u4,g1,4] + Q_ug[u4,g2,4]
+   + Q_ug[u4,g3,4] + Q_ug[u4,g4,4] + Q_ug[u4,g5,4] = 0
+ c16[u4,5]: - 0.5 Q_ju[j1,u4,5] - 0.5 Q_ju[j2,u4,5] - 0.5 Q_ju[j3,u4,5]
+   - 0.5 Q_ju[j4,u4,5] + Q_uh[u4,h1,5] + Q_uh[u4,h2,5] + Q_uh[u4,h3,5]
+   + Q_uh[u4,h4,5] + Q_uh[u4,h5,5] + Q_ug[u4,g1,5] + Q_ug[u4,g2,5]
+   + Q_ug[u4,g3,5] + Q_ug[u4,g4,5] + Q_ug[u4,g5,5] = 0
+ c16[u4,6]: - 0.5 Q_ju[j1,u4,6] - 0.5 Q_ju[j2,u4,6] - 0.5 Q_ju[j3,u4,6]
+   - 0.5 Q_ju[j4,u4,6] + Q_uh[u4,h1,6] + Q_uh[u4,h2,6] + Q_uh[u4,h3,6]
+   + Q_uh[u4,h4,6] + Q_uh[u4,h5,6] + Q_ug[u4,g1,6] + Q_ug[u4,g2,6]
+   + Q_ug[u4,g3,6] + Q_ug[u4,g4,6] + Q_ug[u4,g5,6] = 0
+ c16[u4,7]: - 0.5 Q_ju[j1,u4,7] - 0.5 Q_ju[j2,u4,7] - 0.5 Q_ju[j3,u4,7]
+   - 0.5 Q_ju[j4,u4,7] + Q_uh[u4,h1,7] + Q_uh[u4,h2,7] + Q_uh[u4,h3,7]
+   + Q_uh[u4,h4,7] + Q_uh[u4,h5,7] + Q_ug[u4,g1,7] + Q_ug[u4,g2,7]
+   + Q_ug[u4,g3,7] + Q_ug[u4,g4,7] + Q_ug[u4,g5,7] = 0
+ c16[u4,8]: - 0.6 Q_ju[j1,u4,8] - 0.6 Q_ju[j2,u4,8] - 0.6 Q_ju[j3,u4,8]
+   - 0.6 Q_ju[j4,u4,8] + Q_uh[u4,h1,8] + Q_uh[u4,h2,8] + Q_uh[u4,h3,8]
+   + Q_uh[u4,h4,8] + Q_uh[u4,h5,8] + Q_ug[u4,g1,8] + Q_ug[u4,g2,8]
+   + Q_ug[u4,g3,8] + Q_ug[u4,g4,8] + Q_ug[u4,g5,8] = 0
+ c16[u4,9]: - 0.5 Q_ju[j1,u4,9] - 0.5 Q_ju[j2,u4,9] - 0.5 Q_ju[j3,u4,9]
+   - 0.5 Q_ju[j4,u4,9] + Q_uh[u4,h1,9] + Q_uh[u4,h2,9] + Q_uh[u4,h3,9]
+   + Q_uh[u4,h4,9] + Q_uh[u4,h5,9] + Q_ug[u4,g1,9] + Q_ug[u4,g2,9]
+   + Q_ug[u4,g3,9] + Q_ug[u4,g4,9] + Q_ug[u4,g5,9] = 0
+ c16[u4,10]: - 0.4 Q_ju[j1,u4,10] - 0.4 Q_ju[j2,u4,10] - 0.4 Q_ju[j3,u4,10]
+   - 0.4 Q_ju[j4,u4,10] + Q_uh[u4,h1,10] + Q_uh[u4,h2,10] + Q_uh[u4,h3,10]
+   + Q_uh[u4,h4,10] + Q_uh[u4,h5,10] + Q_ug[u4,g1,10] + Q_ug[u4,g2,10]
+   + Q_ug[u4,g3,10] + Q_ug[u4,g4,10] + Q_ug[u4,g5,10] = 0
+ c16[u4,11]: - 0.6 Q_ju[j1,u4,11] - 0.6 Q_ju[j2,u4,11] - 0.6 Q_ju[j3,u4,11]
+   - 0.6 Q_ju[j4,u4,11] + Q_uh[u4,h1,11] + Q_uh[u4,h2,11] + Q_uh[u4,h3,11]
+   + Q_uh[u4,h4,11] + Q_uh[u4,h5,11] + Q_ug[u4,g1,11] + Q_ug[u4,g2,11]
+   + Q_ug[u4,g3,11] + Q_ug[u4,g4,11] + Q_ug[u4,g5,11] = 0
+ c16[u5,0]: - 0.6 Q_ju[j1,u5,0] - 0.6 Q_ju[j2,u5,0] - 0.6 Q_ju[j3,u5,0]
+   - 0.6 Q_ju[j4,u5,0] + Q_uh[u5,h1,0] + Q_uh[u5,h2,0] + Q_uh[u5,h3,0]
+   + Q_uh[u5,h4,0] + Q_uh[u5,h5,0] + Q_ug[u5,g1,0] + Q_ug[u5,g2,0]
+   + Q_ug[u5,g3,0] + Q_ug[u5,g4,0] + Q_ug[u5,g5,0] = 0
+ c16[u5,1]: - 0.4 Q_ju[j1,u5,1] - 0.4 Q_ju[j2,u5,1] - 0.4 Q_ju[j3,u5,1]
+   - 0.4 Q_ju[j4,u5,1] + Q_uh[u5,h1,1] + Q_uh[u5,h2,1] + Q_uh[u5,h3,1]
+   + Q_uh[u5,h4,1] + Q_uh[u5,h5,1] + Q_ug[u5,g1,1] + Q_ug[u5,g2,1]
+   + Q_ug[u5,g3,1] + Q_ug[u5,g4,1] + Q_ug[u5,g5,1] = 0
+ c16[u5,2]: - 0.6 Q_ju[j1,u5,2] - 0.6 Q_ju[j2,u5,2] - 0.6 Q_ju[j3,u5,2]
+   - 0.6 Q_ju[j4,u5,2] + Q_uh[u5,h1,2] + Q_uh[u5,h2,2] + Q_uh[u5,h3,2]
+   + Q_uh[u5,h4,2] + Q_uh[u5,h5,2] + Q_ug[u5,g1,2] + Q_ug[u5,g2,2]
+   + Q_ug[u5,g3,2] + Q_ug[u5,g4,2] + Q_ug[u5,g5,2] = 0
+ c16[u5,3]: - 0.4 Q_ju[j1,u5,3] - 0.4 Q_ju[j2,u5,3] - 0.4 Q_ju[j3,u5,3]
+   - 0.4 Q_ju[j4,u5,3] + Q_uh[u5,h1,3] + Q_uh[u5,h2,3] + Q_uh[u5,h3,3]
+   + Q_uh[u5,h4,3] + Q_uh[u5,h5,3] + Q_ug[u5,g1,3] + Q_ug[u5,g2,3]
+   + Q_ug[u5,g3,3] + Q_ug[u5,g4,3] + Q_ug[u5,g5,3] = 0
+ c16[u5,4]: - 0.6 Q_ju[j1,u5,4] - 0.6 Q_ju[j2,u5,4] - 0.6 Q_ju[j3,u5,4]
+   - 0.6 Q_ju[j4,u5,4] + Q_uh[u5,h1,4] + Q_uh[u5,h2,4] + Q_uh[u5,h3,4]
+   + Q_uh[u5,h4,4] + Q_uh[u5,h5,4] + Q_ug[u5,g1,4] + Q_ug[u5,g2,4]
+   + Q_ug[u5,g3,4] + Q_ug[u5,g4,4] + Q_ug[u5,g5,4] = 0
+ c16[u5,5]: - 0.5 Q_ju[j1,u5,5] - 0.5 Q_ju[j2,u5,5] - 0.5 Q_ju[j3,u5,5]
+   - 0.5 Q_ju[j4,u5,5] + Q_uh[u5,h1,5] + Q_uh[u5,h2,5] + Q_uh[u5,h3,5]
+   + Q_uh[u5,h4,5] + Q_uh[u5,h5,5] + Q_ug[u5,g1,5] + Q_ug[u5,g2,5]
+   + Q_ug[u5,g3,5] + Q_ug[u5,g4,5] + Q_ug[u5,g5,5] = 0
+ c16[u5,6]: - 0.5 Q_ju[j1,u5,6] - 0.5 Q_ju[j2,u5,6] - 0.5 Q_ju[j3,u5,6]
+   - 0.5 Q_ju[j4,u5,6] + Q_uh[u5,h1,6] + Q_uh[u5,h2,6] + Q_uh[u5,h3,6]
+   + Q_uh[u5,h4,6] + Q_uh[u5,h5,6] + Q_ug[u5,g1,6] + Q_ug[u5,g2,6]
+   + Q_ug[u5,g3,6] + Q_ug[u5,g4,6] + Q_ug[u5,g5,6] = 0
+ c16[u5,7]: - 0.5 Q_ju[j1,u5,7] - 0.5 Q_ju[j2,u5,7] - 0.5 Q_ju[j3,u5,7]
+   - 0.5 Q_ju[j4,u5,7] + Q_uh[u5,h1,7] + Q_uh[u5,h2,7] + Q_uh[u5,h3,7]
+   + Q_uh[u5,h4,7] + Q_uh[u5,h5,7] + Q_ug[u5,g1,7] + Q_ug[u5,g2,7]
+   + Q_ug[u5,g3,7] + Q_ug[u5,g4,7] + Q_ug[u5,g5,7] = 0
+ c16[u5,8]: - 0.6 Q_ju[j1,u5,8] - 0.6 Q_ju[j2,u5,8] - 0.6 Q_ju[j3,u5,8]
+   - 0.6 Q_ju[j4,u5,8] + Q_uh[u5,h1,8] + Q_uh[u5,h2,8] + Q_uh[u5,h3,8]
+   + Q_uh[u5,h4,8] + Q_uh[u5,h5,8] + Q_ug[u5,g1,8] + Q_ug[u5,g2,8]
+   + Q_ug[u5,g3,8] + Q_ug[u5,g4,8] + Q_ug[u5,g5,8] = 0
+ c16[u5,9]: - 0.5 Q_ju[j1,u5,9] - 0.5 Q_ju[j2,u5,9] - 0.5 Q_ju[j3,u5,9]
+   - 0.5 Q_ju[j4,u5,9] + Q_uh[u5,h1,9] + Q_uh[u5,h2,9] + Q_uh[u5,h3,9]
+   + Q_uh[u5,h4,9] + Q_uh[u5,h5,9] + Q_ug[u5,g1,9] + Q_ug[u5,g2,9]
+   + Q_ug[u5,g3,9] + Q_ug[u5,g4,9] + Q_ug[u5,g5,9] = 0
+ c16[u5,10]: - 0.4 Q_ju[j1,u5,10] - 0.4 Q_ju[j2,u5,10] - 0.4 Q_ju[j3,u5,10]
+   - 0.4 Q_ju[j4,u5,10] + Q_uh[u5,h1,10] + Q_uh[u5,h2,10] + Q_uh[u5,h3,10]
+   + Q_uh[u5,h4,10] + Q_uh[u5,h5,10] + Q_ug[u5,g1,10] + Q_ug[u5,g2,10]
+   + Q_ug[u5,g3,10] + Q_ug[u5,g4,10] + Q_ug[u5,g5,10] = 0
+ c16[u5,11]: - 0.6 Q_ju[j1,u5,11] - 0.6 Q_ju[j2,u5,11] - 0.6 Q_ju[j3,u5,11]
+   - 0.6 Q_ju[j4,u5,11] + Q_uh[u5,h1,11] + Q_uh[u5,h2,11] + Q_uh[u5,h3,11]
+   + Q_uh[u5,h4,11] + Q_uh[u5,h5,11] + Q_ug[u5,g1,11] + Q_ug[u5,g2,11]
+   + Q_ug[u5,g3,11] + Q_ug[u5,g4,11] + Q_ug[u5,g5,11] = 0
+ c17[u1,k1,0]: - 0.3 Q_ju[j1,u1,0] - 0.3 Q_ju[j2,u1,0] - 0.3 Q_ju[j3,u1,0]
+   - 0.3 Q_ju[j4,u1,0] + Q_kuv[k1,u1,v1,0] + Q_kuv[k1,u1,v2,0]
+   + Q_kuv[k1,u1,v3,0] + Q_kuv[k1,u1,v4,0] + Q_kuv[k1,u1,v5,0] = 0
+ c17[u1,k1,1]: - 0.3 Q_ju[j1,u1,1] - 0.3 Q_ju[j2,u1,1] - 0.3 Q_ju[j3,u1,1]
+   - 0.3 Q_ju[j4,u1,1] + Q_kuv[k1,u1,v1,1] + Q_kuv[k1,u1,v2,1]
+   + Q_kuv[k1,u1,v3,1] + Q_kuv[k1,u1,v4,1] + Q_kuv[k1,u1,v5,1] = 0
+ c17[u1,k1,2]: - 0.3 Q_ju[j1,u1,2] - 0.3 Q_ju[j2,u1,2] - 0.3 Q_ju[j3,u1,2]
+   - 0.3 Q_ju[j4,u1,2] + Q_kuv[k1,u1,v1,2] + Q_kuv[k1,u1,v2,2]
+   + Q_kuv[k1,u1,v3,2] + Q_kuv[k1,u1,v4,2] + Q_kuv[k1,u1,v5,2] = 0
+ c17[u1,k1,3]: - 0.4 Q_ju[j1,u1,3] - 0.4 Q_ju[j2,u1,3] - 0.4 Q_ju[j3,u1,3]
+   - 0.4 Q_ju[j4,u1,3] + Q_kuv[k1,u1,v1,3] + Q_kuv[k1,u1,v2,3]
+   + Q_kuv[k1,u1,v3,3] + Q_kuv[k1,u1,v4,3] + Q_kuv[k1,u1,v5,3] = 0
+ c17[u1,k1,4]: - 0.2 Q_ju[j1,u1,4] - 0.2 Q_ju[j2,u1,4] - 0.2 Q_ju[j3,u1,4]
+   - 0.2 Q_ju[j4,u1,4] + Q_kuv[k1,u1,v1,4] + Q_kuv[k1,u1,v2,4]
+   + Q_kuv[k1,u1,v3,4] + Q_kuv[k1,u1,v4,4] + Q_kuv[k1,u1,v5,4] = 0
+ c17[u1,k1,5]: - 0.2 Q_ju[j1,u1,5] - 0.2 Q_ju[j2,u1,5] - 0.2 Q_ju[j3,u1,5]
+   - 0.2 Q_ju[j4,u1,5] + Q_kuv[k1,u1,v1,5] + Q_kuv[k1,u1,v2,5]
+   + Q_kuv[k1,u1,v3,5] + Q_kuv[k1,u1,v4,5] + Q_kuv[k1,u1,v5,5] = 0
+ c17[u1,k1,6]: - 0.3 Q_ju[j1,u1,6] - 0.3 Q_ju[j2,u1,6] - 0.3 Q_ju[j3,u1,6]
+   - 0.3 Q_ju[j4,u1,6] + Q_kuv[k1,u1,v1,6] + Q_kuv[k1,u1,v2,6]
+   + Q_kuv[k1,u1,v3,6] + Q_kuv[k1,u1,v4,6] + Q_kuv[k1,u1,v5,6] = 0
+ c17[u1,k1,7]: - 0.4 Q_ju[j1,u1,7] - 0.4 Q_ju[j2,u1,7] - 0.4 Q_ju[j3,u1,7]
+   - 0.4 Q_ju[j4,u1,7] + Q_kuv[k1,u1,v1,7] + Q_kuv[k1,u1,v2,7]
+   + Q_kuv[k1,u1,v3,7] + Q_kuv[k1,u1,v4,7] + Q_kuv[k1,u1,v5,7] = 0
+ c17[u1,k1,8]: - 0.2 Q_ju[j1,u1,8] - 0.2 Q_ju[j2,u1,8] - 0.2 Q_ju[j3,u1,8]
+   - 0.2 Q_ju[j4,u1,8] + Q_kuv[k1,u1,v1,8] + Q_kuv[k1,u1,v2,8]
+   + Q_kuv[k1,u1,v3,8] + Q_kuv[k1,u1,v4,8] + Q_kuv[k1,u1,v5,8] = 0
+ c17[u1,k1,9]: - 0.4 Q_ju[j1,u1,9] - 0.4 Q_ju[j2,u1,9] - 0.4 Q_ju[j3,u1,9]
+   - 0.4 Q_ju[j4,u1,9] + Q_kuv[k1,u1,v1,9] + Q_kuv[k1,u1,v2,9]
+   + Q_kuv[k1,u1,v3,9] + Q_kuv[k1,u1,v4,9] + Q_kuv[k1,u1,v5,9] = 0
+ c17[u1,k1,10]: - 0.4 Q_ju[j1,u1,10] - 0.4 Q_ju[j2,u1,10]
+   - 0.4 Q_ju[j3,u1,10] - 0.4 Q_ju[j4,u1,10] + Q_kuv[k1,u1,v1,10]
+   + Q_kuv[k1,u1,v2,10] + Q_kuv[k1,u1,v3,10] + Q_kuv[k1,u1,v4,10]
+   + Q_kuv[k1,u1,v5,10] = 0
+ c17[u1,k1,11]: - 0.3 Q_ju[j1,u1,11] - 0.3 Q_ju[j2,u1,11]
+   - 0.3 Q_ju[j3,u1,11] - 0.3 Q_ju[j4,u1,11] + Q_kuv[k1,u1,v1,11]
+   + Q_kuv[k1,u1,v2,11] + Q_kuv[k1,u1,v3,11] + Q_kuv[k1,u1,v4,11]
+   + Q_kuv[k1,u1,v5,11] = 0
+ c17[u1,k2,0]: - 1.2 Q_ju[j1,u1,0] - 1.2 Q_ju[j2,u1,0] - 1.2 Q_ju[j3,u1,0]
+   - 1.2 Q_ju[j4,u1,0] + Q_kuv[k2,u1,v1,0] + Q_kuv[k2,u1,v2,0]
+   + Q_kuv[k2,u1,v3,0] + Q_kuv[k2,u1,v4,0] + Q_kuv[k2,u1,v5,0] = 0
+ c17[u1,k2,1]: - 1.2 Q_ju[j1,u1,1] - 1.2 Q_ju[j2,u1,1] - 1.2 Q_ju[j3,u1,1]
+   - 1.2 Q_ju[j4,u1,1] + Q_kuv[k2,u1,v1,1] + Q_kuv[k2,u1,v2,1]
+   + Q_kuv[k2,u1,v3,1] + Q_kuv[k2,u1,v4,1] + Q_kuv[k2,u1,v5,1] = 0
+ c17[u1,k2,2]: - 1.2 Q_ju[j1,u1,2] - 1.2 Q_ju[j2,u1,2] - 1.2 Q_ju[j3,u1,2]
+   - 1.2 Q_ju[j4,u1,2] + Q_kuv[k2,u1,v1,2] + Q_kuv[k2,u1,v2,2]
+   + Q_kuv[k2,u1,v3,2] + Q_kuv[k2,u1,v4,2] + Q_kuv[k2,u1,v5,2] = 0
+ c17[u1,k2,3]: - 1.6 Q_ju[j1,u1,3] - 1.6 Q_ju[j2,u1,3] - 1.6 Q_ju[j3,u1,3]
+   - 1.6 Q_ju[j4,u1,3] + Q_kuv[k2,u1,v1,3] + Q_kuv[k2,u1,v2,3]
+   + Q_kuv[k2,u1,v3,3] + Q_kuv[k2,u1,v4,3] + Q_kuv[k2,u1,v5,3] = 0
+ c17[u1,k2,4]: - 0.8 Q_ju[j1,u1,4] - 0.8 Q_ju[j2,u1,4] - 0.8 Q_ju[j3,u1,4]
+   - 0.8 Q_ju[j4,u1,4] + Q_kuv[k2,u1,v1,4] + Q_kuv[k2,u1,v2,4]
+   + Q_kuv[k2,u1,v3,4] + Q_kuv[k2,u1,v4,4] + Q_kuv[k2,u1,v5,4] = 0
+ c17[u1,k2,5]: - 0.8 Q_ju[j1,u1,5] - 0.8 Q_ju[j2,u1,5] - 0.8 Q_ju[j3,u1,5]
+   - 0.8 Q_ju[j4,u1,5] + Q_kuv[k2,u1,v1,5] + Q_kuv[k2,u1,v2,5]
+   + Q_kuv[k2,u1,v3,5] + Q_kuv[k2,u1,v4,5] + Q_kuv[k2,u1,v5,5] = 0
+ c17[u1,k2,6]: - 1.2 Q_ju[j1,u1,6] - 1.2 Q_ju[j2,u1,6] - 1.2 Q_ju[j3,u1,6]
+   - 1.2 Q_ju[j4,u1,6] + Q_kuv[k2,u1,v1,6] + Q_kuv[k2,u1,v2,6]
+   + Q_kuv[k2,u1,v3,6] + Q_kuv[k2,u1,v4,6] + Q_kuv[k2,u1,v5,6] = 0
+ c17[u1,k2,7]: - 1.6 Q_ju[j1,u1,7] - 1.6 Q_ju[j2,u1,7] - 1.6 Q_ju[j3,u1,7]
+   - 1.6 Q_ju[j4,u1,7] + Q_kuv[k2,u1,v1,7] + Q_kuv[k2,u1,v2,7]
+   + Q_kuv[k2,u1,v3,7] + Q_kuv[k2,u1,v4,7] + Q_kuv[k2,u1,v5,7] = 0
+ c17[u1,k2,8]: - 0.8 Q_ju[j1,u1,8] - 0.8 Q_ju[j2,u1,8] - 0.8 Q_ju[j3,u1,8]
+   - 0.8 Q_ju[j4,u1,8] + Q_kuv[k2,u1,v1,8] + Q_kuv[k2,u1,v2,8]
+   + Q_kuv[k2,u1,v3,8] + Q_kuv[k2,u1,v4,8] + Q_kuv[k2,u1,v5,8] = 0
+ c17[u1,k2,9]: - 1.6 Q_ju[j1,u1,9] - 1.6 Q_ju[j2,u1,9] - 1.6 Q_ju[j3,u1,9]
+   - 1.6 Q_ju[j4,u1,9] + Q_kuv[k2,u1,v1,9] + Q_kuv[k2,u1,v2,9]
+   + Q_kuv[k2,u1,v3,9] + Q_kuv[k2,u1,v4,9] + Q_kuv[k2,u1,v5,9] = 0
+ c17[u1,k2,10]: - 1.6 Q_ju[j1,u1,10] - 1.6 Q_ju[j2,u1,10]
+   - 1.6 Q_ju[j3,u1,10] - 1.6 Q_ju[j4,u1,10] + Q_kuv[k2,u1,v1,10]
+   + Q_kuv[k2,u1,v2,10] + Q_kuv[k2,u1,v3,10] + Q_kuv[k2,u1,v4,10]
+   + Q_kuv[k2,u1,v5,10] = 0
+ c17[u1,k2,11]: - 1.2 Q_ju[j1,u1,11] - 1.2 Q_ju[j2,u1,11]
+   - 1.2 Q_ju[j3,u1,11] - 1.2 Q_ju[j4,u1,11] + Q_kuv[k2,u1,v1,11]
+   + Q_kuv[k2,u1,v2,11] + Q_kuv[k2,u1,v3,11] + Q_kuv[k2,u1,v4,11]
+   + Q_kuv[k2,u1,v5,11] = 0
+ c17[u1,k3,0]: - 3 Q_ju[j1,u1,0] - 3 Q_ju[j2,u1,0] - 3 Q_ju[j3,u1,0]
+   - 3 Q_ju[j4,u1,0] + Q_kuv[k3,u1,v1,0] + Q_kuv[k3,u1,v2,0]
+   + Q_kuv[k3,u1,v3,0] + Q_kuv[k3,u1,v4,0] + Q_kuv[k3,u1,v5,0] = 0
+ c17[u1,k3,1]: - 3 Q_ju[j1,u1,1] - 3 Q_ju[j2,u1,1] - 3 Q_ju[j3,u1,1]
+   - 3 Q_ju[j4,u1,1] + Q_kuv[k3,u1,v1,1] + Q_kuv[k3,u1,v2,1]
+   + Q_kuv[k3,u1,v3,1] + Q_kuv[k3,u1,v4,1] + Q_kuv[k3,u1,v5,1] = 0
+ c17[u1,k3,2]: - 3 Q_ju[j1,u1,2] - 3 Q_ju[j2,u1,2] - 3 Q_ju[j3,u1,2]
+   - 3 Q_ju[j4,u1,2] + Q_kuv[k3,u1,v1,2] + Q_kuv[k3,u1,v2,2]
+   + Q_kuv[k3,u1,v3,2] + Q_kuv[k3,u1,v4,2] + Q_kuv[k3,u1,v5,2] = 0
+ c17[u1,k3,3]: - 4 Q_ju[j1,u1,3] - 4 Q_ju[j2,u1,3] - 4 Q_ju[j3,u1,3]
+   - 4 Q_ju[j4,u1,3] + Q_kuv[k3,u1,v1,3] + Q_kuv[k3,u1,v2,3]
+   + Q_kuv[k3,u1,v3,3] + Q_kuv[k3,u1,v4,3] + Q_kuv[k3,u1,v5,3] = 0
+ c17[u1,k3,4]: - 2 Q_ju[j1,u1,4] - 2 Q_ju[j2,u1,4] - 2 Q_ju[j3,u1,4]
+   - 2 Q_ju[j4,u1,4] + Q_kuv[k3,u1,v1,4] + Q_kuv[k3,u1,v2,4]
+   + Q_kuv[k3,u1,v3,4] + Q_kuv[k3,u1,v4,4] + Q_kuv[k3,u1,v5,4] = 0
+ c17[u1,k3,5]: - 2 Q_ju[j1,u1,5] - 2 Q_ju[j2,u1,5] - 2 Q_ju[j3,u1,5]
+   - 2 Q_ju[j4,u1,5] + Q_kuv[k3,u1,v1,5] + Q_kuv[k3,u1,v2,5]
+   + Q_kuv[k3,u1,v3,5] + Q_kuv[k3,u1,v4,5] + Q_kuv[k3,u1,v5,5] = 0
+ c17[u1,k3,6]: - 3 Q_ju[j1,u1,6] - 3 Q_ju[j2,u1,6] - 3 Q_ju[j3,u1,6]
+   - 3 Q_ju[j4,u1,6] + Q_kuv[k3,u1,v1,6] + Q_kuv[k3,u1,v2,6]
+   + Q_kuv[k3,u1,v3,6] + Q_kuv[k3,u1,v4,6] + Q_kuv[k3,u1,v5,6] = 0
+ c17[u1,k3,7]: - 4 Q_ju[j1,u1,7] - 4 Q_ju[j2,u1,7] - 4 Q_ju[j3,u1,7]
+   - 4 Q_ju[j4,u1,7] + Q_kuv[k3,u1,v1,7] + Q_kuv[k3,u1,v2,7]
+   + Q_kuv[k3,u1,v3,7] + Q_kuv[k3,u1,v4,7] + Q_kuv[k3,u1,v5,7] = 0
+ c17[u1,k3,8]: - 2 Q_ju[j1,u1,8] - 2 Q_ju[j2,u1,8] - 2 Q_ju[j3,u1,8]
+   - 2 Q_ju[j4,u1,8] + Q_kuv[k3,u1,v1,8] + Q_kuv[k3,u1,v2,8]
+   + Q_kuv[k3,u1,v3,8] + Q_kuv[k3,u1,v4,8] + Q_kuv[k3,u1,v5,8] = 0
+ c17[u1,k3,9]: - 4 Q_ju[j1,u1,9] - 4 Q_ju[j2,u1,9] - 4 Q_ju[j3,u1,9]
+   - 4 Q_ju[j4,u1,9] + Q_kuv[k3,u1,v1,9] + Q_kuv[k3,u1,v2,9]
+   + Q_kuv[k3,u1,v3,9] + Q_kuv[k3,u1,v4,9] + Q_kuv[k3,u1,v5,9] = 0
+ c17[u1,k3,10]: - 4 Q_ju[j1,u1,10] - 4 Q_ju[j2,u1,10] - 4 Q_ju[j3,u1,10]
+   - 4 Q_ju[j4,u1,10] + Q_kuv[k3,u1,v1,10] + Q_kuv[k3,u1,v2,10]
+   + Q_kuv[k3,u1,v3,10] + Q_kuv[k3,u1,v4,10] + Q_kuv[k3,u1,v5,10] = 0
+ c17[u1,k3,11]: - 3 Q_ju[j1,u1,11] - 3 Q_ju[j2,u1,11] - 3 Q_ju[j3,u1,11]
+   - 3 Q_ju[j4,u1,11] + Q_kuv[k3,u1,v1,11] + Q_kuv[k3,u1,v2,11]
+   + Q_kuv[k3,u1,v3,11] + Q_kuv[k3,u1,v4,11] + Q_kuv[k3,u1,v5,11] = 0
+ c17[u2,k1,0]: - 0.3 Q_ju[j1,u2,0] - 0.3 Q_ju[j2,u2,0] - 0.3 Q_ju[j3,u2,0]
+   - 0.3 Q_ju[j4,u2,0] + Q_kuv[k1,u2,v1,0] + Q_kuv[k1,u2,v2,0]
+   + Q_kuv[k1,u2,v3,0] + Q_kuv[k1,u2,v4,0] + Q_kuv[k1,u2,v5,0] = 0
+ c17[u2,k1,1]: - 0.3 Q_ju[j1,u2,1] - 0.3 Q_ju[j2,u2,1] - 0.3 Q_ju[j3,u2,1]
+   - 0.3 Q_ju[j4,u2,1] + Q_kuv[k1,u2,v1,1] + Q_kuv[k1,u2,v2,1]
+   + Q_kuv[k1,u2,v3,1] + Q_kuv[k1,u2,v4,1] + Q_kuv[k1,u2,v5,1] = 0
+ c17[u2,k1,2]: - 0.3 Q_ju[j1,u2,2] - 0.3 Q_ju[j2,u2,2] - 0.3 Q_ju[j3,u2,2]
+   - 0.3 Q_ju[j4,u2,2] + Q_kuv[k1,u2,v1,2] + Q_kuv[k1,u2,v2,2]
+   + Q_kuv[k1,u2,v3,2] + Q_kuv[k1,u2,v4,2] + Q_kuv[k1,u2,v5,2] = 0
+ c17[u2,k1,3]: - 0.4 Q_ju[j1,u2,3] - 0.4 Q_ju[j2,u2,3] - 0.4 Q_ju[j3,u2,3]
+   - 0.4 Q_ju[j4,u2,3] + Q_kuv[k1,u2,v1,3] + Q_kuv[k1,u2,v2,3]
+   + Q_kuv[k1,u2,v3,3] + Q_kuv[k1,u2,v4,3] + Q_kuv[k1,u2,v5,3] = 0
+ c17[u2,k1,4]: - 0.2 Q_ju[j1,u2,4] - 0.2 Q_ju[j2,u2,4] - 0.2 Q_ju[j3,u2,4]
+   - 0.2 Q_ju[j4,u2,4] + Q_kuv[k1,u2,v1,4] + Q_kuv[k1,u2,v2,4]
+   + Q_kuv[k1,u2,v3,4] + Q_kuv[k1,u2,v4,4] + Q_kuv[k1,u2,v5,4] = 0
+ c17[u2,k1,5]: - 0.2 Q_ju[j1,u2,5] - 0.2 Q_ju[j2,u2,5] - 0.2 Q_ju[j3,u2,5]
+   - 0.2 Q_ju[j4,u2,5] + Q_kuv[k1,u2,v1,5] + Q_kuv[k1,u2,v2,5]
+   + Q_kuv[k1,u2,v3,5] + Q_kuv[k1,u2,v4,5] + Q_kuv[k1,u2,v5,5] = 0
+ c17[u2,k1,6]: - 0.3 Q_ju[j1,u2,6] - 0.3 Q_ju[j2,u2,6] - 0.3 Q_ju[j3,u2,6]
+   - 0.3 Q_ju[j4,u2,6] + Q_kuv[k1,u2,v1,6] + Q_kuv[k1,u2,v2,6]
+   + Q_kuv[k1,u2,v3,6] + Q_kuv[k1,u2,v4,6] + Q_kuv[k1,u2,v5,6] = 0
+ c17[u2,k1,7]: - 0.4 Q_ju[j1,u2,7] - 0.4 Q_ju[j2,u2,7] - 0.4 Q_ju[j3,u2,7]
+   - 0.4 Q_ju[j4,u2,7] + Q_kuv[k1,u2,v1,7] + Q_kuv[k1,u2,v2,7]
+   + Q_kuv[k1,u2,v3,7] + Q_kuv[k1,u2,v4,7] + Q_kuv[k1,u2,v5,7] = 0
+ c17[u2,k1,8]: - 0.2 Q_ju[j1,u2,8] - 0.2 Q_ju[j2,u2,8] - 0.2 Q_ju[j3,u2,8]
+   - 0.2 Q_ju[j4,u2,8] + Q_kuv[k1,u2,v1,8] + Q_kuv[k1,u2,v2,8]
+   + Q_kuv[k1,u2,v3,8] + Q_kuv[k1,u2,v4,8] + Q_kuv[k1,u2,v5,8] = 0
+ c17[u2,k1,9]: - 0.4 Q_ju[j1,u2,9] - 0.4 Q_ju[j2,u2,9] - 0.4 Q_ju[j3,u2,9]
+   - 0.4 Q_ju[j4,u2,9] + Q_kuv[k1,u2,v1,9] + Q_kuv[k1,u2,v2,9]
+   + Q_kuv[k1,u2,v3,9] + Q_kuv[k1,u2,v4,9] + Q_kuv[k1,u2,v5,9] = 0
+ c17[u2,k1,10]: - 0.4 Q_ju[j1,u2,10] - 0.4 Q_ju[j2,u2,10]
+   - 0.4 Q_ju[j3,u2,10] - 0.4 Q_ju[j4,u2,10] + Q_kuv[k1,u2,v1,10]
+   + Q_kuv[k1,u2,v2,10] + Q_kuv[k1,u2,v3,10] + Q_kuv[k1,u2,v4,10]
+   + Q_kuv[k1,u2,v5,10] = 0
+ c17[u2,k1,11]: - 0.3 Q_ju[j1,u2,11] - 0.3 Q_ju[j2,u2,11]
+   - 0.3 Q_ju[j3,u2,11] - 0.3 Q_ju[j4,u2,11] + Q_kuv[k1,u2,v1,11]
+   + Q_kuv[k1,u2,v2,11] + Q_kuv[k1,u2,v3,11] + Q_kuv[k1,u2,v4,11]
+   + Q_kuv[k1,u2,v5,11] = 0
+ c17[u2,k2,0]: - 1.2 Q_ju[j1,u2,0] - 1.2 Q_ju[j2,u2,0] - 1.2 Q_ju[j3,u2,0]
+   - 1.2 Q_ju[j4,u2,0] + Q_kuv[k2,u2,v1,0] + Q_kuv[k2,u2,v2,0]
+   + Q_kuv[k2,u2,v3,0] + Q_kuv[k2,u2,v4,0] + Q_kuv[k2,u2,v5,0] = 0
+ c17[u2,k2,1]: - 1.2 Q_ju[j1,u2,1] - 1.2 Q_ju[j2,u2,1] - 1.2 Q_ju[j3,u2,1]
+   - 1.2 Q_ju[j4,u2,1] + Q_kuv[k2,u2,v1,1] + Q_kuv[k2,u2,v2,1]
+   + Q_kuv[k2,u2,v3,1] + Q_kuv[k2,u2,v4,1] + Q_kuv[k2,u2,v5,1] = 0
+ c17[u2,k2,2]: - 1.2 Q_ju[j1,u2,2] - 1.2 Q_ju[j2,u2,2] - 1.2 Q_ju[j3,u2,2]
+   - 1.2 Q_ju[j4,u2,2] + Q_kuv[k2,u2,v1,2] + Q_kuv[k2,u2,v2,2]
+   + Q_kuv[k2,u2,v3,2] + Q_kuv[k2,u2,v4,2] + Q_kuv[k2,u2,v5,2] = 0
+ c17[u2,k2,3]: - 1.6 Q_ju[j1,u2,3] - 1.6 Q_ju[j2,u2,3] - 1.6 Q_ju[j3,u2,3]
+   - 1.6 Q_ju[j4,u2,3] + Q_kuv[k2,u2,v1,3] + Q_kuv[k2,u2,v2,3]
+   + Q_kuv[k2,u2,v3,3] + Q_kuv[k2,u2,v4,3] + Q_kuv[k2,u2,v5,3] = 0
+ c17[u2,k2,4]: - 0.8 Q_ju[j1,u2,4] - 0.8 Q_ju[j2,u2,4] - 0.8 Q_ju[j3,u2,4]
+   - 0.8 Q_ju[j4,u2,4] + Q_kuv[k2,u2,v1,4] + Q_kuv[k2,u2,v2,4]
+   + Q_kuv[k2,u2,v3,4] + Q_kuv[k2,u2,v4,4] + Q_kuv[k2,u2,v5,4] = 0
+ c17[u2,k2,5]: - 0.8 Q_ju[j1,u2,5] - 0.8 Q_ju[j2,u2,5] - 0.8 Q_ju[j3,u2,5]
+   - 0.8 Q_ju[j4,u2,5] + Q_kuv[k2,u2,v1,5] + Q_kuv[k2,u2,v2,5]
+   + Q_kuv[k2,u2,v3,5] + Q_kuv[k2,u2,v4,5] + Q_kuv[k2,u2,v5,5] = 0
+ c17[u2,k2,6]: - 1.2 Q_ju[j1,u2,6] - 1.2 Q_ju[j2,u2,6] - 1.2 Q_ju[j3,u2,6]
+   - 1.2 Q_ju[j4,u2,6] + Q_kuv[k2,u2,v1,6] + Q_kuv[k2,u2,v2,6]
+   + Q_kuv[k2,u2,v3,6] + Q_kuv[k2,u2,v4,6] + Q_kuv[k2,u2,v5,6] = 0
+ c17[u2,k2,7]: - 1.6 Q_ju[j1,u2,7] - 1.6 Q_ju[j2,u2,7] - 1.6 Q_ju[j3,u2,7]
+   - 1.6 Q_ju[j4,u2,7] + Q_kuv[k2,u2,v1,7] + Q_kuv[k2,u2,v2,7]
+   + Q_kuv[k2,u2,v3,7] + Q_kuv[k2,u2,v4,7] + Q_kuv[k2,u2,v5,7] = 0
+ c17[u2,k2,8]: - 0.8 Q_ju[j1,u2,8] - 0.8 Q_ju[j2,u2,8] - 0.8 Q_ju[j3,u2,8]
+   - 0.8 Q_ju[j4,u2,8] + Q_kuv[k2,u2,v1,8] + Q_kuv[k2,u2,v2,8]
+   + Q_kuv[k2,u2,v3,8] + Q_kuv[k2,u2,v4,8] + Q_kuv[k2,u2,v5,8] = 0
+ c17[u2,k2,9]: - 1.6 Q_ju[j1,u2,9] - 1.6 Q_ju[j2,u2,9] - 1.6 Q_ju[j3,u2,9]
+   - 1.6 Q_ju[j4,u2,9] + Q_kuv[k2,u2,v1,9] + Q_kuv[k2,u2,v2,9]
+   + Q_kuv[k2,u2,v3,9] + Q_kuv[k2,u2,v4,9] + Q_kuv[k2,u2,v5,9] = 0
+ c17[u2,k2,10]: - 1.6 Q_ju[j1,u2,10] - 1.6 Q_ju[j2,u2,10]
+   - 1.6 Q_ju[j3,u2,10] - 1.6 Q_ju[j4,u2,10] + Q_kuv[k2,u2,v1,10]
+   + Q_kuv[k2,u2,v2,10] + Q_kuv[k2,u2,v3,10] + Q_kuv[k2,u2,v4,10]
+   + Q_kuv[k2,u2,v5,10] = 0
+ c17[u2,k2,11]: - 1.2 Q_ju[j1,u2,11] - 1.2 Q_ju[j2,u2,11]
+   - 1.2 Q_ju[j3,u2,11] - 1.2 Q_ju[j4,u2,11] + Q_kuv[k2,u2,v1,11]
+   + Q_kuv[k2,u2,v2,11] + Q_kuv[k2,u2,v3,11] + Q_kuv[k2,u2,v4,11]
+   + Q_kuv[k2,u2,v5,11] = 0
+ c17[u2,k3,0]: - 3 Q_ju[j1,u2,0] - 3 Q_ju[j2,u2,0] - 3 Q_ju[j3,u2,0]
+   - 3 Q_ju[j4,u2,0] + Q_kuv[k3,u2,v1,0] + Q_kuv[k3,u2,v2,0]
+   + Q_kuv[k3,u2,v3,0] + Q_kuv[k3,u2,v4,0] + Q_kuv[k3,u2,v5,0] = 0
+ c17[u2,k3,1]: - 3 Q_ju[j1,u2,1] - 3 Q_ju[j2,u2,1] - 3 Q_ju[j3,u2,1]
+   - 3 Q_ju[j4,u2,1] + Q_kuv[k3,u2,v1,1] + Q_kuv[k3,u2,v2,1]
+   + Q_kuv[k3,u2,v3,1] + Q_kuv[k3,u2,v4,1] + Q_kuv[k3,u2,v5,1] = 0
+ c17[u2,k3,2]: - 3 Q_ju[j1,u2,2] - 3 Q_ju[j2,u2,2] - 3 Q_ju[j3,u2,2]
+   - 3 Q_ju[j4,u2,2] + Q_kuv[k3,u2,v1,2] + Q_kuv[k3,u2,v2,2]
+   + Q_kuv[k3,u2,v3,2] + Q_kuv[k3,u2,v4,2] + Q_kuv[k3,u2,v5,2] = 0
+ c17[u2,k3,3]: - 4 Q_ju[j1,u2,3] - 4 Q_ju[j2,u2,3] - 4 Q_ju[j3,u2,3]
+   - 4 Q_ju[j4,u2,3] + Q_kuv[k3,u2,v1,3] + Q_kuv[k3,u2,v2,3]
+   + Q_kuv[k3,u2,v3,3] + Q_kuv[k3,u2,v4,3] + Q_kuv[k3,u2,v5,3] = 0
+ c17[u2,k3,4]: - 2 Q_ju[j1,u2,4] - 2 Q_ju[j2,u2,4] - 2 Q_ju[j3,u2,4]
+   - 2 Q_ju[j4,u2,4] + Q_kuv[k3,u2,v1,4] + Q_kuv[k3,u2,v2,4]
+   + Q_kuv[k3,u2,v3,4] + Q_kuv[k3,u2,v4,4] + Q_kuv[k3,u2,v5,4] = 0
+ c17[u2,k3,5]: - 2 Q_ju[j1,u2,5] - 2 Q_ju[j2,u2,5] - 2 Q_ju[j3,u2,5]
+   - 2 Q_ju[j4,u2,5] + Q_kuv[k3,u2,v1,5] + Q_kuv[k3,u2,v2,5]
+   + Q_kuv[k3,u2,v3,5] + Q_kuv[k3,u2,v4,5] + Q_kuv[k3,u2,v5,5] = 0
+ c17[u2,k3,6]: - 3 Q_ju[j1,u2,6] - 3 Q_ju[j2,u2,6] - 3 Q_ju[j3,u2,6]
+   - 3 Q_ju[j4,u2,6] + Q_kuv[k3,u2,v1,6] + Q_kuv[k3,u2,v2,6]
+   + Q_kuv[k3,u2,v3,6] + Q_kuv[k3,u2,v4,6] + Q_kuv[k3,u2,v5,6] = 0
+ c17[u2,k3,7]: - 4 Q_ju[j1,u2,7] - 4 Q_ju[j2,u2,7] - 4 Q_ju[j3,u2,7]
+   - 4 Q_ju[j4,u2,7] + Q_kuv[k3,u2,v1,7] + Q_kuv[k3,u2,v2,7]
+   + Q_kuv[k3,u2,v3,7] + Q_kuv[k3,u2,v4,7] + Q_kuv[k3,u2,v5,7] = 0
+ c17[u2,k3,8]: - 2 Q_ju[j1,u2,8] - 2 Q_ju[j2,u2,8] - 2 Q_ju[j3,u2,8]
+   - 2 Q_ju[j4,u2,8] + Q_kuv[k3,u2,v1,8] + Q_kuv[k3,u2,v2,8]
+   + Q_kuv[k3,u2,v3,8] + Q_kuv[k3,u2,v4,8] + Q_kuv[k3,u2,v5,8] = 0
+ c17[u2,k3,9]: - 4 Q_ju[j1,u2,9] - 4 Q_ju[j2,u2,9] - 4 Q_ju[j3,u2,9]
+   - 4 Q_ju[j4,u2,9] + Q_kuv[k3,u2,v1,9] + Q_kuv[k3,u2,v2,9]
+   + Q_kuv[k3,u2,v3,9] + Q_kuv[k3,u2,v4,9] + Q_kuv[k3,u2,v5,9] = 0
+ c17[u2,k3,10]: - 4 Q_ju[j1,u2,10] - 4 Q_ju[j2,u2,10] - 4 Q_ju[j3,u2,10]
+   - 4 Q_ju[j4,u2,10] + Q_kuv[k3,u2,v1,10] + Q_kuv[k3,u2,v2,10]
+   + Q_kuv[k3,u2,v3,10] + Q_kuv[k3,u2,v4,10] + Q_kuv[k3,u2,v5,10] = 0
+ c17[u2,k3,11]: - 3 Q_ju[j1,u2,11] - 3 Q_ju[j2,u2,11] - 3 Q_ju[j3,u2,11]
+   - 3 Q_ju[j4,u2,11] + Q_kuv[k3,u2,v1,11] + Q_kuv[k3,u2,v2,11]
+   + Q_kuv[k3,u2,v3,11] + Q_kuv[k3,u2,v4,11] + Q_kuv[k3,u2,v5,11] = 0
+ c17[u3,k1,0]: - 0.3 Q_ju[j1,u3,0] - 0.3 Q_ju[j2,u3,0] - 0.3 Q_ju[j3,u3,0]
+   - 0.3 Q_ju[j4,u3,0] + Q_kuv[k1,u3,v1,0] + Q_kuv[k1,u3,v2,0]
+   + Q_kuv[k1,u3,v3,0] + Q_kuv[k1,u3,v4,0] + Q_kuv[k1,u3,v5,0] = 0
+ c17[u3,k1,1]: - 0.3 Q_ju[j1,u3,1] - 0.3 Q_ju[j2,u3,1] - 0.3 Q_ju[j3,u3,1]
+   - 0.3 Q_ju[j4,u3,1] + Q_kuv[k1,u3,v1,1] + Q_kuv[k1,u3,v2,1]
+   + Q_kuv[k1,u3,v3,1] + Q_kuv[k1,u3,v4,1] + Q_kuv[k1,u3,v5,1] = 0
+ c17[u3,k1,2]: - 0.3 Q_ju[j1,u3,2] - 0.3 Q_ju[j2,u3,2] - 0.3 Q_ju[j3,u3,2]
+   - 0.3 Q_ju[j4,u3,2] + Q_kuv[k1,u3,v1,2] + Q_kuv[k1,u3,v2,2]
+   + Q_kuv[k1,u3,v3,2] + Q_kuv[k1,u3,v4,2] + Q_kuv[k1,u3,v5,2] = 0
+ c17[u3,k1,3]: - 0.4 Q_ju[j1,u3,3] - 0.4 Q_ju[j2,u3,3] - 0.4 Q_ju[j3,u3,3]
+   - 0.4 Q_ju[j4,u3,3] + Q_kuv[k1,u3,v1,3] + Q_kuv[k1,u3,v2,3]
+   + Q_kuv[k1,u3,v3,3] + Q_kuv[k1,u3,v4,3] + Q_kuv[k1,u3,v5,3] = 0
+ c17[u3,k1,4]: - 0.2 Q_ju[j1,u3,4] - 0.2 Q_ju[j2,u3,4] - 0.2 Q_ju[j3,u3,4]
+   - 0.2 Q_ju[j4,u3,4] + Q_kuv[k1,u3,v1,4] + Q_kuv[k1,u3,v2,4]
+   + Q_kuv[k1,u3,v3,4] + Q_kuv[k1,u3,v4,4] + Q_kuv[k1,u3,v5,4] = 0
+ c17[u3,k1,5]: - 0.2 Q_ju[j1,u3,5] - 0.2 Q_ju[j2,u3,5] - 0.2 Q_ju[j3,u3,5]
+   - 0.2 Q_ju[j4,u3,5] + Q_kuv[k1,u3,v1,5] + Q_kuv[k1,u3,v2,5]
+   + Q_kuv[k1,u3,v3,5] + Q_kuv[k1,u3,v4,5] + Q_kuv[k1,u3,v5,5] = 0
+ c17[u3,k1,6]: - 0.3 Q_ju[j1,u3,6] - 0.3 Q_ju[j2,u3,6] - 0.3 Q_ju[j3,u3,6]
+   - 0.3 Q_ju[j4,u3,6] + Q_kuv[k1,u3,v1,6] + Q_kuv[k1,u3,v2,6]
+   + Q_kuv[k1,u3,v3,6] + Q_kuv[k1,u3,v4,6] + Q_kuv[k1,u3,v5,6] = 0
+ c17[u3,k1,7]: - 0.4 Q_ju[j1,u3,7] - 0.4 Q_ju[j2,u3,7] - 0.4 Q_ju[j3,u3,7]
+   - 0.4 Q_ju[j4,u3,7] + Q_kuv[k1,u3,v1,7] + Q_kuv[k1,u3,v2,7]
+   + Q_kuv[k1,u3,v3,7] + Q_kuv[k1,u3,v4,7] + Q_kuv[k1,u3,v5,7] = 0
+ c17[u3,k1,8]: - 0.2 Q_ju[j1,u3,8] - 0.2 Q_ju[j2,u3,8] - 0.2 Q_ju[j3,u3,8]
+   - 0.2 Q_ju[j4,u3,8] + Q_kuv[k1,u3,v1,8] + Q_kuv[k1,u3,v2,8]
+   + Q_kuv[k1,u3,v3,8] + Q_kuv[k1,u3,v4,8] + Q_kuv[k1,u3,v5,8] = 0
+ c17[u3,k1,9]: - 0.4 Q_ju[j1,u3,9] - 0.4 Q_ju[j2,u3,9] - 0.4 Q_ju[j3,u3,9]
+   - 0.4 Q_ju[j4,u3,9] + Q_kuv[k1,u3,v1,9] + Q_kuv[k1,u3,v2,9]
+   + Q_kuv[k1,u3,v3,9] + Q_kuv[k1,u3,v4,9] + Q_kuv[k1,u3,v5,9] = 0
+ c17[u3,k1,10]: - 0.4 Q_ju[j1,u3,10] - 0.4 Q_ju[j2,u3,10]
+   - 0.4 Q_ju[j3,u3,10] - 0.4 Q_ju[j4,u3,10] + Q_kuv[k1,u3,v1,10]
+   + Q_kuv[k1,u3,v2,10] + Q_kuv[k1,u3,v3,10] + Q_kuv[k1,u3,v4,10]
+   + Q_kuv[k1,u3,v5,10] = 0
+ c17[u3,k1,11]: - 0.3 Q_ju[j1,u3,11] - 0.3 Q_ju[j2,u3,11]
+   - 0.3 Q_ju[j3,u3,11] - 0.3 Q_ju[j4,u3,11] + Q_kuv[k1,u3,v1,11]
+   + Q_kuv[k1,u3,v2,11] + Q_kuv[k1,u3,v3,11] + Q_kuv[k1,u3,v4,11]
+   + Q_kuv[k1,u3,v5,11] = 0
+ c17[u3,k2,0]: - 1.2 Q_ju[j1,u3,0] - 1.2 Q_ju[j2,u3,0] - 1.2 Q_ju[j3,u3,0]
+   - 1.2 Q_ju[j4,u3,0] + Q_kuv[k2,u3,v1,0] + Q_kuv[k2,u3,v2,0]
+   + Q_kuv[k2,u3,v3,0] + Q_kuv[k2,u3,v4,0] + Q_kuv[k2,u3,v5,0] = 0
+ c17[u3,k2,1]: - 1.2 Q_ju[j1,u3,1] - 1.2 Q_ju[j2,u3,1] - 1.2 Q_ju[j3,u3,1]
+   - 1.2 Q_ju[j4,u3,1] + Q_kuv[k2,u3,v1,1] + Q_kuv[k2,u3,v2,1]
+   + Q_kuv[k2,u3,v3,1] + Q_kuv[k2,u3,v4,1] + Q_kuv[k2,u3,v5,1] = 0
+ c17[u3,k2,2]: - 1.2 Q_ju[j1,u3,2] - 1.2 Q_ju[j2,u3,2] - 1.2 Q_ju[j3,u3,2]
+   - 1.2 Q_ju[j4,u3,2] + Q_kuv[k2,u3,v1,2] + Q_kuv[k2,u3,v2,2]
+   + Q_kuv[k2,u3,v3,2] + Q_kuv[k2,u3,v4,2] + Q_kuv[k2,u3,v5,2] = 0
+ c17[u3,k2,3]: - 1.6 Q_ju[j1,u3,3] - 1.6 Q_ju[j2,u3,3] - 1.6 Q_ju[j3,u3,3]
+   - 1.6 Q_ju[j4,u3,3] + Q_kuv[k2,u3,v1,3] + Q_kuv[k2,u3,v2,3]
+   + Q_kuv[k2,u3,v3,3] + Q_kuv[k2,u3,v4,3] + Q_kuv[k2,u3,v5,3] = 0
+ c17[u3,k2,4]: - 0.8 Q_ju[j1,u3,4] - 0.8 Q_ju[j2,u3,4] - 0.8 Q_ju[j3,u3,4]
+   - 0.8 Q_ju[j4,u3,4] + Q_kuv[k2,u3,v1,4] + Q_kuv[k2,u3,v2,4]
+   + Q_kuv[k2,u3,v3,4] + Q_kuv[k2,u3,v4,4] + Q_kuv[k2,u3,v5,4] = 0
+ c17[u3,k2,5]: - 0.8 Q_ju[j1,u3,5] - 0.8 Q_ju[j2,u3,5] - 0.8 Q_ju[j3,u3,5]
+   - 0.8 Q_ju[j4,u3,5] + Q_kuv[k2,u3,v1,5] + Q_kuv[k2,u3,v2,5]
+   + Q_kuv[k2,u3,v3,5] + Q_kuv[k2,u3,v4,5] + Q_kuv[k2,u3,v5,5] = 0
+ c17[u3,k2,6]: - 1.2 Q_ju[j1,u3,6] - 1.2 Q_ju[j2,u3,6] - 1.2 Q_ju[j3,u3,6]
+   - 1.2 Q_ju[j4,u3,6] + Q_kuv[k2,u3,v1,6] + Q_kuv[k2,u3,v2,6]
+   + Q_kuv[k2,u3,v3,6] + Q_kuv[k2,u3,v4,6] + Q_kuv[k2,u3,v5,6] = 0
+ c17[u3,k2,7]: - 1.6 Q_ju[j1,u3,7] - 1.6 Q_ju[j2,u3,7] - 1.6 Q_ju[j3,u3,7]
+   - 1.6 Q_ju[j4,u3,7] + Q_kuv[k2,u3,v1,7] + Q_kuv[k2,u3,v2,7]
+   + Q_kuv[k2,u3,v3,7] + Q_kuv[k2,u3,v4,7] + Q_kuv[k2,u3,v5,7] = 0
+ c17[u3,k2,8]: - 0.8 Q_ju[j1,u3,8] - 0.8 Q_ju[j2,u3,8] - 0.8 Q_ju[j3,u3,8]
+   - 0.8 Q_ju[j4,u3,8] + Q_kuv[k2,u3,v1,8] + Q_kuv[k2,u3,v2,8]
+   + Q_kuv[k2,u3,v3,8] + Q_kuv[k2,u3,v4,8] + Q_kuv[k2,u3,v5,8] = 0
+ c17[u3,k2,9]: - 1.6 Q_ju[j1,u3,9] - 1.6 Q_ju[j2,u3,9] - 1.6 Q_ju[j3,u3,9]
+   - 1.6 Q_ju[j4,u3,9] + Q_kuv[k2,u3,v1,9] + Q_kuv[k2,u3,v2,9]
+   + Q_kuv[k2,u3,v3,9] + Q_kuv[k2,u3,v4,9] + Q_kuv[k2,u3,v5,9] = 0
+ c17[u3,k2,10]: - 1.6 Q_ju[j1,u3,10] - 1.6 Q_ju[j2,u3,10]
+   - 1.6 Q_ju[j3,u3,10] - 1.6 Q_ju[j4,u3,10] + Q_kuv[k2,u3,v1,10]
+   + Q_kuv[k2,u3,v2,10] + Q_kuv[k2,u3,v3,10] + Q_kuv[k2,u3,v4,10]
+   + Q_kuv[k2,u3,v5,10] = 0
+ c17[u3,k2,11]: - 1.2 Q_ju[j1,u3,11] - 1.2 Q_ju[j2,u3,11]
+   - 1.2 Q_ju[j3,u3,11] - 1.2 Q_ju[j4,u3,11] + Q_kuv[k2,u3,v1,11]
+   + Q_kuv[k2,u3,v2,11] + Q_kuv[k2,u3,v3,11] + Q_kuv[k2,u3,v4,11]
+   + Q_kuv[k2,u3,v5,11] = 0
+ c17[u3,k3,0]: - 3 Q_ju[j1,u3,0] - 3 Q_ju[j2,u3,0] - 3 Q_ju[j3,u3,0]
+   - 3 Q_ju[j4,u3,0] + Q_kuv[k3,u3,v1,0] + Q_kuv[k3,u3,v2,0]
+   + Q_kuv[k3,u3,v3,0] + Q_kuv[k3,u3,v4,0] + Q_kuv[k3,u3,v5,0] = 0
+ c17[u3,k3,1]: - 3 Q_ju[j1,u3,1] - 3 Q_ju[j2,u3,1] - 3 Q_ju[j3,u3,1]
+   - 3 Q_ju[j4,u3,1] + Q_kuv[k3,u3,v1,1] + Q_kuv[k3,u3,v2,1]
+   + Q_kuv[k3,u3,v3,1] + Q_kuv[k3,u3,v4,1] + Q_kuv[k3,u3,v5,1] = 0
+ c17[u3,k3,2]: - 3 Q_ju[j1,u3,2] - 3 Q_ju[j2,u3,2] - 3 Q_ju[j3,u3,2]
+   - 3 Q_ju[j4,u3,2] + Q_kuv[k3,u3,v1,2] + Q_kuv[k3,u3,v2,2]
+   + Q_kuv[k3,u3,v3,2] + Q_kuv[k3,u3,v4,2] + Q_kuv[k3,u3,v5,2] = 0
+ c17[u3,k3,3]: - 4 Q_ju[j1,u3,3] - 4 Q_ju[j2,u3,3] - 4 Q_ju[j3,u3,3]
+   - 4 Q_ju[j4,u3,3] + Q_kuv[k3,u3,v1,3] + Q_kuv[k3,u3,v2,3]
+   + Q_kuv[k3,u3,v3,3] + Q_kuv[k3,u3,v4,3] + Q_kuv[k3,u3,v5,3] = 0
+ c17[u3,k3,4]: - 2 Q_ju[j1,u3,4] - 2 Q_ju[j2,u3,4] - 2 Q_ju[j3,u3,4]
+   - 2 Q_ju[j4,u3,4] + Q_kuv[k3,u3,v1,4] + Q_kuv[k3,u3,v2,4]
+   + Q_kuv[k3,u3,v3,4] + Q_kuv[k3,u3,v4,4] + Q_kuv[k3,u3,v5,4] = 0
+ c17[u3,k3,5]: - 2 Q_ju[j1,u3,5] - 2 Q_ju[j2,u3,5] - 2 Q_ju[j3,u3,5]
+   - 2 Q_ju[j4,u3,5] + Q_kuv[k3,u3,v1,5] + Q_kuv[k3,u3,v2,5]
+   + Q_kuv[k3,u3,v3,5] + Q_kuv[k3,u3,v4,5] + Q_kuv[k3,u3,v5,5] = 0
+ c17[u3,k3,6]: - 3 Q_ju[j1,u3,6] - 3 Q_ju[j2,u3,6] - 3 Q_ju[j3,u3,6]
+   - 3 Q_ju[j4,u3,6] + Q_kuv[k3,u3,v1,6] + Q_kuv[k3,u3,v2,6]
+   + Q_kuv[k3,u3,v3,6] + Q_kuv[k3,u3,v4,6] + Q_kuv[k3,u3,v5,6] = 0
+ c17[u3,k3,7]: - 4 Q_ju[j1,u3,7] - 4 Q_ju[j2,u3,7] - 4 Q_ju[j3,u3,7]
+   - 4 Q_ju[j4,u3,7] + Q_kuv[k3,u3,v1,7] + Q_kuv[k3,u3,v2,7]
+   + Q_kuv[k3,u3,v3,7] + Q_kuv[k3,u3,v4,7] + Q_kuv[k3,u3,v5,7] = 0
+ c17[u3,k3,8]: - 2 Q_ju[j1,u3,8] - 2 Q_ju[j2,u3,8] - 2 Q_ju[j3,u3,8]
+   - 2 Q_ju[j4,u3,8] + Q_kuv[k3,u3,v1,8] + Q_kuv[k3,u3,v2,8]
+   + Q_kuv[k3,u3,v3,8] + Q_kuv[k3,u3,v4,8] + Q_kuv[k3,u3,v5,8] = 0
+ c17[u3,k3,9]: - 4 Q_ju[j1,u3,9] - 4 Q_ju[j2,u3,9] - 4 Q_ju[j3,u3,9]
+   - 4 Q_ju[j4,u3,9] + Q_kuv[k3,u3,v1,9] + Q_kuv[k3,u3,v2,9]
+   + Q_kuv[k3,u3,v3,9] + Q_kuv[k3,u3,v4,9] + Q_kuv[k3,u3,v5,9] = 0
+ c17[u3,k3,10]: - 4 Q_ju[j1,u3,10] - 4 Q_ju[j2,u3,10] - 4 Q_ju[j3,u3,10]
+   - 4 Q_ju[j4,u3,10] + Q_kuv[k3,u3,v1,10] + Q_kuv[k3,u3,v2,10]
+   + Q_kuv[k3,u3,v3,10] + Q_kuv[k3,u3,v4,10] + Q_kuv[k3,u3,v5,10] = 0
+ c17[u3,k3,11]: - 3 Q_ju[j1,u3,11] - 3 Q_ju[j2,u3,11] - 3 Q_ju[j3,u3,11]
+   - 3 Q_ju[j4,u3,11] + Q_kuv[k3,u3,v1,11] + Q_kuv[k3,u3,v2,11]
+   + Q_kuv[k3,u3,v3,11] + Q_kuv[k3,u3,v4,11] + Q_kuv[k3,u3,v5,11] = 0
+ c17[u4,k1,0]: - 0.3 Q_ju[j1,u4,0] - 0.3 Q_ju[j2,u4,0] - 0.3 Q_ju[j3,u4,0]
+   - 0.3 Q_ju[j4,u4,0] + Q_kuv[k1,u4,v1,0] + Q_kuv[k1,u4,v2,0]
+   + Q_kuv[k1,u4,v3,0] + Q_kuv[k1,u4,v4,0] + Q_kuv[k1,u4,v5,0] = 0
+ c17[u4,k1,1]: - 0.3 Q_ju[j1,u4,1] - 0.3 Q_ju[j2,u4,1] - 0.3 Q_ju[j3,u4,1]
+   - 0.3 Q_ju[j4,u4,1] + Q_kuv[k1,u4,v1,1] + Q_kuv[k1,u4,v2,1]
+   + Q_kuv[k1,u4,v3,1] + Q_kuv[k1,u4,v4,1] + Q_kuv[k1,u4,v5,1] = 0
+ c17[u4,k1,2]: - 0.3 Q_ju[j1,u4,2] - 0.3 Q_ju[j2,u4,2] - 0.3 Q_ju[j3,u4,2]
+   - 0.3 Q_ju[j4,u4,2] + Q_kuv[k1,u4,v1,2] + Q_kuv[k1,u4,v2,2]
+   + Q_kuv[k1,u4,v3,2] + Q_kuv[k1,u4,v4,2] + Q_kuv[k1,u4,v5,2] = 0
+ c17[u4,k1,3]: - 0.4 Q_ju[j1,u4,3] - 0.4 Q_ju[j2,u4,3] - 0.4 Q_ju[j3,u4,3]
+   - 0.4 Q_ju[j4,u4,3] + Q_kuv[k1,u4,v1,3] + Q_kuv[k1,u4,v2,3]
+   + Q_kuv[k1,u4,v3,3] + Q_kuv[k1,u4,v4,3] + Q_kuv[k1,u4,v5,3] = 0
+ c17[u4,k1,4]: - 0.2 Q_ju[j1,u4,4] - 0.2 Q_ju[j2,u4,4] - 0.2 Q_ju[j3,u4,4]
+   - 0.2 Q_ju[j4,u4,4] + Q_kuv[k1,u4,v1,4] + Q_kuv[k1,u4,v2,4]
+   + Q_kuv[k1,u4,v3,4] + Q_kuv[k1,u4,v4,4] + Q_kuv[k1,u4,v5,4] = 0
+ c17[u4,k1,5]: - 0.2 Q_ju[j1,u4,5] - 0.2 Q_ju[j2,u4,5] - 0.2 Q_ju[j3,u4,5]
+   - 0.2 Q_ju[j4,u4,5] + Q_kuv[k1,u4,v1,5] + Q_kuv[k1,u4,v2,5]
+   + Q_kuv[k1,u4,v3,5] + Q_kuv[k1,u4,v4,5] + Q_kuv[k1,u4,v5,5] = 0
+ c17[u4,k1,6]: - 0.3 Q_ju[j1,u4,6] - 0.3 Q_ju[j2,u4,6] - 0.3 Q_ju[j3,u4,6]
+   - 0.3 Q_ju[j4,u4,6] + Q_kuv[k1,u4,v1,6] + Q_kuv[k1,u4,v2,6]
+   + Q_kuv[k1,u4,v3,6] + Q_kuv[k1,u4,v4,6] + Q_kuv[k1,u4,v5,6] = 0
+ c17[u4,k1,7]: - 0.4 Q_ju[j1,u4,7] - 0.4 Q_ju[j2,u4,7] - 0.4 Q_ju[j3,u4,7]
+   - 0.4 Q_ju[j4,u4,7] + Q_kuv[k1,u4,v1,7] + Q_kuv[k1,u4,v2,7]
+   + Q_kuv[k1,u4,v3,7] + Q_kuv[k1,u4,v4,7] + Q_kuv[k1,u4,v5,7] = 0
+ c17[u4,k1,8]: - 0.2 Q_ju[j1,u4,8] - 0.2 Q_ju[j2,u4,8] - 0.2 Q_ju[j3,u4,8]
+   - 0.2 Q_ju[j4,u4,8] + Q_kuv[k1,u4,v1,8] + Q_kuv[k1,u4,v2,8]
+   + Q_kuv[k1,u4,v3,8] + Q_kuv[k1,u4,v4,8] + Q_kuv[k1,u4,v5,8] = 0
+ c17[u4,k1,9]: - 0.4 Q_ju[j1,u4,9] - 0.4 Q_ju[j2,u4,9] - 0.4 Q_ju[j3,u4,9]
+   - 0.4 Q_ju[j4,u4,9] + Q_kuv[k1,u4,v1,9] + Q_kuv[k1,u4,v2,9]
+   + Q_kuv[k1,u4,v3,9] + Q_kuv[k1,u4,v4,9] + Q_kuv[k1,u4,v5,9] = 0
+ c17[u4,k1,10]: - 0.4 Q_ju[j1,u4,10] - 0.4 Q_ju[j2,u4,10]
+   - 0.4 Q_ju[j3,u4,10] - 0.4 Q_ju[j4,u4,10] + Q_kuv[k1,u4,v1,10]
+   + Q_kuv[k1,u4,v2,10] + Q_kuv[k1,u4,v3,10] + Q_kuv[k1,u4,v4,10]
+   + Q_kuv[k1,u4,v5,10] = 0
+ c17[u4,k1,11]: - 0.3 Q_ju[j1,u4,11] - 0.3 Q_ju[j2,u4,11]
+   - 0.3 Q_ju[j3,u4,11] - 0.3 Q_ju[j4,u4,11] + Q_kuv[k1,u4,v1,11]
+   + Q_kuv[k1,u4,v2,11] + Q_kuv[k1,u4,v3,11] + Q_kuv[k1,u4,v4,11]
+   + Q_kuv[k1,u4,v5,11] = 0
+ c17[u4,k2,0]: - 1.2 Q_ju[j1,u4,0] - 1.2 Q_ju[j2,u4,0] - 1.2 Q_ju[j3,u4,0]
+   - 1.2 Q_ju[j4,u4,0] + Q_kuv[k2,u4,v1,0] + Q_kuv[k2,u4,v2,0]
+   + Q_kuv[k2,u4,v3,0] + Q_kuv[k2,u4,v4,0] + Q_kuv[k2,u4,v5,0] = 0
+ c17[u4,k2,1]: - 1.2 Q_ju[j1,u4,1] - 1.2 Q_ju[j2,u4,1] - 1.2 Q_ju[j3,u4,1]
+   - 1.2 Q_ju[j4,u4,1] + Q_kuv[k2,u4,v1,1] + Q_kuv[k2,u4,v2,1]
+   + Q_kuv[k2,u4,v3,1] + Q_kuv[k2,u4,v4,1] + Q_kuv[k2,u4,v5,1] = 0
+ c17[u4,k2,2]: - 1.2 Q_ju[j1,u4,2] - 1.2 Q_ju[j2,u4,2] - 1.2 Q_ju[j3,u4,2]
+   - 1.2 Q_ju[j4,u4,2] + Q_kuv[k2,u4,v1,2] + Q_kuv[k2,u4,v2,2]
+   + Q_kuv[k2,u4,v3,2] + Q_kuv[k2,u4,v4,2] + Q_kuv[k2,u4,v5,2] = 0
+ c17[u4,k2,3]: - 1.6 Q_ju[j1,u4,3] - 1.6 Q_ju[j2,u4,3] - 1.6 Q_ju[j3,u4,3]
+   - 1.6 Q_ju[j4,u4,3] + Q_kuv[k2,u4,v1,3] + Q_kuv[k2,u4,v2,3]
+   + Q_kuv[k2,u4,v3,3] + Q_kuv[k2,u4,v4,3] + Q_kuv[k2,u4,v5,3] = 0
+ c17[u4,k2,4]: - 0.8 Q_ju[j1,u4,4] - 0.8 Q_ju[j2,u4,4] - 0.8 Q_ju[j3,u4,4]
+   - 0.8 Q_ju[j4,u4,4] + Q_kuv[k2,u4,v1,4] + Q_kuv[k2,u4,v2,4]
+   + Q_kuv[k2,u4,v3,4] + Q_kuv[k2,u4,v4,4] + Q_kuv[k2,u4,v5,4] = 0
+ c17[u4,k2,5]: - 0.8 Q_ju[j1,u4,5] - 0.8 Q_ju[j2,u4,5] - 0.8 Q_ju[j3,u4,5]
+   - 0.8 Q_ju[j4,u4,5] + Q_kuv[k2,u4,v1,5] + Q_kuv[k2,u4,v2,5]
+   + Q_kuv[k2,u4,v3,5] + Q_kuv[k2,u4,v4,5] + Q_kuv[k2,u4,v5,5] = 0
+ c17[u4,k2,6]: - 1.2 Q_ju[j1,u4,6] - 1.2 Q_ju[j2,u4,6] - 1.2 Q_ju[j3,u4,6]
+   - 1.2 Q_ju[j4,u4,6] + Q_kuv[k2,u4,v1,6] + Q_kuv[k2,u4,v2,6]
+   + Q_kuv[k2,u4,v3,6] + Q_kuv[k2,u4,v4,6] + Q_kuv[k2,u4,v5,6] = 0
+ c17[u4,k2,7]: - 1.6 Q_ju[j1,u4,7] - 1.6 Q_ju[j2,u4,7] - 1.6 Q_ju[j3,u4,7]
+   - 1.6 Q_ju[j4,u4,7] + Q_kuv[k2,u4,v1,7] + Q_kuv[k2,u4,v2,7]
+   + Q_kuv[k2,u4,v3,7] + Q_kuv[k2,u4,v4,7] + Q_kuv[k2,u4,v5,7] = 0
+ c17[u4,k2,8]: - 0.8 Q_ju[j1,u4,8] - 0.8 Q_ju[j2,u4,8] - 0.8 Q_ju[j3,u4,8]
+   - 0.8 Q_ju[j4,u4,8] + Q_kuv[k2,u4,v1,8] + Q_kuv[k2,u4,v2,8]
+   + Q_kuv[k2,u4,v3,8] + Q_kuv[k2,u4,v4,8] + Q_kuv[k2,u4,v5,8] = 0
+ c17[u4,k2,9]: - 1.6 Q_ju[j1,u4,9] - 1.6 Q_ju[j2,u4,9] - 1.6 Q_ju[j3,u4,9]
+   - 1.6 Q_ju[j4,u4,9] + Q_kuv[k2,u4,v1,9] + Q_kuv[k2,u4,v2,9]
+   + Q_kuv[k2,u4,v3,9] + Q_kuv[k2,u4,v4,9] + Q_kuv[k2,u4,v5,9] = 0
+ c17[u4,k2,10]: - 1.6 Q_ju[j1,u4,10] - 1.6 Q_ju[j2,u4,10]
+   - 1.6 Q_ju[j3,u4,10] - 1.6 Q_ju[j4,u4,10] + Q_kuv[k2,u4,v1,10]
+   + Q_kuv[k2,u4,v2,10] + Q_kuv[k2,u4,v3,10] + Q_kuv[k2,u4,v4,10]
+   + Q_kuv[k2,u4,v5,10] = 0
+ c17[u4,k2,11]: - 1.2 Q_ju[j1,u4,11] - 1.2 Q_ju[j2,u4,11]
+   - 1.2 Q_ju[j3,u4,11] - 1.2 Q_ju[j4,u4,11] + Q_kuv[k2,u4,v1,11]
+   + Q_kuv[k2,u4,v2,11] + Q_kuv[k2,u4,v3,11] + Q_kuv[k2,u4,v4,11]
+   + Q_kuv[k2,u4,v5,11] = 0
+ c17[u4,k3,0]: - 3 Q_ju[j1,u4,0] - 3 Q_ju[j2,u4,0] - 3 Q_ju[j3,u4,0]
+   - 3 Q_ju[j4,u4,0] + Q_kuv[k3,u4,v1,0] + Q_kuv[k3,u4,v2,0]
+   + Q_kuv[k3,u4,v3,0] + Q_kuv[k3,u4,v4,0] + Q_kuv[k3,u4,v5,0] = 0
+ c17[u4,k3,1]: - 3 Q_ju[j1,u4,1] - 3 Q_ju[j2,u4,1] - 3 Q_ju[j3,u4,1]
+   - 3 Q_ju[j4,u4,1] + Q_kuv[k3,u4,v1,1] + Q_kuv[k3,u4,v2,1]
+   + Q_kuv[k3,u4,v3,1] + Q_kuv[k3,u4,v4,1] + Q_kuv[k3,u4,v5,1] = 0
+ c17[u4,k3,2]: - 3 Q_ju[j1,u4,2] - 3 Q_ju[j2,u4,2] - 3 Q_ju[j3,u4,2]
+   - 3 Q_ju[j4,u4,2] + Q_kuv[k3,u4,v1,2] + Q_kuv[k3,u4,v2,2]
+   + Q_kuv[k3,u4,v3,2] + Q_kuv[k3,u4,v4,2] + Q_kuv[k3,u4,v5,2] = 0
+ c17[u4,k3,3]: - 4 Q_ju[j1,u4,3] - 4 Q_ju[j2,u4,3] - 4 Q_ju[j3,u4,3]
+   - 4 Q_ju[j4,u4,3] + Q_kuv[k3,u4,v1,3] + Q_kuv[k3,u4,v2,3]
+   + Q_kuv[k3,u4,v3,3] + Q_kuv[k3,u4,v4,3] + Q_kuv[k3,u4,v5,3] = 0
+ c17[u4,k3,4]: - 2 Q_ju[j1,u4,4] - 2 Q_ju[j2,u4,4] - 2 Q_ju[j3,u4,4]
+   - 2 Q_ju[j4,u4,4] + Q_kuv[k3,u4,v1,4] + Q_kuv[k3,u4,v2,4]
+   + Q_kuv[k3,u4,v3,4] + Q_kuv[k3,u4,v4,4] + Q_kuv[k3,u4,v5,4] = 0
+ c17[u4,k3,5]: - 2 Q_ju[j1,u4,5] - 2 Q_ju[j2,u4,5] - 2 Q_ju[j3,u4,5]
+   - 2 Q_ju[j4,u4,5] + Q_kuv[k3,u4,v1,5] + Q_kuv[k3,u4,v2,5]
+   + Q_kuv[k3,u4,v3,5] + Q_kuv[k3,u4,v4,5] + Q_kuv[k3,u4,v5,5] = 0
+ c17[u4,k3,6]: - 3 Q_ju[j1,u4,6] - 3 Q_ju[j2,u4,6] - 3 Q_ju[j3,u4,6]
+   - 3 Q_ju[j4,u4,6] + Q_kuv[k3,u4,v1,6] + Q_kuv[k3,u4,v2,6]
+   + Q_kuv[k3,u4,v3,6] + Q_kuv[k3,u4,v4,6] + Q_kuv[k3,u4,v5,6] = 0
+ c17[u4,k3,7]: - 4 Q_ju[j1,u4,7] - 4 Q_ju[j2,u4,7] - 4 Q_ju[j3,u4,7]
+   - 4 Q_ju[j4,u4,7] + Q_kuv[k3,u4,v1,7] + Q_kuv[k3,u4,v2,7]
+   + Q_kuv[k3,u4,v3,7] + Q_kuv[k3,u4,v4,7] + Q_kuv[k3,u4,v5,7] = 0
+ c17[u4,k3,8]: - 2 Q_ju[j1,u4,8] - 2 Q_ju[j2,u4,8] - 2 Q_ju[j3,u4,8]
+   - 2 Q_ju[j4,u4,8] + Q_kuv[k3,u4,v1,8] + Q_kuv[k3,u4,v2,8]
+   + Q_kuv[k3,u4,v3,8] + Q_kuv[k3,u4,v4,8] + Q_kuv[k3,u4,v5,8] = 0
+ c17[u4,k3,9]: - 4 Q_ju[j1,u4,9] - 4 Q_ju[j2,u4,9] - 4 Q_ju[j3,u4,9]
+   - 4 Q_ju[j4,u4,9] + Q_kuv[k3,u4,v1,9] + Q_kuv[k3,u4,v2,9]
+   + Q_kuv[k3,u4,v3,9] + Q_kuv[k3,u4,v4,9] + Q_kuv[k3,u4,v5,9] = 0
+ c17[u4,k3,10]: - 4 Q_ju[j1,u4,10] - 4 Q_ju[j2,u4,10] - 4 Q_ju[j3,u4,10]
+   - 4 Q_ju[j4,u4,10] + Q_kuv[k3,u4,v1,10] + Q_kuv[k3,u4,v2,10]
+   + Q_kuv[k3,u4,v3,10] + Q_kuv[k3,u4,v4,10] + Q_kuv[k3,u4,v5,10] = 0
+ c17[u4,k3,11]: - 3 Q_ju[j1,u4,11] - 3 Q_ju[j2,u4,11] - 3 Q_ju[j3,u4,11]
+   - 3 Q_ju[j4,u4,11] + Q_kuv[k3,u4,v1,11] + Q_kuv[k3,u4,v2,11]
+   + Q_kuv[k3,u4,v3,11] + Q_kuv[k3,u4,v4,11] + Q_kuv[k3,u4,v5,11] = 0
+ c17[u5,k1,0]: - 0.3 Q_ju[j1,u5,0] - 0.3 Q_ju[j2,u5,0] - 0.3 Q_ju[j3,u5,0]
+   - 0.3 Q_ju[j4,u5,0] + Q_kuv[k1,u5,v1,0] + Q_kuv[k1,u5,v2,0]
+   + Q_kuv[k1,u5,v3,0] + Q_kuv[k1,u5,v4,0] + Q_kuv[k1,u5,v5,0] = 0
+ c17[u5,k1,1]: - 0.3 Q_ju[j1,u5,1] - 0.3 Q_ju[j2,u5,1] - 0.3 Q_ju[j3,u5,1]
+   - 0.3 Q_ju[j4,u5,1] + Q_kuv[k1,u5,v1,1] + Q_kuv[k1,u5,v2,1]
+   + Q_kuv[k1,u5,v3,1] + Q_kuv[k1,u5,v4,1] + Q_kuv[k1,u5,v5,1] = 0
+ c17[u5,k1,2]: - 0.3 Q_ju[j1,u5,2] - 0.3 Q_ju[j2,u5,2] - 0.3 Q_ju[j3,u5,2]
+   - 0.3 Q_ju[j4,u5,2] + Q_kuv[k1,u5,v1,2] + Q_kuv[k1,u5,v2,2]
+   + Q_kuv[k1,u5,v3,2] + Q_kuv[k1,u5,v4,2] + Q_kuv[k1,u5,v5,2] = 0
+ c17[u5,k1,3]: - 0.4 Q_ju[j1,u5,3] - 0.4 Q_ju[j2,u5,3] - 0.4 Q_ju[j3,u5,3]
+   - 0.4 Q_ju[j4,u5,3] + Q_kuv[k1,u5,v1,3] + Q_kuv[k1,u5,v2,3]
+   + Q_kuv[k1,u5,v3,3] + Q_kuv[k1,u5,v4,3] + Q_kuv[k1,u5,v5,3] = 0
+ c17[u5,k1,4]: - 0.2 Q_ju[j1,u5,4] - 0.2 Q_ju[j2,u5,4] - 0.2 Q_ju[j3,u5,4]
+   - 0.2 Q_ju[j4,u5,4] + Q_kuv[k1,u5,v1,4] + Q_kuv[k1,u5,v2,4]
+   + Q_kuv[k1,u5,v3,4] + Q_kuv[k1,u5,v4,4] + Q_kuv[k1,u5,v5,4] = 0
+ c17[u5,k1,5]: - 0.2 Q_ju[j1,u5,5] - 0.2 Q_ju[j2,u5,5] - 0.2 Q_ju[j3,u5,5]
+   - 0.2 Q_ju[j4,u5,5] + Q_kuv[k1,u5,v1,5] + Q_kuv[k1,u5,v2,5]
+   + Q_kuv[k1,u5,v3,5] + Q_kuv[k1,u5,v4,5] + Q_kuv[k1,u5,v5,5] = 0
+ c17[u5,k1,6]: - 0.3 Q_ju[j1,u5,6] - 0.3 Q_ju[j2,u5,6] - 0.3 Q_ju[j3,u5,6]
+   - 0.3 Q_ju[j4,u5,6] + Q_kuv[k1,u5,v1,6] + Q_kuv[k1,u5,v2,6]
+   + Q_kuv[k1,u5,v3,6] + Q_kuv[k1,u5,v4,6] + Q_kuv[k1,u5,v5,6] = 0
+ c17[u5,k1,7]: - 0.4 Q_ju[j1,u5,7] - 0.4 Q_ju[j2,u5,7] - 0.4 Q_ju[j3,u5,7]
+   - 0.4 Q_ju[j4,u5,7] + Q_kuv[k1,u5,v1,7] + Q_kuv[k1,u5,v2,7]
+   + Q_kuv[k1,u5,v3,7] + Q_kuv[k1,u5,v4,7] + Q_kuv[k1,u5,v5,7] = 0
+ c17[u5,k1,8]: - 0.2 Q_ju[j1,u5,8] - 0.2 Q_ju[j2,u5,8] - 0.2 Q_ju[j3,u5,8]
+   - 0.2 Q_ju[j4,u5,8] + Q_kuv[k1,u5,v1,8] + Q_kuv[k1,u5,v2,8]
+   + Q_kuv[k1,u5,v3,8] + Q_kuv[k1,u5,v4,8] + Q_kuv[k1,u5,v5,8] = 0
+ c17[u5,k1,9]: - 0.4 Q_ju[j1,u5,9] - 0.4 Q_ju[j2,u5,9] - 0.4 Q_ju[j3,u5,9]
+   - 0.4 Q_ju[j4,u5,9] + Q_kuv[k1,u5,v1,9] + Q_kuv[k1,u5,v2,9]
+   + Q_kuv[k1,u5,v3,9] + Q_kuv[k1,u5,v4,9] + Q_kuv[k1,u5,v5,9] = 0
+ c17[u5,k1,10]: - 0.4 Q_ju[j1,u5,10] - 0.4 Q_ju[j2,u5,10]
+   - 0.4 Q_ju[j3,u5,10] - 0.4 Q_ju[j4,u5,10] + Q_kuv[k1,u5,v1,10]
+   + Q_kuv[k1,u5,v2,10] + Q_kuv[k1,u5,v3,10] + Q_kuv[k1,u5,v4,10]
+   + Q_kuv[k1,u5,v5,10] = 0
+ c17[u5,k1,11]: - 0.3 Q_ju[j1,u5,11] - 0.3 Q_ju[j2,u5,11]
+   - 0.3 Q_ju[j3,u5,11] - 0.3 Q_ju[j4,u5,11] + Q_kuv[k1,u5,v1,11]
+   + Q_kuv[k1,u5,v2,11] + Q_kuv[k1,u5,v3,11] + Q_kuv[k1,u5,v4,11]
+   + Q_kuv[k1,u5,v5,11] = 0
+ c17[u5,k2,0]: - 1.2 Q_ju[j1,u5,0] - 1.2 Q_ju[j2,u5,0] - 1.2 Q_ju[j3,u5,0]
+   - 1.2 Q_ju[j4,u5,0] + Q_kuv[k2,u5,v1,0] + Q_kuv[k2,u5,v2,0]
+   + Q_kuv[k2,u5,v3,0] + Q_kuv[k2,u5,v4,0] + Q_kuv[k2,u5,v5,0] = 0
+ c17[u5,k2,1]: - 1.2 Q_ju[j1,u5,1] - 1.2 Q_ju[j2,u5,1] - 1.2 Q_ju[j3,u5,1]
+   - 1.2 Q_ju[j4,u5,1] + Q_kuv[k2,u5,v1,1] + Q_kuv[k2,u5,v2,1]
+   + Q_kuv[k2,u5,v3,1] + Q_kuv[k2,u5,v4,1] + Q_kuv[k2,u5,v5,1] = 0
+ c17[u5,k2,2]: - 1.2 Q_ju[j1,u5,2] - 1.2 Q_ju[j2,u5,2] - 1.2 Q_ju[j3,u5,2]
+   - 1.2 Q_ju[j4,u5,2] + Q_kuv[k2,u5,v1,2] + Q_kuv[k2,u5,v2,2]
+   + Q_kuv[k2,u5,v3,2] + Q_kuv[k2,u5,v4,2] + Q_kuv[k2,u5,v5,2] = 0
+ c17[u5,k2,3]: - 1.6 Q_ju[j1,u5,3] - 1.6 Q_ju[j2,u5,3] - 1.6 Q_ju[j3,u5,3]
+   - 1.6 Q_ju[j4,u5,3] + Q_kuv[k2,u5,v1,3] + Q_kuv[k2,u5,v2,3]
+   + Q_kuv[k2,u5,v3,3] + Q_kuv[k2,u5,v4,3] + Q_kuv[k2,u5,v5,3] = 0
+ c17[u5,k2,4]: - 0.8 Q_ju[j1,u5,4] - 0.8 Q_ju[j2,u5,4] - 0.8 Q_ju[j3,u5,4]
+   - 0.8 Q_ju[j4,u5,4] + Q_kuv[k2,u5,v1,4] + Q_kuv[k2,u5,v2,4]
+   + Q_kuv[k2,u5,v3,4] + Q_kuv[k2,u5,v4,4] + Q_kuv[k2,u5,v5,4] = 0
+ c17[u5,k2,5]: - 0.8 Q_ju[j1,u5,5] - 0.8 Q_ju[j2,u5,5] - 0.8 Q_ju[j3,u5,5]
+   - 0.8 Q_ju[j4,u5,5] + Q_kuv[k2,u5,v1,5] + Q_kuv[k2,u5,v2,5]
+   + Q_kuv[k2,u5,v3,5] + Q_kuv[k2,u5,v4,5] + Q_kuv[k2,u5,v5,5] = 0
+ c17[u5,k2,6]: - 1.2 Q_ju[j1,u5,6] - 1.2 Q_ju[j2,u5,6] - 1.2 Q_ju[j3,u5,6]
+   - 1.2 Q_ju[j4,u5,6] + Q_kuv[k2,u5,v1,6] + Q_kuv[k2,u5,v2,6]
+   + Q_kuv[k2,u5,v3,6] + Q_kuv[k2,u5,v4,6] + Q_kuv[k2,u5,v5,6] = 0
+ c17[u5,k2,7]: - 1.6 Q_ju[j1,u5,7] - 1.6 Q_ju[j2,u5,7] - 1.6 Q_ju[j3,u5,7]
+   - 1.6 Q_ju[j4,u5,7] + Q_kuv[k2,u5,v1,7] + Q_kuv[k2,u5,v2,7]
+   + Q_kuv[k2,u5,v3,7] + Q_kuv[k2,u5,v4,7] + Q_kuv[k2,u5,v5,7] = 0
+ c17[u5,k2,8]: - 0.8 Q_ju[j1,u5,8] - 0.8 Q_ju[j2,u5,8] - 0.8 Q_ju[j3,u5,8]
+   - 0.8 Q_ju[j4,u5,8] + Q_kuv[k2,u5,v1,8] + Q_kuv[k2,u5,v2,8]
+   + Q_kuv[k2,u5,v3,8] + Q_kuv[k2,u5,v4,8] + Q_kuv[k2,u5,v5,8] = 0
+ c17[u5,k2,9]: - 1.6 Q_ju[j1,u5,9] - 1.6 Q_ju[j2,u5,9] - 1.6 Q_ju[j3,u5,9]
+   - 1.6 Q_ju[j4,u5,9] + Q_kuv[k2,u5,v1,9] + Q_kuv[k2,u5,v2,9]
+   + Q_kuv[k2,u5,v3,9] + Q_kuv[k2,u5,v4,9] + Q_kuv[k2,u5,v5,9] = 0
+ c17[u5,k2,10]: - 1.6 Q_ju[j1,u5,10] - 1.6 Q_ju[j2,u5,10]
+   - 1.6 Q_ju[j3,u5,10] - 1.6 Q_ju[j4,u5,10] + Q_kuv[k2,u5,v1,10]
+   + Q_kuv[k2,u5,v2,10] + Q_kuv[k2,u5,v3,10] + Q_kuv[k2,u5,v4,10]
+   + Q_kuv[k2,u5,v5,10] = 0
+ c17[u5,k2,11]: - 1.2 Q_ju[j1,u5,11] - 1.2 Q_ju[j2,u5,11]
+   - 1.2 Q_ju[j3,u5,11] - 1.2 Q_ju[j4,u5,11] + Q_kuv[k2,u5,v1,11]
+   + Q_kuv[k2,u5,v2,11] + Q_kuv[k2,u5,v3,11] + Q_kuv[k2,u5,v4,11]
+   + Q_kuv[k2,u5,v5,11] = 0
+ c17[u5,k3,0]: - 3 Q_ju[j1,u5,0] - 3 Q_ju[j2,u5,0] - 3 Q_ju[j3,u5,0]
+   - 3 Q_ju[j4,u5,0] + Q_kuv[k3,u5,v1,0] + Q_kuv[k3,u5,v2,0]
+   + Q_kuv[k3,u5,v3,0] + Q_kuv[k3,u5,v4,0] + Q_kuv[k3,u5,v5,0] = 0
+ c17[u5,k3,1]: - 3 Q_ju[j1,u5,1] - 3 Q_ju[j2,u5,1] - 3 Q_ju[j3,u5,1]
+   - 3 Q_ju[j4,u5,1] + Q_kuv[k3,u5,v1,1] + Q_kuv[k3,u5,v2,1]
+   + Q_kuv[k3,u5,v3,1] + Q_kuv[k3,u5,v4,1] + Q_kuv[k3,u5,v5,1] = 0
+ c17[u5,k3,2]: - 3 Q_ju[j1,u5,2] - 3 Q_ju[j2,u5,2] - 3 Q_ju[j3,u5,2]
+   - 3 Q_ju[j4,u5,2] + Q_kuv[k3,u5,v1,2] + Q_kuv[k3,u5,v2,2]
+   + Q_kuv[k3,u5,v3,2] + Q_kuv[k3,u5,v4,2] + Q_kuv[k3,u5,v5,2] = 0
+ c17[u5,k3,3]: - 4 Q_ju[j1,u5,3] - 4 Q_ju[j2,u5,3] - 4 Q_ju[j3,u5,3]
+   - 4 Q_ju[j4,u5,3] + Q_kuv[k3,u5,v1,3] + Q_kuv[k3,u5,v2,3]
+   + Q_kuv[k3,u5,v3,3] + Q_kuv[k3,u5,v4,3] + Q_kuv[k3,u5,v5,3] = 0
+ c17[u5,k3,4]: - 2 Q_ju[j1,u5,4] - 2 Q_ju[j2,u5,4] - 2 Q_ju[j3,u5,4]
+   - 2 Q_ju[j4,u5,4] + Q_kuv[k3,u5,v1,4] + Q_kuv[k3,u5,v2,4]
+   + Q_kuv[k3,u5,v3,4] + Q_kuv[k3,u5,v4,4] + Q_kuv[k3,u5,v5,4] = 0
+ c17[u5,k3,5]: - 2 Q_ju[j1,u5,5] - 2 Q_ju[j2,u5,5] - 2 Q_ju[j3,u5,5]
+   - 2 Q_ju[j4,u5,5] + Q_kuv[k3,u5,v1,5] + Q_kuv[k3,u5,v2,5]
+   + Q_kuv[k3,u5,v3,5] + Q_kuv[k3,u5,v4,5] + Q_kuv[k3,u5,v5,5] = 0
+ c17[u5,k3,6]: - 3 Q_ju[j1,u5,6] - 3 Q_ju[j2,u5,6] - 3 Q_ju[j3,u5,6]
+   - 3 Q_ju[j4,u5,6] + Q_kuv[k3,u5,v1,6] + Q_kuv[k3,u5,v2,6]
+   + Q_kuv[k3,u5,v3,6] + Q_kuv[k3,u5,v4,6] + Q_kuv[k3,u5,v5,6] = 0
+ c17[u5,k3,7]: - 4 Q_ju[j1,u5,7] - 4 Q_ju[j2,u5,7] - 4 Q_ju[j3,u5,7]
+   - 4 Q_ju[j4,u5,7] + Q_kuv[k3,u5,v1,7] + Q_kuv[k3,u5,v2,7]
+   + Q_kuv[k3,u5,v3,7] + Q_kuv[k3,u5,v4,7] + Q_kuv[k3,u5,v5,7] = 0
+ c17[u5,k3,8]: - 2 Q_ju[j1,u5,8] - 2 Q_ju[j2,u5,8] - 2 Q_ju[j3,u5,8]
+   - 2 Q_ju[j4,u5,8] + Q_kuv[k3,u5,v1,8] + Q_kuv[k3,u5,v2,8]
+   + Q_kuv[k3,u5,v3,8] + Q_kuv[k3,u5,v4,8] + Q_kuv[k3,u5,v5,8] = 0
+ c17[u5,k3,9]: - 4 Q_ju[j1,u5,9] - 4 Q_ju[j2,u5,9] - 4 Q_ju[j3,u5,9]
+   - 4 Q_ju[j4,u5,9] + Q_kuv[k3,u5,v1,9] + Q_kuv[k3,u5,v2,9]
+   + Q_kuv[k3,u5,v3,9] + Q_kuv[k3,u5,v4,9] + Q_kuv[k3,u5,v5,9] = 0
+ c17[u5,k3,10]: - 4 Q_ju[j1,u5,10] - 4 Q_ju[j2,u5,10] - 4 Q_ju[j3,u5,10]
+   - 4 Q_ju[j4,u5,10] + Q_kuv[k3,u5,v1,10] + Q_kuv[k3,u5,v2,10]
+   + Q_kuv[k3,u5,v3,10] + Q_kuv[k3,u5,v4,10] + Q_kuv[k3,u5,v5,10] = 0
+ c17[u5,k3,11]: - 3 Q_ju[j1,u5,11] - 3 Q_ju[j2,u5,11] - 3 Q_ju[j3,u5,11]
+   - 3 Q_ju[j4,u5,11] + Q_kuv[k3,u5,v1,11] + Q_kuv[k3,u5,v2,11]
+   + Q_kuv[k3,u5,v3,11] + Q_kuv[k3,u5,v4,11] + Q_kuv[k3,u5,v5,11] = 0
+ c18[u1,k1,0]: - 0.1 Q_ju[j1,u1,0] - 0.1 Q_ju[j2,u1,0] - 0.1 Q_ju[j3,u1,0]
+   - 0.1 Q_ju[j4,u1,0] + Q_kuw[k1,u1,w1,0] + Q_kuw[k1,u1,w2,0]
+   + Q_kuw[k1,u1,w3,0] + Q_kuw[k1,u1,w4,0] + Q_kuw[k1,u1,w5,0] = 0
+ c18[u1,k1,1]: - 0.3 Q_ju[j1,u1,1] - 0.3 Q_ju[j2,u1,1] - 0.3 Q_ju[j3,u1,1]
+   - 0.3 Q_ju[j4,u1,1] + Q_kuw[k1,u1,w1,1] + Q_kuw[k1,u1,w2,1]
+   + Q_kuw[k1,u1,w3,1] + Q_kuw[k1,u1,w4,1] + Q_kuw[k1,u1,w5,1] = 0
+ c18[u1,k1,2]: - 0.1 Q_ju[j1,u1,2] - 0.1 Q_ju[j2,u1,2] - 0.1 Q_ju[j3,u1,2]
+   - 0.1 Q_ju[j4,u1,2] + Q_kuw[k1,u1,w1,2] + Q_kuw[k1,u1,w2,2]
+   + Q_kuw[k1,u1,w3,2] + Q_kuw[k1,u1,w4,2] + Q_kuw[k1,u1,w5,2] = 0
+ c18[u1,k1,3]: - 0.2 Q_ju[j1,u1,3] - 0.2 Q_ju[j2,u1,3] - 0.2 Q_ju[j3,u1,3]
+   - 0.2 Q_ju[j4,u1,3] + Q_kuw[k1,u1,w1,3] + Q_kuw[k1,u1,w2,3]
+   + Q_kuw[k1,u1,w3,3] + Q_kuw[k1,u1,w4,3] + Q_kuw[k1,u1,w5,3] = 0
+ c18[u1,k1,4]: - 0.2 Q_ju[j1,u1,4] - 0.2 Q_ju[j2,u1,4] - 0.2 Q_ju[j3,u1,4]
+   - 0.2 Q_ju[j4,u1,4] + Q_kuw[k1,u1,w1,4] + Q_kuw[k1,u1,w2,4]
+   + Q_kuw[k1,u1,w3,4] + Q_kuw[k1,u1,w4,4] + Q_kuw[k1,u1,w5,4] = 0
+ c18[u1,k1,5]: - 0.3 Q_ju[j1,u1,5] - 0.3 Q_ju[j2,u1,5] - 0.3 Q_ju[j3,u1,5]
+   - 0.3 Q_ju[j4,u1,5] + Q_kuw[k1,u1,w1,5] + Q_kuw[k1,u1,w2,5]
+   + Q_kuw[k1,u1,w3,5] + Q_kuw[k1,u1,w4,5] + Q_kuw[k1,u1,w5,5] = 0
+ c18[u1,k1,6]: - 0.2 Q_ju[j1,u1,6] - 0.2 Q_ju[j2,u1,6] - 0.2 Q_ju[j3,u1,6]
+   - 0.2 Q_ju[j4,u1,6] + Q_kuw[k1,u1,w1,6] + Q_kuw[k1,u1,w2,6]
+   + Q_kuw[k1,u1,w3,6] + Q_kuw[k1,u1,w4,6] + Q_kuw[k1,u1,w5,6] = 0
+ c18[u1,k1,7]: - 0.1 Q_ju[j1,u1,7] - 0.1 Q_ju[j2,u1,7] - 0.1 Q_ju[j3,u1,7]
+   - 0.1 Q_ju[j4,u1,7] + Q_kuw[k1,u1,w1,7] + Q_kuw[k1,u1,w2,7]
+   + Q_kuw[k1,u1,w3,7] + Q_kuw[k1,u1,w4,7] + Q_kuw[k1,u1,w5,7] = 0
+ c18[u1,k1,8]: - 0.2 Q_ju[j1,u1,8] - 0.2 Q_ju[j2,u1,8] - 0.2 Q_ju[j3,u1,8]
+   - 0.2 Q_ju[j4,u1,8] + Q_kuw[k1,u1,w1,8] + Q_kuw[k1,u1,w2,8]
+   + Q_kuw[k1,u1,w3,8] + Q_kuw[k1,u1,w4,8] + Q_kuw[k1,u1,w5,8] = 0
+ c18[u1,k1,9]: - 0.1 Q_ju[j1,u1,9] - 0.1 Q_ju[j2,u1,9] - 0.1 Q_ju[j3,u1,9]
+   - 0.1 Q_ju[j4,u1,9] + Q_kuw[k1,u1,w1,9] + Q_kuw[k1,u1,w2,9]
+   + Q_kuw[k1,u1,w3,9] + Q_kuw[k1,u1,w4,9] + Q_kuw[k1,u1,w5,9] = 0
+ c18[u1,k1,10]: - 0.2 Q_ju[j1,u1,10] - 0.2 Q_ju[j2,u1,10]
+   - 0.2 Q_ju[j3,u1,10] - 0.2 Q_ju[j4,u1,10] + Q_kuw[k1,u1,w1,10]
+   + Q_kuw[k1,u1,w2,10] + Q_kuw[k1,u1,w3,10] + Q_kuw[k1,u1,w4,10]
+   + Q_kuw[k1,u1,w5,10] = 0
+ c18[u1,k1,11]: - 0.1 Q_ju[j1,u1,11] - 0.1 Q_ju[j2,u1,11]
+   - 0.1 Q_ju[j3,u1,11] - 0.1 Q_ju[j4,u1,11] + Q_kuw[k1,u1,w1,11]
+   + Q_kuw[k1,u1,w2,11] + Q_kuw[k1,u1,w3,11] + Q_kuw[k1,u1,w4,11]
+   + Q_kuw[k1,u1,w5,11] = 0
+ c18[u1,k2,0]: - 0.4 Q_ju[j1,u1,0] - 0.4 Q_ju[j2,u1,0] - 0.4 Q_ju[j3,u1,0]
+   - 0.4 Q_ju[j4,u1,0] + Q_kuw[k2,u1,w1,0] + Q_kuw[k2,u1,w2,0]
+   + Q_kuw[k2,u1,w3,0] + Q_kuw[k2,u1,w4,0] + Q_kuw[k2,u1,w5,0] = 0
+ c18[u1,k2,1]: - 1.2 Q_ju[j1,u1,1] - 1.2 Q_ju[j2,u1,1] - 1.2 Q_ju[j3,u1,1]
+   - 1.2 Q_ju[j4,u1,1] + Q_kuw[k2,u1,w1,1] + Q_kuw[k2,u1,w2,1]
+   + Q_kuw[k2,u1,w3,1] + Q_kuw[k2,u1,w4,1] + Q_kuw[k2,u1,w5,1] = 0
+ c18[u1,k2,2]: - 0.4 Q_ju[j1,u1,2] - 0.4 Q_ju[j2,u1,2] - 0.4 Q_ju[j3,u1,2]
+   - 0.4 Q_ju[j4,u1,2] + Q_kuw[k2,u1,w1,2] + Q_kuw[k2,u1,w2,2]
+   + Q_kuw[k2,u1,w3,2] + Q_kuw[k2,u1,w4,2] + Q_kuw[k2,u1,w5,2] = 0
+ c18[u1,k2,3]: - 0.8 Q_ju[j1,u1,3] - 0.8 Q_ju[j2,u1,3] - 0.8 Q_ju[j3,u1,3]
+   - 0.8 Q_ju[j4,u1,3] + Q_kuw[k2,u1,w1,3] + Q_kuw[k2,u1,w2,3]
+   + Q_kuw[k2,u1,w3,3] + Q_kuw[k2,u1,w4,3] + Q_kuw[k2,u1,w5,3] = 0
+ c18[u1,k2,4]: - 0.8 Q_ju[j1,u1,4] - 0.8 Q_ju[j2,u1,4] - 0.8 Q_ju[j3,u1,4]
+   - 0.8 Q_ju[j4,u1,4] + Q_kuw[k2,u1,w1,4] + Q_kuw[k2,u1,w2,4]
+   + Q_kuw[k2,u1,w3,4] + Q_kuw[k2,u1,w4,4] + Q_kuw[k2,u1,w5,4] = 0
+ c18[u1,k2,5]: - 1.2 Q_ju[j1,u1,5] - 1.2 Q_ju[j2,u1,5] - 1.2 Q_ju[j3,u1,5]
+   - 1.2 Q_ju[j4,u1,5] + Q_kuw[k2,u1,w1,5] + Q_kuw[k2,u1,w2,5]
+   + Q_kuw[k2,u1,w3,5] + Q_kuw[k2,u1,w4,5] + Q_kuw[k2,u1,w5,5] = 0
+ c18[u1,k2,6]: - 0.8 Q_ju[j1,u1,6] - 0.8 Q_ju[j2,u1,6] - 0.8 Q_ju[j3,u1,6]
+   - 0.8 Q_ju[j4,u1,6] + Q_kuw[k2,u1,w1,6] + Q_kuw[k2,u1,w2,6]
+   + Q_kuw[k2,u1,w3,6] + Q_kuw[k2,u1,w4,6] + Q_kuw[k2,u1,w5,6] = 0
+ c18[u1,k2,7]: - 0.4 Q_ju[j1,u1,7] - 0.4 Q_ju[j2,u1,7] - 0.4 Q_ju[j3,u1,7]
+   - 0.4 Q_ju[j4,u1,7] + Q_kuw[k2,u1,w1,7] + Q_kuw[k2,u1,w2,7]
+   + Q_kuw[k2,u1,w3,7] + Q_kuw[k2,u1,w4,7] + Q_kuw[k2,u1,w5,7] = 0
+ c18[u1,k2,8]: - 0.8 Q_ju[j1,u1,8] - 0.8 Q_ju[j2,u1,8] - 0.8 Q_ju[j3,u1,8]
+   - 0.8 Q_ju[j4,u1,8] + Q_kuw[k2,u1,w1,8] + Q_kuw[k2,u1,w2,8]
+   + Q_kuw[k2,u1,w3,8] + Q_kuw[k2,u1,w4,8] + Q_kuw[k2,u1,w5,8] = 0
+ c18[u1,k2,9]: - 0.4 Q_ju[j1,u1,9] - 0.4 Q_ju[j2,u1,9] - 0.4 Q_ju[j3,u1,9]
+   - 0.4 Q_ju[j4,u1,9] + Q_kuw[k2,u1,w1,9] + Q_kuw[k2,u1,w2,9]
+   + Q_kuw[k2,u1,w3,9] + Q_kuw[k2,u1,w4,9] + Q_kuw[k2,u1,w5,9] = 0
+ c18[u1,k2,10]: - 0.8 Q_ju[j1,u1,10] - 0.8 Q_ju[j2,u1,10]
+   - 0.8 Q_ju[j3,u1,10] - 0.8 Q_ju[j4,u1,10] + Q_kuw[k2,u1,w1,10]
+   + Q_kuw[k2,u1,w2,10] + Q_kuw[k2,u1,w3,10] + Q_kuw[k2,u1,w4,10]
+   + Q_kuw[k2,u1,w5,10] = 0
+ c18[u1,k2,11]: - 0.4 Q_ju[j1,u1,11] - 0.4 Q_ju[j2,u1,11]
+   - 0.4 Q_ju[j3,u1,11] - 0.4 Q_ju[j4,u1,11] + Q_kuw[k2,u1,w1,11]
+   + Q_kuw[k2,u1,w2,11] + Q_kuw[k2,u1,w3,11] + Q_kuw[k2,u1,w4,11]
+   + Q_kuw[k2,u1,w5,11] = 0
+ c18[u1,k3,0]: - Q_ju[j1,u1,0] - Q_ju[j2,u1,0] - Q_ju[j3,u1,0]
+   - Q_ju[j4,u1,0] + Q_kuw[k3,u1,w1,0] + Q_kuw[k3,u1,w2,0]
+   + Q_kuw[k3,u1,w3,0] + Q_kuw[k3,u1,w4,0] + Q_kuw[k3,u1,w5,0] = 0
+ c18[u1,k3,1]: - 3 Q_ju[j1,u1,1] - 3 Q_ju[j2,u1,1] - 3 Q_ju[j3,u1,1]
+   - 3 Q_ju[j4,u1,1] + Q_kuw[k3,u1,w1,1] + Q_kuw[k3,u1,w2,1]
+   + Q_kuw[k3,u1,w3,1] + Q_kuw[k3,u1,w4,1] + Q_kuw[k3,u1,w5,1] = 0
+ c18[u1,k3,2]: - Q_ju[j1,u1,2] - Q_ju[j2,u1,2] - Q_ju[j3,u1,2]
+   - Q_ju[j4,u1,2] + Q_kuw[k3,u1,w1,2] + Q_kuw[k3,u1,w2,2]
+   + Q_kuw[k3,u1,w3,2] + Q_kuw[k3,u1,w4,2] + Q_kuw[k3,u1,w5,2] = 0
+ c18[u1,k3,3]: - 2 Q_ju[j1,u1,3] - 2 Q_ju[j2,u1,3] - 2 Q_ju[j3,u1,3]
+   - 2 Q_ju[j4,u1,3] + Q_kuw[k3,u1,w1,3] + Q_kuw[k3,u1,w2,3]
+   + Q_kuw[k3,u1,w3,3] + Q_kuw[k3,u1,w4,3] + Q_kuw[k3,u1,w5,3] = 0
+ c18[u1,k3,4]: - 2 Q_ju[j1,u1,4] - 2 Q_ju[j2,u1,4] - 2 Q_ju[j3,u1,4]
+   - 2 Q_ju[j4,u1,4] + Q_kuw[k3,u1,w1,4] + Q_kuw[k3,u1,w2,4]
+   + Q_kuw[k3,u1,w3,4] + Q_kuw[k3,u1,w4,4] + Q_kuw[k3,u1,w5,4] = 0
+ c18[u1,k3,5]: - 3 Q_ju[j1,u1,5] - 3 Q_ju[j2,u1,5] - 3 Q_ju[j3,u1,5]
+   - 3 Q_ju[j4,u1,5] + Q_kuw[k3,u1,w1,5] + Q_kuw[k3,u1,w2,5]
+   + Q_kuw[k3,u1,w3,5] + Q_kuw[k3,u1,w4,5] + Q_kuw[k3,u1,w5,5] = 0
+ c18[u1,k3,6]: - 2 Q_ju[j1,u1,6] - 2 Q_ju[j2,u1,6] - 2 Q_ju[j3,u1,6]
+   - 2 Q_ju[j4,u1,6] + Q_kuw[k3,u1,w1,6] + Q_kuw[k3,u1,w2,6]
+   + Q_kuw[k3,u1,w3,6] + Q_kuw[k3,u1,w4,6] + Q_kuw[k3,u1,w5,6] = 0
+ c18[u1,k3,7]: - Q_ju[j1,u1,7] - Q_ju[j2,u1,7] - Q_ju[j3,u1,7]
+   - Q_ju[j4,u1,7] + Q_kuw[k3,u1,w1,7] + Q_kuw[k3,u1,w2,7]
+   + Q_kuw[k3,u1,w3,7] + Q_kuw[k3,u1,w4,7] + Q_kuw[k3,u1,w5,7] = 0
+ c18[u1,k3,8]: - 2 Q_ju[j1,u1,8] - 2 Q_ju[j2,u1,8] - 2 Q_ju[j3,u1,8]
+   - 2 Q_ju[j4,u1,8] + Q_kuw[k3,u1,w1,8] + Q_kuw[k3,u1,w2,8]
+   + Q_kuw[k3,u1,w3,8] + Q_kuw[k3,u1,w4,8] + Q_kuw[k3,u1,w5,8] = 0
+ c18[u1,k3,9]: - Q_ju[j1,u1,9] - Q_ju[j2,u1,9] - Q_ju[j3,u1,9]
+   - Q_ju[j4,u1,9] + Q_kuw[k3,u1,w1,9] + Q_kuw[k3,u1,w2,9]
+   + Q_kuw[k3,u1,w3,9] + Q_kuw[k3,u1,w4,9] + Q_kuw[k3,u1,w5,9] = 0
+ c18[u1,k3,10]: - 2 Q_ju[j1,u1,10] - 2 Q_ju[j2,u1,10] - 2 Q_ju[j3,u1,10]
+   - 2 Q_ju[j4,u1,10] + Q_kuw[k3,u1,w1,10] + Q_kuw[k3,u1,w2,10]
+   + Q_kuw[k3,u1,w3,10] + Q_kuw[k3,u1,w4,10] + Q_kuw[k3,u1,w5,10] = 0
+ c18[u1,k3,11]: - Q_ju[j1,u1,11] - Q_ju[j2,u1,11] - Q_ju[j3,u1,11]
+   - Q_ju[j4,u1,11] + Q_kuw[k3,u1,w1,11] + Q_kuw[k3,u1,w2,11]
+   + Q_kuw[k3,u1,w3,11] + Q_kuw[k3,u1,w4,11] + Q_kuw[k3,u1,w5,11] = 0
+ c18[u2,k1,0]: - 0.1 Q_ju[j1,u2,0] - 0.1 Q_ju[j2,u2,0] - 0.1 Q_ju[j3,u2,0]
+   - 0.1 Q_ju[j4,u2,0] + Q_kuw[k1,u2,w1,0] + Q_kuw[k1,u2,w2,0]
+   + Q_kuw[k1,u2,w3,0] + Q_kuw[k1,u2,w4,0] + Q_kuw[k1,u2,w5,0] = 0
+ c18[u2,k1,1]: - 0.3 Q_ju[j1,u2,1] - 0.3 Q_ju[j2,u2,1] - 0.3 Q_ju[j3,u2,1]
+   - 0.3 Q_ju[j4,u2,1] + Q_kuw[k1,u2,w1,1] + Q_kuw[k1,u2,w2,1]
+   + Q_kuw[k1,u2,w3,1] + Q_kuw[k1,u2,w4,1] + Q_kuw[k1,u2,w5,1] = 0
+ c18[u2,k1,2]: - 0.1 Q_ju[j1,u2,2] - 0.1 Q_ju[j2,u2,2] - 0.1 Q_ju[j3,u2,2]
+   - 0.1 Q_ju[j4,u2,2] + Q_kuw[k1,u2,w1,2] + Q_kuw[k1,u2,w2,2]
+   + Q_kuw[k1,u2,w3,2] + Q_kuw[k1,u2,w4,2] + Q_kuw[k1,u2,w5,2] = 0
+ c18[u2,k1,3]: - 0.2 Q_ju[j1,u2,3] - 0.2 Q_ju[j2,u2,3] - 0.2 Q_ju[j3,u2,3]
+   - 0.2 Q_ju[j4,u2,3] + Q_kuw[k1,u2,w1,3] + Q_kuw[k1,u2,w2,3]
+   + Q_kuw[k1,u2,w3,3] + Q_kuw[k1,u2,w4,3] + Q_kuw[k1,u2,w5,3] = 0
+ c18[u2,k1,4]: - 0.2 Q_ju[j1,u2,4] - 0.2 Q_ju[j2,u2,4] - 0.2 Q_ju[j3,u2,4]
+   - 0.2 Q_ju[j4,u2,4] + Q_kuw[k1,u2,w1,4] + Q_kuw[k1,u2,w2,4]
+   + Q_kuw[k1,u2,w3,4] + Q_kuw[k1,u2,w4,4] + Q_kuw[k1,u2,w5,4] = 0
+ c18[u2,k1,5]: - 0.3 Q_ju[j1,u2,5] - 0.3 Q_ju[j2,u2,5] - 0.3 Q_ju[j3,u2,5]
+   - 0.3 Q_ju[j4,u2,5] + Q_kuw[k1,u2,w1,5] + Q_kuw[k1,u2,w2,5]
+   + Q_kuw[k1,u2,w3,5] + Q_kuw[k1,u2,w4,5] + Q_kuw[k1,u2,w5,5] = 0
+ c18[u2,k1,6]: - 0.2 Q_ju[j1,u2,6] - 0.2 Q_ju[j2,u2,6] - 0.2 Q_ju[j3,u2,6]
+   - 0.2 Q_ju[j4,u2,6] + Q_kuw[k1,u2,w1,6] + Q_kuw[k1,u2,w2,6]
+   + Q_kuw[k1,u2,w3,6] + Q_kuw[k1,u2,w4,6] + Q_kuw[k1,u2,w5,6] = 0
+ c18[u2,k1,7]: - 0.1 Q_ju[j1,u2,7] - 0.1 Q_ju[j2,u2,7] - 0.1 Q_ju[j3,u2,7]
+   - 0.1 Q_ju[j4,u2,7] + Q_kuw[k1,u2,w1,7] + Q_kuw[k1,u2,w2,7]
+   + Q_kuw[k1,u2,w3,7] + Q_kuw[k1,u2,w4,7] + Q_kuw[k1,u2,w5,7] = 0
+ c18[u2,k1,8]: - 0.2 Q_ju[j1,u2,8] - 0.2 Q_ju[j2,u2,8] - 0.2 Q_ju[j3,u2,8]
+   - 0.2 Q_ju[j4,u2,8] + Q_kuw[k1,u2,w1,8] + Q_kuw[k1,u2,w2,8]
+   + Q_kuw[k1,u2,w3,8] + Q_kuw[k1,u2,w4,8] + Q_kuw[k1,u2,w5,8] = 0
+ c18[u2,k1,9]: - 0.1 Q_ju[j1,u2,9] - 0.1 Q_ju[j2,u2,9] - 0.1 Q_ju[j3,u2,9]
+   - 0.1 Q_ju[j4,u2,9] + Q_kuw[k1,u2,w1,9] + Q_kuw[k1,u2,w2,9]
+   + Q_kuw[k1,u2,w3,9] + Q_kuw[k1,u2,w4,9] + Q_kuw[k1,u2,w5,9] = 0
+ c18[u2,k1,10]: - 0.2 Q_ju[j1,u2,10] - 0.2 Q_ju[j2,u2,10]
+   - 0.2 Q_ju[j3,u2,10] - 0.2 Q_ju[j4,u2,10] + Q_kuw[k1,u2,w1,10]
+   + Q_kuw[k1,u2,w2,10] + Q_kuw[k1,u2,w3,10] + Q_kuw[k1,u2,w4,10]
+   + Q_kuw[k1,u2,w5,10] = 0
+ c18[u2,k1,11]: - 0.1 Q_ju[j1,u2,11] - 0.1 Q_ju[j2,u2,11]
+   - 0.1 Q_ju[j3,u2,11] - 0.1 Q_ju[j4,u2,11] + Q_kuw[k1,u2,w1,11]
+   + Q_kuw[k1,u2,w2,11] + Q_kuw[k1,u2,w3,11] + Q_kuw[k1,u2,w4,11]
+   + Q_kuw[k1,u2,w5,11] = 0
+ c18[u2,k2,0]: - 0.4 Q_ju[j1,u2,0] - 0.4 Q_ju[j2,u2,0] - 0.4 Q_ju[j3,u2,0]
+   - 0.4 Q_ju[j4,u2,0] + Q_kuw[k2,u2,w1,0] + Q_kuw[k2,u2,w2,0]
+   + Q_kuw[k2,u2,w3,0] + Q_kuw[k2,u2,w4,0] + Q_kuw[k2,u2,w5,0] = 0
+ c18[u2,k2,1]: - 1.2 Q_ju[j1,u2,1] - 1.2 Q_ju[j2,u2,1] - 1.2 Q_ju[j3,u2,1]
+   - 1.2 Q_ju[j4,u2,1] + Q_kuw[k2,u2,w1,1] + Q_kuw[k2,u2,w2,1]
+   + Q_kuw[k2,u2,w3,1] + Q_kuw[k2,u2,w4,1] + Q_kuw[k2,u2,w5,1] = 0
+ c18[u2,k2,2]: - 0.4 Q_ju[j1,u2,2] - 0.4 Q_ju[j2,u2,2] - 0.4 Q_ju[j3,u2,2]
+   - 0.4 Q_ju[j4,u2,2] + Q_kuw[k2,u2,w1,2] + Q_kuw[k2,u2,w2,2]
+   + Q_kuw[k2,u2,w3,2] + Q_kuw[k2,u2,w4,2] + Q_kuw[k2,u2,w5,2] = 0
+ c18[u2,k2,3]: - 0.8 Q_ju[j1,u2,3] - 0.8 Q_ju[j2,u2,3] - 0.8 Q_ju[j3,u2,3]
+   - 0.8 Q_ju[j4,u2,3] + Q_kuw[k2,u2,w1,3] + Q_kuw[k2,u2,w2,3]
+   + Q_kuw[k2,u2,w3,3] + Q_kuw[k2,u2,w4,3] + Q_kuw[k2,u2,w5,3] = 0
+ c18[u2,k2,4]: - 0.8 Q_ju[j1,u2,4] - 0.8 Q_ju[j2,u2,4] - 0.8 Q_ju[j3,u2,4]
+   - 0.8 Q_ju[j4,u2,4] + Q_kuw[k2,u2,w1,4] + Q_kuw[k2,u2,w2,4]
+   + Q_kuw[k2,u2,w3,4] + Q_kuw[k2,u2,w4,4] + Q_kuw[k2,u2,w5,4] = 0
+ c18[u2,k2,5]: - 1.2 Q_ju[j1,u2,5] - 1.2 Q_ju[j2,u2,5] - 1.2 Q_ju[j3,u2,5]
+   - 1.2 Q_ju[j4,u2,5] + Q_kuw[k2,u2,w1,5] + Q_kuw[k2,u2,w2,5]
+   + Q_kuw[k2,u2,w3,5] + Q_kuw[k2,u2,w4,5] + Q_kuw[k2,u2,w5,5] = 0
+ c18[u2,k2,6]: - 0.8 Q_ju[j1,u2,6] - 0.8 Q_ju[j2,u2,6] - 0.8 Q_ju[j3,u2,6]
+   - 0.8 Q_ju[j4,u2,6] + Q_kuw[k2,u2,w1,6] + Q_kuw[k2,u2,w2,6]
+   + Q_kuw[k2,u2,w3,6] + Q_kuw[k2,u2,w4,6] + Q_kuw[k2,u2,w5,6] = 0
+ c18[u2,k2,7]: - 0.4 Q_ju[j1,u2,7] - 0.4 Q_ju[j2,u2,7] - 0.4 Q_ju[j3,u2,7]
+   - 0.4 Q_ju[j4,u2,7] + Q_kuw[k2,u2,w1,7] + Q_kuw[k2,u2,w2,7]
+   + Q_kuw[k2,u2,w3,7] + Q_kuw[k2,u2,w4,7] + Q_kuw[k2,u2,w5,7] = 0
+ c18[u2,k2,8]: - 0.8 Q_ju[j1,u2,8] - 0.8 Q_ju[j2,u2,8] - 0.8 Q_ju[j3,u2,8]
+   - 0.8 Q_ju[j4,u2,8] + Q_kuw[k2,u2,w1,8] + Q_kuw[k2,u2,w2,8]
+   + Q_kuw[k2,u2,w3,8] + Q_kuw[k2,u2,w4,8] + Q_kuw[k2,u2,w5,8] = 0
+ c18[u2,k2,9]: - 0.4 Q_ju[j1,u2,9] - 0.4 Q_ju[j2,u2,9] - 0.4 Q_ju[j3,u2,9]
+   - 0.4 Q_ju[j4,u2,9] + Q_kuw[k2,u2,w1,9] + Q_kuw[k2,u2,w2,9]
+   + Q_kuw[k2,u2,w3,9] + Q_kuw[k2,u2,w4,9] + Q_kuw[k2,u2,w5,9] = 0
+ c18[u2,k2,10]: - 0.8 Q_ju[j1,u2,10] - 0.8 Q_ju[j2,u2,10]
+   - 0.8 Q_ju[j3,u2,10] - 0.8 Q_ju[j4,u2,10] + Q_kuw[k2,u2,w1,10]
+   + Q_kuw[k2,u2,w2,10] + Q_kuw[k2,u2,w3,10] + Q_kuw[k2,u2,w4,10]
+   + Q_kuw[k2,u2,w5,10] = 0
+ c18[u2,k2,11]: - 0.4 Q_ju[j1,u2,11] - 0.4 Q_ju[j2,u2,11]
+   - 0.4 Q_ju[j3,u2,11] - 0.4 Q_ju[j4,u2,11] + Q_kuw[k2,u2,w1,11]
+   + Q_kuw[k2,u2,w2,11] + Q_kuw[k2,u2,w3,11] + Q_kuw[k2,u2,w4,11]
+   + Q_kuw[k2,u2,w5,11] = 0
+ c18[u2,k3,0]: - Q_ju[j1,u2,0] - Q_ju[j2,u2,0] - Q_ju[j3,u2,0]
+   - Q_ju[j4,u2,0] + Q_kuw[k3,u2,w1,0] + Q_kuw[k3,u2,w2,0]
+   + Q_kuw[k3,u2,w3,0] + Q_kuw[k3,u2,w4,0] + Q_kuw[k3,u2,w5,0] = 0
+ c18[u2,k3,1]: - 3 Q_ju[j1,u2,1] - 3 Q_ju[j2,u2,1] - 3 Q_ju[j3,u2,1]
+   - 3 Q_ju[j4,u2,1] + Q_kuw[k3,u2,w1,1] + Q_kuw[k3,u2,w2,1]
+   + Q_kuw[k3,u2,w3,1] + Q_kuw[k3,u2,w4,1] + Q_kuw[k3,u2,w5,1] = 0
+ c18[u2,k3,2]: - Q_ju[j1,u2,2] - Q_ju[j2,u2,2] - Q_ju[j3,u2,2]
+   - Q_ju[j4,u2,2] + Q_kuw[k3,u2,w1,2] + Q_kuw[k3,u2,w2,2]
+   + Q_kuw[k3,u2,w3,2] + Q_kuw[k3,u2,w4,2] + Q_kuw[k3,u2,w5,2] = 0
+ c18[u2,k3,3]: - 2 Q_ju[j1,u2,3] - 2 Q_ju[j2,u2,3] - 2 Q_ju[j3,u2,3]
+   - 2 Q_ju[j4,u2,3] + Q_kuw[k3,u2,w1,3] + Q_kuw[k3,u2,w2,3]
+   + Q_kuw[k3,u2,w3,3] + Q_kuw[k3,u2,w4,3] + Q_kuw[k3,u2,w5,3] = 0
+ c18[u2,k3,4]: - 2 Q_ju[j1,u2,4] - 2 Q_ju[j2,u2,4] - 2 Q_ju[j3,u2,4]
+   - 2 Q_ju[j4,u2,4] + Q_kuw[k3,u2,w1,4] + Q_kuw[k3,u2,w2,4]
+   + Q_kuw[k3,u2,w3,4] + Q_kuw[k3,u2,w4,4] + Q_kuw[k3,u2,w5,4] = 0
+ c18[u2,k3,5]: - 3 Q_ju[j1,u2,5] - 3 Q_ju[j2,u2,5] - 3 Q_ju[j3,u2,5]
+   - 3 Q_ju[j4,u2,5] + Q_kuw[k3,u2,w1,5] + Q_kuw[k3,u2,w2,5]
+   + Q_kuw[k3,u2,w3,5] + Q_kuw[k3,u2,w4,5] + Q_kuw[k3,u2,w5,5] = 0
+ c18[u2,k3,6]: - 2 Q_ju[j1,u2,6] - 2 Q_ju[j2,u2,6] - 2 Q_ju[j3,u2,6]
+   - 2 Q_ju[j4,u2,6] + Q_kuw[k3,u2,w1,6] + Q_kuw[k3,u2,w2,6]
+   + Q_kuw[k3,u2,w3,6] + Q_kuw[k3,u2,w4,6] + Q_kuw[k3,u2,w5,6] = 0
+ c18[u2,k3,7]: - Q_ju[j1,u2,7] - Q_ju[j2,u2,7] - Q_ju[j3,u2,7]
+   - Q_ju[j4,u2,7] + Q_kuw[k3,u2,w1,7] + Q_kuw[k3,u2,w2,7]
+   + Q_kuw[k3,u2,w3,7] + Q_kuw[k3,u2,w4,7] + Q_kuw[k3,u2,w5,7] = 0
+ c18[u2,k3,8]: - 2 Q_ju[j1,u2,8] - 2 Q_ju[j2,u2,8] - 2 Q_ju[j3,u2,8]
+   - 2 Q_ju[j4,u2,8] + Q_kuw[k3,u2,w1,8] + Q_kuw[k3,u2,w2,8]
+   + Q_kuw[k3,u2,w3,8] + Q_kuw[k3,u2,w4,8] + Q_kuw[k3,u2,w5,8] = 0
+ c18[u2,k3,9]: - Q_ju[j1,u2,9] - Q_ju[j2,u2,9] - Q_ju[j3,u2,9]
+   - Q_ju[j4,u2,9] + Q_kuw[k3,u2,w1,9] + Q_kuw[k3,u2,w2,9]
+   + Q_kuw[k3,u2,w3,9] + Q_kuw[k3,u2,w4,9] + Q_kuw[k3,u2,w5,9] = 0
+ c18[u2,k3,10]: - 2 Q_ju[j1,u2,10] - 2 Q_ju[j2,u2,10] - 2 Q_ju[j3,u2,10]
+   - 2 Q_ju[j4,u2,10] + Q_kuw[k3,u2,w1,10] + Q_kuw[k3,u2,w2,10]
+   + Q_kuw[k3,u2,w3,10] + Q_kuw[k3,u2,w4,10] + Q_kuw[k3,u2,w5,10] = 0
+ c18[u2,k3,11]: - Q_ju[j1,u2,11] - Q_ju[j2,u2,11] - Q_ju[j3,u2,11]
+   - Q_ju[j4,u2,11] + Q_kuw[k3,u2,w1,11] + Q_kuw[k3,u2,w2,11]
+   + Q_kuw[k3,u2,w3,11] + Q_kuw[k3,u2,w4,11] + Q_kuw[k3,u2,w5,11] = 0
+ c18[u3,k1,0]: - 0.1 Q_ju[j1,u3,0] - 0.1 Q_ju[j2,u3,0] - 0.1 Q_ju[j3,u3,0]
+   - 0.1 Q_ju[j4,u3,0] + Q_kuw[k1,u3,w1,0] + Q_kuw[k1,u3,w2,0]
+   + Q_kuw[k1,u3,w3,0] + Q_kuw[k1,u3,w4,0] + Q_kuw[k1,u3,w5,0] = 0
+ c18[u3,k1,1]: - 0.3 Q_ju[j1,u3,1] - 0.3 Q_ju[j2,u3,1] - 0.3 Q_ju[j3,u3,1]
+   - 0.3 Q_ju[j4,u3,1] + Q_kuw[k1,u3,w1,1] + Q_kuw[k1,u3,w2,1]
+   + Q_kuw[k1,u3,w3,1] + Q_kuw[k1,u3,w4,1] + Q_kuw[k1,u3,w5,1] = 0
+ c18[u3,k1,2]: - 0.1 Q_ju[j1,u3,2] - 0.1 Q_ju[j2,u3,2] - 0.1 Q_ju[j3,u3,2]
+   - 0.1 Q_ju[j4,u3,2] + Q_kuw[k1,u3,w1,2] + Q_kuw[k1,u3,w2,2]
+   + Q_kuw[k1,u3,w3,2] + Q_kuw[k1,u3,w4,2] + Q_kuw[k1,u3,w5,2] = 0
+ c18[u3,k1,3]: - 0.2 Q_ju[j1,u3,3] - 0.2 Q_ju[j2,u3,3] - 0.2 Q_ju[j3,u3,3]
+   - 0.2 Q_ju[j4,u3,3] + Q_kuw[k1,u3,w1,3] + Q_kuw[k1,u3,w2,3]
+   + Q_kuw[k1,u3,w3,3] + Q_kuw[k1,u3,w4,3] + Q_kuw[k1,u3,w5,3] = 0
+ c18[u3,k1,4]: - 0.2 Q_ju[j1,u3,4] - 0.2 Q_ju[j2,u3,4] - 0.2 Q_ju[j3,u3,4]
+   - 0.2 Q_ju[j4,u3,4] + Q_kuw[k1,u3,w1,4] + Q_kuw[k1,u3,w2,4]
+   + Q_kuw[k1,u3,w3,4] + Q_kuw[k1,u3,w4,4] + Q_kuw[k1,u3,w5,4] = 0
+ c18[u3,k1,5]: - 0.3 Q_ju[j1,u3,5] - 0.3 Q_ju[j2,u3,5] - 0.3 Q_ju[j3,u3,5]
+   - 0.3 Q_ju[j4,u3,5] + Q_kuw[k1,u3,w1,5] + Q_kuw[k1,u3,w2,5]
+   + Q_kuw[k1,u3,w3,5] + Q_kuw[k1,u3,w4,5] + Q_kuw[k1,u3,w5,5] = 0
+ c18[u3,k1,6]: - 0.2 Q_ju[j1,u3,6] - 0.2 Q_ju[j2,u3,6] - 0.2 Q_ju[j3,u3,6]
+   - 0.2 Q_ju[j4,u3,6] + Q_kuw[k1,u3,w1,6] + Q_kuw[k1,u3,w2,6]
+   + Q_kuw[k1,u3,w3,6] + Q_kuw[k1,u3,w4,6] + Q_kuw[k1,u3,w5,6] = 0
+ c18[u3,k1,7]: - 0.1 Q_ju[j1,u3,7] - 0.1 Q_ju[j2,u3,7] - 0.1 Q_ju[j3,u3,7]
+   - 0.1 Q_ju[j4,u3,7] + Q_kuw[k1,u3,w1,7] + Q_kuw[k1,u3,w2,7]
+   + Q_kuw[k1,u3,w3,7] + Q_kuw[k1,u3,w4,7] + Q_kuw[k1,u3,w5,7] = 0
+ c18[u3,k1,8]: - 0.2 Q_ju[j1,u3,8] - 0.2 Q_ju[j2,u3,8] - 0.2 Q_ju[j3,u3,8]
+   - 0.2 Q_ju[j4,u3,8] + Q_kuw[k1,u3,w1,8] + Q_kuw[k1,u3,w2,8]
+   + Q_kuw[k1,u3,w3,8] + Q_kuw[k1,u3,w4,8] + Q_kuw[k1,u3,w5,8] = 0
+ c18[u3,k1,9]: - 0.1 Q_ju[j1,u3,9] - 0.1 Q_ju[j2,u3,9] - 0.1 Q_ju[j3,u3,9]
+   - 0.1 Q_ju[j4,u3,9] + Q_kuw[k1,u3,w1,9] + Q_kuw[k1,u3,w2,9]
+   + Q_kuw[k1,u3,w3,9] + Q_kuw[k1,u3,w4,9] + Q_kuw[k1,u3,w5,9] = 0
+ c18[u3,k1,10]: - 0.2 Q_ju[j1,u3,10] - 0.2 Q_ju[j2,u3,10]
+   - 0.2 Q_ju[j3,u3,10] - 0.2 Q_ju[j4,u3,10] + Q_kuw[k1,u3,w1,10]
+   + Q_kuw[k1,u3,w2,10] + Q_kuw[k1,u3,w3,10] + Q_kuw[k1,u3,w4,10]
+   + Q_kuw[k1,u3,w5,10] = 0
+ c18[u3,k1,11]: - 0.1 Q_ju[j1,u3,11] - 0.1 Q_ju[j2,u3,11]
+   - 0.1 Q_ju[j3,u3,11] - 0.1 Q_ju[j4,u3,11] + Q_kuw[k1,u3,w1,11]
+   + Q_kuw[k1,u3,w2,11] + Q_kuw[k1,u3,w3,11] + Q_kuw[k1,u3,w4,11]
+   + Q_kuw[k1,u3,w5,11] = 0
+ c18[u3,k2,0]: - 0.4 Q_ju[j1,u3,0] - 0.4 Q_ju[j2,u3,0] - 0.4 Q_ju[j3,u3,0]
+   - 0.4 Q_ju[j4,u3,0] + Q_kuw[k2,u3,w1,0] + Q_kuw[k2,u3,w2,0]
+   + Q_kuw[k2,u3,w3,0] + Q_kuw[k2,u3,w4,0] + Q_kuw[k2,u3,w5,0] = 0
+ c18[u3,k2,1]: - 1.2 Q_ju[j1,u3,1] - 1.2 Q_ju[j2,u3,1] - 1.2 Q_ju[j3,u3,1]
+   - 1.2 Q_ju[j4,u3,1] + Q_kuw[k2,u3,w1,1] + Q_kuw[k2,u3,w2,1]
+   + Q_kuw[k2,u3,w3,1] + Q_kuw[k2,u3,w4,1] + Q_kuw[k2,u3,w5,1] = 0
+ c18[u3,k2,2]: - 0.4 Q_ju[j1,u3,2] - 0.4 Q_ju[j2,u3,2] - 0.4 Q_ju[j3,u3,2]
+   - 0.4 Q_ju[j4,u3,2] + Q_kuw[k2,u3,w1,2] + Q_kuw[k2,u3,w2,2]
+   + Q_kuw[k2,u3,w3,2] + Q_kuw[k2,u3,w4,2] + Q_kuw[k2,u3,w5,2] = 0
+ c18[u3,k2,3]: - 0.8 Q_ju[j1,u3,3] - 0.8 Q_ju[j2,u3,3] - 0.8 Q_ju[j3,u3,3]
+   - 0.8 Q_ju[j4,u3,3] + Q_kuw[k2,u3,w1,3] + Q_kuw[k2,u3,w2,3]
+   + Q_kuw[k2,u3,w3,3] + Q_kuw[k2,u3,w4,3] + Q_kuw[k2,u3,w5,3] = 0
+ c18[u3,k2,4]: - 0.8 Q_ju[j1,u3,4] - 0.8 Q_ju[j2,u3,4] - 0.8 Q_ju[j3,u3,4]
+   - 0.8 Q_ju[j4,u3,4] + Q_kuw[k2,u3,w1,4] + Q_kuw[k2,u3,w2,4]
+   + Q_kuw[k2,u3,w3,4] + Q_kuw[k2,u3,w4,4] + Q_kuw[k2,u3,w5,4] = 0
+ c18[u3,k2,5]: - 1.2 Q_ju[j1,u3,5] - 1.2 Q_ju[j2,u3,5] - 1.2 Q_ju[j3,u3,5]
+   - 1.2 Q_ju[j4,u3,5] + Q_kuw[k2,u3,w1,5] + Q_kuw[k2,u3,w2,5]
+   + Q_kuw[k2,u3,w3,5] + Q_kuw[k2,u3,w4,5] + Q_kuw[k2,u3,w5,5] = 0
+ c18[u3,k2,6]: - 0.8 Q_ju[j1,u3,6] - 0.8 Q_ju[j2,u3,6] - 0.8 Q_ju[j3,u3,6]
+   - 0.8 Q_ju[j4,u3,6] + Q_kuw[k2,u3,w1,6] + Q_kuw[k2,u3,w2,6]
+   + Q_kuw[k2,u3,w3,6] + Q_kuw[k2,u3,w4,6] + Q_kuw[k2,u3,w5,6] = 0
+ c18[u3,k2,7]: - 0.4 Q_ju[j1,u3,7] - 0.4 Q_ju[j2,u3,7] - 0.4 Q_ju[j3,u3,7]
+   - 0.4 Q_ju[j4,u3,7] + Q_kuw[k2,u3,w1,7] + Q_kuw[k2,u3,w2,7]
+   + Q_kuw[k2,u3,w3,7] + Q_kuw[k2,u3,w4,7] + Q_kuw[k2,u3,w5,7] = 0
+ c18[u3,k2,8]: - 0.8 Q_ju[j1,u3,8] - 0.8 Q_ju[j2,u3,8] - 0.8 Q_ju[j3,u3,8]
+   - 0.8 Q_ju[j4,u3,8] + Q_kuw[k2,u3,w1,8] + Q_kuw[k2,u3,w2,8]
+   + Q_kuw[k2,u3,w3,8] + Q_kuw[k2,u3,w4,8] + Q_kuw[k2,u3,w5,8] = 0
+ c18[u3,k2,9]: - 0.4 Q_ju[j1,u3,9] - 0.4 Q_ju[j2,u3,9] - 0.4 Q_ju[j3,u3,9]
+   - 0.4 Q_ju[j4,u3,9] + Q_kuw[k2,u3,w1,9] + Q_kuw[k2,u3,w2,9]
+   + Q_kuw[k2,u3,w3,9] + Q_kuw[k2,u3,w4,9] + Q_kuw[k2,u3,w5,9] = 0
+ c18[u3,k2,10]: - 0.8 Q_ju[j1,u3,10] - 0.8 Q_ju[j2,u3,10]
+   - 0.8 Q_ju[j3,u3,10] - 0.8 Q_ju[j4,u3,10] + Q_kuw[k2,u3,w1,10]
+   + Q_kuw[k2,u3,w2,10] + Q_kuw[k2,u3,w3,10] + Q_kuw[k2,u3,w4,10]
+   + Q_kuw[k2,u3,w5,10] = 0
+ c18[u3,k2,11]: - 0.4 Q_ju[j1,u3,11] - 0.4 Q_ju[j2,u3,11]
+   - 0.4 Q_ju[j3,u3,11] - 0.4 Q_ju[j4,u3,11] + Q_kuw[k2,u3,w1,11]
+   + Q_kuw[k2,u3,w2,11] + Q_kuw[k2,u3,w3,11] + Q_kuw[k2,u3,w4,11]
+   + Q_kuw[k2,u3,w5,11] = 0
+ c18[u3,k3,0]: - Q_ju[j1,u3,0] - Q_ju[j2,u3,0] - Q_ju[j3,u3,0]
+   - Q_ju[j4,u3,0] + Q_kuw[k3,u3,w1,0] + Q_kuw[k3,u3,w2,0]
+   + Q_kuw[k3,u3,w3,0] + Q_kuw[k3,u3,w4,0] + Q_kuw[k3,u3,w5,0] = 0
+ c18[u3,k3,1]: - 3 Q_ju[j1,u3,1] - 3 Q_ju[j2,u3,1] - 3 Q_ju[j3,u3,1]
+   - 3 Q_ju[j4,u3,1] + Q_kuw[k3,u3,w1,1] + Q_kuw[k3,u3,w2,1]
+   + Q_kuw[k3,u3,w3,1] + Q_kuw[k3,u3,w4,1] + Q_kuw[k3,u3,w5,1] = 0
+ c18[u3,k3,2]: - Q_ju[j1,u3,2] - Q_ju[j2,u3,2] - Q_ju[j3,u3,2]
+   - Q_ju[j4,u3,2] + Q_kuw[k3,u3,w1,2] + Q_kuw[k3,u3,w2,2]
+   + Q_kuw[k3,u3,w3,2] + Q_kuw[k3,u3,w4,2] + Q_kuw[k3,u3,w5,2] = 0
+ c18[u3,k3,3]: - 2 Q_ju[j1,u3,3] - 2 Q_ju[j2,u3,3] - 2 Q_ju[j3,u3,3]
+   - 2 Q_ju[j4,u3,3] + Q_kuw[k3,u3,w1,3] + Q_kuw[k3,u3,w2,3]
+   + Q_kuw[k3,u3,w3,3] + Q_kuw[k3,u3,w4,3] + Q_kuw[k3,u3,w5,3] = 0
+ c18[u3,k3,4]: - 2 Q_ju[j1,u3,4] - 2 Q_ju[j2,u3,4] - 2 Q_ju[j3,u3,4]
+   - 2 Q_ju[j4,u3,4] + Q_kuw[k3,u3,w1,4] + Q_kuw[k3,u3,w2,4]
+   + Q_kuw[k3,u3,w3,4] + Q_kuw[k3,u3,w4,4] + Q_kuw[k3,u3,w5,4] = 0
+ c18[u3,k3,5]: - 3 Q_ju[j1,u3,5] - 3 Q_ju[j2,u3,5] - 3 Q_ju[j3,u3,5]
+   - 3 Q_ju[j4,u3,5] + Q_kuw[k3,u3,w1,5] + Q_kuw[k3,u3,w2,5]
+   + Q_kuw[k3,u3,w3,5] + Q_kuw[k3,u3,w4,5] + Q_kuw[k3,u3,w5,5] = 0
+ c18[u3,k3,6]: - 2 Q_ju[j1,u3,6] - 2 Q_ju[j2,u3,6] - 2 Q_ju[j3,u3,6]
+   - 2 Q_ju[j4,u3,6] + Q_kuw[k3,u3,w1,6] + Q_kuw[k3,u3,w2,6]
+   + Q_kuw[k3,u3,w3,6] + Q_kuw[k3,u3,w4,6] + Q_kuw[k3,u3,w5,6] = 0
+ c18[u3,k3,7]: - Q_ju[j1,u3,7] - Q_ju[j2,u3,7] - Q_ju[j3,u3,7]
+   - Q_ju[j4,u3,7] + Q_kuw[k3,u3,w1,7] + Q_kuw[k3,u3,w2,7]
+   + Q_kuw[k3,u3,w3,7] + Q_kuw[k3,u3,w4,7] + Q_kuw[k3,u3,w5,7] = 0
+ c18[u3,k3,8]: - 2 Q_ju[j1,u3,8] - 2 Q_ju[j2,u3,8] - 2 Q_ju[j3,u3,8]
+   - 2 Q_ju[j4,u3,8] + Q_kuw[k3,u3,w1,8] + Q_kuw[k3,u3,w2,8]
+   + Q_kuw[k3,u3,w3,8] + Q_kuw[k3,u3,w4,8] + Q_kuw[k3,u3,w5,8] = 0
+ c18[u3,k3,9]: - Q_ju[j1,u3,9] - Q_ju[j2,u3,9] - Q_ju[j3,u3,9]
+   - Q_ju[j4,u3,9] + Q_kuw[k3,u3,w1,9] + Q_kuw[k3,u3,w2,9]
+   + Q_kuw[k3,u3,w3,9] + Q_kuw[k3,u3,w4,9] + Q_kuw[k3,u3,w5,9] = 0
+ c18[u3,k3,10]: - 2 Q_ju[j1,u3,10] - 2 Q_ju[j2,u3,10] - 2 Q_ju[j3,u3,10]
+   - 2 Q_ju[j4,u3,10] + Q_kuw[k3,u3,w1,10] + Q_kuw[k3,u3,w2,10]
+   + Q_kuw[k3,u3,w3,10] + Q_kuw[k3,u3,w4,10] + Q_kuw[k3,u3,w5,10] = 0
+ c18[u3,k3,11]: - Q_ju[j1,u3,11] - Q_ju[j2,u3,11] - Q_ju[j3,u3,11]
+   - Q_ju[j4,u3,11] + Q_kuw[k3,u3,w1,11] + Q_kuw[k3,u3,w2,11]
+   + Q_kuw[k3,u3,w3,11] + Q_kuw[k3,u3,w4,11] + Q_kuw[k3,u3,w5,11] = 0
+ c18[u4,k1,0]: - 0.1 Q_ju[j1,u4,0] - 0.1 Q_ju[j2,u4,0] - 0.1 Q_ju[j3,u4,0]
+   - 0.1 Q_ju[j4,u4,0] + Q_kuw[k1,u4,w1,0] + Q_kuw[k1,u4,w2,0]
+   + Q_kuw[k1,u4,w3,0] + Q_kuw[k1,u4,w4,0] + Q_kuw[k1,u4,w5,0] = 0
+ c18[u4,k1,1]: - 0.3 Q_ju[j1,u4,1] - 0.3 Q_ju[j2,u4,1] - 0.3 Q_ju[j3,u4,1]
+   - 0.3 Q_ju[j4,u4,1] + Q_kuw[k1,u4,w1,1] + Q_kuw[k1,u4,w2,1]
+   + Q_kuw[k1,u4,w3,1] + Q_kuw[k1,u4,w4,1] + Q_kuw[k1,u4,w5,1] = 0
+ c18[u4,k1,2]: - 0.1 Q_ju[j1,u4,2] - 0.1 Q_ju[j2,u4,2] - 0.1 Q_ju[j3,u4,2]
+   - 0.1 Q_ju[j4,u4,2] + Q_kuw[k1,u4,w1,2] + Q_kuw[k1,u4,w2,2]
+   + Q_kuw[k1,u4,w3,2] + Q_kuw[k1,u4,w4,2] + Q_kuw[k1,u4,w5,2] = 0
+ c18[u4,k1,3]: - 0.2 Q_ju[j1,u4,3] - 0.2 Q_ju[j2,u4,3] - 0.2 Q_ju[j3,u4,3]
+   - 0.2 Q_ju[j4,u4,3] + Q_kuw[k1,u4,w1,3] + Q_kuw[k1,u4,w2,3]
+   + Q_kuw[k1,u4,w3,3] + Q_kuw[k1,u4,w4,3] + Q_kuw[k1,u4,w5,3] = 0
+ c18[u4,k1,4]: - 0.2 Q_ju[j1,u4,4] - 0.2 Q_ju[j2,u4,4] - 0.2 Q_ju[j3,u4,4]
+   - 0.2 Q_ju[j4,u4,4] + Q_kuw[k1,u4,w1,4] + Q_kuw[k1,u4,w2,4]
+   + Q_kuw[k1,u4,w3,4] + Q_kuw[k1,u4,w4,4] + Q_kuw[k1,u4,w5,4] = 0
+ c18[u4,k1,5]: - 0.3 Q_ju[j1,u4,5] - 0.3 Q_ju[j2,u4,5] - 0.3 Q_ju[j3,u4,5]
+   - 0.3 Q_ju[j4,u4,5] + Q_kuw[k1,u4,w1,5] + Q_kuw[k1,u4,w2,5]
+   + Q_kuw[k1,u4,w3,5] + Q_kuw[k1,u4,w4,5] + Q_kuw[k1,u4,w5,5] = 0
+ c18[u4,k1,6]: - 0.2 Q_ju[j1,u4,6] - 0.2 Q_ju[j2,u4,6] - 0.2 Q_ju[j3,u4,6]
+   - 0.2 Q_ju[j4,u4,6] + Q_kuw[k1,u4,w1,6] + Q_kuw[k1,u4,w2,6]
+   + Q_kuw[k1,u4,w3,6] + Q_kuw[k1,u4,w4,6] + Q_kuw[k1,u4,w5,6] = 0
+ c18[u4,k1,7]: - 0.1 Q_ju[j1,u4,7] - 0.1 Q_ju[j2,u4,7] - 0.1 Q_ju[j3,u4,7]
+   - 0.1 Q_ju[j4,u4,7] + Q_kuw[k1,u4,w1,7] + Q_kuw[k1,u4,w2,7]
+   + Q_kuw[k1,u4,w3,7] + Q_kuw[k1,u4,w4,7] + Q_kuw[k1,u4,w5,7] = 0
+ c18[u4,k1,8]: - 0.2 Q_ju[j1,u4,8] - 0.2 Q_ju[j2,u4,8] - 0.2 Q_ju[j3,u4,8]
+   - 0.2 Q_ju[j4,u4,8] + Q_kuw[k1,u4,w1,8] + Q_kuw[k1,u4,w2,8]
+   + Q_kuw[k1,u4,w3,8] + Q_kuw[k1,u4,w4,8] + Q_kuw[k1,u4,w5,8] = 0
+ c18[u4,k1,9]: - 0.1 Q_ju[j1,u4,9] - 0.1 Q_ju[j2,u4,9] - 0.1 Q_ju[j3,u4,9]
+   - 0.1 Q_ju[j4,u4,9] + Q_kuw[k1,u4,w1,9] + Q_kuw[k1,u4,w2,9]
+   + Q_kuw[k1,u4,w3,9] + Q_kuw[k1,u4,w4,9] + Q_kuw[k1,u4,w5,9] = 0
+ c18[u4,k1,10]: - 0.2 Q_ju[j1,u4,10] - 0.2 Q_ju[j2,u4,10]
+   - 0.2 Q_ju[j3,u4,10] - 0.2 Q_ju[j4,u4,10] + Q_kuw[k1,u4,w1,10]
+   + Q_kuw[k1,u4,w2,10] + Q_kuw[k1,u4,w3,10] + Q_kuw[k1,u4,w4,10]
+   + Q_kuw[k1,u4,w5,10] = 0
+ c18[u4,k1,11]: - 0.1 Q_ju[j1,u4,11] - 0.1 Q_ju[j2,u4,11]
+   - 0.1 Q_ju[j3,u4,11] - 0.1 Q_ju[j4,u4,11] + Q_kuw[k1,u4,w1,11]
+   + Q_kuw[k1,u4,w2,11] + Q_kuw[k1,u4,w3,11] + Q_kuw[k1,u4,w4,11]
+   + Q_kuw[k1,u4,w5,11] = 0
+ c18[u4,k2,0]: - 0.4 Q_ju[j1,u4,0] - 0.4 Q_ju[j2,u4,0] - 0.4 Q_ju[j3,u4,0]
+   - 0.4 Q_ju[j4,u4,0] + Q_kuw[k2,u4,w1,0] + Q_kuw[k2,u4,w2,0]
+   + Q_kuw[k2,u4,w3,0] + Q_kuw[k2,u4,w4,0] + Q_kuw[k2,u4,w5,0] = 0
+ c18[u4,k2,1]: - 1.2 Q_ju[j1,u4,1] - 1.2 Q_ju[j2,u4,1] - 1.2 Q_ju[j3,u4,1]
+   - 1.2 Q_ju[j4,u4,1] + Q_kuw[k2,u4,w1,1] + Q_kuw[k2,u4,w2,1]
+   + Q_kuw[k2,u4,w3,1] + Q_kuw[k2,u4,w4,1] + Q_kuw[k2,u4,w5,1] = 0
+ c18[u4,k2,2]: - 0.4 Q_ju[j1,u4,2] - 0.4 Q_ju[j2,u4,2] - 0.4 Q_ju[j3,u4,2]
+   - 0.4 Q_ju[j4,u4,2] + Q_kuw[k2,u4,w1,2] + Q_kuw[k2,u4,w2,2]
+   + Q_kuw[k2,u4,w3,2] + Q_kuw[k2,u4,w4,2] + Q_kuw[k2,u4,w5,2] = 0
+ c18[u4,k2,3]: - 0.8 Q_ju[j1,u4,3] - 0.8 Q_ju[j2,u4,3] - 0.8 Q_ju[j3,u4,3]
+   - 0.8 Q_ju[j4,u4,3] + Q_kuw[k2,u4,w1,3] + Q_kuw[k2,u4,w2,3]
+   + Q_kuw[k2,u4,w3,3] + Q_kuw[k2,u4,w4,3] + Q_kuw[k2,u4,w5,3] = 0
+ c18[u4,k2,4]: - 0.8 Q_ju[j1,u4,4] - 0.8 Q_ju[j2,u4,4] - 0.8 Q_ju[j3,u4,4]
+   - 0.8 Q_ju[j4,u4,4] + Q_kuw[k2,u4,w1,4] + Q_kuw[k2,u4,w2,4]
+   + Q_kuw[k2,u4,w3,4] + Q_kuw[k2,u4,w4,4] + Q_kuw[k2,u4,w5,4] = 0
+ c18[u4,k2,5]: - 1.2 Q_ju[j1,u4,5] - 1.2 Q_ju[j2,u4,5] - 1.2 Q_ju[j3,u4,5]
+   - 1.2 Q_ju[j4,u4,5] + Q_kuw[k2,u4,w1,5] + Q_kuw[k2,u4,w2,5]
+   + Q_kuw[k2,u4,w3,5] + Q_kuw[k2,u4,w4,5] + Q_kuw[k2,u4,w5,5] = 0
+ c18[u4,k2,6]: - 0.8 Q_ju[j1,u4,6] - 0.8 Q_ju[j2,u4,6] - 0.8 Q_ju[j3,u4,6]
+   - 0.8 Q_ju[j4,u4,6] + Q_kuw[k2,u4,w1,6] + Q_kuw[k2,u4,w2,6]
+   + Q_kuw[k2,u4,w3,6] + Q_kuw[k2,u4,w4,6] + Q_kuw[k2,u4,w5,6] = 0
+ c18[u4,k2,7]: - 0.4 Q_ju[j1,u4,7] - 0.4 Q_ju[j2,u4,7] - 0.4 Q_ju[j3,u4,7]
+   - 0.4 Q_ju[j4,u4,7] + Q_kuw[k2,u4,w1,7] + Q_kuw[k2,u4,w2,7]
+   + Q_kuw[k2,u4,w3,7] + Q_kuw[k2,u4,w4,7] + Q_kuw[k2,u4,w5,7] = 0
+ c18[u4,k2,8]: - 0.8 Q_ju[j1,u4,8] - 0.8 Q_ju[j2,u4,8] - 0.8 Q_ju[j3,u4,8]
+   - 0.8 Q_ju[j4,u4,8] + Q_kuw[k2,u4,w1,8] + Q_kuw[k2,u4,w2,8]
+   + Q_kuw[k2,u4,w3,8] + Q_kuw[k2,u4,w4,8] + Q_kuw[k2,u4,w5,8] = 0
+ c18[u4,k2,9]: - 0.4 Q_ju[j1,u4,9] - 0.4 Q_ju[j2,u4,9] - 0.4 Q_ju[j3,u4,9]
+   - 0.4 Q_ju[j4,u4,9] + Q_kuw[k2,u4,w1,9] + Q_kuw[k2,u4,w2,9]
+   + Q_kuw[k2,u4,w3,9] + Q_kuw[k2,u4,w4,9] + Q_kuw[k2,u4,w5,9] = 0
+ c18[u4,k2,10]: - 0.8 Q_ju[j1,u4,10] - 0.8 Q_ju[j2,u4,10]
+   - 0.8 Q_ju[j3,u4,10] - 0.8 Q_ju[j4,u4,10] + Q_kuw[k2,u4,w1,10]
+   + Q_kuw[k2,u4,w2,10] + Q_kuw[k2,u4,w3,10] + Q_kuw[k2,u4,w4,10]
+   + Q_kuw[k2,u4,w5,10] = 0
+ c18[u4,k2,11]: - 0.4 Q_ju[j1,u4,11] - 0.4 Q_ju[j2,u4,11]
+   - 0.4 Q_ju[j3,u4,11] - 0.4 Q_ju[j4,u4,11] + Q_kuw[k2,u4,w1,11]
+   + Q_kuw[k2,u4,w2,11] + Q_kuw[k2,u4,w3,11] + Q_kuw[k2,u4,w4,11]
+   + Q_kuw[k2,u4,w5,11] = 0
+ c18[u4,k3,0]: - Q_ju[j1,u4,0] - Q_ju[j2,u4,0] - Q_ju[j3,u4,0]
+   - Q_ju[j4,u4,0] + Q_kuw[k3,u4,w1,0] + Q_kuw[k3,u4,w2,0]
+   + Q_kuw[k3,u4,w3,0] + Q_kuw[k3,u4,w4,0] + Q_kuw[k3,u4,w5,0] = 0
+ c18[u4,k3,1]: - 3 Q_ju[j1,u4,1] - 3 Q_ju[j2,u4,1] - 3 Q_ju[j3,u4,1]
+   - 3 Q_ju[j4,u4,1] + Q_kuw[k3,u4,w1,1] + Q_kuw[k3,u4,w2,1]
+   + Q_kuw[k3,u4,w3,1] + Q_kuw[k3,u4,w4,1] + Q_kuw[k3,u4,w5,1] = 0
+ c18[u4,k3,2]: - Q_ju[j1,u4,2] - Q_ju[j2,u4,2] - Q_ju[j3,u4,2]
+   - Q_ju[j4,u4,2] + Q_kuw[k3,u4,w1,2] + Q_kuw[k3,u4,w2,2]
+   + Q_kuw[k3,u4,w3,2] + Q_kuw[k3,u4,w4,2] + Q_kuw[k3,u4,w5,2] = 0
+ c18[u4,k3,3]: - 2 Q_ju[j1,u4,3] - 2 Q_ju[j2,u4,3] - 2 Q_ju[j3,u4,3]
+   - 2 Q_ju[j4,u4,3] + Q_kuw[k3,u4,w1,3] + Q_kuw[k3,u4,w2,3]
+   + Q_kuw[k3,u4,w3,3] + Q_kuw[k3,u4,w4,3] + Q_kuw[k3,u4,w5,3] = 0
+ c18[u4,k3,4]: - 2 Q_ju[j1,u4,4] - 2 Q_ju[j2,u4,4] - 2 Q_ju[j3,u4,4]
+   - 2 Q_ju[j4,u4,4] + Q_kuw[k3,u4,w1,4] + Q_kuw[k3,u4,w2,4]
+   + Q_kuw[k3,u4,w3,4] + Q_kuw[k3,u4,w4,4] + Q_kuw[k3,u4,w5,4] = 0
+ c18[u4,k3,5]: - 3 Q_ju[j1,u4,5] - 3 Q_ju[j2,u4,5] - 3 Q_ju[j3,u4,5]
+   - 3 Q_ju[j4,u4,5] + Q_kuw[k3,u4,w1,5] + Q_kuw[k3,u4,w2,5]
+   + Q_kuw[k3,u4,w3,5] + Q_kuw[k3,u4,w4,5] + Q_kuw[k3,u4,w5,5] = 0
+ c18[u4,k3,6]: - 2 Q_ju[j1,u4,6] - 2 Q_ju[j2,u4,6] - 2 Q_ju[j3,u4,6]
+   - 2 Q_ju[j4,u4,6] + Q_kuw[k3,u4,w1,6] + Q_kuw[k3,u4,w2,6]
+   + Q_kuw[k3,u4,w3,6] + Q_kuw[k3,u4,w4,6] + Q_kuw[k3,u4,w5,6] = 0
+ c18[u4,k3,7]: - Q_ju[j1,u4,7] - Q_ju[j2,u4,7] - Q_ju[j3,u4,7]
+   - Q_ju[j4,u4,7] + Q_kuw[k3,u4,w1,7] + Q_kuw[k3,u4,w2,7]
+   + Q_kuw[k3,u4,w3,7] + Q_kuw[k3,u4,w4,7] + Q_kuw[k3,u4,w5,7] = 0
+ c18[u4,k3,8]: - 2 Q_ju[j1,u4,8] - 2 Q_ju[j2,u4,8] - 2 Q_ju[j3,u4,8]
+   - 2 Q_ju[j4,u4,8] + Q_kuw[k3,u4,w1,8] + Q_kuw[k3,u4,w2,8]
+   + Q_kuw[k3,u4,w3,8] + Q_kuw[k3,u4,w4,8] + Q_kuw[k3,u4,w5,8] = 0
+ c18[u4,k3,9]: - Q_ju[j1,u4,9] - Q_ju[j2,u4,9] - Q_ju[j3,u4,9]
+   - Q_ju[j4,u4,9] + Q_kuw[k3,u4,w1,9] + Q_kuw[k3,u4,w2,9]
+   + Q_kuw[k3,u4,w3,9] + Q_kuw[k3,u4,w4,9] + Q_kuw[k3,u4,w5,9] = 0
+ c18[u4,k3,10]: - 2 Q_ju[j1,u4,10] - 2 Q_ju[j2,u4,10] - 2 Q_ju[j3,u4,10]
+   - 2 Q_ju[j4,u4,10] + Q_kuw[k3,u4,w1,10] + Q_kuw[k3,u4,w2,10]
+   + Q_kuw[k3,u4,w3,10] + Q_kuw[k3,u4,w4,10] + Q_kuw[k3,u4,w5,10] = 0
+ c18[u4,k3,11]: - Q_ju[j1,u4,11] - Q_ju[j2,u4,11] - Q_ju[j3,u4,11]
+   - Q_ju[j4,u4,11] + Q_kuw[k3,u4,w1,11] + Q_kuw[k3,u4,w2,11]
+   + Q_kuw[k3,u4,w3,11] + Q_kuw[k3,u4,w4,11] + Q_kuw[k3,u4,w5,11] = 0
+ c18[u5,k1,0]: - 0.1 Q_ju[j1,u5,0] - 0.1 Q_ju[j2,u5,0] - 0.1 Q_ju[j3,u5,0]
+   - 0.1 Q_ju[j4,u5,0] + Q_kuw[k1,u5,w1,0] + Q_kuw[k1,u5,w2,0]
+   + Q_kuw[k1,u5,w3,0] + Q_kuw[k1,u5,w4,0] + Q_kuw[k1,u5,w5,0] = 0
+ c18[u5,k1,1]: - 0.3 Q_ju[j1,u5,1] - 0.3 Q_ju[j2,u5,1] - 0.3 Q_ju[j3,u5,1]
+   - 0.3 Q_ju[j4,u5,1] + Q_kuw[k1,u5,w1,1] + Q_kuw[k1,u5,w2,1]
+   + Q_kuw[k1,u5,w3,1] + Q_kuw[k1,u5,w4,1] + Q_kuw[k1,u5,w5,1] = 0
+ c18[u5,k1,2]: - 0.1 Q_ju[j1,u5,2] - 0.1 Q_ju[j2,u5,2] - 0.1 Q_ju[j3,u5,2]
+   - 0.1 Q_ju[j4,u5,2] + Q_kuw[k1,u5,w1,2] + Q_kuw[k1,u5,w2,2]
+   + Q_kuw[k1,u5,w3,2] + Q_kuw[k1,u5,w4,2] + Q_kuw[k1,u5,w5,2] = 0
+ c18[u5,k1,3]: - 0.2 Q_ju[j1,u5,3] - 0.2 Q_ju[j2,u5,3] - 0.2 Q_ju[j3,u5,3]
+   - 0.2 Q_ju[j4,u5,3] + Q_kuw[k1,u5,w1,3] + Q_kuw[k1,u5,w2,3]
+   + Q_kuw[k1,u5,w3,3] + Q_kuw[k1,u5,w4,3] + Q_kuw[k1,u5,w5,3] = 0
+ c18[u5,k1,4]: - 0.2 Q_ju[j1,u5,4] - 0.2 Q_ju[j2,u5,4] - 0.2 Q_ju[j3,u5,4]
+   - 0.2 Q_ju[j4,u5,4] + Q_kuw[k1,u5,w1,4] + Q_kuw[k1,u5,w2,4]
+   + Q_kuw[k1,u5,w3,4] + Q_kuw[k1,u5,w4,4] + Q_kuw[k1,u5,w5,4] = 0
+ c18[u5,k1,5]: - 0.3 Q_ju[j1,u5,5] - 0.3 Q_ju[j2,u5,5] - 0.3 Q_ju[j3,u5,5]
+   - 0.3 Q_ju[j4,u5,5] + Q_kuw[k1,u5,w1,5] + Q_kuw[k1,u5,w2,5]
+   + Q_kuw[k1,u5,w3,5] + Q_kuw[k1,u5,w4,5] + Q_kuw[k1,u5,w5,5] = 0
+ c18[u5,k1,6]: - 0.2 Q_ju[j1,u5,6] - 0.2 Q_ju[j2,u5,6] - 0.2 Q_ju[j3,u5,6]
+   - 0.2 Q_ju[j4,u5,6] + Q_kuw[k1,u5,w1,6] + Q_kuw[k1,u5,w2,6]
+   + Q_kuw[k1,u5,w3,6] + Q_kuw[k1,u5,w4,6] + Q_kuw[k1,u5,w5,6] = 0
+ c18[u5,k1,7]: - 0.1 Q_ju[j1,u5,7] - 0.1 Q_ju[j2,u5,7] - 0.1 Q_ju[j3,u5,7]
+   - 0.1 Q_ju[j4,u5,7] + Q_kuw[k1,u5,w1,7] + Q_kuw[k1,u5,w2,7]
+   + Q_kuw[k1,u5,w3,7] + Q_kuw[k1,u5,w4,7] + Q_kuw[k1,u5,w5,7] = 0
+ c18[u5,k1,8]: - 0.2 Q_ju[j1,u5,8] - 0.2 Q_ju[j2,u5,8] - 0.2 Q_ju[j3,u5,8]
+   - 0.2 Q_ju[j4,u5,8] + Q_kuw[k1,u5,w1,8] + Q_kuw[k1,u5,w2,8]
+   + Q_kuw[k1,u5,w3,8] + Q_kuw[k1,u5,w4,8] + Q_kuw[k1,u5,w5,8] = 0
+ c18[u5,k1,9]: - 0.1 Q_ju[j1,u5,9] - 0.1 Q_ju[j2,u5,9] - 0.1 Q_ju[j3,u5,9]
+   - 0.1 Q_ju[j4,u5,9] + Q_kuw[k1,u5,w1,9] + Q_kuw[k1,u5,w2,9]
+   + Q_kuw[k1,u5,w3,9] + Q_kuw[k1,u5,w4,9] + Q_kuw[k1,u5,w5,9] = 0
+ c18[u5,k1,10]: - 0.2 Q_ju[j1,u5,10] - 0.2 Q_ju[j2,u5,10]
+   - 0.2 Q_ju[j3,u5,10] - 0.2 Q_ju[j4,u5,10] + Q_kuw[k1,u5,w1,10]
+   + Q_kuw[k1,u5,w2,10] + Q_kuw[k1,u5,w3,10] + Q_kuw[k1,u5,w4,10]
+   + Q_kuw[k1,u5,w5,10] = 0
+ c18[u5,k1,11]: - 0.1 Q_ju[j1,u5,11] - 0.1 Q_ju[j2,u5,11]
+   - 0.1 Q_ju[j3,u5,11] - 0.1 Q_ju[j4,u5,11] + Q_kuw[k1,u5,w1,11]
+   + Q_kuw[k1,u5,w2,11] + Q_kuw[k1,u5,w3,11] + Q_kuw[k1,u5,w4,11]
+   + Q_kuw[k1,u5,w5,11] = 0
+ c18[u5,k2,0]: - 0.4 Q_ju[j1,u5,0] - 0.4 Q_ju[j2,u5,0] - 0.4 Q_ju[j3,u5,0]
+   - 0.4 Q_ju[j4,u5,0] + Q_kuw[k2,u5,w1,0] + Q_kuw[k2,u5,w2,0]
+   + Q_kuw[k2,u5,w3,0] + Q_kuw[k2,u5,w4,0] + Q_kuw[k2,u5,w5,0] = 0
+ c18[u5,k2,1]: - 1.2 Q_ju[j1,u5,1] - 1.2 Q_ju[j2,u5,1] - 1.2 Q_ju[j3,u5,1]
+   - 1.2 Q_ju[j4,u5,1] + Q_kuw[k2,u5,w1,1] + Q_kuw[k2,u5,w2,1]
+   + Q_kuw[k2,u5,w3,1] + Q_kuw[k2,u5,w4,1] + Q_kuw[k2,u5,w5,1] = 0
+ c18[u5,k2,2]: - 0.4 Q_ju[j1,u5,2] - 0.4 Q_ju[j2,u5,2] - 0.4 Q_ju[j3,u5,2]
+   - 0.4 Q_ju[j4,u5,2] + Q_kuw[k2,u5,w1,2] + Q_kuw[k2,u5,w2,2]
+   + Q_kuw[k2,u5,w3,2] + Q_kuw[k2,u5,w4,2] + Q_kuw[k2,u5,w5,2] = 0
+ c18[u5,k2,3]: - 0.8 Q_ju[j1,u5,3] - 0.8 Q_ju[j2,u5,3] - 0.8 Q_ju[j3,u5,3]
+   - 0.8 Q_ju[j4,u5,3] + Q_kuw[k2,u5,w1,3] + Q_kuw[k2,u5,w2,3]
+   + Q_kuw[k2,u5,w3,3] + Q_kuw[k2,u5,w4,3] + Q_kuw[k2,u5,w5,3] = 0
+ c18[u5,k2,4]: - 0.8 Q_ju[j1,u5,4] - 0.8 Q_ju[j2,u5,4] - 0.8 Q_ju[j3,u5,4]
+   - 0.8 Q_ju[j4,u5,4] + Q_kuw[k2,u5,w1,4] + Q_kuw[k2,u5,w2,4]
+   + Q_kuw[k2,u5,w3,4] + Q_kuw[k2,u5,w4,4] + Q_kuw[k2,u5,w5,4] = 0
+ c18[u5,k2,5]: - 1.2 Q_ju[j1,u5,5] - 1.2 Q_ju[j2,u5,5] - 1.2 Q_ju[j3,u5,5]
+   - 1.2 Q_ju[j4,u5,5] + Q_kuw[k2,u5,w1,5] + Q_kuw[k2,u5,w2,5]
+   + Q_kuw[k2,u5,w3,5] + Q_kuw[k2,u5,w4,5] + Q_kuw[k2,u5,w5,5] = 0
+ c18[u5,k2,6]: - 0.8 Q_ju[j1,u5,6] - 0.8 Q_ju[j2,u5,6] - 0.8 Q_ju[j3,u5,6]
+   - 0.8 Q_ju[j4,u5,6] + Q_kuw[k2,u5,w1,6] + Q_kuw[k2,u5,w2,6]
+   + Q_kuw[k2,u5,w3,6] + Q_kuw[k2,u5,w4,6] + Q_kuw[k2,u5,w5,6] = 0
+ c18[u5,k2,7]: - 0.4 Q_ju[j1,u5,7] - 0.4 Q_ju[j2,u5,7] - 0.4 Q_ju[j3,u5,7]
+   - 0.4 Q_ju[j4,u5,7] + Q_kuw[k2,u5,w1,7] + Q_kuw[k2,u5,w2,7]
+   + Q_kuw[k2,u5,w3,7] + Q_kuw[k2,u5,w4,7] + Q_kuw[k2,u5,w5,7] = 0
+ c18[u5,k2,8]: - 0.8 Q_ju[j1,u5,8] - 0.8 Q_ju[j2,u5,8] - 0.8 Q_ju[j3,u5,8]
+   - 0.8 Q_ju[j4,u5,8] + Q_kuw[k2,u5,w1,8] + Q_kuw[k2,u5,w2,8]
+   + Q_kuw[k2,u5,w3,8] + Q_kuw[k2,u5,w4,8] + Q_kuw[k2,u5,w5,8] = 0
+ c18[u5,k2,9]: - 0.4 Q_ju[j1,u5,9] - 0.4 Q_ju[j2,u5,9] - 0.4 Q_ju[j3,u5,9]
+   - 0.4 Q_ju[j4,u5,9] + Q_kuw[k2,u5,w1,9] + Q_kuw[k2,u5,w2,9]
+   + Q_kuw[k2,u5,w3,9] + Q_kuw[k2,u5,w4,9] + Q_kuw[k2,u5,w5,9] = 0
+ c18[u5,k2,10]: - 0.8 Q_ju[j1,u5,10] - 0.8 Q_ju[j2,u5,10]
+   - 0.8 Q_ju[j3,u5,10] - 0.8 Q_ju[j4,u5,10] + Q_kuw[k2,u5,w1,10]
+   + Q_kuw[k2,u5,w2,10] + Q_kuw[k2,u5,w3,10] + Q_kuw[k2,u5,w4,10]
+   + Q_kuw[k2,u5,w5,10] = 0
+ c18[u5,k2,11]: - 0.4 Q_ju[j1,u5,11] - 0.4 Q_ju[j2,u5,11]
+   - 0.4 Q_ju[j3,u5,11] - 0.4 Q_ju[j4,u5,11] + Q_kuw[k2,u5,w1,11]
+   + Q_kuw[k2,u5,w2,11] + Q_kuw[k2,u5,w3,11] + Q_kuw[k2,u5,w4,11]
+   + Q_kuw[k2,u5,w5,11] = 0
+ c18[u5,k3,0]: - Q_ju[j1,u5,0] - Q_ju[j2,u5,0] - Q_ju[j3,u5,0]
+   - Q_ju[j4,u5,0] + Q_kuw[k3,u5,w1,0] + Q_kuw[k3,u5,w2,0]
+   + Q_kuw[k3,u5,w3,0] + Q_kuw[k3,u5,w4,0] + Q_kuw[k3,u5,w5,0] = 0
+ c18[u5,k3,1]: - 3 Q_ju[j1,u5,1] - 3 Q_ju[j2,u5,1] - 3 Q_ju[j3,u5,1]
+   - 3 Q_ju[j4,u5,1] + Q_kuw[k3,u5,w1,1] + Q_kuw[k3,u5,w2,1]
+   + Q_kuw[k3,u5,w3,1] + Q_kuw[k3,u5,w4,1] + Q_kuw[k3,u5,w5,1] = 0
+ c18[u5,k3,2]: - Q_ju[j1,u5,2] - Q_ju[j2,u5,2] - Q_ju[j3,u5,2]
+   - Q_ju[j4,u5,2] + Q_kuw[k3,u5,w1,2] + Q_kuw[k3,u5,w2,2]
+   + Q_kuw[k3,u5,w3,2] + Q_kuw[k3,u5,w4,2] + Q_kuw[k3,u5,w5,2] = 0
+ c18[u5,k3,3]: - 2 Q_ju[j1,u5,3] - 2 Q_ju[j2,u5,3] - 2 Q_ju[j3,u5,3]
+   - 2 Q_ju[j4,u5,3] + Q_kuw[k3,u5,w1,3] + Q_kuw[k3,u5,w2,3]
+   + Q_kuw[k3,u5,w3,3] + Q_kuw[k3,u5,w4,3] + Q_kuw[k3,u5,w5,3] = 0
+ c18[u5,k3,4]: - 2 Q_ju[j1,u5,4] - 2 Q_ju[j2,u5,4] - 2 Q_ju[j3,u5,4]
+   - 2 Q_ju[j4,u5,4] + Q_kuw[k3,u5,w1,4] + Q_kuw[k3,u5,w2,4]
+   + Q_kuw[k3,u5,w3,4] + Q_kuw[k3,u5,w4,4] + Q_kuw[k3,u5,w5,4] = 0
+ c18[u5,k3,5]: - 3 Q_ju[j1,u5,5] - 3 Q_ju[j2,u5,5] - 3 Q_ju[j3,u5,5]
+   - 3 Q_ju[j4,u5,5] + Q_kuw[k3,u5,w1,5] + Q_kuw[k3,u5,w2,5]
+   + Q_kuw[k3,u5,w3,5] + Q_kuw[k3,u5,w4,5] + Q_kuw[k3,u5,w5,5] = 0
+ c18[u5,k3,6]: - 2 Q_ju[j1,u5,6] - 2 Q_ju[j2,u5,6] - 2 Q_ju[j3,u5,6]
+   - 2 Q_ju[j4,u5,6] + Q_kuw[k3,u5,w1,6] + Q_kuw[k3,u5,w2,6]
+   + Q_kuw[k3,u5,w3,6] + Q_kuw[k3,u5,w4,6] + Q_kuw[k3,u5,w5,6] = 0
+ c18[u5,k3,7]: - Q_ju[j1,u5,7] - Q_ju[j2,u5,7] - Q_ju[j3,u5,7]
+   - Q_ju[j4,u5,7] + Q_kuw[k3,u5,w1,7] + Q_kuw[k3,u5,w2,7]
+   + Q_kuw[k3,u5,w3,7] + Q_kuw[k3,u5,w4,7] + Q_kuw[k3,u5,w5,7] = 0
+ c18[u5,k3,8]: - 2 Q_ju[j1,u5,8] - 2 Q_ju[j2,u5,8] - 2 Q_ju[j3,u5,8]
+   - 2 Q_ju[j4,u5,8] + Q_kuw[k3,u5,w1,8] + Q_kuw[k3,u5,w2,8]
+   + Q_kuw[k3,u5,w3,8] + Q_kuw[k3,u5,w4,8] + Q_kuw[k3,u5,w5,8] = 0
+ c18[u5,k3,9]: - Q_ju[j1,u5,9] - Q_ju[j2,u5,9] - Q_ju[j3,u5,9]
+   - Q_ju[j4,u5,9] + Q_kuw[k3,u5,w1,9] + Q_kuw[k3,u5,w2,9]
+   + Q_kuw[k3,u5,w3,9] + Q_kuw[k3,u5,w4,9] + Q_kuw[k3,u5,w5,9] = 0
+ c18[u5,k3,10]: - 2 Q_ju[j1,u5,10] - 2 Q_ju[j2,u5,10] - 2 Q_ju[j3,u5,10]
+   - 2 Q_ju[j4,u5,10] + Q_kuw[k3,u5,w1,10] + Q_kuw[k3,u5,w2,10]
+   + Q_kuw[k3,u5,w3,10] + Q_kuw[k3,u5,w4,10] + Q_kuw[k3,u5,w5,10] = 0
+ c18[u5,k3,11]: - Q_ju[j1,u5,11] - Q_ju[j2,u5,11] - Q_ju[j3,u5,11]
+   - Q_ju[j4,u5,11] + Q_kuw[k3,u5,w1,11] + Q_kuw[k3,u5,w2,11]
+   + Q_kuw[k3,u5,w3,11] + Q_kuw[k3,u5,w4,11] + Q_kuw[k3,u5,w5,11] = 0
  c19[k1,v1,0]: Q_kuv[k1,u1,v1,0] + Q_kuv[k1,u2,v1,0] + Q_kuv[k1,u3,v1,0]
    + Q_kuv[k1,u4,v1,0] + Q_kuv[k1,u5,v1,0] - Q_kvf[k1,v1,f1,0]
    - Q_kvf[k1,v1,f2,0] - Q_kvf[k1,v1,f3,0] - Q_kvf[k1,v1,f4,0]
@@ -22698,8 +22698,114 @@ Generals
 General Constraints
  GC0: legal = MIN ( C6290 , C6291 )
  GC1: excess = MAX ( C6292 , 0 )
-Scenario 0
-Bounds
- pi = 0
- pi_penalty = 0
+Scenario M_j_+50
+Subject To
+ c15[j1,0]: = 180002
+ c15[j1,1]: = 7500
+ c15[j1,2]: = 6000
+ c15[j1,3]: = 12000
+ c15[j1,4]: = 12000
+ c15[j1,5]: = 12000
+ c15[j1,6]: = 13500
+ c15[j1,7]: = 12000
+ c15[j1,8]: = 9000
+ c15[j1,9]: = 12000
+ c15[j1,10]: = 16500
+ c15[j1,11]: = 7500
+ c15[j2,0]: = 16500
+ c15[j2,1]: = 16500
+ c15[j2,2]: = 18000
+ c15[j2,3]: = 16500
+ c15[j2,4]: = 13500
+ c15[j2,5]: = 12000
+ c15[j2,6]: = 7500
+ c15[j2,7]: = 15000
+ c15[j2,8]: = 12000
+ c15[j2,9]: = 13500
+ c15[j2,10]: = 12000
+ c15[j2,11]: = 12000
+ c15[j3,0]: = 7500
+ c15[j3,1]: = 7500
+ c15[j3,2]: = 7500
+ c15[j3,3]: = 16500
+ c15[j3,4]: = 6000
+ c15[j3,5]: = 15000
+ c15[j3,6]: = 7500
+ c15[j3,7]: = 10500
+ c15[j3,8]: = 7500
+ c15[j3,9]: = 12000
+ c15[j3,10]: = 18000
+ c15[j3,11]: = 18000
+ c15[j4,0]: = 18000
+ c15[j4,1]: = 6000
+ c15[j4,2]: = 13500
+ c15[j4,3]: = 7500
+ c15[j4,4]: = 18000
+ c15[j4,5]: = 12000
+ c15[j4,6]: = 13500
+ c15[j4,7]: = 18000
+ c15[j4,8]: = 10500
+ c15[j4,9]: = 7500
+ c15[j4,10]: = 10500
+ c15[j4,11]: = 16500
+ c16[u1,0]: = 0.8
+ c16[u1,1]: = 0.8
+ c16[u1,2]: = 0.7
+ c16[u1,3]: = 0.7
+ c16[u1,4]: = 0.7
+ c16[u1,5]: = 0.7
+ c16[u1,6]: = 0.8
+ c16[u1,7]: = 0.7
+ c16[u1,8]: = 0.7
+ c16[u1,9]: = 0.7
+ c16[u1,10]: = 0.7
+ c16[u1,11]: = 0.7
+ c16[u2,0]: = 0.8
+ c16[u2,1]: = 0.8
+ c16[u2,2]: = 0.7
+ c16[u2,3]: = 0.7
+ c16[u2,4]: = 0.7
+ c16[u2,5]: = 0.7
+ c16[u2,6]: = 0.8
+ c16[u2,7]: = 0.7
+ c16[u2,8]: = 0.7
+ c16[u2,9]: = 0.7
+ c16[u2,10]: = 0.7
+ c16[u2,11]: = 0.7
+ c16[u3,0]: = 0.8
+ c16[u3,1]: = 0.8
+ c16[u3,2]: = 0.7
+ c16[u3,3]: = 0.7
+ c16[u3,4]: = 0.7
+ c16[u3,5]: = 0.7
+ c16[u3,6]: = 0.8
+ c16[u3,7]: = 0.7
+ c16[u3,8]: = 0.7
+ c16[u3,9]: = 0.7
+ c16[u3,10]: = 0.7
+ c16[u3,11]: = 0.7
+ c16[u4,0]: = 0.8
+ c16[u4,1]: = 0.8
+ c16[u4,2]: = 0.7
+ c16[u4,3]: = 0.7
+ c16[u4,4]: = 0.7
+ c16[u4,5]: = 0.7
+ c16[u4,6]: = 0.8
+ c16[u4,7]: = 0.7
+ c16[u4,8]: = 0.7
+ c16[u4,9]: = 0.7
+ c16[u4,10]: = 0.7
+ c16[u4,11]: = 0.7
+ c16[u5,0]: = 0.8
+ c16[u5,1]: = 0.8
+ c16[u5,2]: = 0.7
+ c16[u5,3]: = 0.7
+ c16[u5,4]: = 0.7
+ c16[u5,5]: = 0.7
+ c16[u5,6]: = 0.8
+ c16[u5,7]: = 0.7
+ c16[u5,8]: = 0.7
+ c16[u5,9]: = 0.7
+ c16[u5,10]: = 0.7
+ c16[u5,11]: = 0.7
 End
