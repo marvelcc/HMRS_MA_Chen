@@ -321,7 +321,7 @@ for t in period:
 		m.addConstrs(((X_w[w, 0] == 1) >> (X_w[w, i+1] == 1) for i in range(0, 11)))
 
 
-m.NumScenarios = 
+m.NumScenarios = a
 
 m.Params.ScenarioNumber = 0
 m.ScenNName = 'Base model'
