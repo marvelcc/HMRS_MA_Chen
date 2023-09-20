@@ -11,9 +11,9 @@ m.setParam('TimeLimit', time_limit_seconds)
 
 # Scenario: changes in M_j and alpha dominant
 parameters = "parameters/base/"
-results = "scenario_returns/returns_alpha/results/"
+results = "scenario_returns/returns_normal/results/"
 
-percentage_variations = [-0.5, -0.25, 0.0, 0.25, 0.5]
+percentage_variations = [-0.5, -0.25, 0.25, 0.5]
 
 comparison = pd.DataFrame(columns=[f'{p * 100}%' for p in percentage_variations])
 comparison_rows = ['Gesamtkosten', 'Einrichtungskosten', 'Produktionskosten', 'Transportkosten', 'Emissionskosten', 'CO2-Ausstoß', 'Optimality Gap', 'Run Time', 'Variables', 'Nodes', 'Constraints']
@@ -44,7 +44,7 @@ returns = pd.read_csv(parameters +  'returns.csv', index_col=0)
 capacity = pd.read_csv(parameters + 'production_capacity.csv', index_col=0)
 capacity_bar = pd.read_csv(parameters + 'production_capacity_bar.csv', index_col=0)
 capacity_k = pd.read_csv(parameters + 'production_capacity_k.csv', index_col=0)
-ratio = pd.read_csv(parameters + 'ratio_a_dominant.csv', index_col=0)
+ratio = pd.read_csv(parameters + 'ratio.csv', index_col=0)
 
 
 for change in percentage_variations:
@@ -353,7 +353,7 @@ for change in percentage_variations:
 		nodes = m.NodeCount
 		solution = m.getAttr('X')
 		total_cost = m.ObjVal
-
+		
 		comparison.at['Gesamtkosten', f'{change * 100}%'] = f'{round(total_cost):,}'
 		comparison.at['Einrichtungskosten', f'{change * 100}%'] = f'{round(EK.getValue()):,}'
 		comparison.at['Produktionskosten', f'{change * 100}%'] = f'{round(PK.getValue()):,}'

@@ -2,9 +2,13 @@ import gurobipy as gp
 from gurobipy import GRB
 import pandas as pd
 
+m = gp.Model('HMRS')
 # Scenario: base scenario
 parameters = "parameters/base/"
 scenario_result = "base_scenario/results/"
+
+time_limit_seconds = 60 * 5
+m.setParam('TimeLimit', time_limit_seconds)
 
 # Initialize the sets and parameters of the model
 # Sets of the model
@@ -20,6 +24,10 @@ collect = ['j1', 'j2', 'j3', 'j4']
 disassembly = ['u1', 'u2', 'u3', 'u4', 'u5']
 recycling = ['v1', 'v2', 'v3', 'v4', 'v5']
 disposal = ['w1', 'w2', 'w3', 'w4', 'w5']
+
+comparison = pd.DataFrame(columns=['Basisszenario'])
+comparison_rows = ['Gesamtkosten', 'Einrichtungskosten', 'Produktionskosten', 'Transportkosten', 'Emissionskosten', 'CO2-Ausstoß', 'Optimality Gap', 'Run Time', 'Variables', 'Nodes', 'Constraints']
+
 
 # Reading basis scenario data
 activation = pd.read_csv(parameters + 'activation_cost.csv', header=None)
@@ -176,7 +184,7 @@ for t, row in capacity_k.iterrows():
 
 
 
-m = gp.Model('HMRS')
+
 # Add decision variables
 # Binary decision variables
 X_f = m.addVars(manu, period, vtype=GRB.BINARY, name="X_f")
@@ -325,15 +333,30 @@ m.optimize()
 
 
 # Print out results
-if m.Status == GRB.OPTIMAL:
+if m.Status == GRB.TIME_LIMIT:
 
 	total_cost = m.ObjVal
+		
+	gap = m.MIPGap
+	time = m.Runtime
+	num_var = m.NumVars
+	num_constr = m.NumConstrs
+	nodes = m.NodeCount
+	solution = m.getAttr('X')
+	total_cost = m.ObjVal
 
-	m.Params.LogFile = ""
-
-	with open(objective_filename, "w") as file:
-		file.write("%s %s\n%s %s\n%s %s\n%s %s\n%s %s\n%s %s \n" % ("Gesamtkosten: ", str(round(total_cost, 2)), "Gesamte Einrichtungskosten: ", str(round(EK.getValue(), 2)), "Gesamte Bearbeitungs- und Produktionskosten: ", str(round(PK.getValue(), 2)), "Gesamte Transportkosten: ", str(round(TK.getValue(), 2)), "Gesamtkosten für Emissionen: ", str(round(KK.getValue(), 2)), "Gesamtemissionen in kg: ", str(round(CO2.X, 2))))
-	file.close()
+	comparison.at['Gesamtkosten', 'Basisszenario'] = f'{round(total_cost):,}'
+	comparison.at['Einrichtungskosten', 'Basisszenario'] = f'{round(EK.getValue()):,}'
+	comparison.at['Produktionskosten', 'Basisszenario'] = f'{round(PK.getValue()):,}'
+	comparison.at['Transportkosten', 'Basisszenario'] = f'{round(TK.getValue()):,}'
+	comparison.at['Emissionskosten', 'Basisszenario'] = f'{round(KK.getValue()):,}'
+	comparison.at['CO2-Ausstoß', 'Basisszenario'] = f'{round(CO2.X):,}'
+	comparison.at['Optimality Gap','Basisszenario'] = gap
+	comparison.at['Run Time', 'Basisszenario'] = time
+	comparison.at['Variables', 'Basisszenario'] = num_var
+	comparison.at['Constraints', 'Basisszenario'] = num_constr
+	comparison.at['Nodes', 'Basisszenario'] = nodes
+	
 
 	# Activation decisions
 	xf = m.getAttr('X', X_f)
@@ -528,7 +551,229 @@ if m.Status == GRB.OPTIMAL:
 	k3_vh.to_csv(scenario_result + "Q_kvh_k3.csv")
 
 	print("=======================================================================================")
-	print("=============================== Optimal solution found! ===============================")
+	print("=============================== Zeitlimit erreicht! ===================================")
+	print("=======================================================================================")
+
+
+if m.Status == GRB.OPTIMAL:
+
+	total_cost = m.ObjVal
+		
+	gap = m.MIPGap
+	time = m.Runtime
+	num_var = m.NumVars
+	num_constr = m.NumConstrs
+	nodes = m.NodeCount
+	solution = m.getAttr('X')
+	total_cost = m.ObjVal
+
+	comparison.at['Gesamtkosten', 'Basisszenario'] = f'{round(total_cost):,}'
+	comparison.at['Einrichtungskosten', 'Basisszenario'] = f'{round(EK.getValue()):,}'
+	comparison.at['Produktionskosten', 'Basisszenario'] = f'{round(PK.getValue()):,}'
+	comparison.at['Transportkosten', 'Basisszenario'] = f'{round(TK.getValue()):,}'
+	comparison.at['Emissionskosten', 'Basisszenario'] = f'{round(KK.getValue()):,}'
+	comparison.at['CO2-Ausstoß', 'Basisszenario'] = f'{round(CO2.X):,}'
+	comparison.at['Optimality Gap','Basisszenario'] = gap
+	comparison.at['Run Time', 'Basisszenario'] = time
+	comparison.at['Variables', 'Basisszenario'] = num_var
+	comparison.at['Constraints', 'Basisszenario'] = num_constr
+	comparison.at['Nodes', 'Basisszenario'] = nodes
+	
+
+	# Activation decisions
+	xf = m.getAttr('X', X_f)
+	actv_xf = pd.DataFrame.from_dict(xf, orient="index")
+	actv_xf.index = pd.MultiIndex.from_tuples(actv_xf.index)
+	actv_xf = actv_xf.unstack()
+	
+	xg = m.getAttr('X', X_g)
+	actv_xg = pd.DataFrame.from_dict(xg, orient="index")
+	actv_xg.index = pd.MultiIndex.from_tuples(actv_xg.index)
+	actv_xg = actv_xg.unstack()
+
+	xh = m.getAttr('X', X_h)
+	actv_xh = pd.DataFrame.from_dict(xh, orient="index")
+	actv_xh.index = pd.MultiIndex.from_tuples(actv_xh.index)
+	actv_xh = actv_xh.unstack()
+
+	xj = m.getAttr('X', X_j)
+	actv_xj = pd.DataFrame.from_dict(xj, orient="index")
+	actv_xj.index = pd.MultiIndex.from_tuples(actv_xj.index)
+	actv_xj = actv_xj.unstack()
+
+	xu = m.getAttr('X', X_u)
+	actv_xu = pd.DataFrame.from_dict(xu, orient="index")
+	actv_xu.index = pd.MultiIndex.from_tuples(actv_xu.index)
+	actv_xu = actv_xu.unstack()
+
+	xv = m.getAttr('X', X_v)
+	actv_xv = pd.DataFrame.from_dict(xv, orient="index")
+	actv_xv.index = pd.MultiIndex.from_tuples(actv_xv.index)
+	actv_xv = actv_xv.unstack()
+
+	xw = m.getAttr('X', X_w)
+	actv_xw = pd.DataFrame.from_dict(xw, orient="index")
+	actv_xw.index = pd.MultiIndex.from_tuples(actv_xw.index)
+	actv_xw = actv_xw.unstack()
+
+	activation_matrix = pd.concat([actv_xf, actv_xg, actv_xh, actv_xj, actv_xu, actv_xv, actv_xw]).transpose().head(1)
+	activation_matrix.to_csv(scenario_result + "activation_matrix.csv")
+
+
+	# Transport quantity Q_klf: supplier --> manu
+	lf = m.getAttr('X', Q_klf)
+	qklf = pd.DataFrame.from_dict(lf, orient="index")
+	qklf.index = pd.MultiIndex.from_tuples(qklf.index)
+	qklf = qklf.unstack().groupby(level=0)
+	qklf_df = {}
+	for name, df in qklf:
+		qklf_df[name] = df
+	k1_lf = qklf_df['k1']
+	k2_lf = qklf_df['k2']
+	k3_lf = qklf_df['k3']
+	k1_lf.to_csv(scenario_result + "Q_klf_k1.csv")
+	k2_lf.to_csv(scenario_result + "Q_klf_k2.csv")
+	k3_lf.to_csv(scenario_result + "Q_klf_k3.csv")
+
+
+	# Transport quantity Q_klh: supplier --> hybrid
+	lh = m.getAttr('X', Q_klh)
+	qklh = pd.DataFrame.from_dict(lh, orient="index")
+	qklh.index = pd.MultiIndex.from_tuples(qklh.index)
+	qklh = qklh.unstack().groupby(level=0)
+	qklh_df = {}
+	for name, df in qklh:
+		qklh_df[name] = df
+	k1_lh = qklh_df['k1']
+	k2_lh = qklh_df['k2']
+	k3_lh = qklh_df['k3']
+	k1_lh.to_csv(scenario_result + "Q_klh_k1.csv")
+	k2_lh.to_csv(scenario_result + "Q_klh_k2.csv")
+	k3_lh.to_csv(scenario_result + "Q_klh_k3.csv")
+
+
+	# Transport quantity Q_fi: manu --> warehouse
+	fi = m.getAttr('X', Q_fi)
+	qfi = pd.DataFrame.from_dict(fi, orient="index")
+	qfi.index = pd.MultiIndex.from_tuples(qfi.index)
+	qfi = qfi.unstack()
+	qfi.to_csv(scenario_result + "Q_fi.csv")
+
+
+	# Transport quantity Q_gi: remanu --> warehouse
+	gi = m.getAttr('X', Q_gi)
+	qgi = pd.DataFrame.from_dict(gi, orient="index")
+	qgi.index = pd.MultiIndex.from_tuples(qgi.index)
+	qgi = qgi.unstack()
+	qgi.to_csv(scenario_result + "Q_gi.csv")
+
+
+	# Transport quantity Q_hi: hybrid --> warehouse
+	hi = m.getAttr('X', Q_hi)
+	qhi = pd.DataFrame.from_dict(hi, orient="index")
+	qhi.index = pd.MultiIndex.from_tuples(qhi.index)
+	qhi = qhi.unstack()
+	qhi.to_csv(scenario_result + "Q_hi.csv")
+
+
+	# Transport quantity Q_hi_bar: hybrid --> warehouse
+	hi_bar = m.getAttr('X', Q_hi_bar)
+	qhi_bar = pd.DataFrame.from_dict(hi_bar, orient="index")
+	qhi_bar.index = pd.MultiIndex.from_tuples(qhi_bar.index)
+	qhi_bar = qhi_bar.unstack()
+	qhi_bar.to_csv(scenario_result + "Q_hi_bar.csv")
+
+
+	# Transport quantity Q_ju: collection --> disassembly
+	ju = m.getAttr('X', Q_ju)
+	qju = pd.DataFrame.from_dict(ju, orient="index")
+	qju.index = pd.MultiIndex.from_tuples(qju.index)
+	qju = qju.unstack()
+	qju.to_csv(scenario_result + "Q_ju.csv")
+
+
+ 	# Transport component quantity Q_kuv: disassembly --> recycling
+	uv = m.getAttr('X', Q_kuv)
+	qkuv = pd.DataFrame.from_dict(uv, orient="index")
+	qkuv.index = pd.MultiIndex.from_tuples(qkuv.index)
+	qkuv = qkuv.unstack().groupby(level=0)
+	qkuv_df = {}
+	for name, df in qkuv:
+		qkuv_df[name] = df
+	k1_uv = qkuv_df['k1']
+	k2_uv = qkuv_df['k2']
+	k3_uv = qkuv_df['k3']
+	k1_uv.to_csv(scenario_result + "Q_kuv_k1.csv")
+	k2_uv.to_csv(scenario_result + "Q_kuv_k2.csv")
+	k3_uv.to_csv(scenario_result + "Q_kuv_k3.csv")
+
+
+ 	# Transport component quantity Q_kuw: disassembly --> disposal
+	uw = m.getAttr('X', Q_kuw)
+	qkuw = pd.DataFrame.from_dict(uw, orient="index")
+	qkuw.index = pd.MultiIndex.from_tuples(qkuw.index)
+	qkuw = qkuw.unstack().groupby(level=0)
+	qkuw_df = {}
+	for name, df in qkuw:
+		qkuw_df[name] = df
+	k1_uw = qkuw_df['k1']
+	k2_uw = qkuw_df['k2']
+	k3_uw = qkuw_df['k3']
+	k1_uw.to_csv(scenario_result + "Q_kuw_k1.csv")
+	k2_uw.to_csv(scenario_result + "Q_kuw_k2.csv")
+	k3_uw.to_csv(scenario_result + "Q_kuw_k3.csv")
+
+
+	# Transport quantity Q_ug: disassembly --> remanu
+	ug = m.getAttr('X', Q_ug)
+	qug = pd.DataFrame.from_dict(ug, orient="index")
+	qug.index = pd.MultiIndex.from_tuples(qug.index)
+	qug = qug.unstack()
+	qug.to_csv(scenario_result + "Q_ug.csv")
+
+
+	# Transport quantity Q_uh: disassembly --> hybrid
+	uh = m.getAttr('X', Q_uh)
+	uh = m.getAttr('X', Q_uh)
+	quh = pd.DataFrame.from_dict(uh, orient="index")
+	quh.index = pd.MultiIndex.from_tuples(quh.index)
+	quh = quh.unstack()
+	quh.to_csv(scenario_result + "Q_uh.csv")
+
+
+	# Transport component quantity Q_kvf: recycling --> manu
+	vf = m.getAttr('X', Q_kvf)
+	qkvf = pd.DataFrame.from_dict(vf, orient="index")
+	qkvf.index = pd.MultiIndex.from_tuples(qkvf.index)
+	qkvf = qkvf.unstack().groupby(level=0)
+	qkvf_df = {}
+	for name, df in qkvf:
+		qkvf_df[name] = df
+	k1_vf = qkvf_df['k1']
+	k2_vf = qkvf_df['k2']
+	k3_vf = qkvf_df['k3']
+	k1_vf.to_csv(scenario_result + "Q_kvf_k1.csv")
+	k2_vf.to_csv(scenario_result + "Q_kvf_k2.csv")
+	k3_vf.to_csv(scenario_result + "Q_kvf_k3.csv")
+
+
+	# Transport component quantity Q_kvh: recycling --> hybrid
+	vh = m.getAttr('X', Q_kvh)
+	qkvh = pd.DataFrame.from_dict(vh, orient="index")
+	qkvh.index = pd.MultiIndex.from_tuples(qkvh.index)
+	qkvh = qkvh.unstack().groupby(level=0)
+	qkvh_df = {}
+	for name, df in qkvh:
+		qkvh_df[name] = df
+	k1_vh = qkvh_df['k1']
+	k2_vh = qkvh_df['k2']
+	k3_vh = qkvh_df['k3']
+	k1_vh.to_csv(scenario_result + "Q_kvh_k1.csv")
+	k2_vh.to_csv(scenario_result + "Q_kvh_k2.csv")
+	k3_vh.to_csv(scenario_result + "Q_kvh_k3.csv")
+
+	print("=======================================================================================")
+	print("=============================== Optimale Lösung gefunden! =============================")
 	print("=======================================================================================")
 
 
@@ -539,6 +784,8 @@ elif m.Status == GRB.INFEASIBLE:
 		if c.IISConstr: print(f'\t{c.constrname}: {m.getRow(c)} {c.Sense} {c.RHS}')
 
 	print("=======================================================================================")
-	print("================================ Model is infeasible! =================================")
+	print("================================ Model nicht lösbar! ==================================")
 	print("=======================================================================================")
 
+final_comparison = pd.concat([comparison], axis=1)
+final_comparison.to_csv(scenario_result + "objectives.csv")

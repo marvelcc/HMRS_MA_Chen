@@ -354,12 +354,12 @@ for change in percentage_variations:
 		solution = m.getAttr('X')
 		total_cost = m.ObjVal
 
-		comparison.at['Gesamtkosten', f'{change * 100}%'] = total_cost
-		comparison.at['Einrichtungskosten', f'{change * 100}%'] = round(EK.getValue())
-		comparison.at['Produktionskosten', f'{change * 100}%'] = round(PK.getValue())
-		comparison.at['Transportkosten', f'{change * 100}%'] = round(TK.getValue())
-		comparison.at['Emissionskosten', f'{change * 100}%'] = round(KK.getValue())
-		comparison.at['CO2-Ausstoß', f'{change * 100}%'] = round(CO2.X)
+		comparison.at['Gesamtkosten', f'{change * 100}%'] = f'{round(total_cost):,}'
+		comparison.at['Einrichtungskosten', f'{change * 100}%'] = f'{round(EK.getValue()):,}'
+		comparison.at['Produktionskosten', f'{change * 100}%'] = f'{round(PK.getValue()):,}'
+		comparison.at['Transportkosten', f'{change * 100}%'] = f'{round(TK.getValue()):,}'
+		comparison.at['Emissionskosten', f'{change * 100}%'] = f'{round(KK.getValue()):,}'
+		comparison.at['CO2-Ausstoß', f'{change * 100}%'] = f'{round(CO2.X):,}'
 		comparison.at['Optimality Gap', f'{change * 100}%'] = gap
 		comparison.at['Run Time', f'{change * 100}%'] = time
 		comparison.at['Variables', f'{change * 100}%'] = num_var
@@ -581,12 +581,12 @@ for change in percentage_variations:
 		results_path = os.path.join(results, results_foldername)
 		os.makedirs(results_path, exist_ok=True)
 
-		comparison.at['Gesamtkosten', f'{change * 100}%'] = total_cost
-		comparison.at['Einrichtungskosten', f'{change * 100}%'] = round(EK.getValue())
-		comparison.at['Produktionskosten', f'{change * 100}%'] = round(PK.getValue())
-		comparison.at['Transportkosten', f'{change * 100}%'] = round(TK.getValue())
-		comparison.at['Emissionskosten', f'{change * 100}%'] = round(KK.getValue())
-		comparison.at['CO2-Ausstoß', f'{change * 100}%'] = round(CO2.X)
+		comparison.at['Gesamtkosten', f'{change * 100}%'] = f'{round(total_cost):,}'
+		comparison.at['Einrichtungskosten', f'{change * 100}%'] = f'{round(EK.getValue()):,}'
+		comparison.at['Produktionskosten', f'{change * 100}%'] = f'{round(PK.getValue()):,}'
+		comparison.at['Transportkosten', f'{change * 100}%'] = f'{round(TK.getValue()):,}'
+		comparison.at['Emissionskosten', f'{change * 100}%'] = f'{round(KK.getValue()):,}'
+		comparison.at['CO2-Ausstoß', f'{change * 100}%'] = f'{round(CO2.X):,}'
 		comparison.at['Optimality Gap', f'{change * 100}%'] = gap
 		comparison.at['Run Time', f'{change * 100}%'] = time
 		comparison.at['Variables', f'{change * 100}%'] = num_var

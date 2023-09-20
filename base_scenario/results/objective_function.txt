@@ -1,6 +1,0 @@
-Gesamtkosten:  56320996.96
-Gesamte Einrichtungskosten:  12840000.0
-Gesamte Bearbeitungs- und Produktionskosten:  38758550.0
-Gesamte Transportkosten:  2029124.66
-Gesamtkosten für Emissionen:  2693322.3
-Gesamtemissionen in kg:  27412853.0 
