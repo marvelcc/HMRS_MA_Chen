@@ -6,7 +6,7 @@ import os
 m = gp.Model('HMRS')
 
 # Set time limit
-time_limit_seconds = 60 * 5
+time_limit_seconds = 60 * 2
 m.setParam('TimeLimit', time_limit_seconds)
 
 # Scenario: changes in CAP_h
@@ -271,19 +271,19 @@ for change in percentage_variations:
 	m.addConstrs((gp.quicksum(Q_kuw[a, b, c, t] for a in component for b in disassembly) <= CAP_Kw[t, c] * X_w[c, t] for c in disposal for t in period), name='c9')
 
 	# (10)
-	m.addConstrs(((gp.quicksum(Q_fi[a, b, t] for a in manu) + gp.quicksum(Q_hi[a, b, t] for a in hybrid) + gp.quicksum(Q_gi[a, b ,t] for a in remanu) + gp.quicksum(Q_hi_bar[a, b ,t] for a in hybrid) == D_i[t, b]) for b in warehouse for t in period), name='c10')
+	m.addConstrs(((gp.quicksum(Q_fi[f, i, t] for f in manu) + gp.quicksum(Q_hi[h, i, t] for h in hybrid) + gp.quicksum(Q_gi[g, i ,t] for g in remanu) + gp.quicksum(Q_hi_bar[h, i ,t] for h in hybrid) == D_i[t, i]) for i in warehouse for t in period), name='c10')
 
 	# (11)
-	m.addConstrs((gp.quicksum(Q_klf[a, b, c, t] for b in supplier) + gp.quicksum(Q_kvf[a, b, c, t] for b in recycling)  == gp.quicksum(Q_fi[c, b, t] for b in warehouse) * R_k[a] for a in component for c in manu for t in period), name='c11')
+	m.addConstrs((gp.quicksum(Q_klf[a, b, c, t] for b in supplier) + gp.quicksum(Q_kvf[a, b, c, t] for b in recycling)  == gp.quicksum(Q_fi[c, b, int(t+1)] for b in warehouse) * R_k[a] for a in component for c in manu for t in range(T-1)), name='c11')
 
 	# (12)
-	m.addConstrs((gp.quicksum(Q_ug[a, b, t] for a in disassembly) == gp.quicksum(Q_gi[b, c, t] for c in warehouse) for b in remanu for t in period), name='c12')
+	m.addConstrs((gp.quicksum(Q_ug[a, b, t] for a in disassembly) == gp.quicksum(Q_gi[b, c, int(t+1)] for c in warehouse) for b in remanu for t in range(T-1)), name='c12')
 
 	# (13)
 	m.addConstrs((gp.quicksum(Q_klh[a, b, c, t] for b in supplier) + gp.quicksum(Q_kvh[a, b, c, t] for b in recycling) == gp.quicksum(Q_hi[c, b, t] for b in warehouse) * R_k[a] for a in component for c in hybrid for t in period), name='c13')
 
 	# (14)
-	m.addConstrs((gp.quicksum(Q_uh[u, h, t] for u in disassembly) == gp.quicksum(Q_hi_bar[h, i, t] for i in warehouse) for h in hybrid for t in period), name='c14')
+	m.addConstrs((gp.quicksum(Q_uh[u, h, t] for u in disassembly) == gp.quicksum(Q_hi_bar[h, i, int(t+1)] for i in warehouse) for h in hybrid for t in range(T-1)), name='c14')
 
 	# (15)
 	m.addConstrs(((gp.quicksum(Q_ju[j, u, t] for u in disassembly) == M_j[t, j]) for j in collect for t in period), name='c15')
@@ -330,6 +330,7 @@ for change in percentage_variations:
 		for w in disposal:
 			m.addConstrs(((X_w[w, 0] == 0) >> (X_w[w, i+1] == 0) for i in range(0, 11)))
 			m.addConstrs(((X_w[w, 0] == 1) >> (X_w[w, i+1] == 1) for i in range(0, 11)))
+
 
 	results_foldername = f'CAP_h_{int(change * 100)}/'
 	results_path = os.path.join(results, results_foldername)
