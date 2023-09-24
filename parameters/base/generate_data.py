@@ -3,7 +3,7 @@ import random
 import pandas as pd
 import numpy as np
 
-case = "parameters/base/"
+case = "parameters/test/"
 
 component = ['k1', 'k2', 'k3']
 supplier = ['l1', 'l2']
@@ -15,6 +15,8 @@ collect = ['j1', 'j2', 'j3', 'j4']
 disassembly = ['u1', 'u2', 'u3', 'u4', 'u5']
 recycling = ['v1', 'v2', 'v3', 'v4', 'v5']
 disposal = ['w1', 'w2', 'w3', 'w4', 'w5']
+
+
 T = 12
 
 
@@ -116,15 +118,15 @@ T = 12
 # for t in range(T):
 #     capacities = {}
 #     for f in manu:
-#         capacities[f] = round(random.normalvariate(250, 20)) * 100
+#         capacities[f] = round(random.normalvariate(500, 20)) * 100
 #     for g in remanu:
-#         capacities[g] = round(random.normalvariate(100, 10)) * 100
+#         capacities[g] = round(random.normalvariate(300, 10)) * 100
 #     for h in hybrid:
-#         capacities[h] = round(random.normalvariate(150, 10)) * 100
+#         capacities[h] = round(random.normalvariate(100, 10)) * 100
 #     for j in collect:
-#         capacities[j] = round(random.normalvariate(250, 10)) * 100
+#         capacities[j] = round(random.normalvariate(300, 10)) * 100
 #     for u in disassembly:
-#         capacities[u] = round(random.normalvariate(300, 10)) * 100
+#         capacities[u] = round(random.normalvariate(250, 10)) * 100
 #     cap.append({**capacities})
 
 #     capacities_bar = {}
@@ -138,7 +140,7 @@ T = 12
 #     for Kv in recycling:
 #         capacities_comp[Kv] = round(random.normalvariate(200, 10)) * 1000
 #     for Kw in disposal:
-#         capacities_comp[Kw] = round(random.normalvariate(200, 5)) * 1000
+#         capacities_comp[Kw] = round(random.normalvariate(250, 10)) * 1000
 #     cap_component.append({**capacities_comp})
 
 # df_prod_cap = pd.DataFrame(cap)
@@ -167,7 +169,7 @@ T = 12
 #         a = random.randint(4, 6) / 10
 #         b = random.randint(2, 4) / 10
 #         c = 1 - a - b
-#         if b > 0.0:
+#         if c > 0.0:
 #             ratio.append([a, b, c])
 #         else:
 #             continue

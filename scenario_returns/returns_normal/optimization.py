@@ -6,18 +6,18 @@ import os
 m = gp.Model('HMRS')
 
 # Set time limit
-time_limit_seconds = 60 * 2
+time_limit_seconds = 60 * 3
 m.setParam('TimeLimit', time_limit_seconds)
 
-# Scenario: changes in M_j and alpha dominant
+# Scenario: changes in M_j and gamma dominant
 parameters = "parameters/base/"
-results = "scenario_returns/returns_normal/results/"
+results = "results/scenario_returns/returns_normal/"
 
-percentage_variations = [-0.5, -0.25, 0.25, 0.5]
+percentage_variations = [-0.5, -0.25, 0.0, 0.25, 0.5]
 
 comparison = pd.DataFrame(columns=[f'{p * 100}%' for p in percentage_variations])
 comparison_rows = ['Gesamtkosten', 'Einrichtungskosten', 'Produktionskosten', 'Transportkosten', 'Emissionskosten', 'CO2-Ausstoß', 'Optimality Gap', 'Run Time', 'Variables', 'Nodes', 'Constraints']
-
+activation_compare = pd.DataFrame()
 
 # Initialize the sets and parameters of the model
 # Sets of the model
@@ -33,6 +33,8 @@ collect = ['j1', 'j2', 'j3', 'j4']
 disassembly = ['u1', 'u2', 'u3', 'u4', 'u5']
 recycling = ['v1', 'v2', 'v3', 'v4', 'v5']
 disposal = ['w1', 'w2', 'w3', 'w4', 'w5']
+
+locations = manu + remanu + hybrid + collect + disassembly + recycling + disposal
 
 # Reading basis scenario data
 activation = pd.read_csv(parameters + 'activation_cost.csv', header=None)
@@ -88,7 +90,7 @@ for change in percentage_variations:
 	E_H = 5
 	E_J = 10
 	E_U = 5
-	E_KU = 5
+	E_KU = 0.5
 	E_V = 0.5
 	E_W = 2
 	E_P = 0.009
@@ -180,7 +182,7 @@ for change in percentage_variations:
 			CAP_u[(t, u)] = value
 	for t, row in capacity_bar.iterrows():
 		for h in capacity_bar.columns:
-			value = capacity_bar.loc[t, h] * new
+			value = capacity_bar.loc[t, h]
 			CAP_h_bar[(t, h)] = value
 	for t, row in capacity_k.iterrows():
 		for u in capacity_k.filter(like='u').columns:
@@ -242,6 +244,10 @@ for change in percentage_variations:
 	# Define the objective function
 	m.setObjective(EK + PK + TK + KK, GRB.MINIMIZE)
 
+	m.addConstrs((gp.quicksum(Q_gi[g, i, 0] for i in warehouse) == 0 for g in remanu), name="gi0")
+	m.addConstrs((gp.quicksum(Q_hi_bar[h, i, 0] for i in warehouse) == 0 for h in hybrid), name="hibar0")
+	m.addConstrs((gp.quicksum(Q_fi[f, i, 0] for i in warehouse) * R_k[k] == gp.quicksum(Q_klf[k, l, f, 0] for l in supplier) for k in component for f in manu), name="klf_fi")
+	m.addConstrs((gp.quicksum(Q_hi[h, i, 0] for i in warehouse) * R_k[k] == gp.quicksum(Q_klh[k, l, h, 0] for l in supplier) for k in component for h in hybrid), name="klh_hi")
 	# Add constraints
 	# (1)
 	m.addConstrs(((gp.quicksum(Q_fi[f, i, t] for i in warehouse) <= CAP_f[t, f] * X_f[f, t]) for f in manu for t in period), name='c1')
@@ -274,13 +280,13 @@ for change in percentage_variations:
 	m.addConstrs(((gp.quicksum(Q_fi[f, i, t] for f in manu) + gp.quicksum(Q_hi[h, i, t] for h in hybrid) + gp.quicksum(Q_gi[g, i ,t] for g in remanu) + gp.quicksum(Q_hi_bar[h, i ,t] for h in hybrid) == D_i[t, i]) for i in warehouse for t in period), name='c10')
 
 	# (11)
-	m.addConstrs((gp.quicksum(Q_klf[a, b, c, t] for b in supplier) + gp.quicksum(Q_kvf[a, b, c, t] for b in recycling)  == gp.quicksum(Q_fi[c, b, int(t+1)] for b in warehouse) * R_k[a] for a in component for c in manu for t in range(T-1)), name='c11')
+	m.addConstrs((gp.quicksum(Q_klf[a, b, c, int(t+1)] for b in supplier) + gp.quicksum(Q_kvf[a, b, c, t] for b in recycling)  == gp.quicksum(Q_fi[c, b, int(t+1)] for b in warehouse) * R_k[a] for a in component for c in manu for t in range(T-1)), name='c11')
 
 	# (12)
 	m.addConstrs((gp.quicksum(Q_ug[a, b, t] for a in disassembly) == gp.quicksum(Q_gi[b, c, int(t+1)] for c in warehouse) for b in remanu for t in range(T-1)), name='c12')
 
 	# (13)
-	m.addConstrs((gp.quicksum(Q_klh[a, b, c, t] for b in supplier) + gp.quicksum(Q_kvh[a, b, c, t] for b in recycling) == gp.quicksum(Q_hi[c, b, t] for b in warehouse) * R_k[a] for a in component for c in hybrid for t in period), name='c13')
+	m.addConstrs((gp.quicksum(Q_klh[a, b, c, int(t+1)] for b in supplier) + gp.quicksum(Q_kvh[a, b, c, t] for b in recycling) == gp.quicksum(Q_hi[c, b, int(t+1)] for b in warehouse) * R_k[a] for a in component for c in hybrid for t in range(T-1)), name='c13')
 
 	# (14)
 	m.addConstrs((gp.quicksum(Q_uh[u, h, t] for u in disassembly) == gp.quicksum(Q_hi_bar[h, i, int(t+1)] for i in warehouse) for h in hybrid for t in range(T-1)), name='c14')
@@ -332,7 +338,7 @@ for change in percentage_variations:
 			m.addConstrs(((X_w[w, 0] == 1) >> (X_w[w, i+1] == 1) for i in range(0, 11)))
 
 
-	results_foldername = f'M_j_a_{int(change * 100)}/'
+	results_foldername = f'M_j_n_{int(change * 100)}/'
 	results_path = os.path.join(results, results_foldername)
 	os.makedirs(results_path, exist_ok=True)
 	log_filename = results + results_foldername + "mip_log.txt"
@@ -354,13 +360,13 @@ for change in percentage_variations:
 		nodes = m.NodeCount
 		solution = m.getAttr('X')
 		total_cost = m.ObjVal
-		
-		comparison.at['Gesamtkosten', f'{change * 100}%'] = f'{round(total_cost):,}'
-		comparison.at['Einrichtungskosten', f'{change * 100}%'] = f'{round(EK.getValue()):,}'
-		comparison.at['Produktionskosten', f'{change * 100}%'] = f'{round(PK.getValue()):,}'
-		comparison.at['Transportkosten', f'{change * 100}%'] = f'{round(TK.getValue()):,}'
-		comparison.at['Emissionskosten', f'{change * 100}%'] = f'{round(KK.getValue()):,}'
-		comparison.at['CO2-Ausstoß', f'{change * 100}%'] = f'{round(CO2.X):,}'
+
+		comparison.at['Gesamtkosten', f'{change * 100}%'] = round(total_cost)
+		comparison.at['Einrichtungskosten', f'{change * 100}%'] = round(EK.getValue())
+		comparison.at['Produktionskosten', f'{change * 100}%'] = round(PK.getValue())
+		comparison.at['Transportkosten', f'{change * 100}%'] = round(TK.getValue())
+		comparison.at['Emissionskosten', f'{change * 100}%'] = round(KK.getValue())
+		comparison.at['CO2-Ausstoß', f'{change * 100}%'] = round(CO2.X)
 		comparison.at['Optimality Gap', f'{change * 100}%'] = gap
 		comparison.at['Run Time', f'{change * 100}%'] = time
 		comparison.at['Variables', f'{change * 100}%'] = num_var
@@ -369,44 +375,54 @@ for change in percentage_variations:
 
 
 		# Activation decisions
+		activation_table = pd.DataFrame(columns=[l for l in locations])
+
 		xf = m.getAttr('X', X_f)
-		actv_xf = pd.DataFrame.from_dict(xf, orient="index")
-		actv_xf.index = pd.MultiIndex.from_tuples(actv_xf.index)
-		actv_xf = actv_xf.unstack()
+		xf_filter = {key: value for key, value in xf.items() if key[1] == 0}
+		xf_df = pd.DataFrame.from_dict(xf_filter, orient='index', columns=['0'])
+		xf_df.index = xf_df.index.map(lambda x: x[0])
+		xf_df = xf_df.T
 		
 		xg = m.getAttr('X', X_g)
-		actv_xg = pd.DataFrame.from_dict(xg, orient="index")
-		actv_xg.index = pd.MultiIndex.from_tuples(actv_xg.index)
-		actv_xg = actv_xg.unstack()
+		xg_filter = {key: value for key, value in xg.items() if key[1] == 0}
+		xg_df = pd.DataFrame.from_dict(xg_filter, orient='index', columns=['0'])
+		xg_df.index = xg_df.index.map(lambda x: x[0])
+		xg_df = xg_df.T
 
 		xh = m.getAttr('X', X_h)
-		actv_xh = pd.DataFrame.from_dict(xh, orient="index")
-		actv_xh.index = pd.MultiIndex.from_tuples(actv_xh.index)
-		actv_xh = actv_xh.unstack()
+		xh_filter = {key: value for key, value in xh.items() if key[1] == 0}
+		xh_df = pd.DataFrame.from_dict(xh_filter, orient='index', columns=['0'])
+		xh_df.index = xh_df.index.map(lambda x: x[0])
+		xh_df = xh_df.T
 
 		xj = m.getAttr('X', X_j)
-		actv_xj = pd.DataFrame.from_dict(xj, orient="index")
-		actv_xj.index = pd.MultiIndex.from_tuples(actv_xj.index)
-		actv_xj = actv_xj.unstack()
+		xj_filter = {key: value for key, value in xj.items() if key[1] == 0}
+		xj_df = pd.DataFrame.from_dict(xj_filter, orient='index', columns=['0'])
+		xj_df.index = xj_df.index.map(lambda x: x[0])
+		xj_df = xj_df.T
 
 		xu = m.getAttr('X', X_u)
-		actv_xu = pd.DataFrame.from_dict(xu, orient="index")
-		actv_xu.index = pd.MultiIndex.from_tuples(actv_xu.index)
-		actv_xu = actv_xu.unstack()
+		xu_filter = {key: value for key, value in xu.items() if key[1] == 0}
+		xu_df = pd.DataFrame.from_dict(xu_filter, orient='index', columns=['0'])
+		xu_df.index = xu_df.index.map(lambda x: x[0])
+		xu_df = xu_df.T
 
 		xv = m.getAttr('X', X_v)
-		actv_xv = pd.DataFrame.from_dict(xv, orient="index")
-		actv_xv.index = pd.MultiIndex.from_tuples(actv_xv.index)
-		actv_xv = actv_xv.unstack()
+		xv_filter = {key: value for key, value in xv.items() if key[1] == 0}
+		xv_df = pd.DataFrame.from_dict(xv_filter, orient='index', columns=['0'])
+		xv_df.index = xv_df.index.map(lambda x: x[0])
+		xv_df = xv_df.T
 
 		xw = m.getAttr('X', X_w)
-		actv_xw = pd.DataFrame.from_dict(xw, orient="index")
-		actv_xw.index = pd.MultiIndex.from_tuples(actv_xw.index)
-		actv_xw = actv_xw.unstack()
+		xw_filter = {key: value for key, value in xw.items() if key[1] == 0}
+		xw_df = pd.DataFrame.from_dict(xw_filter, orient='index', columns=['0'])
+		xw_df.index = xw_df.index.map(lambda x: x[0])
+		xw_df = xw_df.T
 
-		activation_matrix = pd.concat([actv_xf, actv_xg, actv_xh, actv_xj, actv_xu, actv_xv, actv_xw]).transpose().head(1)
-		activation_matrix.to_csv(results_path + f"M_j_a_{int(change * 100)}_activation_matrix.csv")
 
+		activation_table = pd.concat([xf_df, xg_df, xh_df, xj_df, xu_df, xv_df, xw_df], axis=1)
+		activation_compare = pd.concat([activation_compare, activation_table], axis=0)
+		activation_compare.to_csv(results + "activation_comparison.csv")
 
 		# Transport quantity Q_klf: supplier --> manu
 		lf = m.getAttr('X', Q_klf)
@@ -419,9 +435,9 @@ for change in percentage_variations:
 		k1_lf = qklf_df['k1']
 		k2_lf = qklf_df['k2']
 		k3_lf = qklf_df['k3']
-		k1_lf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klf_k1.csv")
-		k2_lf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klf_k2.csv")
-		k3_lf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klf_k3.csv")
+		k1_lf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klf_k1.csv")
+		k2_lf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klf_k2.csv")
+		k3_lf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klf_k3.csv")
 
 
 		# Transport quantity Q_klh: supplier --> hybrid
@@ -435,9 +451,9 @@ for change in percentage_variations:
 		k1_lh = qklh_df['k1']
 		k2_lh = qklh_df['k2']
 		k3_lh = qklh_df['k3']
-		k1_lh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klh_k1.csv")
-		k2_lh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klh_k2.csv")
-		k3_lh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klh_k3.csv")
+		k1_lh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klh_k1.csv")
+		k2_lh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klh_k2.csv")
+		k3_lh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klh_k3.csv")
 
 
 		# Transport quantity Q_fi: manu --> warehouse
@@ -445,7 +461,7 @@ for change in percentage_variations:
 		qfi = pd.DataFrame.from_dict(fi, orient="index")
 		qfi.index = pd.MultiIndex.from_tuples(qfi.index)
 		qfi = qfi.unstack()
-		qfi.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_fi.csv")
+		qfi.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_fi.csv")
 
 
 		# Transport quantity Q_gi: remanu --> warehouse
@@ -453,7 +469,7 @@ for change in percentage_variations:
 		qgi = pd.DataFrame.from_dict(gi, orient="index")
 		qgi.index = pd.MultiIndex.from_tuples(qgi.index)
 		qgi = qgi.unstack()
-		qgi.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_gi.csv")
+		qgi.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_gi.csv")
 
 
 		# Transport quantity Q_hi: hybrid --> warehouse
@@ -461,7 +477,7 @@ for change in percentage_variations:
 		qhi = pd.DataFrame.from_dict(hi, orient="index")
 		qhi.index = pd.MultiIndex.from_tuples(qhi.index)
 		qhi = qhi.unstack()
-		qhi.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_hi.csv")
+		qhi.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_hi.csv")
 
 
 		# Transport quantity Q_hi_bar: hybrid --> warehouse
@@ -469,7 +485,7 @@ for change in percentage_variations:
 		qhi_bar = pd.DataFrame.from_dict(hi_bar, orient="index")
 		qhi_bar.index = pd.MultiIndex.from_tuples(qhi_bar.index)
 		qhi_bar = qhi_bar.unstack()
-		qhi_bar.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_hi_bar.csv")
+		qhi_bar.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_hi_bar.csv")
 
 
 		# Transport quantity Q_ju: collection --> disassembly
@@ -477,7 +493,7 @@ for change in percentage_variations:
 		qju = pd.DataFrame.from_dict(ju, orient="index")
 		qju.index = pd.MultiIndex.from_tuples(qju.index)
 		qju = qju.unstack()
-		qju.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_ju.csv")
+		qju.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_ju.csv")
 
 
 		# Transport component quantity Q_kuv: disassembly --> recycling
@@ -491,9 +507,9 @@ for change in percentage_variations:
 		k1_uv = qkuv_df['k1']
 		k2_uv = qkuv_df['k2']
 		k3_uv = qkuv_df['k3']
-		k1_uv.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuv_k1.csv")
-		k2_uv.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuv_k2.csv")
-		k3_uv.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuv_k3.csv")
+		k1_uv.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuv_k1.csv")
+		k2_uv.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuv_k2.csv")
+		k3_uv.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuv_k3.csv")
 
 
 		# Transport component quantity Q_kuw: disassembly --> disposal
@@ -507,9 +523,9 @@ for change in percentage_variations:
 		k1_uw = qkuw_df['k1']
 		k2_uw = qkuw_df['k2']
 		k3_uw = qkuw_df['k3']
-		k1_uw.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuw_k1.csv")
-		k2_uw.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuw_k2.csv")
-		k3_uw.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuw_k3.csv")
+		k1_uw.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuw_k1.csv")
+		k2_uw.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuw_k2.csv")
+		k3_uw.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuw_k3.csv")
 
 
 		# Transport quantity Q_ug: disassembly --> remanu
@@ -517,7 +533,7 @@ for change in percentage_variations:
 		qug = pd.DataFrame.from_dict(ug, orient="index")
 		qug.index = pd.MultiIndex.from_tuples(qug.index)
 		qug = qug.unstack()
-		qug.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_ug.csv")
+		qug.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_ug.csv")
 
 
 		# Transport quantity Q_uh: disassembly --> hybrid
@@ -526,7 +542,7 @@ for change in percentage_variations:
 		quh = pd.DataFrame.from_dict(uh, orient="index")
 		quh.index = pd.MultiIndex.from_tuples(quh.index)
 		quh = quh.unstack()
-		quh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_uh.csv")
+		quh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_uh.csv")
 
 
 		# Transport component quantity Q_kvf: recycling --> manu
@@ -540,9 +556,9 @@ for change in percentage_variations:
 		k1_vf = qkvf_df['k1']
 		k2_vf = qkvf_df['k2']
 		k3_vf = qkvf_df['k3']
-		k1_vf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvf_k1.csv")
-		k2_vf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvf_k2.csv")
-		k3_vf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvf_k3.csv")
+		k1_vf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvf_k1.csv")
+		k2_vf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvf_k2.csv")
+		k3_vf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvf_k3.csv")
 
 
 		# Transport component quantity Q_kvh: recycling --> hybrid
@@ -556,9 +572,9 @@ for change in percentage_variations:
 		k1_vh = qkvh_df['k1']
 		k2_vh = qkvh_df['k2']
 		k3_vh = qkvh_df['k3']
-		k1_vh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvh_k1.csv")
-		k2_vh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvh_k2.csv")
-		k3_vh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvh_k3.csv")
+		k1_vh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvh_k1.csv")
+		k2_vh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvh_k2.csv")
+		k3_vh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvh_k3.csv")
 
 
 
@@ -568,227 +584,227 @@ for change in percentage_variations:
 
 
 	# If set time limit is reached
-	if m.Status == GRB.TIME_LIMIT:
+	# if m.Status == GRB.TIME_LIMIT:
 
-		gap = m.MIPGap
-		time = m.Runtime
-		num_var = m.NumVars
-		num_constr = m.NumConstrs
-		nodes = m.NodeCount
-		solution = m.getAttr('X')
-		total_cost = m.ObjVal
+	# 	gap = m.MIPGap
+	# 	time = m.Runtime
+	# 	num_var = m.NumVars
+	# 	num_constr = m.NumConstrs
+	# 	nodes = m.NodeCount
+	# 	solution = m.getAttr('X')
+	# 	total_cost = m.ObjVal
 
-		results_foldername = f'M_j_a_{int(change * 100)}/'
-		results_path = os.path.join(results, results_foldername)
-		os.makedirs(results_path, exist_ok=True)
+	# 	results_foldername = f'M_j_n_{int(change * 100)}/'
+	# 	results_path = os.path.join(results, results_foldername)
+	# 	os.makedirs(results_path, exist_ok=True)
 
-		comparison.at['Gesamtkosten', f'{change * 100}%'] = f'{round(total_cost):,}'
-		comparison.at['Einrichtungskosten', f'{change * 100}%'] = f'{round(EK.getValue()):,}'
-		comparison.at['Produktionskosten', f'{change * 100}%'] = f'{round(PK.getValue()):,}'
-		comparison.at['Transportkosten', f'{change * 100}%'] = f'{round(TK.getValue()):,}'
-		comparison.at['Emissionskosten', f'{change * 100}%'] = f'{round(KK.getValue()):,}'
-		comparison.at['CO2-Ausstoß', f'{change * 100}%'] = f'{round(CO2.X):,}'
-		comparison.at['Optimality Gap', f'{change * 100}%'] = gap
-		comparison.at['Run Time', f'{change * 100}%'] = time
-		comparison.at['Variables', f'{change * 100}%'] = num_var
-		comparison.at['Constraints', f'{change * 100}%'] = num_constr
-		comparison.at['Nodes', f'{change * 100}%'] = nodes
+	# 	comparison.at['Gesamtkosten', f'{change * 100}%'] = round(total_cost)
+	# 	comparison.at['Einrichtungskosten', f'{change * 100}%'] = round(EK.getValue())
+	# 	comparison.at['Produktionskosten', f'{change * 100}%'] = round(PK.getValue())
+	# 	comparison.at['Transportkosten', f'{change * 100}%'] = round(TK.getValue())
+	# 	comparison.at['Emissionskosten', f'{change * 100}%'] = round(KK.getValue())
+	# 	comparison.at['CO2-Ausstoß', f'{change * 100}%'] = round(CO2.X)
+	# 	comparison.at['Optimality Gap', f'{change * 100}%'] = gap
+	# 	comparison.at['Run Time', f'{change * 100}%'] = time
+	# 	comparison.at['Variables', f'{change * 100}%'] = num_var
+	# 	comparison.at['Constraints', f'{change * 100}%'] = num_constr
+	# 	comparison.at['Nodes', f'{change * 100}%'] = nodes
 	
-		# Activation decisions
-		xf = m.getAttr('X', X_f)
-		actv_xf = pd.DataFrame.from_dict(xf, orient="index")
-		actv_xf.index = pd.MultiIndex.from_tuples(actv_xf.index)
-		actv_xf = actv_xf.unstack()
+	# 	# Activation decisions
+	# 	xf = m.getAttr('X', X_f)
+	# 	actv_xf = pd.DataFrame.from_dict(xf, orient="index")
+	# 	actv_xf.index = pd.MultiIndex.from_tuples(actv_xf.index)
+	# 	actv_xf = actv_xf.unstack()
 		
-		xg = m.getAttr('X', X_g)
-		actv_xg = pd.DataFrame.from_dict(xg, orient="index")
-		actv_xg.index = pd.MultiIndex.from_tuples(actv_xg.index)
-		actv_xg = actv_xg.unstack()
+	# 	xg = m.getAttr('X', X_g)
+	# 	actv_xg = pd.DataFrame.from_dict(xg, orient="index")
+	# 	actv_xg.index = pd.MultiIndex.from_tuples(actv_xg.index)
+	# 	actv_xg = actv_xg.unstack()
 
-		xh = m.getAttr('X', X_h)
-		actv_xh = pd.DataFrame.from_dict(xh, orient="index")
-		actv_xh.index = pd.MultiIndex.from_tuples(actv_xh.index)
-		actv_xh = actv_xh.unstack()
+	# 	xh = m.getAttr('X', X_h)
+	# 	actv_xh = pd.DataFrame.from_dict(xh, orient="index")
+	# 	actv_xh.index = pd.MultiIndex.from_tuples(actv_xh.index)
+	# 	actv_xh = actv_xh.unstack()
 
-		xj = m.getAttr('X', X_j)
-		actv_xj = pd.DataFrame.from_dict(xj, orient="index")
-		actv_xj.index = pd.MultiIndex.from_tuples(actv_xj.index)
-		actv_xj = actv_xj.unstack()
+	# 	xj = m.getAttr('X', X_j)
+	# 	actv_xj = pd.DataFrame.from_dict(xj, orient="index")
+	# 	actv_xj.index = pd.MultiIndex.from_tuples(actv_xj.index)
+	# 	actv_xj = actv_xj.unstack()
 
-		xu = m.getAttr('X', X_u)
-		actv_xu = pd.DataFrame.from_dict(xu, orient="index")
-		actv_xu.index = pd.MultiIndex.from_tuples(actv_xu.index)
-		actv_xu = actv_xu.unstack()
+	# 	xu = m.getAttr('X', X_u)
+	# 	actv_xu = pd.DataFrame.from_dict(xu, orient="index")
+	# 	actv_xu.index = pd.MultiIndex.from_tuples(actv_xu.index)
+	# 	actv_xu = actv_xu.unstack()
 
-		xv = m.getAttr('X', X_v)
-		actv_xv = pd.DataFrame.from_dict(xv, orient="index")
-		actv_xv.index = pd.MultiIndex.from_tuples(actv_xv.index)
-		actv_xv = actv_xv.unstack()
+	# 	xv = m.getAttr('X', X_v)
+	# 	actv_xv = pd.DataFrame.from_dict(xv, orient="index")
+	# 	actv_xv.index = pd.MultiIndex.from_tuples(actv_xv.index)
+	# 	actv_xv = actv_xv.unstack()
 
-		xw = m.getAttr('X', X_w)
-		actv_xw = pd.DataFrame.from_dict(xw, orient="index")
-		actv_xw.index = pd.MultiIndex.from_tuples(actv_xw.index)
-		actv_xw = actv_xw.unstack()
+	# 	xw = m.getAttr('X', X_w)
+	# 	actv_xw = pd.DataFrame.from_dict(xw, orient="index")
+	# 	actv_xw.index = pd.MultiIndex.from_tuples(actv_xw.index)
+	# 	actv_xw = actv_xw.unstack()
 
-		activation_matrix = pd.concat([actv_xf, actv_xg, actv_xh, actv_xj, actv_xu, actv_xv, actv_xw]).transpose().head(1)
-		activation_matrix.to_csv(results_path + f"M_j_a_{int(change * 100)}_activation_matrix.csv")
-
-
-		# Transport quantity Q_klf: supplier --> manu
-		lf = m.getAttr('X', Q_klf)
-		qklf = pd.DataFrame.from_dict(lf, orient="index")
-		qklf.index = pd.MultiIndex.from_tuples(qklf.index)
-		qklf = qklf.unstack().groupby(level=0)
-		qklf_df = {}
-		for name, df in qklf:
-			qklf_df[name] = df
-		k1_lf = qklf_df['k1']
-		k2_lf = qklf_df['k2']
-		k3_lf = qklf_df['k3']
-		k1_lf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klf_k1.csv")
-		k2_lf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klf_k2.csv")
-		k3_lf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klf_k3.csv")
+	# 	activation_matrix = pd.concat([actv_xf, actv_xg, actv_xh, actv_xj, actv_xu, actv_xv, actv_xw]).transpose().head(1)
+	# 	activation_matrix.to_csv(results_path + f"M_j_n_{int(change * 100)}_activation_matrix.csv")
 
 
-		# Transport quantity Q_klh: supplier --> hybrid
-		lh = m.getAttr('X', Q_klh)
-		qklh = pd.DataFrame.from_dict(lh, orient="index")
-		qklh.index = pd.MultiIndex.from_tuples(qklh.index)
-		qklh = qklh.unstack().groupby(level=0)
-		qklh_df = {}
-		for name, df in qklh:
-			qklh_df[name] = df
-		k1_lh = qklh_df['k1']
-		k2_lh = qklh_df['k2']
-		k3_lh = qklh_df['k3']
-		k1_lh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klh_k1.csv")
-		k2_lh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klh_k2.csv")
-		k3_lh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_klh_k3.csv")
+	# 	# Transport quantity Q_klf: supplier --> manu
+	# 	lf = m.getAttr('X', Q_klf)
+	# 	qklf = pd.DataFrame.from_dict(lf, orient="index")
+	# 	qklf.index = pd.MultiIndex.from_tuples(qklf.index)
+	# 	qklf = qklf.unstack().groupby(level=0)
+	# 	qklf_df = {}
+	# 	for name, df in qklf:
+	# 		qklf_df[name] = df
+	# 	k1_lf = qklf_df['k1']
+	# 	k2_lf = qklf_df['k2']
+	# 	k3_lf = qklf_df['k3']
+	# 	k1_lf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klf_k1.csv")
+	# 	k2_lf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klf_k2.csv")
+	# 	k3_lf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klf_k3.csv")
 
 
-		# Transport quantity Q_fi: manu --> warehouse
-		fi = m.getAttr('X', Q_fi)
-		qfi = pd.DataFrame.from_dict(fi, orient="index")
-		qfi.index = pd.MultiIndex.from_tuples(qfi.index)
-		qfi = qfi.unstack()
-		qfi.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_fi.csv")
+	# 	# Transport quantity Q_klh: supplier --> hybrid
+	# 	lh = m.getAttr('X', Q_klh)
+	# 	qklh = pd.DataFrame.from_dict(lh, orient="index")
+	# 	qklh.index = pd.MultiIndex.from_tuples(qklh.index)
+	# 	qklh = qklh.unstack().groupby(level=0)
+	# 	qklh_df = {}
+	# 	for name, df in qklh:
+	# 		qklh_df[name] = df
+	# 	k1_lh = qklh_df['k1']
+	# 	k2_lh = qklh_df['k2']
+	# 	k3_lh = qklh_df['k3']
+	# 	k1_lh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klh_k1.csv")
+	# 	k2_lh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klh_k2.csv")
+	# 	k3_lh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_klh_k3.csv")
 
 
-		# Transport quantity Q_gi: remanu --> warehouse
-		gi = m.getAttr('X', Q_gi)
-		qgi = pd.DataFrame.from_dict(gi, orient="index")
-		qgi.index = pd.MultiIndex.from_tuples(qgi.index)
-		qgi = qgi.unstack()
-		qgi.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_gi.csv")
+	# 	# Transport quantity Q_fi: manu --> warehouse
+	# 	fi = m.getAttr('X', Q_fi)
+	# 	qfi = pd.DataFrame.from_dict(fi, orient="index")
+	# 	qfi.index = pd.MultiIndex.from_tuples(qfi.index)
+	# 	qfi = qfi.unstack()
+	# 	qfi.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_fi.csv")
 
 
-		# Transport quantity Q_hi: hybrid --> warehouse
-		hi = m.getAttr('X', Q_hi)
-		qhi = pd.DataFrame.from_dict(hi, orient="index")
-		qhi.index = pd.MultiIndex.from_tuples(qhi.index)
-		qhi = qhi.unstack()
-		qhi.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_hi.csv")
+	# 	# Transport quantity Q_gi: remanu --> warehouse
+	# 	gi = m.getAttr('X', Q_gi)
+	# 	qgi = pd.DataFrame.from_dict(gi, orient="index")
+	# 	qgi.index = pd.MultiIndex.from_tuples(qgi.index)
+	# 	qgi = qgi.unstack()
+	# 	qgi.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_gi.csv")
 
 
-		# Transport quantity Q_hi_bar: hybrid --> warehouse
-		hi_bar = m.getAttr('X', Q_hi_bar)
-		qhi_bar = pd.DataFrame.from_dict(hi_bar, orient="index")
-		qhi_bar.index = pd.MultiIndex.from_tuples(qhi_bar.index)
-		qhi_bar = qhi_bar.unstack()
-		qhi_bar.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_hi_bar.csv")
+	# 	# Transport quantity Q_hi: hybrid --> warehouse
+	# 	hi = m.getAttr('X', Q_hi)
+	# 	qhi = pd.DataFrame.from_dict(hi, orient="index")
+	# 	qhi.index = pd.MultiIndex.from_tuples(qhi.index)
+	# 	qhi = qhi.unstack()
+	# 	qhi.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_hi.csv")
 
 
-		# Transport quantity Q_ju: collection --> disassembly
-		ju = m.getAttr('X', Q_ju)
-		qju = pd.DataFrame.from_dict(ju, orient="index")
-		qju.index = pd.MultiIndex.from_tuples(qju.index)
-		qju = qju.unstack()
-		qju.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_ju.csv")
+	# 	# Transport quantity Q_hi_bar: hybrid --> warehouse
+	# 	hi_bar = m.getAttr('X', Q_hi_bar)
+	# 	qhi_bar = pd.DataFrame.from_dict(hi_bar, orient="index")
+	# 	qhi_bar.index = pd.MultiIndex.from_tuples(qhi_bar.index)
+	# 	qhi_bar = qhi_bar.unstack()
+	# 	qhi_bar.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_hi_bar.csv")
 
 
-		# Transport component quantity Q_kuv: disassembly --> recycling
-		uv = m.getAttr('X', Q_kuv)
-		qkuv = pd.DataFrame.from_dict(uv, orient="index")
-		qkuv.index = pd.MultiIndex.from_tuples(qkuv.index)
-		qkuv = qkuv.unstack().groupby(level=0)
-		qkuv_df = {}
-		for name, df in qkuv:
-			qkuv_df[name] = df
-		k1_uv = qkuv_df['k1']
-		k2_uv = qkuv_df['k2']
-		k3_uv = qkuv_df['k3']
-		k1_uv.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuv_k1.csv")
-		k2_uv.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuv_k2.csv")
-		k3_uv.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuv_k3.csv")
+	# 	# Transport quantity Q_ju: collection --> disassembly
+	# 	ju = m.getAttr('X', Q_ju)
+	# 	qju = pd.DataFrame.from_dict(ju, orient="index")
+	# 	qju.index = pd.MultiIndex.from_tuples(qju.index)
+	# 	qju = qju.unstack()
+	# 	qju.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_ju.csv")
 
 
-		# Transport component quantity Q_kuw: disassembly --> disposal
-		uw = m.getAttr('X', Q_kuw)
-		qkuw = pd.DataFrame.from_dict(uw, orient="index")
-		qkuw.index = pd.MultiIndex.from_tuples(qkuw.index)
-		qkuw = qkuw.unstack().groupby(level=0)
-		qkuw_df = {}
-		for name, df in qkuw:
-			qkuw_df[name] = df
-		k1_uw = qkuw_df['k1']
-		k2_uw = qkuw_df['k2']
-		k3_uw = qkuw_df['k3']
-		k1_uw.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuw_k1.csv")
-		k2_uw.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuw_k2.csv")
-		k3_uw.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kuw_k3.csv")
+	# 	# Transport component quantity Q_kuv: disassembly --> recycling
+	# 	uv = m.getAttr('X', Q_kuv)
+	# 	qkuv = pd.DataFrame.from_dict(uv, orient="index")
+	# 	qkuv.index = pd.MultiIndex.from_tuples(qkuv.index)
+	# 	qkuv = qkuv.unstack().groupby(level=0)
+	# 	qkuv_df = {}
+	# 	for name, df in qkuv:
+	# 		qkuv_df[name] = df
+	# 	k1_uv = qkuv_df['k1']
+	# 	k2_uv = qkuv_df['k2']
+	# 	k3_uv = qkuv_df['k3']
+	# 	k1_uv.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuv_k1.csv")
+	# 	k2_uv.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuv_k2.csv")
+	# 	k3_uv.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuv_k3.csv")
 
 
-		# Transport quantity Q_ug: disassembly --> remanu
-		ug = m.getAttr('X', Q_ug)
-		qug = pd.DataFrame.from_dict(ug, orient="index")
-		qug.index = pd.MultiIndex.from_tuples(qug.index)
-		qug = qug.unstack()
-		qug.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_ug.csv")
+	# 	# Transport component quantity Q_kuw: disassembly --> disposal
+	# 	uw = m.getAttr('X', Q_kuw)
+	# 	qkuw = pd.DataFrame.from_dict(uw, orient="index")
+	# 	qkuw.index = pd.MultiIndex.from_tuples(qkuw.index)
+	# 	qkuw = qkuw.unstack().groupby(level=0)
+	# 	qkuw_df = {}
+	# 	for name, df in qkuw:
+	# 		qkuw_df[name] = df
+	# 	k1_uw = qkuw_df['k1']
+	# 	k2_uw = qkuw_df['k2']
+	# 	k3_uw = qkuw_df['k3']
+	# 	k1_uw.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuw_k1.csv")
+	# 	k2_uw.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuw_k2.csv")
+	# 	k3_uw.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kuw_k3.csv")
 
 
-		# Transport quantity Q_uh: disassembly --> hybrid
-		uh = m.getAttr('X', Q_uh)
-		uh = m.getAttr('X', Q_uh)
-		quh = pd.DataFrame.from_dict(uh, orient="index")
-		quh.index = pd.MultiIndex.from_tuples(quh.index)
-		quh = quh.unstack()
-		quh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_uh.csv")
+	# 	# Transport quantity Q_ug: disassembly --> remanu
+	# 	ug = m.getAttr('X', Q_ug)
+	# 	qug = pd.DataFrame.from_dict(ug, orient="index")
+	# 	qug.index = pd.MultiIndex.from_tuples(qug.index)
+	# 	qug = qug.unstack()
+	# 	qug.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_ug.csv")
 
 
-		# Transport component quantity Q_kvf: recycling --> manu
-		vf = m.getAttr('X', Q_kvf)
-		qkvf = pd.DataFrame.from_dict(vf, orient="index")
-		qkvf.index = pd.MultiIndex.from_tuples(qkvf.index)
-		qkvf = qkvf.unstack().groupby(level=0)
-		qkvf_df = {}
-		for name, df in qkvf:
-			qkvf_df[name] = df
-		k1_vf = qkvf_df['k1']
-		k2_vf = qkvf_df['k2']
-		k3_vf = qkvf_df['k3']
-		k1_vf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvf_k1.csv")
-		k2_vf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvf_k2.csv")
-		k3_vf.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvf_k3.csv")
+	# 	# Transport quantity Q_uh: disassembly --> hybrid
+	# 	uh = m.getAttr('X', Q_uh)
+	# 	uh = m.getAttr('X', Q_uh)
+	# 	quh = pd.DataFrame.from_dict(uh, orient="index")
+	# 	quh.index = pd.MultiIndex.from_tuples(quh.index)
+	# 	quh = quh.unstack()
+	# 	quh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_uh.csv")
 
 
-		# Transport component quantity Q_kvh: recycling --> hybrid
-		vh = m.getAttr('X', Q_kvh)
-		qkvh = pd.DataFrame.from_dict(vh, orient="index")
-		qkvh.index = pd.MultiIndex.from_tuples(qkvh.index)
-		qkvh = qkvh.unstack().groupby(level=0)
-		qkvh_df = {}
-		for name, df in qkvh:
-			qkvh_df[name] = df
-		k1_vh = qkvh_df['k1']
-		k2_vh = qkvh_df['k2']
-		k3_vh = qkvh_df['k3']
-		k1_vh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvh_k1.csv")
-		k2_vh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvh_k2.csv")
-		k3_vh.to_csv(results_path + f"M_j_a_{int(change * 100)}_Q_kvh_k3.csv")
+	# 	# Transport component quantity Q_kvf: recycling --> manu
+	# 	vf = m.getAttr('X', Q_kvf)
+	# 	qkvf = pd.DataFrame.from_dict(vf, orient="index")
+	# 	qkvf.index = pd.MultiIndex.from_tuples(qkvf.index)
+	# 	qkvf = qkvf.unstack().groupby(level=0)
+	# 	qkvf_df = {}
+	# 	for name, df in qkvf:
+	# 		qkvf_df[name] = df
+	# 	k1_vf = qkvf_df['k1']
+	# 	k2_vf = qkvf_df['k2']
+	# 	k3_vf = qkvf_df['k3']
+	# 	k1_vf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvf_k1.csv")
+	# 	k2_vf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvf_k2.csv")
+	# 	k3_vf.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvf_k3.csv")
 
-		print("=======================================================================================")
-		print("=============================== Time limit reached! ===================================")
-		print("=======================================================================================")
+
+	# 	# Transport component quantity Q_kvh: recycling --> hybrid
+	# 	vh = m.getAttr('X', Q_kvh)
+	# 	qkvh = pd.DataFrame.from_dict(vh, orient="index")
+	# 	qkvh.index = pd.MultiIndex.from_tuples(qkvh.index)
+	# 	qkvh = qkvh.unstack().groupby(level=0)
+	# 	qkvh_df = {}
+	# 	for name, df in qkvh:
+	# 		qkvh_df[name] = df
+	# 	k1_vh = qkvh_df['k1']
+	# 	k2_vh = qkvh_df['k2']
+	# 	k3_vh = qkvh_df['k3']
+	# 	k1_vh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvh_k1.csv")
+	# 	k2_vh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvh_k2.csv")
+	# 	k3_vh.to_csv(results_path + f"M_j_n_{int(change * 100)}_Q_kvh_k3.csv")
+
+	# 	print("=======================================================================================")
+	# 	print("=============================== Time limit reached! ===================================")
+	# 	print("=======================================================================================")
 
 
 	elif m.Status == GRB.INFEASIBLE:
@@ -800,7 +816,7 @@ for change in percentage_variations:
 		print("=======================================================================================")
 		print("================================ Model is infeasible! =================================")
 		print("=======================================================================================")
-
+	m.reset()
 
 	final_comparison = pd.concat([comparison], axis=1)
 	final_comparison.to_csv(results + "objective_comparison.csv")

@@ -1,14 +1,16 @@
 import gurobipy as gp
 from gurobipy import GRB
 import pandas as pd
-
-# Scenario: no CO2 regulation
-parameters = "parameters/base/"
-scenario_result = "scenario_co2cap/results/"
+import os
 
 m = gp.Model('HMRS')
+# Scenario: no CO2 regulation
+parameters = "parameters/base/"
+scenario_result = "results/scenario_co2cap/"
+os.makedirs(scenario_result, exist_ok=True)
 
-time_limit_seconds = 60 * 2
+
+time_limit_seconds = 60 * 3
 m.setParam('TimeLimit', time_limit_seconds)
 
 # Initialize the sets and parameters of the model
@@ -25,6 +27,8 @@ collect = ['j1', 'j2', 'j3', 'j4']
 disassembly = ['u1', 'u2', 'u3', 'u4', 'u5']
 recycling = ['v1', 'v2', 'v3', 'v4', 'v5']
 disposal = ['w1', 'w2', 'w3', 'w4', 'w5']
+
+locations = manu + remanu + hybrid + collect + disassembly + recycling + disposal
 
 comparison = pd.DataFrame(columns=['Ohne CO2 Cap'])
 comparison_rows = ['Gesamtkosten', 'Einrichtungskosten', 'Produktionskosten', 'Transportkosten', 'Emissionskosten', 'CO2-Ausstoß', 'Optimality Gap', 'Run Time', 'Variables', 'Nodes', 'Constraints']
@@ -80,7 +84,7 @@ E_G = 2
 E_H = 5
 E_J = 10
 E_U = 5
-E_KU = 5
+E_KU = 0.5
 E_V = 0.5
 E_W = 2
 E_P = 0.009
@@ -234,6 +238,11 @@ KK = pi * legal + pi_p * excess
 # Define the objective function
 m.setObjective(EK + PK + TK + KK, GRB.MINIMIZE)
 
+m.addConstrs((gp.quicksum(Q_gi[g, i, 0] for i in warehouse) == 0 for g in remanu), name="gi0")
+m.addConstrs((gp.quicksum(Q_hi_bar[h, i, 0] for i in warehouse) == 0 for h in hybrid), name="hibar0")
+m.addConstrs((gp.quicksum(Q_fi[f, i, 0] for i in warehouse) * R_k[k] == gp.quicksum(Q_klf[k, l, f, 0] for l in supplier) for k in component for f in manu), name="klf_fi")
+m.addConstrs((gp.quicksum(Q_hi[h, i, 0] for i in warehouse) * R_k[k] == gp.quicksum(Q_klh[k, l, h, 0] for l in supplier) for k in component for h in hybrid), name="klh_hi")
+
 # Add constraints
 # (1)
 m.addConstrs(((gp.quicksum(Q_fi[f, i, t] for i in warehouse) <= CAP_f[t, f] * X_f[f, t]) for f in manu for t in period), name='c1')
@@ -266,13 +275,13 @@ m.addConstrs((gp.quicksum(Q_kuw[a, b, c, t] for a in component for b in disassem
 m.addConstrs(((gp.quicksum(Q_fi[f, i, t] for f in manu) + gp.quicksum(Q_hi[h, i, t] for h in hybrid) + gp.quicksum(Q_gi[g, i ,t] for g in remanu) + gp.quicksum(Q_hi_bar[h, i ,t] for h in hybrid) == D_i[t, i]) for i in warehouse for t in period), name='c10')
 
 # (11)
-m.addConstrs((gp.quicksum(Q_klf[a, b, c, t] for b in supplier) + gp.quicksum(Q_kvf[a, b, c, t] for b in recycling)  == gp.quicksum(Q_fi[c, b, int(t+1)] for b in warehouse) * R_k[a] for a in component for c in manu for t in range(T-1)), name='c11')
+m.addConstrs((gp.quicksum(Q_klf[a, b, c, int(t+1)] for b in supplier) + gp.quicksum(Q_kvf[a, b, c, t] for b in recycling)  == gp.quicksum(Q_fi[c, b, int(t+1)] for b in warehouse) * R_k[a] for a in component for c in manu for t in range(T-1)), name='c11')
 
 # (12)
 m.addConstrs((gp.quicksum(Q_ug[a, b, t] for a in disassembly) == gp.quicksum(Q_gi[b, c, int(t+1)] for c in warehouse) for b in remanu for t in range(T-1)), name='c12')
 
 # (13)
-m.addConstrs((gp.quicksum(Q_klh[a, b, c, t] for b in supplier) + gp.quicksum(Q_kvh[a, b, c, t] for b in recycling) == gp.quicksum(Q_hi[c, b, t] for b in warehouse) * R_k[a] for a in component for c in hybrid for t in period), name='c13')
+m.addConstrs((gp.quicksum(Q_klh[a, b, c, int(t+1)] for b in supplier) + gp.quicksum(Q_kvh[a, b, c, t] for b in recycling) == gp.quicksum(Q_hi[c, b, int(t+1)] for b in warehouse) * R_k[a] for a in component for c in hybrid for t in range(T-1)), name='c13')
 
 # (14)
 m.addConstrs((gp.quicksum(Q_uh[u, h, t] for u in disassembly) == gp.quicksum(Q_hi_bar[h, i, int(t+1)] for i in warehouse) for h in hybrid for t in range(T-1)), name='c14')
@@ -371,12 +380,12 @@ if m.Status == GRB.TIME_LIMIT:
 	solution = m.getAttr('X')
 	total_cost = m.ObjVal
 
-	comparison.at['Gesamtkosten', 'Ohne CO2 Cap'] = f'{round(total_cost):,}'
-	comparison.at['Einrichtungskosten', 'Ohne CO2 Cap'] = f'{round(EK.getValue()):,}'
-	comparison.at['Produktionskosten', 'Ohne CO2 Cap'] = f'{round(PK.getValue()):,}'
-	comparison.at['Transportkosten', 'Ohne CO2 Cap'] = f'{round(TK.getValue()):,}'
-	comparison.at['Emissionskosten', 'Ohne CO2 Cap'] = f'{round(KK.getValue()):,}'
-	comparison.at['CO2-Ausstoß', 'Ohne CO2 Cap'] = f'{round(CO2.X):,}'
+	comparison.at['Gesamtkosten', 'Ohne CO2 Cap'] = round(total_cost)
+	comparison.at['Einrichtungskosten', 'Ohne CO2 Cap'] = round(EK.getValue())
+	comparison.at['Produktionskosten', 'Ohne CO2 Cap'] = round(PK.getValue())
+	comparison.at['Transportkosten', 'Ohne CO2 Cap'] = round(TK.getValue())
+	comparison.at['Emissionskosten', 'Ohne CO2 Cap'] = round(KK.getValue())
+	comparison.at['CO2-Ausstoß', 'Ohne CO2 Cap'] = round(CO2.X)
 	comparison.at['Optimality Gap', 'Ohne CO2 Cap'] = gap
 	comparison.at['Run Time', 'Ohne CO2 Cap'] = time
 	comparison.at['Variables', 'Ohne CO2 Cap'] = num_var
@@ -582,15 +591,21 @@ if m.Status == GRB.TIME_LIMIT:
 
 
 if m.Status == GRB.OPTIMAL:
-
+	
+	gap = m.MIPGap
+	time = m.Runtime
+	num_var = m.NumVars
+	num_constr = m.NumConstrs
+	nodes = m.NodeCount
+	solution = m.getAttr('X')
 	total_cost = m.ObjVal
 
-	comparison.at['Gesamtkosten', 'Ohne CO2 Cap'] = f'{round(total_cost):,}'
-	comparison.at['Einrichtungskosten', 'Ohne CO2 Cap'] = f'{round(EK.getValue()):,}'
-	comparison.at['Produktionskosten', 'Ohne CO2 Cap'] = f'{round(PK.getValue()):,}'
-	comparison.at['Transportkosten', 'Ohne CO2 Cap'] = f'{round(TK.getValue()):,}'
-	comparison.at['Emissionskosten', 'Ohne CO2 Cap'] = f'{round(KK.getValue()):,}'
-	comparison.at['CO2-Ausstoß', 'Ohne CO2 Cap'] = f'{round(CO2.X):,}'
+	comparison.at['Gesamtkosten', 'Ohne CO2 Cap'] = round(total_cost)
+	comparison.at['Einrichtungskosten', 'Ohne CO2 Cap'] = round(EK.getValue())
+	comparison.at['Produktionskosten', 'Ohne CO2 Cap'] = round(PK.getValue())
+	comparison.at['Transportkosten', 'Ohne CO2 Cap'] = round(TK.getValue())
+	comparison.at['Emissionskosten', 'Ohne CO2 Cap'] = round(KK.getValue())
+	comparison.at['CO2-Ausstoß', 'Ohne CO2 Cap'] = round(CO2.X)
 	comparison.at['Optimality Gap', 'Ohne CO2 Cap'] = gap
 	comparison.at['Run Time', 'Ohne CO2 Cap'] = time
 	comparison.at['Variables', 'Ohne CO2 Cap'] = num_var
@@ -598,43 +613,53 @@ if m.Status == GRB.OPTIMAL:
 	comparison.at['Nodes', 'Ohne CO2 Cap'] = nodes
 
 	# Activation decisions
+	activation_table = pd.DataFrame(columns=[l for l in locations])
+
 	xf = m.getAttr('X', X_f)
-	actv_xf = pd.DataFrame.from_dict(xf, orient="index")
-	actv_xf.index = pd.MultiIndex.from_tuples(actv_xf.index)
-	actv_xf = actv_xf.unstack()
+	xf_filter = {key: value for key, value in xf.items() if key[1] == 0}
+	xf_df = pd.DataFrame.from_dict(xf_filter, orient='index', columns=['0'])
+	xf_df.index = xf_df.index.map(lambda x: x[0])
+	xf_df = xf_df.T
 	
 	xg = m.getAttr('X', X_g)
-	actv_xg = pd.DataFrame.from_dict(xg, orient="index")
-	actv_xg.index = pd.MultiIndex.from_tuples(actv_xg.index)
-	actv_xg = actv_xg.unstack()
+	xg_filter = {key: value for key, value in xg.items() if key[1] == 0}
+	xg_df = pd.DataFrame.from_dict(xg_filter, orient='index', columns=['0'])
+	xg_df.index = xg_df.index.map(lambda x: x[0])
+	xg_df = xg_df.T
 
 	xh = m.getAttr('X', X_h)
-	actv_xh = pd.DataFrame.from_dict(xh, orient="index")
-	actv_xh.index = pd.MultiIndex.from_tuples(actv_xh.index)
-	actv_xh = actv_xh.unstack()
+	xh_filter = {key: value for key, value in xh.items() if key[1] == 0}
+	xh_df = pd.DataFrame.from_dict(xh_filter, orient='index', columns=['0'])
+	xh_df.index = xh_df.index.map(lambda x: x[0])
+	xh_df = xh_df.T
 
 	xj = m.getAttr('X', X_j)
-	actv_xj = pd.DataFrame.from_dict(xj, orient="index")
-	actv_xj.index = pd.MultiIndex.from_tuples(actv_xj.index)
-	actv_xj = actv_xj.unstack()
+	xj_filter = {key: value for key, value in xj.items() if key[1] == 0}
+	xj_df = pd.DataFrame.from_dict(xj_filter, orient='index', columns=['0'])
+	xj_df.index = xj_df.index.map(lambda x: x[0])
+	xj_df = xj_df.T
 
 	xu = m.getAttr('X', X_u)
-	actv_xu = pd.DataFrame.from_dict(xu, orient="index")
-	actv_xu.index = pd.MultiIndex.from_tuples(actv_xu.index)
-	actv_xu = actv_xu.unstack()
+	xu_filter = {key: value for key, value in xu.items() if key[1] == 0}
+	xu_df = pd.DataFrame.from_dict(xu_filter, orient='index', columns=['0'])
+	xu_df.index = xu_df.index.map(lambda x: x[0])
+	xu_df = xu_df.T
 
 	xv = m.getAttr('X', X_v)
-	actv_xv = pd.DataFrame.from_dict(xv, orient="index")
-	actv_xv.index = pd.MultiIndex.from_tuples(actv_xv.index)
-	actv_xv = actv_xv.unstack()
+	xv_filter = {key: value for key, value in xv.items() if key[1] == 0}
+	xv_df = pd.DataFrame.from_dict(xv_filter, orient='index', columns=['0'])
+	xv_df.index = xv_df.index.map(lambda x: x[0])
+	xv_df = xv_df.T
 
 	xw = m.getAttr('X', X_w)
-	actv_xw = pd.DataFrame.from_dict(xw, orient="index")
-	actv_xw.index = pd.MultiIndex.from_tuples(actv_xw.index)
-	actv_xw = actv_xw.unstack()
+	xw_filter = {key: value for key, value in xw.items() if key[1] == 0}
+	xw_df = pd.DataFrame.from_dict(xw_filter, orient='index', columns=['0'])
+	xw_df.index = xw_df.index.map(lambda x: x[0])
+	xw_df = xw_df.T
 
-	activation_matrix = pd.concat([actv_xf, actv_xg, actv_xh, actv_xj, actv_xu, actv_xv, actv_xw]).transpose().head(1)
-	activation_matrix.to_csv(scenario_result + "activation_matrix.csv")
+
+	activation_table = pd.concat([xf_df, xg_df, xh_df, xj_df, xu_df, xv_df, xw_df], axis=1)
+	activation_table.to_csv(scenario_result + "activation_matrix.csv")
 
 
 	# Transport quantity Q_klf: supplier --> manu
